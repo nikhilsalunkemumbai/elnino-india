@@ -186,7 +186,7 @@ def cwc_bulletin_url(date: datetime) -> str:
       /sites/default/files/reservoir-storage-bulletin/YYYY-Wnn.pdf
     We check the current week and fall back one week if not yet published.
     """
-    base = "https://cwc.gov.in/sites/default/files/reservoir-storage-bulletin/"
+    base = "https://rsms.cwc.gov.in/admin/storage/bulletins/"
     iso  = date.isocalendar()
     return f"{base}{iso[0]}-W{iso[1]:02d}.pdf"
 
