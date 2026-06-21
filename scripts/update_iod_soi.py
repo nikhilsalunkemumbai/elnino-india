@@ -1,23 +1,25 @@
 """
 update_iod_soi.py
 Fetches:
-  - Indian Ocean Dipole (IOD / DMI) — primary: NOAA PSL ERSSTv5-derived DMI
-                                       fallback: JAMSTEC long-run DMI series
+  - Indian Ocean Dipole (IOD / DMI) — primary: NOAA PSL HadISST-derived DMI
+                                       fallback: NOAA OSMC state-of-ocean DMI
   - Southern Oscillation Index (SOI) — NOAA CPC (permanent, unchanged)
 
-Why the source change for IOD:
-  BOM switched from Traditional to Relative Niño indices in Sep 2025 and their
-  flat-file URLs (iod_1997.txt) are tied to internal site structure that has
-  changed before. NOAA PSL computes DMI independently from ERSSTv5 SSTs and
-  publishes a stable text file that has not changed format since the 1990s.
-  JAMSTEC is kept as an explicit fallback since it has published DMI since 1997
-  with a stable URL and is widely used in peer-reviewed research.
+IOD source history:
+  - Original (broken): bom.gov.au/climate/enso/iod_1997.txt  → BOM changed URLs
+  - v2 attempt (broken): psl.noaa.gov/data/correlation/dmi.data  → 404, path moved
+  - v3 attempt (broken): jamstec.go.jp/aplinfo/sintexf/iod/iod_index_ersstv5.txt → 404
+  - CURRENT (confirmed live June 2026):
+      Primary:  https://psl.noaa.gov/data/timeseries/month/data/dmi.had.long.data
+      Fallback: https://psl.noaa.gov/data/timeseries/month/data/dmi.had.long.csv
 
 Outputs:
   data/iod.json
   data/soi.json
 """
 
+import csv
+import io
 import json
 import re
 import requests
@@ -27,19 +29,10 @@ from datetime import datetime, timezone
 DATA_DIR = Path(__file__).parent.parent / "data"
 DATA_DIR.mkdir(exist_ok=True)
 
-# --- IOD / DMI sources (in priority order) ---
-
-# Primary: NOAA PSL ERSSTv5 Dipole Mode Index monthly text file
-# Stable since 1990s, same format as their Nino3.4 files, not ENSO-hype-dependent
-NOAA_DMI_URL = (
-    "https://psl.noaa.gov/data/correlation/dmi.data"
-)
-
-# Fallback: JAMSTEC (Japan Agency for Marine-Earth Science and Technology)
-# Has published weekly/monthly DMI since 1997; peer-reviewed, independent of BOM
-JAMSTEC_DMI_URL = (
-    "https://www.jamstec.go.jp/aplinfo/sintexf/iod/iod_index_ersstv5.txt"
-)
+# --- IOD / DMI sources ---
+# Confirmed live: https://psl.noaa.gov/data/timeseries/month/DMI/
+NOAA_DMI_DATA_URL = "https://psl.noaa.gov/data/timeseries/month/data/dmi.had.long.data"
+NOAA_DMI_CSV_URL  = "https://psl.noaa.gov/data/timeseries/month/data/dmi.had.long.csv"
 
 # --- SOI source (unchanged — NOAA CPC is permanent) ---
 SOI_URL = "https://www.cpc.ncep.noaa.gov/data/indices/soi"
@@ -57,12 +50,12 @@ def iod_label(dmi: float) -> str:
     return "Neutral IOD"
 
 
-def parse_noaa_dmi(text: str) -> list:
+def parse_noaa_dmi_data(text: str) -> list:
     """
-    NOAA PSL dmi.data format:
-      Header line(s) starting with non-digit characters, then:
-      YYYY  v1  v2  v3  v4  v5  v6  v7  v8  v9  v10  v11  v12
-      Missing = -9.99 or -99.99
+    NOAA PSL standard format:
+      First line: start_year  num_years
+      Then rows:  YYYY  v1  v2 ... v12
+      Missing sentinel: -999.9 or -99.99
     """
     records = []
     for line in text.splitlines():
@@ -77,76 +70,65 @@ def parse_noaa_dmi(text: str) -> list:
                 val = float(val_str)
             except ValueError:
                 continue
-            if val <= -9.0:   # missing sentinel
+            if val <= -99.0:   # missing sentinel
                 continue
             records.append({
-                "date": f"{year}-{month_idx:02d}-01",
-                "year": year,
-                "month": month_idx,
-                "dmi": round(val, 3),
-                "label": iod_label(val),
-                "source": "NOAA PSL ERSSTv5",
+                "date":   f"{year}-{month_idx:02d}-01",
+                "year":   year,
+                "month":  month_idx,
+                "dmi":    round(val, 3),
+                "label":  iod_label(val),
+                "source": "NOAA PSL HadISST1.1",
             })
     return records
 
 
-def parse_jamstec_dmi(text: str) -> list:
-    """
-    JAMSTEC format (weekly or monthly depending on file):
-      YYYY/MM/DD  DMI
-    or
-      YYYY  MM  DMI
-    Missing = 9999 or -9999
-    """
+def parse_noaa_dmi_csv(text: str) -> list:
+    """Parse the CSV version of the same PSL DMI file."""
     records = []
-    for line in text.splitlines():
-        line = line.strip()
-        if not line or line.startswith("#"):
-            continue
-        # Try YYYY/MM/DD  DMI
-        m = re.match(r"^(\d{4})/(\d{2})/(\d{2})\s+([-\d.]+)$", line)
-        if m:
-            year, month, _, dmi_str = m.groups()
-        else:
-            # Try YYYY  MM  DMI
-            parts = line.split()
-            if len(parts) < 3:
-                continue
-            year, month, dmi_str = parts[0], parts[1], parts[2]
+    reader = csv.DictReader(io.StringIO(text))
+    for row in reader:
         try:
-            dmi = float(dmi_str)
-        except ValueError:
+            year  = int(row.get("Year", row.get("year", 0)))
+            month = int(row.get("Month", row.get("month", 0)))
+            val   = float(row.get("DMI", row.get("dmi", row.get("Value", 0))))
+        except (ValueError, TypeError):
             continue
-        if abs(dmi) > 9000:
+        if abs(val) > 90:
             continue
         records.append({
-            "date": f"{year}-{int(month):02d}-01",
-            "year": int(year),
-            "month": int(month),
-            "dmi": round(dmi, 3),
-            "label": iod_label(dmi),
-            "source": "JAMSTEC ERSSTv5",
+            "date":   f"{year}-{month:02d}-01",
+            "year":   year,
+            "month":  month,
+            "dmi":    round(val, 3),
+            "label":  iod_label(val),
+            "source": "NOAA PSL HadISST1.1 (CSV)",
         })
     return records
 
 
 def fetch_iod() -> list:
-    """Try NOAA PSL first, fall back to JAMSTEC."""
-    for url, parser, name in [
-        (NOAA_DMI_URL,    parse_noaa_dmi,    "NOAA PSL"),
-        (JAMSTEC_DMI_URL, parse_jamstec_dmi, "JAMSTEC"),
+    """Try .data format first, then CSV format."""
+    for url, parser, label in [
+        (NOAA_DMI_DATA_URL, parse_noaa_dmi_data, "NOAA PSL DMI .data"),
+        (NOAA_DMI_CSV_URL,  parse_noaa_dmi_csv,  "NOAA PSL DMI .csv"),
     ]:
         try:
             resp = requests.get(url, timeout=30)
             resp.raise_for_status()
             records = parser(resp.text)
             if records:
-                print(f"   IOD source: {name} ({url})")
+                print(f"   IOD source: {label}")
                 return records
-            print(f"   {name} returned 0 records — trying fallback …")
+            print(f"   {label} returned 0 records — trying next …")
         except Exception as exc:
-            print(f"   {name} failed ({exc}) — trying fallback …")
-    raise RuntimeError("All IOD sources failed. Check network or source URLs.")
+            print(f"   {label} failed: {exc} — trying next …")
+    raise RuntimeError(
+        "All IOD sources failed.\n"
+        f"  Tried: {NOAA_DMI_DATA_URL}\n"
+        f"  Tried: {NOAA_DMI_CSV_URL}\n"
+        "Check https://psl.noaa.gov/data/timeseries/month/DMI/ for current URLs."
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -177,10 +159,10 @@ def fetch_soi() -> list:
                 try:
                     soi_val = float(val)
                     records.append({
-                        "date": f"{current_year}-{i+1:02d}-01",
-                        "year": current_year,
+                        "date":  f"{current_year}-{i+1:02d}-01",
+                        "year":  current_year,
                         "month": i + 1,
-                        "soi": soi_val,
+                        "soi":   soi_val,
                         "label": soi_label(soi_val),
                     })
                 except ValueError:
@@ -201,8 +183,8 @@ def main():
     iod_path    = DATA_DIR / "iod.json"
     iod_path.write_text(json.dumps({
         "updated":    now,
-        "sources":    [NOAA_DMI_URL, JAMSTEC_DMI_URL],
-        "note":       "Primary: NOAA PSL ERSSTv5 DMI. Fallback: JAMSTEC ERSSTv5 DMI.",
+        "source":     NOAA_DMI_DATA_URL,
+        "note":       "NOAA PSL HadISST1.1 DMI. Ref: psl.noaa.gov/data/timeseries/month/DMI/",
         "latest":     latest_iod,
         "timeseries": iod_records,
     }, indent=2))
