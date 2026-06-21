@@ -24,7 +24,7 @@ jobs:
           cache: "pip"
 
       - name: Install Python dependencies
-        run: pip install requests pandas numpy pdfplumber
+        run: pip install requests pandas numpy pdfplumber rasterio
 
       - name: Fetch ENSO / Niño3.4 data
         run: python scripts/update_enso.py
