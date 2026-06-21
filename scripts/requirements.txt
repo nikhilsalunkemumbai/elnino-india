@@ -1,0 +1,8 @@
+requests>=2.31.0
+pandas>=2.0.0
+numpy>=1.26.0
+pdfplumber>=0.10.0
+
+# Optional — enables CHIRPS v3 GeoTIFF parsing (Tier 1 rainfall source)
+# Without it the script automatically falls back to NOAA PSL (no extra install needed)
+# rasterio>=1.3.0

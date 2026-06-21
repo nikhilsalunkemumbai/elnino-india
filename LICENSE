@@ -1,0 +1,54 @@
+MIT License
+
+Copyright (c) 2026 India El Niño Intelligence Dashboard Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Third-Party Data Sources
+
+This project displays data from the following public-domain sources. Their use
+is subject to each agency's own terms:
+
+- **NOAA / CPC** (National Oceanic and Atmospheric Administration, USA)
+  Public domain — https://www.noaa.gov/information-technology/open-data-dissemination
+
+- **NOAA PSL** (NOAA Physical Sciences Laboratory, USA) — IOD/DMI primary
+  Public domain — https://psl.noaa.gov/data/correlation/dmi.data
+
+- **JAMSTEC** (Japan Agency for Marine-Earth Science and Technology) — IOD/DMI fallback
+  Public domain for research use — https://www.jamstec.go.jp/aplinfo/sintexf/iod/
+
+- **CHIRPS v3** (Climate Hazards Group, UC Santa Barbara)
+  Creative Commons Attribution 4.0 International (CC BY 4.0) — any use permitted with attribution
+  https://chc.ucsb.edu/data/chirps3
+
+- **India-WRIS** (India Water Resources Information System, CWC / NHP / World Bank)
+  Open Government Data — https://indiawris.gov.in/
+
+- **CWC Weekly Bulletin + data.gov.in** (Central Water Commission, Government of India)
+  Open Government Data (OGD) Platform India — https://data.gov.in/
+
+- **Observable Framework**
+  ISC License — https://github.com/observablehq/framework/blob/main/LICENSE
+
+No proprietary data, no personally identifiable information (PII), and no
+protected health information (PHI) is stored, processed, or displayed by
+this software.

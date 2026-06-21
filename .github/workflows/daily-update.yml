@@ -1,0 +1,86 @@
+name: Daily Data Update & Deploy
+
+on:
+  schedule:
+    - cron: "0 0 * * *"   # midnight UTC every day
+  workflow_dispatch:        # manual trigger from GitHub UI
+  push:
+    branches: [main]        # also run on every push (first deploy included)
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Python dependencies
+        run: pip install requests pandas numpy pdfplumber
+
+      - name: Fetch ENSO / Niño3.4 data
+        run: python scripts/update_enso.py
+
+      - name: Fetch IOD & SOI data
+        run: python scripts/update_iod_soi.py
+
+      - name: Fetch India rainfall (CHIRPS)
+        run: python scripts/update_rainfall.py
+
+      - name: Fetch reservoir storage (CWC)
+        run: python scripts/update_reservoirs.py
+
+      - name: Commit updated data files
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/*.json data/*.csv
+          git diff --cached --quiet || git commit -m "chore: data update $(date -u +%Y-%m-%d)"
+          git push
+
+  build-and-deploy:
+    needs: update-data
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout repo (with fresh data)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install Node dependencies
+        run: npm install
+
+      - name: Build Observable Framework site
+        run: npm run build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
