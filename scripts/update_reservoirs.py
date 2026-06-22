@@ -87,24 +87,43 @@ RSMS_API_BASE      = f"{RSMS_BASE_URL}/admin"
 RSMS_ANCHOR_DATE   = date(2026, 6, 18)   # confirmed Thursday, bulletin #105
 RSMS_ANCHOR_SEQ    = 105
 
-# Plausible Laravel/Lumen REST routes (no auth probe — public listing)
+# Plausible REST routes to probe on rsms.cwc.gov.in
+# Includes /frameWork/ paths discovered from public-dashboard URL (user observation):
+#   rsms.cwc.gov.in/frameWork/web/public-dashboard  ← Angular public dashboard
+#   The Angular app fetches from a /frameWork/api/* backend
+# Also includes /admin/api/* paths from session_summary.txt Laravel/Lumen backend
 RSMS_API_ROUTES = [
+    # frameWork paths (from public-dashboard URL structure)
+    "/frameWork/api/bulletins",
+    "/frameWork/api/bulletin",
+    "/frameWork/api/bulletin/latest",
+    "/frameWork/api/public/bulletins",
+    "/frameWork/api/public/bulletin/latest",
+    "/frameWork/api/reservoir",
+    "/frameWork/api/reservoir/storage",
+    "/frameWork/api/reservoir-storage",
+    "/frameWork/api/reservoir-storage/latest",
+    "/frameWork/api/storage",
+    "/frameWork/api/storage/latest",
+    # admin/api paths (from session_summary.txt Laravel/Lumen backend)
     "/api/bulletins",
     "/api/bulletin",
-    "/api/bulletin-list",
-    "/api/bulletins/latest",
     "/api/bulletin/latest",
+    "/api/bulletins/latest",
     "/api/reservoirs",
     "/api/reservoir-storage",
     "/api/reservoir-storage/latest",
-    "/api/storage",
     "/api/v1/bulletins",
-    "/api/v1/bulletin",
     "/api/v1/reservoir-storage",
     "/bulletins",
     "/reservoir-storage",
-    "/storage/latest",
 ]
+
+# ── RSMS public dashboard base (discovered from user observation) ─────────────
+# rsms.cwc.gov.in/frameWork/web/public-dashboard is a public Angular dashboard
+# Its backend API is likely at /frameWork/api/*
+RSMS_FRAMEWORK_BASE   = f"{RSMS_BASE_URL}/frameWork"
+RSMS_FRAMEWORK_PUBDASH = f"{RSMS_BASE_URL}/frameWork/web/public-dashboard"
 
 # ── CWC general HTML (fallback) ───────────────────────────────────────────────
 CWC_HTML_URL = "https://cwc.gov.in/reservoir-storage-information"
@@ -208,10 +227,17 @@ def fetch_rsms_api() -> list:
     # Try without auth first, then with auth
     cookie_options = [""] + ([cookie] if cookie else [])
 
+    # Try admin base (session_summary.txt) and frameWork base (public-dashboard)
+    api_bases = [
+        (RSMS_API_BASE,       "admin"),
+        (RSMS_FRAMEWORK_BASE, "frameWork"),
+    ]
+
     for ck in cookie_options:
         auth_label = "with cookie" if ck else "no auth"
-        for route in RSMS_API_ROUTES:
-            url = f"{RSMS_API_BASE}{route}"
+        for base_url, base_label in api_bases:
+          for route in RSMS_API_ROUTES:
+            url = f"{base_url}{route}"
             try:
                 resp = requests.get(
                     url, headers=_headers(ck), timeout=15
@@ -235,12 +261,12 @@ def fetch_rsms_api() -> list:
                     continue
                 records = _parse_api_rows(raw, today_str, url)
                 if records:
-                    print(f"   ✅ RSMS API ({auth_label}): {url}  ({len(records)} reservoirs)")
+                    print(f"   ✅ RSMS API ({base_label}, {auth_label}): {url}  ({len(records)} reservoirs)")
                     return records
             except Exception as exc:
-                print(f"   RSMS API {route} ({auth_label}): {exc}")
+                print(f"   RSMS API {route} ({base_label}, {auth_label}): {exc}")
 
-    print("   RSMS API: no working endpoint found")
+    print("   RSMS API: no working endpoint found on admin or frameWork base")
     return []
 
 
@@ -454,13 +480,22 @@ def fetch_rsms_bundle_scan() -> list:
     today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
     try:
-        # Fetch the RSMS homepage to find bundle script tags
-        resp = requests.get(
+        # Try both the main homepage and the public-dashboard page
+        # Public-dashboard is the known Angular entry point (user observation)
+        scan_urls = [
             f"{RSMS_BASE_URL}/",
-            headers=_headers(cookie), timeout=20
-        )
-        if resp.status_code != 200:
-            print(f"   RSMS bundle scan: homepage returned {resp.status_code}")
+            RSMS_FRAMEWORK_PUBDASH,
+        ]
+        resp = None
+        for scan_url in scan_urls:
+            r = requests.get(scan_url, headers=_headers(cookie), timeout=20)
+            if r.status_code == 200:
+                resp = r
+                print(f"   RSMS bundle scan: fetched {scan_url}")
+                break
+            print(f"   RSMS bundle scan: {scan_url} → {r.status_code}")
+        if resp is None:
+            print("   RSMS bundle scan: no accessible entry point found")
             return []
 
         # Find Angular bundle JS filenames from <script src="..."> tags
