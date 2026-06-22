@@ -1,11 +1,11 @@
 date,name,state,capacity_bcm,live_storage_bcm,live_storage_pct,ten_yr_avg_pct,deficit_pct,status,source
-2026-06-22,Bhakra (Gobind Sagar),Punjab/HP,9.34,0.0,0.0,0.0,0.0,Data Unavailable,STALE (last known) — STALE (last known) — Stub — all live sources failed
-2026-06-22,Hirakud,Odisha,8.14,0.0,0.0,0.0,0.0,Data Unavailable,STALE (last known) — STALE (last known) — Stub — all live sources failed
-2026-06-22,Nagarjunasagar,Telangana/AP,11.56,0.0,0.0,0.0,0.0,Data Unavailable,STALE (last known) — STALE (last known) — Stub — all live sources failed
-2026-06-22,Srisailam,Telangana/AP,8.72,0.0,0.0,0.0,0.0,Data Unavailable,STALE (last known) — STALE (last known) — Stub — all live sources failed
-2026-06-22,Indira Sagar (Narmada),Madhya Pradesh,12.22,0.0,0.0,0.0,0.0,Data Unavailable,STALE (last known) — STALE (last known) — Stub — all live sources failed
-2026-06-22,Tungabhadra,Karnataka,3.7,0.0,0.0,0.0,0.0,Data Unavailable,STALE (last known) — STALE (last known) — Stub — all live sources failed
-2026-06-22,Koyna,Maharashtra,2.8,0.0,0.0,0.0,0.0,Data Unavailable,STALE (last known) — STALE (last known) — Stub — all live sources failed
-2026-06-22,Tehri,Uttarakhand,3.54,0.0,0.0,0.0,0.0,Data Unavailable,STALE (last known) — STALE (last known) — Stub — all live sources failed
-2026-06-22,Ukai,Gujarat,7.42,0.0,0.0,0.0,0.0,Data Unavailable,STALE (last known) — STALE (last known) — Stub — all live sources failed
-2026-06-22,Almatti,Karnataka,3.48,0.0,0.0,0.0,0.0,Data Unavailable,STALE (last known) — STALE (last known) — Stub — all live sources failed
+2026-06-22,Bhakra (Gobind Sagar),Punjab/HP,9.34,0.0,0.0,0.0,0.0,Data Unavailable,STALE (last known) — STALE (last known) — STALE (last known) — Stub — all live sources failed
+2026-06-22,Hirakud,Odisha,8.14,0.0,0.0,0.0,0.0,Data Unavailable,STALE (last known) — STALE (last known) — STALE (last known) — Stub — all live sources failed
+2026-06-22,Nagarjunasagar,Telangana/AP,11.56,0.0,0.0,0.0,0.0,Data Unavailable,STALE (last known) — STALE (last known) — STALE (last known) — Stub — all live sources failed
+2026-06-22,Srisailam,Telangana/AP,8.72,0.0,0.0,0.0,0.0,Data Unavailable,STALE (last known) — STALE (last known) — STALE (last known) — Stub — all live sources failed
+2026-06-22,Indira Sagar (Narmada),Madhya Pradesh,12.22,0.0,0.0,0.0,0.0,Data Unavailable,STALE (last known) — STALE (last known) — STALE (last known) — Stub — all live sources failed
+2026-06-22,Tungabhadra,Karnataka,3.7,0.0,0.0,0.0,0.0,Data Unavailable,STALE (last known) — STALE (last known) — STALE (last known) — Stub — all live sources failed
+2026-06-22,Koyna,Maharashtra,2.8,0.0,0.0,0.0,0.0,Data Unavailable,STALE (last known) — STALE (last known) — STALE (last known) — Stub — all live sources failed
+2026-06-22,Tehri,Uttarakhand,3.54,0.0,0.0,0.0,0.0,Data Unavailable,STALE (last known) — STALE (last known) — STALE (last known) — Stub — all live sources failed
+2026-06-22,Ukai,Gujarat,7.42,0.0,0.0,0.0,0.0,Data Unavailable,STALE (last known) — STALE (last known) — STALE (last known) — Stub — all live sources failed
+2026-06-22,Almatti,Karnataka,3.48,0.0,0.0,0.0,0.0,Data Unavailable,STALE (last known) — STALE (last known) — STALE (last known) — Stub — all live sources failed
