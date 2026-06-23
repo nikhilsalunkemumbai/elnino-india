@@ -47,13 +47,21 @@ Data is fetched daily by GitHub Actions from permanent, public-domain sources. N
 | SOI | NOAA/CPC — https://www.cpc.ncep.noaa.gov/ | — |
 | IOD / DMI | NOAA PSL ERSSTv5 — https://psl.noaa.gov/ | JAMSTEC — https://www.jamstec.go.jp/ |
 | Rainfall anomalies | CHIRPS v3 (CHC/UCSB) — https://chc.ucsb.edu/data/chirps3 | NOAA PSL CPC Unified Gauge |
+<<<<<<< HEAD
 | Reservoir storage | CWC RSMS public dashboard — https://rsms.cwc.gov.in/frameWork/web/public-dashboard | Linked directly; not fetched by ETL |
+=======
+| Reservoir storage | CWC RSMS bulletin PDF — https://rsms.cwc.gov.in/ | Stale git data (last known values) |
+>>>>>>> 3417b3277c343fca9e1146920c442d9d531aeecd
 
 > **Note on IOD source:** BOM Australia switched to a revised index methodology in September 2025. This dashboard sources the IOD/DMI independently from NOAA PSL ERSSTv5 data, with JAMSTEC as fallback, ensuring continuity regardless of BOM's internal changes. IOD values from this dashboard may differ slightly from BOM's published figures.
 
 > **Note on CHIRPS:** This dashboard uses CHIRPS v3, which became operational in January 2025 and replaces v2 (retiring December 2026).
 
+<<<<<<< HEAD
 > **Note on reservoir data:** Live reservoir storage is provided directly via the [CWC RSMS public dashboard](https://rsms.cwc.gov.in/frameWork/web/public-dashboard), which is maintained by the Central Water Commission and updated every Thursday. The Monsoon Stress Index uses a neutral 60% placeholder for the reservoir component (10% weight) rather than attempting to fetch and parse the bulletin programmatically.
+=======
+> **Note on reservoir data:** The CWC RSMS bulletin is published weekly (Thursdays). Fetching it from GitHub Actions requires a session cookie (`RSMS_SESSION_COOKIE` secret). Without the cookie, the dashboard displays a data-unavailable notice for the reservoir section and uses a neutral fallback in the stress index. See the README for setup instructions.
+>>>>>>> 3417b3277c343fca9e1146920c442d9d531aeecd
 
 ## Technology
 

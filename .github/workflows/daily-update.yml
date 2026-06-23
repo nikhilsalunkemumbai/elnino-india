@@ -35,6 +35,17 @@ jobs:
       - name: Fetch India rainfall (CHIRPS v3)
         run: python scripts/update_rainfall.py
 
+<<<<<<< HEAD
+=======
+      - name: Fetch reservoir storage (RSMS PDF → stale fallback)
+        # Non-fatal: reservoir failure must not block ENSO/IOD/rainfall deploy.
+        # Without RSMS_SESSION_COOKIE the PDF returns 401 and the dashboard
+        # shows a data-unavailable notice. See README for setup instructions.
+        env:
+          RSMS_SESSION_COOKIE: ${{ secrets.RSMS_SESSION_COOKIE }}
+        run: python scripts/update_reservoirs.py || echo "⚠️ Reservoir fetch failed — stale data used"
+
+>>>>>>> 3417b3277c343fca9e1146920c442d9d531aeecd
       - name: Commit updated data files
         run: |
           git config user.name  "github-actions[bot]"
@@ -65,6 +76,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+<<<<<<< HEAD
+=======
+          # No cache: npm — requires package-lock.json which is not committed.
+          # npm install generates it fresh each run; caching is handled by pip cache above.
+>>>>>>> 3417b3277c343fca9e1146920c442d9d531aeecd
 
       - name: Install Node dependencies
         run: npm install
