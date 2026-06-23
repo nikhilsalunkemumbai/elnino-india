@@ -8,7 +8,7 @@ The **India El Niño Intelligence Dashboard** is a free, open-source climate mon
 
 ## Why This Dashboard Exists
 
-Global climate monitors like NOAA and BOM report ENSO status in Pacific-centric terms. This dashboard translates those signals into **India-specific risk indicators** — rainfall deficits, reservoir stress, and heatwave likelihood — giving journalists, policymakers, and farming communities actionable intelligence.
+Global climate monitors like NOAA report ENSO status in Pacific-centric terms. This dashboard translates those signals into **India-specific risk indicators** — rainfall deficits, reservoir stress, and drought likelihood — giving journalists, policymakers, and farming communities actionable intelligence.
 
 ## Indicators Explained
 
@@ -23,7 +23,7 @@ Global climate monitors like NOAA and BOM report ENSO status in Pacific-centric 
 
 ## Methodology
 
-The **Monsoon Stress Index** is a weighted composite:
+The **Monsoon Stress Index** is a weighted composite of five climate and water indicators:
 
 | Component | Weight |
 |-----------|--------|
@@ -35,27 +35,31 @@ The **Monsoon Stress Index** is a weighted composite:
 
 Scores: **0–24** Low · **25–49** Moderate · **50–74** High · **75–100** Severe
 
+> **Note:** The Monsoon Stress Index is an experimental composite indicator, not a peer-reviewed forecast product. Weights reflect the relative importance of each driver in historical India monsoon literature but have not been formally backtested. Use alongside IMD seasonal forecasts and official advisories.
+
 ## Data Sources
 
-Data is fetched daily by GitHub Actions from the following permanent, public-domain sources. No API keys or registration are required for any of them.
+Data is fetched daily by GitHub Actions from permanent, public-domain sources. No API keys or registration are required for NOAA, CHIRPS, or JAMSTEC sources.
 
 | Indicator | Primary source | Fallback |
-|-----------|---------------|---------|
+|-----------|---------------|---------| 
 | Niño3.4 / ONI | NOAA/CPC — https://www.cpc.ncep.noaa.gov/ | NOAA/PSL ERSSTv5 |
 | SOI | NOAA/CPC — https://www.cpc.ncep.noaa.gov/ | — |
 | IOD / DMI | NOAA PSL ERSSTv5 — https://psl.noaa.gov/ | JAMSTEC — https://www.jamstec.go.jp/ |
 | Rainfall anomalies | CHIRPS v3 (CHC/UCSB) — https://chc.ucsb.edu/data/chirps3 | NOAA PSL CPC Unified Gauge |
-| Reservoir storage | India-WRIS (CWC/NHP) — https://indiawris.gov.in/ | CWC PDF Bulletin → data.gov.in |
+| Reservoir storage | CWC RSMS bulletin PDF — https://rsms.cwc.gov.in/ | Stale git data (last known values) |
 
-> **Note on IOD source:** BOM Australia switched to a revised index methodology in September 2025. This dashboard sources the IOD/DMI independently from NOAA PSL ERSSTv5 data, with JAMSTEC as fallback, ensuring continuity regardless of BOM's internal URL changes.
+> **Note on IOD source:** BOM Australia switched to a revised index methodology in September 2025. This dashboard sources the IOD/DMI independently from NOAA PSL ERSSTv5 data, with JAMSTEC as fallback, ensuring continuity regardless of BOM's internal changes. IOD values from this dashboard may differ slightly from BOM's published figures.
 
 > **Note on CHIRPS:** This dashboard uses CHIRPS v3, which became operational in January 2025 and replaces v2 (retiring December 2026).
+
+> **Note on reservoir data:** The CWC RSMS bulletin is published weekly (Thursdays). Fetching it from GitHub Actions requires a session cookie (`RSMS_SESSION_COOKIE` secret). Without the cookie, the dashboard displays a data-unavailable notice for the reservoir section and uses a neutral fallback in the stress index. See the README for setup instructions.
 
 ## Technology
 
 Built with [Observable Framework](https://observablehq.com/framework/), Python ETL scripts, GitHub Actions for daily automation, and GitHub Pages for free static hosting. All dependencies are open-source.
 
-**Python dependencies:** `requests`, `numpy`, `pandas`, `pdfplumber`
+**Python dependencies:** `requests`, `numpy`, `pandas`, `pdfplumber`, `beautifulsoup4`
 
 All code is open-source under the **MIT License**.
 
