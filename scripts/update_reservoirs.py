@@ -1,75 +1,49 @@
 """
 update_reservoirs.py
-Fetches India major reservoir live storage from CWC RSMS.
+Fetches India major reservoir storage from the CWC RSMS weekly bulletin PDF.
 
-═══════════════════════════════════════════════════════════════════════════════
-SESSION SUMMARY ALIGNMENT (session_summary.txt)
-═══════════════════════════════════════════════════════════════════════════════
+Source
+------
+  CWC Reservoir Storage Monitoring System (RSMS)
+  https://rsms.cwc.gov.in
+  Published every Thursday.
 
-Key facts established:
-  • RSMS = Reservoir Storage Monitoring System (rsms.cwc.gov.in)
-  • RSMS is the authoritative CWC reservoir data source
-  • Published every Thursday
-  • Bulletin URL pattern (confirmed):
-      https://rsms.cwc.gov.in/admin/storage/bulletins/bulletin-DD-MM-YYYY-SEQ.pdf
-  • Anchor: bulletin-18-06-2026-105.pdf = Thursday 18 Jun 2026
-  • Backend: Laravel/Lumen 11.1.0 at rsms.cwc.gov.in/admin/
-  • Frontend: Angular — does NOT render bulletin links in static HTML
-  • Angular calls a backend API to populate bulletin listings
+  Bulletin URL pattern (confirmed from bulletin #105, 18 Jun 2026):
+    https://rsms.cwc.gov.in/admin/storage/bulletins/bulletin-DD-MM-YYYY-SEQ.pdf
 
-Recommended order per session summary:
-  Approach A: Discover and call the Laravel/Lumen API directly (most robust)
-  Approach B: Scan Angular JS bundles for API endpoint references
-  Approach C: Direct PDF URL construction from known pattern + sequence
+  Sequence number: anchored at #105 for 18 Jun 2026; increments by 1 each Thursday.
 
-RSMS PDF auth status:
-  • /admin/storage/bulletins/ returned HTTP 401 from GitHub Actions runner
-  • Session summary described PDFs as "publicly accessible" — but this was
-    observed from an authenticated browser session (cookie present)
-  • RSMS_SESSION_COOKIE secret enables Tier 1B and all PDF download attempts
-  • Without the cookie, Tier 1A (RSMS API probe — may be public) is tried first
+Authentication
+--------------
+  The bulletin PDF endpoint requires an authenticated session from CI runners
+  (returns HTTP 401 without a valid cookie). To enable live data:
 
-User observation: "rsms html shows bulletin from last thursday"
-  • The Angular frontend at rsms.cwc.gov.in IS accessible and displays the
-    latest bulletin. The Angular app fetches bulletin data from a backend API.
-  • We probe that API without auth first — public listing endpoints are common
-    in Laravel even when file downloads require auth.
+    1. Log in at https://rsms.cwc.gov.in in a browser
+    2. Open DevTools → Application → Cookies → copy the session cookie string
+    3. Add as a GitHub Actions secret named RSMS_SESSION_COOKIE
 
-═══════════════════════════════════════════════════════════════════════════════
-TIER ORDER (RSMS-first as per session summary)
-═══════════════════════════════════════════════════════════════════════════════
+  Without the cookie the script falls back to stale git data and exits 0
+  (reservoir failure must not block ENSO/IOD/rainfall deployment).
 
-Tier 1A — RSMS Laravel/Lumen API (no auth — public listing probe)
-  Probes plausible REST routes at rsms.cwc.gov.in/admin/api/* without cookie.
-  A bulletin listing API would return JSON with bulletin metadata + PDF URLs.
-  If found, also attempts to download the referenced PDF (with cookie if set).
+Data extracted
+--------------
+  Regional summary rows from the bulletin — NOT individual reservoir rows.
+  The bulletin provides pre-computed regional totals (Northern / Western /
+  Central / Eastern / Southern / All India) which are all the dashboard needs.
+  Parsing summary rows is simpler and more robust than parsing 166 reservoir rows.
 
-Tier 1B — RSMS PDF direct URL (Approach C from session summary)
-  Constructs the PDF URL from anchor date + sequence number.
-  Tries WITHOUT cookie first (per "publicly accessible" session summary note).
-  If 401, retries WITH cookie if RSMS_SESSION_COOKIE secret is configured.
-  Parses with pdfplumber.
-
-Tier 1C — RSMS Angular bundle scan (Approach B from session summary)
-  Downloads rsms.cwc.gov.in JS bundles and searches for API endpoint strings.
-  If found, calls the discovered endpoint.
-
-Tier 2 — CWC general HTML (cwc.gov.in)
-  Public HTML page. Older data (as noted by user) but no auth required.
-
-Tier 3 — Stale git data (non-fatal)
-  Re-uses last committed reservoirs.csv. Marks rows as STALE.
-  Ensures dashboard never goes blank.
-
-NON-FATAL: script exits 0 regardless — reservoir failure must not block
-ENSO/IOD/SOI/rainfall deployment.
+Pipeline
+--------
+  Tier 1 — RSMS bulletin PDF  (requires RSMS_SESSION_COOKIE secret)
+  Tier 2 — Stale git data     (last committed reservoirs.csv; never fails)
 
 Output: data/reservoirs.csv
+  Columns: date, name, state, capacity_bcm, live_storage_bcm,
+           live_storage_pct, ten_yr_avg_pct, deficit_pct, status, source
 """
 
 import csv
 import io
-import json
 import os
 import re
 import requests
@@ -80,55 +54,15 @@ from pathlib import Path
 DATA_DIR = Path(__file__).parent.parent / "data"
 DATA_DIR.mkdir(exist_ok=True)
 
-# ── RSMS constants (session_summary.txt) ──────────────────────────────────────
-RSMS_BASE_URL      = "https://rsms.cwc.gov.in"
-RSMS_BULLETIN_BASE = f"{RSMS_BASE_URL}/admin/storage/bulletins"
-RSMS_API_BASE      = f"{RSMS_BASE_URL}/admin"
+# ── RSMS constants ────────────────────────────────────────────────────────────
+RSMS_BULLETIN_BASE = "https://rsms.cwc.gov.in/admin/storage/bulletins"
 RSMS_ANCHOR_DATE   = date(2026, 6, 18)   # confirmed Thursday, bulletin #105
 RSMS_ANCHOR_SEQ    = 105
+# Note: sequence number is believed to increment weekly from the anchor above.
+# If RSMS resets their sequence counter, update RSMS_ANCHOR_DATE and
+# RSMS_ANCHOR_SEQ to a freshly confirmed bulletin filename.
 
-# Plausible REST routes to probe on rsms.cwc.gov.in
-# Includes /frameWork/ paths discovered from public-dashboard URL (user observation):
-#   rsms.cwc.gov.in/frameWork/web/public-dashboard  ← Angular public dashboard
-#   The Angular app fetches from a /frameWork/api/* backend
-# Also includes /admin/api/* paths from session_summary.txt Laravel/Lumen backend
-RSMS_API_ROUTES = [
-    # frameWork paths (from public-dashboard URL structure)
-    "/frameWork/api/bulletins",
-    "/frameWork/api/bulletin",
-    "/frameWork/api/bulletin/latest",
-    "/frameWork/api/public/bulletins",
-    "/frameWork/api/public/bulletin/latest",
-    "/frameWork/api/reservoir",
-    "/frameWork/api/reservoir/storage",
-    "/frameWork/api/reservoir-storage",
-    "/frameWork/api/reservoir-storage/latest",
-    "/frameWork/api/storage",
-    "/frameWork/api/storage/latest",
-    # admin/api paths (from session_summary.txt Laravel/Lumen backend)
-    "/api/bulletins",
-    "/api/bulletin",
-    "/api/bulletin/latest",
-    "/api/bulletins/latest",
-    "/api/reservoirs",
-    "/api/reservoir-storage",
-    "/api/reservoir-storage/latest",
-    "/api/v1/bulletins",
-    "/api/v1/reservoir-storage",
-    "/bulletins",
-    "/reservoir-storage",
-]
-
-# ── RSMS public dashboard base (discovered from user observation) ─────────────
-# rsms.cwc.gov.in/frameWork/web/public-dashboard is a public Angular dashboard
-# Its backend API is likely at /frameWork/api/*
-RSMS_FRAMEWORK_BASE   = f"{RSMS_BASE_URL}/frameWork"
-RSMS_FRAMEWORK_PUBDASH = f"{RSMS_BASE_URL}/frameWork/web/public-dashboard"
-
-# ── CWC general HTML (fallback) ───────────────────────────────────────────────
-CWC_HTML_URL = "https://cwc.gov.in/reservoir-storage-information"
-
-# ── Capacity reference ────────────────────────────────────────────────────────
+# ── Capacity reference (used to fill state when parsing summary rows) ─────────
 KNOWN_RESERVOIRS = [
     {"name": "Bhakra (Gobind Sagar)",  "state": "Punjab/HP",       "capacity_bcm": 9.34},
     {"name": "Hirakud",                "state": "Odisha",           "capacity_bcm": 8.14},
@@ -175,9 +109,8 @@ def _headers(cookie: str = "") -> dict:
             "AppleWebKit/537.36 (KHTML, like Gecko) "
             "Chrome/125.0.0.0 Safari/537.36"
         ),
-        "Accept":  "application/json, text/html, */*",
-        "Referer": f"{RSMS_BASE_URL}/",
-        "Origin":  RSMS_BASE_URL,
+        "Accept":  "application/pdf, */*",
+        "Referer": "https://rsms.cwc.gov.in/",
     }
     if cookie:
         h["Cookie"] = cookie
@@ -185,19 +118,20 @@ def _headers(cookie: str = "") -> dict:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# RSMS bulletin candidate URL generator
+# Bulletin URL candidates
 # ─────────────────────────────────────────────────────────────────────────────
 
 def rsms_candidates() -> list[tuple[date, int, str]]:
     """
-    Yields (date, seq, url) for the last 4 Thursdays.
-    Sequence derived from session summary anchor: #105 = 18 Jun 2026.
+    Returns (date, seq, url) for the last 4 Thursdays.
+    Sequence is derived from the confirmed anchor: #105 = 18 Jun 2026.
+    Try 4 candidates so a missed week doesn't block the pipeline.
     """
     today          = date.today()
     days_since_thu = (today.weekday() - 3) % 7
     last_thursday  = today - timedelta(days=days_since_thu)
-    weeks          = (last_thursday - RSMS_ANCHOR_DATE).days // 7
-    current_seq    = RSMS_ANCHOR_SEQ + weeks
+    weeks_since    = (last_thursday - RSMS_ANCHOR_DATE).days // 7
+    current_seq    = RSMS_ANCHOR_SEQ + weeks_since
     result         = []
     for w in range(4):
         d   = last_thursday - timedelta(weeks=w)
@@ -212,115 +146,14 @@ def rsms_candidates() -> list[tuple[date, int, str]]:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Tier 1A — RSMS Laravel/Lumen API (no-auth probe first, then with cookie)
-# ─────────────────────────────────────────────────────────────────────────────
-
-def fetch_rsms_api() -> list:
-    """
-    Probe RSMS Lumen REST routes for a public bulletin/reservoir listing.
-    Tries without cookie first (public listing APIs are common in Laravel).
-    Falls back to cookie-authenticated request if RSMS_SESSION_COOKIE is set.
-    """
-    cookie    = os.environ.get("RSMS_SESSION_COOKIE", "").strip()
-    today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-
-    # Try without auth first, then with auth
-    cookie_options = [""] + ([cookie] if cookie else [])
-
-    # Try admin base (session_summary.txt) and frameWork base (public-dashboard)
-    api_bases = [
-        (RSMS_API_BASE,       "admin"),
-        (RSMS_FRAMEWORK_BASE, "frameWork"),
-    ]
-
-    for ck in cookie_options:
-        auth_label = "with cookie" if ck else "no auth"
-        for base_url, base_label in api_bases:
-          for route in RSMS_API_ROUTES:
-            url = f"{base_url}{route}"
-            try:
-                resp = requests.get(
-                    url, headers=_headers(ck), timeout=15
-                )
-                if resp.status_code in (401, 403, 404):
-                    continue
-                if resp.status_code != 200:
-                    continue
-                if "json" not in resp.headers.get("Content-Type", "").lower():
-                    continue
-                data = resp.json()
-                # Skip Laravel "route not found" responses
-                if isinstance(data, dict) and data.get("message") == "Route not found.":
-                    continue
-                raw = (
-                    data if isinstance(data, list) else
-                    data.get("data") or data.get("result") or
-                    data.get("bulletins") or data.get("reservoirs") or []
-                )
-                if not raw or not isinstance(raw, list):
-                    continue
-                records = _parse_api_rows(raw, today_str, url)
-                if records:
-                    print(f"   ✅ RSMS API ({base_label}, {auth_label}): {url}  ({len(records)} reservoirs)")
-                    return records
-            except Exception as exc:
-                print(f"   RSMS API {route} ({base_label}, {auth_label}): {exc}")
-
-    print("   RSMS API: no working endpoint found on admin or frameWork base")
-    return []
-
-
-def _parse_api_rows(raw: list, today_str: str, source_url: str) -> list:
-    records = []
-    for item in raw:
-        if not isinstance(item, dict):
-            continue
-        il    = {k.lower(): v for k, v in item.items()}
-        name  = (il.get("reservoir_name") or il.get("reservoirname") or
-                 il.get("name") or il.get("dam_name") or "").strip()
-        if not name:
-            continue
-        cap   = _float(il.get("total_capacity") or il.get("totalcapacity") or
-                       CAPACITY_LOOKUP.get(name, {}).get("capacity_bcm", 0))
-        live  = _float(il.get("live_storage") or il.get("livestorage") or
-                       il.get("current_storage") or il.get("currentstorage"))
-        avg   = _float(il.get("normal_storage") or il.get("normalavgstorage") or
-                       il.get("avg_storage") or il.get("ten_year_avg"))
-        state = (il.get("state_name") or il.get("statename") or il.get("state") or
-                 CAPACITY_LOOKUP.get(name, {}).get("state", "")).strip()
-        live_pct = round(live / cap * 100, 1) if cap else 0.0
-        avg_pct  = round(avg  / cap * 100, 1) if cap else 0.0
-        records.append({
-            "date":             today_str,
-            "name":             name,
-            "state":            state,
-            "capacity_bcm":     round(cap,  2),
-            "live_storage_bcm": round(live, 3),
-            "live_storage_pct": live_pct,
-            "ten_yr_avg_pct":   avg_pct,
-            "deficit_pct":      round(live_pct - avg_pct, 1),
-            "status":           storage_status(live_pct),
-            "source":           f"RSMS API ({source_url})",
-        })
-    return records
-
-
-# ─────────────────────────────────────────────────────────────────────────────
-# Tier 1B — RSMS PDF direct URL (Approach C from session summary)
+# Tier 1 — RSMS bulletin PDF
 # ─────────────────────────────────────────────────────────────────────────────
 
 def fetch_rsms_pdf() -> list:
     """
-    Constructs the RSMS bulletin PDF URL from the confirmed pattern and
-    anchor date in session_summary.txt.
-
-    Tries WITHOUT cookie first (session summary says "publicly accessible").
-    If 401, retries WITH cookie (RSMS_SESSION_COOKIE secret).
-
-    To enable cookie: GitHub repo → Settings → Secrets and variables →
-    Actions → New repository secret → Name: RSMS_SESSION_COOKIE
-    Value: the session cookie string from browser DevTools after logging
-    in at https://rsms.cwc.gov.in/
+    Downloads the RSMS weekly bulletin PDF and extracts regional summary rows.
+    Requires RSMS_SESSION_COOKIE secret (see module docstring).
+    Returns [] if the PDF cannot be fetched or parsed.
     """
     try:
         import pdfplumber
@@ -331,323 +164,106 @@ def fetch_rsms_pdf() -> list:
     cookie     = os.environ.get("RSMS_SESSION_COOKIE", "").strip()
     today_str  = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     candidates = rsms_candidates()
+
+    if not cookie:
+        print(
+            "   ℹ️  RSMS_SESSION_COOKIE not set — bulletin PDF will likely return 401.\n"
+            "   To enable live reservoir data: repo Settings → Secrets → RSMS_SESSION_COOKIE"
+        )
+
     print(f"   RSMS PDF: trying {len(candidates)} candidates …")
-
     for bulletin_date, seq, url in candidates:
-        # Attempt 1: no cookie (session summary: "publicly accessible")
-        for ck, auth_label in [("", "no auth"), (cookie, "with cookie")]:
-            if auth_label == "with cookie" and not cookie:
-                continue   # no point retrying without a cookie to use
-            try:
-                resp = requests.get(url, headers=_headers(ck), timeout=45)
-
-                if resp.status_code == 200:
-                    records = _parse_rsms_pdf(resp.content, today_str, url)
-                    if records:
-                        print(
-                            f"   ✅ RSMS PDF [{seq}] "
-                            f"bulletin-{bulletin_date.day:02d}-{bulletin_date.month:02d}"
-                            f"-{bulletin_date.year}-{seq}.pdf  "
-                            f"({len(records)} reservoirs, {auth_label})"
-                        )
-                        return records
-                    print(f"   RSMS PDF [{seq}] ({auth_label}): downloaded but 0 rows parsed")
-                    break   # don't retry with cookie if we got 200 but no data
-
-                elif resp.status_code == 401:
-                    print(f"   RSMS PDF [{seq}] ({auth_label}): 401 Unauthorized")
-                    if not cookie:
-                        print(
-                            "   → Add RSMS_SESSION_COOKIE as a GitHub Actions secret to enable auth"
-                        )
-                    # continue to next auth option (try with cookie)
-
-                else:
-                    print(f"   RSMS PDF [{seq}] ({auth_label}): HTTP {resp.status_code}")
-                    break   # non-auth error — skip to next week
-
-            except Exception as exc:
-                print(f"   RSMS PDF [{seq}] ({auth_label}): {exc}")
-                break
+        try:
+            resp = requests.get(url, headers=_headers(cookie), timeout=45)
+            if resp.status_code == 401:
+                print(f"   RSMS PDF [{seq}]: 401 Unauthorized — cookie missing or expired")
+                break   # All candidates will return 401 without a valid cookie
+            if resp.status_code != 200:
+                print(f"   RSMS PDF [{seq}]: HTTP {resp.status_code} — skipping")
+                continue
+            records = _parse_bulletin_pdf(resp.content, today_str, url)
+            if records:
+                print(
+                    f"   ✅ RSMS PDF [{seq}] "
+                    f"bulletin-{bulletin_date.day:02d}-{bulletin_date.month:02d}"
+                    f"-{bulletin_date.year}-{seq}.pdf  ({len(records)} rows)"
+                )
+                return records
+            print(f"   RSMS PDF [{seq}]: downloaded but 0 rows parsed")
+        except Exception as exc:
+            print(f"   RSMS PDF [{seq}]: {exc}")
 
     return []
 
 
-def _parse_rsms_pdf(content: bytes, today_str: str, source_url: str) -> list:
+def _parse_bulletin_pdf(content: bytes, today_str: str, source_url: str) -> list:
+    """
+    Extracts regional summary rows from the bulletin PDF.
+    The bulletin provides pre-computed rows for Northern, Western, Central,
+    Eastern, Southern regions and an All India total — 6 rows per bulletin.
+    These are the only rows the dashboard requires.
+    """
     import pdfplumber
+
+    REGION_NAMES = {"northern", "western", "central", "eastern", "southern", "all india"}
     records = []
+
     with pdfplumber.open(io.BytesIO(content)) as pdf:
         for page in pdf.pages:
             for table in (page.extract_tables() or []):
                 for row in table:
-                    parsed = _parse_rsms_row(row, today_str, source_url)
-                    if parsed:
-                        records.append(parsed)
-            if not records:
-                text = page.extract_text() or ""
-                records.extend(_parse_rsms_text(text, today_str, source_url))
-    # Deduplicate by name
-    seen = {}
+                    if not row:
+                        continue
+                    # Find rows where first or second cell matches a region name
+                    cells = [str(c or "").strip() for c in row]
+                    label = next(
+                        (c for c in cells[:3] if c.lower() in REGION_NAMES),
+                        None
+                    )
+                    if not label:
+                        continue
+                    nums = [_float(c) for c in cells if _float(c) > 0]
+                    if len(nums) < 2:
+                        continue
+                    # Column order in RSMS summary table:
+                    # Total capacity | Last year storage | Last year % | Normal storage | Normal % | Current storage | Current %
+                    # Positions vary slightly — take the last 3 positive numerics as
+                    # (normal_pct, current_storage, current_pct) when 3+ are present
+                    capacity     = nums[0] if nums else 0.0
+                    current_pct  = nums[-1] if len(nums) >= 1 else 0.0
+                    last_yr_pct  = nums[-3] if len(nums) >= 3 else 0.0
+                    normal_pct   = nums[-5] if len(nums) >= 5 else 0.0
+                    live_bcm     = nums[-2] if len(nums) >= 2 else 0.0
+
+                    records.append({
+                        "date":             today_str,
+                        "name":             label.title(),
+                        "state":            label.title(),
+                        "capacity_bcm":     round(capacity,    2),
+                        "live_storage_bcm": round(live_bcm,    3),
+                        "live_storage_pct": round(current_pct, 1),
+                        "ten_yr_avg_pct":   round(normal_pct,  1),
+                        "deficit_pct":      round(current_pct - normal_pct, 1),
+                        "status":           storage_status(current_pct),
+                        "source":           f"CWC RSMS Bulletin PDF ({source_url})",
+                    })
+
+    # Deduplicate by region name (keep first occurrence)
+    seen    = {}
     for r in records:
-        seen[r["name"].lower()] = r
+        seen.setdefault(r["name"].lower(), r)
     return list(seen.values())
 
 
-def _parse_rsms_row(row: list, today_str: str, source_url: str) -> dict | None:
-    if not row or len(row) < 5:
-        return None
-    REGIONS    = {"northern", "eastern", "western", "southern", "central"}
-    has_region = str(row[1] or "").strip().lower() in REGIONS
-    if has_region:
-        state_col, name_col, cap_col, live_col, pct_col, avg_col = 2, 3, 4, 5, 6, 8
-    else:
-        state_col, name_col, cap_col, live_col, pct_col, avg_col = 1, 2, 3, 4, 5, 6
-
-    def _g(i): return row[i] if len(row) > i else ""
-
-    name  = str(_g(name_col)  or "").strip()
-    state = str(_g(state_col) or "").strip()
-    if not name:
-        return None
-    if re.match(r"(?i)^(sl\.?|no\.?|reservoir|name|dam|total|live|#)", name):
-        return None
-    if len(name) <= 3 or (name.upper() == name and len(name) < 12):
-        return None
-
-    cap      = _float(_g(cap_col))
-    live     = _float(_g(live_col))
-    live_pct = _float(_g(pct_col))
-    avg      = _float(_g(avg_col))
-    if live_pct == 0 and cap > 0 and live > 0:
-        live_pct = round(live / cap * 100, 1)
-    avg_pct = round(avg / cap * 100, 1) if (avg > 0 and cap > 0) else 0.0
-    if not state:
-        state = CAPACITY_LOOKUP.get(name, {}).get("state", "")
-
-    return {
-        "date":             today_str,
-        "name":             name,
-        "state":            state,
-        "capacity_bcm":     round(cap,  3),
-        "live_storage_bcm": round(live, 3),
-        "live_storage_pct": round(live_pct, 1),
-        "ten_yr_avg_pct":   avg_pct,
-        "deficit_pct":      round(live_pct - avg_pct, 1),
-        "status":           storage_status(live_pct),
-        "source":           f"RSMS Bulletin PDF ({source_url})",
-    }
-
-
-def _parse_rsms_text(text: str, today_str: str, source_url: str) -> list:
-    records = []
-    pattern = re.compile(
-        r"([A-Za-z][A-Za-z\s\(\)\.]{4,40})\s+"
-        r"(\d+\.\d+)\s+(\d+\.\d+)\s+(\d+(?:\.\d+)?)"
-    )
-    for m in pattern.finditer(text):
-        name, cap, live, live_pct = (
-            m.group(1).strip(), _float(m.group(2)),
-            _float(m.group(3)),  _float(m.group(4))
-        )
-        if cap == 0 or len(name) < 5:
-            continue
-        records.append({
-            "date":             today_str,
-            "name":             name,
-            "state":            CAPACITY_LOOKUP.get(name, {}).get("state", ""),
-            "capacity_bcm":     round(cap,  3),
-            "live_storage_bcm": round(live, 3),
-            "live_storage_pct": round(live_pct, 1),
-            "ten_yr_avg_pct":   0.0,
-            "deficit_pct":      0.0,
-            "status":           storage_status(live_pct),
-            "source":           f"RSMS PDF text-fallback ({source_url})",
-        })
-    return records
-
-
 # ─────────────────────────────────────────────────────────────────────────────
-# Tier 1C — RSMS Angular bundle scan (Approach B from session summary)
-# ─────────────────────────────────────────────────────────────────────────────
-
-def fetch_rsms_bundle_scan() -> list:
-    """
-    Downloads the RSMS Angular app's main JS bundle and searches for
-    API endpoint strings. If found, calls the endpoint directly.
-    This implements Approach B from the session summary.
-    """
-    cookie    = os.environ.get("RSMS_SESSION_COOKIE", "").strip()
-    today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-
-    try:
-        # Try both the main homepage and the public-dashboard page
-        # Public-dashboard is the known Angular entry point (user observation)
-        scan_urls = [
-            f"{RSMS_BASE_URL}/",
-            RSMS_FRAMEWORK_PUBDASH,
-        ]
-        resp = None
-        for scan_url in scan_urls:
-            r = requests.get(scan_url, headers=_headers(cookie), timeout=20)
-            if r.status_code == 200:
-                resp = r
-                print(f"   RSMS bundle scan: fetched {scan_url}")
-                break
-            print(f"   RSMS bundle scan: {scan_url} → {r.status_code}")
-        if resp is None:
-            print("   RSMS bundle scan: no accessible entry point found")
-            return []
-
-        # Find Angular bundle JS filenames from <script src="..."> tags
-        bundle_urls = re.findall(
-            r'src=["\']([^"\']*(?:main|chunk|runtime)[^"\']*\.js)["\']',
-            resp.text, re.IGNORECASE
-        )
-        if not bundle_urls:
-            print("   RSMS bundle scan: no JS bundles found in HTML")
-            return []
-
-        # Download and search each bundle for API endpoint strings
-        api_endpoints = set()
-        for bundle_path in bundle_urls[:5]:   # limit to 5 bundles
-            bundle_url = (
-                bundle_path if bundle_path.startswith("http")
-                else f"{RSMS_BASE_URL}/{bundle_path.lstrip('/')}"
-            )
-            try:
-                br = requests.get(bundle_url, headers=_headers(cookie), timeout=20)
-                if br.status_code != 200:
-                    continue
-                # Search for API path strings in minified JS
-                # Patterns: "/api/...", "admin/api/...", etc.
-                for match in re.finditer(
-                    r'["\`]/(api/[a-zA-Z0-9/_\-]+)["\`]', br.text
-                ):
-                    endpoint = "/" + match.group(1)
-                    if any(kw in endpoint.lower() for kw in
-                           ["bulletin", "reservoir", "storage", "cwc"]):
-                        api_endpoints.add(endpoint)
-            except Exception as exc:
-                print(f"   Bundle {bundle_url}: {exc}")
-
-        if not api_endpoints:
-            print("   RSMS bundle scan: no API endpoints found in bundles")
-            return []
-
-        print(f"   RSMS bundle scan: found {len(api_endpoints)} candidate endpoints: {api_endpoints}")
-
-        # Call each discovered endpoint
-        for endpoint in api_endpoints:
-            url = f"{RSMS_API_BASE}{endpoint}"
-            try:
-                er = requests.get(url, headers=_headers(cookie), timeout=15)
-                if er.status_code != 200:
-                    continue
-                if "json" not in er.headers.get("Content-Type", "").lower():
-                    continue
-                data = er.json()
-                raw  = (
-                    data if isinstance(data, list) else
-                    data.get("data") or data.get("result") or
-                    data.get("bulletins") or data.get("reservoirs") or []
-                )
-                if not raw:
-                    continue
-                records = _parse_api_rows(raw, today_str, url)
-                if records:
-                    print(f"   ✅ RSMS bundle-discovered API: {url}  ({len(records)} reservoirs)")
-                    return records
-            except Exception as exc:
-                print(f"   Bundle endpoint {url}: {exc}")
-
-    except Exception as exc:
-        print(f"   RSMS bundle scan failed: {exc}")
-
-    return []
-
-
-# ─────────────────────────────────────────────────────────────────────────────
-# Tier 2 — CWC general HTML (cwc.gov.in) — older data, no auth
-# ─────────────────────────────────────────────────────────────────────────────
-
-def fetch_cwc_html() -> list:
-    try:
-        from bs4 import BeautifulSoup
-    except ImportError:
-        print("   bs4 not installed — skipping CWC HTML tier")
-        return []
-
-    today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    try:
-        resp = requests.get(
-            CWC_HTML_URL,
-            headers={"User-Agent": "Mozilla/5.0"},
-            timeout=30,
-        )
-        resp.raise_for_status()
-        soup    = BeautifulSoup(resp.text, "html.parser")
-        records = []
-
-        for table in soup.find_all("table"):
-            rows = table.find_all("tr")
-            if len(rows) < 3:
-                continue
-            header = [th.get_text(strip=True).lower()
-                      for th in rows[0].find_all(["th", "td"])]
-            if not any(k in " ".join(header)
-                       for k in ["reservoir", "capacity", "storage"]):
-                continue
-
-            for row in rows[1:]:
-                cells = [td.get_text(strip=True) for td in row.find_all(["td","th"])]
-                if len(cells) < 4:
-                    continue
-                name = state = ""
-                for cell in cells:
-                    text = cell.strip()
-                    if (not name and len(text) > 4 and
-                            not re.match(r"^[\d.\-]+$", text) and
-                            not re.match(r"(?i)^(sl|no\.|s\.no|basin|region|total)", text)):
-                        name = text
-                    elif (name and not state and len(text) > 2 and
-                            not re.match(r"^[\d.\-]+$", text)):
-                        state = text
-
-                nums = [_float(c) for c in cells if _float(c) > 0]
-                if name and len(nums) >= 2:
-                    cap      = nums[0] if nums[0] > 1 else 0.0
-                    live     = nums[1] if len(nums) > 1 else 0.0
-                    live_pct = nums[2] if len(nums) > 2 else (round(live/cap*100,1) if cap else 0.0)
-                    avg_pct  = nums[3] if len(nums) > 3 else 0.0
-                    if not state:
-                        state = CAPACITY_LOOKUP.get(name, {}).get("state", "")
-                    if cap == 0:
-                        cap = CAPACITY_LOOKUP.get(name, {}).get("capacity_bcm", 0.0)
-                    records.append({
-                        "date":             today_str,
-                        "name":             name,
-                        "state":            state,
-                        "capacity_bcm":     round(cap,  2),
-                        "live_storage_bcm": round(live, 3),
-                        "live_storage_pct": round(live_pct, 1),
-                        "ten_yr_avg_pct":   round(avg_pct,  1),
-                        "deficit_pct":      round(live_pct - avg_pct, 1),
-                        "status":           storage_status(live_pct),
-                        "source":           f"CWC HTML — note: may be older data ({CWC_HTML_URL})",
-                    })
-        return records
-
-    except Exception as exc:
-        print(f"   CWC HTML failed: {exc}")
-        return []
-
-
-# ─────────────────────────────────────────────────────────────────────────────
-# Tier 3 — Stale git data (non-fatal last resort)
+# Tier 2 — Stale git data (last committed reservoirs.csv)
 # ─────────────────────────────────────────────────────────────────────────────
 
 def fetch_stale_from_git() -> list:
-    out_path = DATA_DIR / "reservoirs.csv"
+    """
+    Re-uses the last committed reservoirs.csv. Marks rows as STALE.
+    Ensures the dashboard never goes blank. Never raises.
+    """
     try:
         result = subprocess.run(
             ["git", "show", "HEAD:data/reservoirs.csv"],
@@ -658,15 +274,19 @@ def fetch_stale_from_git() -> list:
             reader  = csv.DictReader(io.StringIO(result.stdout))
             records = []
             for row in reader:
-                row["source"] = "STALE (last known) — " + row.get("source", "unknown")
+                # Avoid compounding STALE labels on repeated failures
+                src = row.get("source", "unknown")
+                if "STALE" not in src:
+                    src = f"STALE (last known) — {src}"
+                row["source"] = src
                 records.append(row)
             if records:
-                print(f"   ✅ Stale fallback: {len(records)} reservoirs from last git commit")
+                print(f"   ✅ Stale fallback: {len(records)} rows from last git commit")
                 return records
     except Exception as exc:
         print(f"   Stale git fallback failed: {exc}")
 
-    # First-ever run — write informative stub rows
+    # First-ever run or git history unavailable — write minimal stub
     today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     stubs = []
     for r in KNOWN_RESERVOIRS[:10]:
@@ -691,40 +311,20 @@ def fetch_stale_from_git() -> list:
 # ─────────────────────────────────────────────────────────────────────────────
 
 def main():
-    cookie = os.environ.get("RSMS_SESSION_COOKIE", "").strip()
-    print(
-        "Fetching reservoir storage "
-        "(RSMS API → RSMS PDF → RSMS bundle scan → CWC HTML → stale fallback) …"
-    )
-    if not cookie:
-        print(
-            "   ℹ️  RSMS_SESSION_COOKIE not set — RSMS PDF will be tried without auth first.\n"
-            "   To enable cookie auth: repo Settings → Secrets → RSMS_SESSION_COOKIE"
-        )
+    print("Fetching reservoir storage (RSMS PDF → stale fallback) …")
 
-    tiers = [
-        ("RSMS API",          fetch_rsms_api),         # Approach A — no auth then cookie
-        ("RSMS PDF",          fetch_rsms_pdf),          # Approach C — no auth then cookie
-        ("RSMS Bundle scan",  fetch_rsms_bundle_scan),  # Approach B — discover API from JS
-        ("CWC HTML",          fetch_cwc_html),          # Fallback — older data, no auth
-        ("Stale git data",    fetch_stale_from_git),    # Last resort — never fails
-    ]
+    records     = fetch_rsms_pdf()
+    source_used = "RSMS PDF"
 
-    records      = []
-    source_used  = ""
-    for label, fn in tiers:
-        records = fn()
-        if records:
-            source_used = label
-            break
-        if label != "Stale git data":
-            print(f"   {label} returned no data — trying next tier …")
+    if not records:
+        print("   RSMS PDF returned no data — falling back to stale git data …")
+        records     = fetch_stale_from_git()
+        source_used = "Stale git data"
 
-    # Always write — dashboard must never go blank
     out_path   = DATA_DIR / "reservoirs.csv"
     fieldnames = list(records[0].keys()) if records else [
-        "date","name","state","capacity_bcm","live_storage_bcm",
-        "live_storage_pct","ten_yr_avg_pct","deficit_pct","status","source"
+        "date", "name", "state", "capacity_bcm", "live_storage_bcm",
+        "live_storage_pct", "ten_yr_avg_pct", "deficit_pct", "status", "source"
     ]
     with open(out_path, "w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -732,12 +332,12 @@ def main():
         writer.writerows(records)
 
     n_stale = sum(1 for r in records if "STALE" in str(r.get("source", "")))
-    print(f"✅  Saved {len(records)} reservoirs → {out_path}  [source: {source_used}]")
+    print(f"✅  Saved {len(records)} rows → {out_path}  [source: {source_used}]")
     if n_stale:
-        print(f"   ⚠️  {n_stale} rows are stale — no live RSMS source was reachable")
+        print(f"   ⚠️  {n_stale} rows are stale — RSMS PDF unreachable (cookie missing or expired)")
     else:
         n_low = sum(1 for r in records if _float(r.get("live_storage_pct", 0)) < 50)
-        print(f"   {n_low}/{len(records)} below 50% live storage")
+        print(f"   {n_low}/{len(records)} regions below 50% live storage")
 
 
 if __name__ == "__main__":
