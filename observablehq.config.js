@@ -6,5 +6,5 @@ export default {
     { name: "About", path: "/about" },
     { name: "Privacy Policy", path: "/privacy" }
   ],
-  footer: "Built with Observable Framework · Data: NOAA, BOM, CHIRPS, CWC · Updated daily · MIT License"
+  footer: "Built with Observable Framework · Data: NOAA, NOAA PSL, CHIRPS v3, CWC RSMS · Updated daily · MIT License"
 };
