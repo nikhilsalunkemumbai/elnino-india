@@ -133,7 +133,6 @@ ${!rainfallRaw.length ? html`<p class="no-data">Chart will appear after first da
 
 ## 💧 Reservoir Storage (CWC RSMS)
 
-<<<<<<< HEAD
 The Central Water Commission publishes live weekly reservoir storage data via its official public dashboard. This is the authoritative source — updated every Thursday.
 
 <div class="rsms-card">
@@ -148,34 +147,6 @@ The Central Water Commission publishes live weekly reservoir storage data via it
 </div>
 
 > Reservoir storage contributes 10% of the Monsoon Stress Index above. Until live integration is available, a neutral 60% value is used for that component.
-=======
-```js
-const reservoirIsStale = !reservoirs.length ||
-  reservoirs.every(d => d.live_storage_pct === 0) ||
-  reservoirs.some(d => String(d.source ?? "").includes("STALE") || String(d.source ?? "").includes("Stub"));
-
-const reservoirDate = reservoirs.length ? reservoirs[0].date : null;
-```
-
-${reservoirIsStale
-  ? html`<div class="stale-banner">⚠️ <strong>Reservoir data unavailable.</strong> The CWC RSMS live source could not be reached by the automated workflow. ${reservoirDate ? `Last attempted: ${reservoirDate}.` : ""} To enable live data, add the <code>RSMS_SESSION_COOKIE</code> secret — see the <a href="https://github.com/YOUR_USERNAME/elnino-india#-reservoir-data--optional-secret">README</a> for instructions. Stress index is using a neutral reservoir value.</div>`
-  : Plot.plot({
-      title: "Live Storage vs. 10-Year Average (% of Capacity)",
-      width: 800, height: 350, marginLeft: 200,
-      x: { label: "% of Capacity", domain: [0, 100] },
-      marks: [
-        Plot.barX(reservoirs, {
-          x: "live_storage_pct", y: "name",
-          fill: d => d.live_storage_pct < 30 ? "crimson" : d.live_storage_pct < 50 ? "darkorange" : "steelblue",
-          sort: { y: "-x" },
-        }),
-        Plot.tickX(reservoirs, { x: "ten_yr_avg_pct", y: "name", stroke: "black", strokeWidth: 2 }),
-      ]
-  })
-}
-
-${!reservoirIsStale ? html`<p><small>Vertical tick = 10-year average. Red/orange bars are critically below normal.</small></p>` : ""}
->>>>>>> 3417b3277c343fca9e1146920c442d9d531aeecd
 
 ---
 
@@ -205,7 +176,6 @@ ${!dataReady
 <style>
 .updated-note   { color: #888; font-size: 0.85rem; margin-top: -0.5rem; }
 .loading-banner { background: #fff8e1; border: 1px solid #ffe082; border-radius: 6px; padding: 0.75rem 1rem; margin: 0.5rem 0 1rem; }
-<<<<<<< HEAD
 .no-data        { color: #aaa; font-style: italic; }
 .status-cards   { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1rem 0; }
 .card           { flex: 1; min-width: 140px; padding: 1rem 1.2rem; border: 2px solid #ddd; border-radius: 10px; text-align: center; background: #fafafa; }
@@ -222,17 +192,4 @@ ${!dataReady
 .rsms-sub       { font-size: 0.85rem; color: #555; margin-bottom: 0.6rem; }
 .rsms-link      { display: inline-block; background: #1a6fba; color: #fff; padding: 0.4rem 1rem; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 500; }
 .rsms-link:hover { background: #1557a0; }
-=======
-.no-data       { color: #aaa; font-style: italic; }
-.status-cards  { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1rem 0; }
-.card { flex: 1; min-width: 140px; padding: 1rem 1.2rem; border: 2px solid #ddd; border-radius: 10px; text-align: center; background: #fafafa; }
-.card-warning  { border-color: tomato; background: #fff5f5; }
-.card-ok       { border-color: steelblue; background: #f0f6ff; }
-.card-neutral  { border-color: #ccc; }
-.card-label    { font-size: 0.8rem; color: #666; text-transform: uppercase; letter-spacing: 0.05em; }
-.card-value    { font-size: 2rem; font-weight: bold; margin: 0.25rem 0; }
-.card-sub      { font-size: 0.85rem; color: #444; }
-.ai-summary    { background: #f0f6ff; border-left: 4px solid steelblue; padding: 0.75rem 1rem; border-radius: 4px; }
-.stale-banner  { background: #fff8e1; border: 1px solid #ffe082; border-left: 4px solid #f59e0b; border-radius: 6px; padding: 0.75rem 1rem; margin: 0.5rem 0 1rem; color: #78350f; font-size: 0.9rem; }
->>>>>>> 3417b3277c343fca9e1146920c442d9d531aeecd
 </style>

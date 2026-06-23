@@ -65,28 +65,11 @@ After the first deploy, the workflow repeats every night at midnight UTC to keep
 | Southern Oscillation Index (SOI) | NOAA CPC | No auth required |
 | Indian Ocean Dipole (IOD) | NOAA PSL / JAMSTEC | No auth required |
 | India Monsoon Rainfall | CHIRPS v3 (CHC/UCSB) | No auth required |
-<<<<<<< HEAD
 | Reservoir Storage | CWC RSMS public dashboard (rsms.cwc.gov.in) | Linked directly — no auth required |
 
 ### 💧 Reservoir data
 
 Live reservoir storage is linked directly to the [CWC RSMS public dashboard](https://rsms.cwc.gov.in/frameWork/web/public-dashboard) — the official Central Water Commission source, updated every Thursday. No secrets or API keys required.
-=======
-| Reservoir Storage | CWC RSMS bulletin PDF (rsms.cwc.gov.in) | Optional session cookie — see below |
-
-### 🔑 Reservoir data — optional secret
-
-The CWC RSMS weekly bulletin PDF requires an authenticated session from GitHub Actions runners. Without it, the reservoir section will show a "data unavailable" notice and the stress index will use a neutral fallback value.
-
-To enable live reservoir data:
-1. Log in at [rsms.cwc.gov.in](https://rsms.cwc.gov.in) in your browser
-2. Open DevTools → Application → Cookies → copy the session cookie string
-3. Add it as a GitHub Actions secret: **Settings → Secrets and variables → Actions → New repository secret**
-   - Name: `RSMS_SESSION_COOKIE`
-   - Value: the cookie string
-
-The dashboard works fully without this secret — reservoir data just won't update live.
->>>>>>> 3417b3277c343fca9e1146920c442d9d531aeecd
 
 ---
 
