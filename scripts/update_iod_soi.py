@@ -1,21 +1,20 @@
 """
 update_iod_soi.py
 Fetches:
-  - Indian Ocean Dipole (IOD / DMI) — primary: NOAA PSL HadISST-derived DMI
-                                       fallback: NOAA OSMC state-of-ocean DMI
-  - Southern Oscillation Index (SOI) — NOAA CPC (permanent, unchanged)
+  - IOD / DMI  — NOAA PSL HadISST-derived DMI (confirmed live June 2026)
+  - SOI        — NOAA CPC standardised SOI
 
-IOD source history:
-  - Original (broken): bom.gov.au/climate/enso/iod_1997.txt  → BOM changed URLs
-  - v2 attempt (broken): psl.noaa.gov/data/correlation/dmi.data  → 404, path moved
-  - v3 attempt (broken): jamstec.go.jp/aplinfo/sintexf/iod/iod_index_ersstv5.txt → 404
-  - CURRENT (confirmed live June 2026):
-      Primary:  https://psl.noaa.gov/data/timeseries/month/data/dmi.had.long.data
-      Fallback: https://psl.noaa.gov/data/timeseries/month/data/dmi.had.long.csv
+Fixes applied (from Actions log analysis June 2026):
+  - IOD: BOM URL → NOAA PSL /data/timeseries/month/data/dmi.had.long.data ✅
+  - SOI: parser was broken — NOAA CPC SOI file format is:
+      Header: "(STAND TAHITI - STAND DARWIN) SEA LEVEL PRESS ANOMALY"
+      Header: "YEAR JAN FEB MAR APR MAY JUN JUL AUG SEP OCT NOV DEC"
+      Data:   "1951 2.5 1.5 -0.2 ..." (year + 12 values on ONE line, 13 parts)
+    Old parser looked for a lone year on its own line — never matched → 0 records.
+    Fixed: parse lines with 13 parts where first part is a 4-digit year.
+  - SOI fallback: NOAA PSL SOI added as secondary source.
 
-Outputs:
-  data/iod.json
-  data/soi.json
+Outputs: data/iod.json, data/soi.json
 """
 
 import csv
@@ -26,35 +25,37 @@ import requests
 from pathlib import Path
 from datetime import datetime, timezone
 
-DATA_DIR = Path(__file__).parent.parent / "data"
+DATA_DIR = Path(__file__).parent.parent / "src" / "data"
 DATA_DIR.mkdir(exist_ok=True)
 
-# --- IOD / DMI sources ---
-# Confirmed live: https://psl.noaa.gov/data/timeseries/month/DMI/
+# ── IOD sources (confirmed live June 2026 via psl.noaa.gov/data/timeseries/month/DMI/) ──
 NOAA_DMI_DATA_URL = "https://psl.noaa.gov/data/timeseries/month/data/dmi.had.long.data"
 NOAA_DMI_CSV_URL  = "https://psl.noaa.gov/data/timeseries/month/data/dmi.had.long.csv"
 
-# --- SOI source (unchanged — NOAA CPC is permanent) ---
-SOI_URL = "https://www.cpc.ncep.noaa.gov/data/indices/soi"
+# ── SOI sources ──
+# Primary: NOAA CPC standardised SOI (Tahiti - Darwin)
+#   Format: 13 columns per data line → YEAR JAN FEB MAR APR MAY JUN JUL AUG SEP OCT NOV DEC
+#   Missing sentinel: -999.9
+NOAA_CPC_SOI_URL  = "https://www.cpc.ncep.noaa.gov/data/indices/soi"
+# Fallback: NOAA PSL SOI (same index, PSL standard format)
+NOAA_PSL_SOI_URL  = "https://psl.noaa.gov/data/timeseries/month/data/soi.data"
 
 
-# ---------------------------------------------------------------------------
+# ─────────────────────────────────────────────────────────────────────────────
 # IOD helpers
-# ---------------------------------------------------------------------------
+# ─────────────────────────────────────────────────────────────────────────────
 
 def iod_label(dmi: float) -> str:
-    if dmi >= 0.4:
-        return "Positive IOD"
-    elif dmi <= -0.4:
-        return "Negative IOD"
+    if dmi >= 0.4:  return "Positive IOD"
+    if dmi <= -0.4: return "Negative IOD"
     return "Neutral IOD"
 
 
 def parse_noaa_dmi_data(text: str) -> list:
     """
     NOAA PSL standard format:
-      First line: start_year  num_years
-      Then rows:  YYYY  v1  v2 ... v12
+      First line: start_year  num_years   (skip)
+      Data rows:  YYYY  v1  v2 ... v12   (13 parts)
       Missing sentinel: -999.9 or -99.99
     """
     records = []
@@ -70,7 +71,7 @@ def parse_noaa_dmi_data(text: str) -> list:
                 val = float(val_str)
             except ValueError:
                 continue
-            if val <= -99.0:   # missing sentinel
+            if val <= -99.0:
                 continue
             records.append({
                 "date":   f"{year}-{month_idx:02d}-01",
@@ -84,14 +85,13 @@ def parse_noaa_dmi_data(text: str) -> list:
 
 
 def parse_noaa_dmi_csv(text: str) -> list:
-    """Parse the CSV version of the same PSL DMI file."""
     records = []
     reader = csv.DictReader(io.StringIO(text))
     for row in reader:
         try:
-            year  = int(row.get("Year", row.get("year", 0)))
+            year  = int(row.get("Year",  row.get("year",  0)))
             month = int(row.get("Month", row.get("month", 0)))
-            val   = float(row.get("DMI", row.get("dmi", row.get("Value", 0))))
+            val   = float(row.get("DMI", row.get("dmi",   row.get("Value", 0))))
         except (ValueError, TypeError):
             continue
         if abs(val) > 90:
@@ -108,7 +108,6 @@ def parse_noaa_dmi_csv(text: str) -> list:
 
 
 def fetch_iod() -> list:
-    """Try .data format first, then CSV format."""
     for url, parser, label in [
         (NOAA_DMI_DATA_URL, parse_noaa_dmi_data, "NOAA PSL DMI .data"),
         (NOAA_DMI_CSV_URL,  parse_noaa_dmi_csv,  "NOAA PSL DMI .csv"),
@@ -131,48 +130,109 @@ def fetch_iod() -> list:
     )
 
 
-# ---------------------------------------------------------------------------
+# ─────────────────────────────────────────────────────────────────────────────
 # SOI helpers
-# ---------------------------------------------------------------------------
+# ─────────────────────────────────────────────────────────────────────────────
 
 def soi_label(soi: float) -> str:
-    if soi <= -7:
-        return "El Niño signal"
-    elif soi >= 7:
-        return "La Niña signal"
+    if soi <= -7: return "El Niño signal"
+    if soi >= 7:  return "La Niña signal"
     return "Neutral"
 
 
-def fetch_soi() -> list:
-    resp = requests.get(SOI_URL, timeout=30)
-    resp.raise_for_status()
+def parse_cpc_soi(text: str) -> list:
+    """
+    NOAA CPC SOI format (confirmed from actual file, June 2026):
+      Line 1: "(STAND TAHITI - STAND DARWIN) SEA LEVEL PRESS ANOMALY"
+      Line 2: "YEAR JAN FEB MAR APR MAY JUN JUL AUG SEP OCT NOV DEC"
+      Data:   "1951 2.5 1.5 -0.2 -0.5 ..."  ← 13 parts: year + 12 monthly values
+      Missing: -999.9
+
+    BUG FIXED: old parser split on a lone 4-digit year line then expected
+    the 12 values on the NEXT line — but CPC puts year + values on ONE line.
+    """
     records = []
-    current_year = None
-    for line in resp.text.splitlines():
+    for line in text.splitlines():
         parts = line.split()
-        if len(parts) == 1 and re.match(r"^\d{4}$", parts[0]):
-            current_year = int(parts[0])
-        elif current_year and len(parts) == 12:
-            for i, val in enumerate(parts):
-                if val in ("-999.9", "999.9"):
-                    continue
-                try:
-                    soi_val = float(val)
-                    records.append({
-                        "date":  f"{current_year}-{i+1:02d}-01",
-                        "year":  current_year,
-                        "month": i + 1,
-                        "soi":   soi_val,
-                        "label": soi_label(soi_val),
-                    })
-                except ValueError:
-                    pass
+        if len(parts) != 13:
+            continue
+        # First part must be a 4-digit year
+        if not re.match(r"^\d{4}$", parts[0]):
+            continue
+        year = int(parts[0])
+        for i, val_str in enumerate(parts[1:], start=1):
+            try:
+                val = float(val_str)
+            except ValueError:
+                continue
+            if abs(val) >= 999:   # missing sentinel
+                continue
+            records.append({
+                "date":  f"{year}-{i:02d}-01",
+                "year":  year,
+                "month": i,
+                "soi":   round(val, 1),
+                "label": soi_label(val),
+            })
     return records
 
 
-# ---------------------------------------------------------------------------
+def parse_psl_soi(text: str) -> list:
+    """
+    NOAA PSL SOI standard format — same structure as DMI .data:
+      YYYY  v1  v2 ... v12  (13 parts per row)
+      Missing: -99.9 or -999.9
+    """
+    records = []
+    for line in text.splitlines():
+        parts = line.split()
+        if len(parts) != 13:
+            continue
+        if not re.match(r"^\d{4}$", parts[0]):
+            continue
+        year = int(parts[0])
+        for i, val_str in enumerate(parts[1:], start=1):
+            try:
+                val = float(val_str)
+            except ValueError:
+                continue
+            if val <= -99.0:
+                continue
+            records.append({
+                "date":  f"{year}-{i:02d}-01",
+                "year":  year,
+                "month": i,
+                "soi":   round(val, 1),
+                "label": soi_label(val),
+            })
+    return records
+
+
+def fetch_soi() -> list:
+    for url, parser, label in [
+        (NOAA_CPC_SOI_URL, parse_cpc_soi, "NOAA CPC SOI"),
+        (NOAA_PSL_SOI_URL, parse_psl_soi, "NOAA PSL SOI"),
+    ]:
+        try:
+            resp = requests.get(url, timeout=30)
+            resp.raise_for_status()
+            records = parser(resp.text)
+            if records:
+                print(f"   SOI source: {label}  ({len(records)} records)")
+                return records
+            print(f"   {label} returned 0 records — trying next …")
+        except Exception as exc:
+            print(f"   {label} failed: {exc} — trying next …")
+    raise RuntimeError(
+        "All SOI sources failed.\n"
+        f"  Tried: {NOAA_CPC_SOI_URL}\n"
+        f"  Tried: {NOAA_PSL_SOI_URL}"
+    )
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # Main
-# ---------------------------------------------------------------------------
+# ─────────────────────────────────────────────────────────────────────────────
 
 def main():
     now = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
@@ -180,29 +240,27 @@ def main():
     print("Fetching IOD/DMI …")
     iod_records = fetch_iod()
     latest_iod  = iod_records[-1] if iod_records else {}
-    iod_path    = DATA_DIR / "iod.json"
-    iod_path.write_text(json.dumps({
+    (DATA_DIR / "iod.json").write_text(json.dumps({
         "updated":    now,
         "source":     NOAA_DMI_DATA_URL,
         "note":       "NOAA PSL HadISST1.1 DMI. Ref: psl.noaa.gov/data/timeseries/month/DMI/",
         "latest":     latest_iod,
         "timeseries": iod_records,
     }, indent=2))
-    print(f"✅  Saved {len(iod_records)} IOD records → {iod_path}")
+    print(f"✅  Saved {len(iod_records)} IOD records → data/iod.json")
     if latest_iod:
         print(f"   Latest DMI: {latest_iod.get('dmi', 'N/A'):+.3f}°C  ({latest_iod.get('label', '')})")
 
-    print("Fetching SOI (NOAA CPC) …")
+    print("Fetching SOI (NOAA CPC → NOAA PSL fallback) …")
     soi_records = fetch_soi()
     latest_soi  = soi_records[-1] if soi_records else {}
-    soi_path    = DATA_DIR / "soi.json"
-    soi_path.write_text(json.dumps({
+    (DATA_DIR / "soi.json").write_text(json.dumps({
         "updated":    now,
-        "source":     SOI_URL,
+        "source":     NOAA_CPC_SOI_URL,
         "latest":     latest_soi,
         "timeseries": soi_records,
     }, indent=2))
-    print(f"✅  Saved {len(soi_records)} SOI records → {soi_path}")
+    print(f"✅  Saved {len(soi_records)} SOI records → data/soi.json")
     if latest_soi:
         print(f"   Latest SOI: {latest_soi.get('soi', 'N/A'):+.1f}  ({latest_soi.get('label', '')})")
 

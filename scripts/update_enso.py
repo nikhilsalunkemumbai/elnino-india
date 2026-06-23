@@ -13,7 +13,7 @@ import requests
 from pathlib import Path
 from datetime import datetime, timezone
 
-DATA_DIR = Path(__file__).parent.parent / "data"
+DATA_DIR = Path(__file__).parent.parent / "src" / "data"
 DATA_DIR.mkdir(exist_ok=True)
 
 # NOAA CPC ONI text file — 3-month rolling average Niño3.4 anomaly

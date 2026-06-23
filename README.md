@@ -28,7 +28,7 @@ In your repo on GitHub: **Settings → Pages → Source → GitHub Actions** →
 **Settings → Actions → General → Workflow permissions → Read and write** → Save
 
 That's it. GitHub Actions will now:
-- Fetch live data from NOAA, CHIRPS v3, and India-WRIS (all free, no API keys)
+- Fetch live data from NOAA, CHIRPS v3, and CWC RSMS (all free, no API keys required for most sources)
 - Build the Observable Framework site
 - Deploy it to GitHub Pages
 
@@ -44,7 +44,7 @@ You push the repo (just code, no data)
 GitHub Actions triggers automatically
         ↓
 Python scripts fetch public climate data
-  (NOAA ONI · NOAA PSL IOD · NOAA CPC SOI · CHIRPS v3 rainfall · India-WRIS reservoirs)
+  (NOAA ONI · NOAA PSL IOD · NOAA CPC SOI · CHIRPS v3 rainfall · CWC RSMS reservoir bulletin)
         ↓
 JSON/CSV files committed to data/
         ↓
@@ -59,22 +59,26 @@ After the first deploy, the workflow repeats every night at midnight UTC to keep
 
 ## 📊 What It Tracks
 
-| Indicator | Source | No auth required |
-|-----------|--------|-----------------|
-| Niño3.4 SST Anomaly (ENSO) | NOAA/CPC | ✅ |
-| Southern Oscillation Index (SOI) | NOAA CPC | ✅ |
-| Indian Ocean Dipole (IOD) | NOAA PSL / JAMSTEC | ✅ |
-| India Monsoon Rainfall | CHIRPS v3 (CHC/UCSB) | ✅ |
-| Reservoir Storage | India-WRIS (CWC/NHP) | ✅ |
+| Indicator | Source | Notes |
+|-----------|--------|-------|
+| Niño3.4 SST Anomaly (ENSO) | NOAA/CPC | No auth required |
+| Southern Oscillation Index (SOI) | NOAA CPC | No auth required |
+| Indian Ocean Dipole (IOD) | NOAA PSL / JAMSTEC | No auth required |
+| India Monsoon Rainfall | CHIRPS v3 (CHC/UCSB) | No auth required |
+| Reservoir Storage | CWC RSMS public dashboard (rsms.cwc.gov.in) | Linked directly — no auth required |
+
+### 💧 Reservoir data
+
+Live reservoir storage is linked directly to the [CWC RSMS public dashboard](https://rsms.cwc.gov.in/frameWork/web/public-dashboard) — the official Central Water Commission source, updated every Thursday. No secrets or API keys required.
 
 ---
 
 ## 🔒 Privacy & Data
 
-- **No API keys** — all sources are open government data, no registration needed
-- **No secrets or tokens** — only GitHub's built-in `GITHUB_TOKEN` is used (automatic, no configuration)
+- **No API keys** for NOAA, CHIRPS, or JAMSTEC — all open government data
 - **No PII or PHI** — purely geophysical data; no personal, health, or financial data anywhere
 - **No cookies, analytics, or tracking** — static HTML/JS only
+- Only `GITHUB_TOKEN` (automatic, no configuration) and the optional `RSMS_SESSION_COOKIE` are used
 
 See [Privacy Policy](src/privacy.md) · [License](LICENSE)
 
@@ -94,8 +98,6 @@ python scripts/update_rainfall.py
 python scripts/update_reservoirs.py
 npm run dev        # → http://localhost:3000
 ```
-
-**Windows users:** See [WINDOWS_SETUP.md](WINDOWS_SETUP.md) for step-by-step instructions.
 
 ---
 
@@ -126,8 +128,7 @@ elnino-india/
 - [NOAA PSL](https://psl.noaa.gov/data/correlation/dmi.data) — IOD/DMI primary (public domain)
 - [JAMSTEC](https://www.jamstec.go.jp/aplinfo/sintexf/iod/) — IOD/DMI fallback (public domain)
 - [CHIRPS v3](https://chc.ucsb.edu/data/chirps3) — Rainfall (public domain; v2 retires Dec 2026)
-- [India-WRIS](https://indiawris.gov.in/) — Reservoirs primary (CWC/NHP/World Bank)
-- [CWC PDF Bulletin](https://cwc.gov.in/reservoirs-storage-bulletin) + [data.gov.in](https://data.gov.in/) — Reservoir fallbacks
+- [CWC RSMS](https://rsms.cwc.gov.in/) — Reservoir storage bulletin (Central Water Commission)
 
 ## 📜 License
 

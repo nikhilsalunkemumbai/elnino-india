@@ -34,13 +34,13 @@ import numpy as np
 from pathlib import Path
 from datetime import datetime, timezone
 
-DATA_DIR = Path(__file__).parent.parent / "data"
+DATA_DIR = Path(__file__).parent.parent / "src" / "data"
 DATA_DIR.mkdir(exist_ok=True)
 
 # ---------------------------------------------------------------------------
 # CHIRPS v3 — monthly global GeoTIFF index
 # ---------------------------------------------------------------------------
-CHIRPS_V3_BASE = "https://data.chc.ucsb.edu/products/CHIRPS-3.0/global_monthly/tifs/"
+CHIRPS_V3_BASE = "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/tifs//"
 
 # India bounding box (degrees)
 LAT_MIN, LAT_MAX = 6.0,  37.0

@@ -1,9 +1,12 @@
 node_modules/
 dist/
 .cache/
-.observablehq/
+src/.observablehq/cache/
 __pycache__/
 *.pyc
 *.pyo
 .env
 .DS_Store
+
+# Old data directory (moved to src/data/ — do not re-create)
+/data/

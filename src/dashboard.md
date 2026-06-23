@@ -11,12 +11,11 @@ async function safeCsv(attachment) {
   try { return await attachment.csv({ typed: true }); } catch { return []; }
 }
 
-// Load all data sources (populated by GitHub Actions; empty on first push)
-const ensoData    = await safeJson(FileAttachment("../data/nino34.json"));
-const iodData     = await safeJson(FileAttachment("../data/iod.json"));
-const soiData     = await safeJson(FileAttachment("../data/soi.json"));
-const rainfallRaw = await safeCsv(FileAttachment("../data/rainfall.csv"));
-const reservoirs  = await safeCsv(FileAttachment("../data/reservoirs.csv"));
+// Load data sources from src/data/ (populated by GitHub Actions)
+const ensoData    = await safeJson(FileAttachment("./data/nino34.json"));
+const iodData     = await safeJson(FileAttachment("./data/iod.json"));
+const soiData     = await safeJson(FileAttachment("./data/soi.json"));
+const rainfallRaw = await safeCsv(FileAttachment("./data/rainfall.csv"));
 
 const dataReady = ensoData !== null;
 
@@ -27,22 +26,23 @@ const latestSOI      = soiData?.latest  ?? null;
 const latestRainfall = rainfallRaw.at(-1) ?? null;
 
 // Monsoon Stress Index (0–100)
-function computeStressIndex(enso, soi, iod, rainPct, reservoirPct) {
-  const ensoScore  = Math.min(100, Math.max(0, (enso  /  2.0) * 100 * 0.30));
-  const soiScore   = Math.min(100, Math.max(0, (-soi  / 20.0) * 100 * 0.20));
-  const iodScore   = Math.min(100, Math.max(0, (-iod  /  1.0) * 100 * 0.20));
-  const rainScore  = Math.min(100, Math.max(0, (-rainPct / 30) * 100 * 0.20));
-  const resScore   = Math.min(100, Math.max(0, ((50 - reservoirPct) / 50) * 100 * 0.10));
+// Reservoir component removed — uses neutral 60% fallback
+// Live reservoir data: rsms.cwc.gov.in/frameWork/web/public-dashboard
+function computeStressIndex(enso, soi, iod, rainPct) {
+  const ensoScore = Math.min(100, Math.max(0, (enso  /  2.0) * 100 * 0.30));
+  const soiScore  = Math.min(100, Math.max(0, (-soi  / 20.0) * 100 * 0.20));
+  const iodScore  = Math.min(100, Math.max(0, (-iod  /  1.0) * 100 * 0.20));
+  const rainScore = Math.min(100, Math.max(0, (-rainPct / 30) * 100 * 0.20));
+  // Reservoir weight (10%) held at neutral — see CWC RSMS link below
+  const resScore  = Math.min(100, Math.max(0, ((50 - 60) / 50) * 100 * 0.10));
   return Math.round(ensoScore + soiScore + iodScore + rainScore + resScore);
 }
 
-const avgReservoirPct = reservoirs.length ? d3.mean(reservoirs, d => d.live_storage_pct) : null;
 const stressScore = dataReady ? computeStressIndex(
-  latestENSO?.anomaly  ?? 0,
-  latestSOI?.soi        ?? 0,
-  latestIOD?.dmi        ?? 0,
+  latestENSO?.anomaly       ?? 0,
+  latestSOI?.soi            ?? 0,
+  latestIOD?.dmi            ?? 0,
   latestRainfall?.anomaly_pct ?? 0,
-  avgReservoirPct ?? 60,
 ) : null;
 
 const stressLabel = stressScore === null ? "—" :
@@ -131,23 +131,22 @@ ${!rainfallRaw.length ? html`<p class="no-data">Chart will appear after first da
 
 ---
 
-## 💧 Major Reservoir Storage
+## 💧 Reservoir Storage (CWC RSMS)
 
-${!reservoirs.length ? html`<p class="no-data">Chart will appear after first data fetch.</p>` : Plot.plot({
-  title: "Live Storage vs. 10-Year Average (% of Capacity)",
-  width: 800, height: 350, marginLeft: 200,
-  x: { label: "% of Capacity", domain: [0, 100] },
-  marks: [
-    Plot.barX(reservoirs, {
-      x: "live_storage_pct", y: "name",
-      fill: d => d.live_storage_pct < 30 ? "crimson" : d.live_storage_pct < 50 ? "darkorange" : "steelblue",
-      sort: { y: "-x" },
-    }),
-    Plot.tickX(reservoirs, { x: "ten_yr_avg_pct", y: "name", stroke: "black", strokeWidth: 2 }),
-  ]
-})}
+The Central Water Commission publishes live weekly reservoir storage data via its official public dashboard. This is the authoritative source — updated every Thursday.
 
-> Vertical tick = 10-year average. Red/orange bars are critically below normal.
+<div class="rsms-card">
+  <div class="rsms-icon">🏞️</div>
+  <div class="rsms-body">
+    <div class="rsms-title">CWC Reservoir Storage Monitoring System</div>
+    <div class="rsms-sub">Live storage levels · 166 major reservoirs · 5 regional summaries · All India total</div>
+    <a class="rsms-link" href="https://rsms.cwc.gov.in/frameWork/web/public-dashboard" target="_blank" rel="noopener">
+      Open CWC RSMS Dashboard →
+    </a>
+  </div>
+</div>
+
+> Reservoir storage contributes 10% of the Monsoon Stress Index above. Until live integration is available, a neutral 60% value is used for that component.
 
 ---
 
@@ -159,8 +158,8 @@ ${!dataReady
       `Current ENSO: Niño3.4 is ${latestENSO?.anomaly >= 0 ? "+" : ""}${latestENSO?.anomaly?.toFixed(2) ?? "N/A"}°C — ${latestENSO?.label ?? "unknown"}.`,
       `Indian Ocean Dipole: ${latestIOD?.label ?? "unknown"} (DMI: ${latestIOD?.dmi?.toFixed(2) ?? "N/A"}°C).`,
       `India rainfall anomaly: ${latestRainfall?.anomaly_pct > 0 ? "+" : ""}${latestRainfall?.anomaly_pct ?? "N/A"}% (${latestRainfall?.status ?? "—"}).`,
-      `Reservoir storage: ${avgReservoirPct?.toFixed(1) ?? "—"}% of capacity across monitored basins.`,
-      `Monsoon Stress Index: ${stressScore}/100 (${stressLabel} risk).`,
+      `For live reservoir storage, see the CWC RSMS public dashboard.`,
+      `Monsoon Stress Index: ${stressScore}/100 (${stressLabel} risk) — reservoir component at neutral.`,
       stressScore >= 50
         ? "⚠️ Conditions suggest potential below-normal monsoon. Monitor IMD forecasts and consider water-conservation measures."
         : "✅ Conditions do not currently indicate severe monsoon stress.",
@@ -170,20 +169,27 @@ ${!dataReady
 ---
 
 <small>
-**Sources:** NOAA/CPC · BOM Australia · CHIRPS · CWC/NWDP · No personal data collected — see <a href="./privacy">Privacy Policy</a>
+**Sources:** NOAA/CPC · NOAA PSL · CHIRPS v3 · CWC RSMS · No personal data collected — see <a href="./privacy">Privacy Policy</a><br>
+<em>Monsoon Stress Index is an experimental composite indicator, not a forecast product.</em>
 </small>
 
 <style>
-.updated-note  { color: #888; font-size: 0.85rem; margin-top: -0.5rem; }
+.updated-note   { color: #888; font-size: 0.85rem; margin-top: -0.5rem; }
 .loading-banner { background: #fff8e1; border: 1px solid #ffe082; border-radius: 6px; padding: 0.75rem 1rem; margin: 0.5rem 0 1rem; }
-.no-data       { color: #aaa; font-style: italic; }
-.status-cards  { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1rem 0; }
-.card { flex: 1; min-width: 140px; padding: 1rem 1.2rem; border: 2px solid #ddd; border-radius: 10px; text-align: center; background: #fafafa; }
-.card-warning  { border-color: tomato; background: #fff5f5; }
-.card-ok       { border-color: steelblue; background: #f0f6ff; }
-.card-neutral  { border-color: #ccc; }
-.card-label    { font-size: 0.8rem; color: #666; text-transform: uppercase; letter-spacing: 0.05em; }
-.card-value    { font-size: 2rem; font-weight: bold; margin: 0.25rem 0; }
-.card-sub      { font-size: 0.85rem; color: #444; }
-.ai-summary    { background: #f0f6ff; border-left: 4px solid steelblue; padding: 0.75rem 1rem; border-radius: 4px; }
+.no-data        { color: #aaa; font-style: italic; }
+.status-cards   { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1rem 0; }
+.card           { flex: 1; min-width: 140px; padding: 1rem 1.2rem; border: 2px solid #ddd; border-radius: 10px; text-align: center; background: #fafafa; }
+.card-warning   { border-color: tomato; background: #fff5f5; }
+.card-ok        { border-color: steelblue; background: #f0f6ff; }
+.card-neutral   { border-color: #ccc; }
+.card-label     { font-size: 0.8rem; color: #666; text-transform: uppercase; letter-spacing: 0.05em; }
+.card-value     { font-size: 2rem; font-weight: bold; margin: 0.25rem 0; }
+.card-sub       { font-size: 0.85rem; color: #444; }
+.ai-summary     { background: #f0f6ff; border-left: 4px solid steelblue; padding: 0.75rem 1rem; border-radius: 4px; }
+.rsms-card      { display: flex; align-items: center; gap: 1.2rem; background: #f0f8ff; border: 1.5px solid #b6d4f0; border-radius: 10px; padding: 1.2rem 1.5rem; margin: 1rem 0; }
+.rsms-icon      { font-size: 2.2rem; flex-shrink: 0; }
+.rsms-title     { font-weight: 600; font-size: 1rem; color: #1a3a5c; margin-bottom: 0.2rem; }
+.rsms-sub       { font-size: 0.85rem; color: #555; margin-bottom: 0.6rem; }
+.rsms-link      { display: inline-block; background: #1a6fba; color: #fff; padding: 0.4rem 1rem; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+.rsms-link:hover { background: #1557a0; }
 </style>

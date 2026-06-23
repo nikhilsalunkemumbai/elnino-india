@@ -3,9 +3,9 @@ name: Daily Data Update & Deploy
 on:
   schedule:
     - cron: "0 0 * * *"   # midnight UTC every day
-  workflow_dispatch:        # manual trigger from GitHub UI
+  workflow_dispatch:        # manual trigger
   push:
-    branches: [main]        # also run on every push (first deploy included)
+    branches: [main]        # also run on every push
 
 jobs:
   update-data:
@@ -24,7 +24,7 @@ jobs:
           cache: "pip"
 
       - name: Install Python dependencies
-        run: pip install requests pandas numpy pdfplumber
+        run: pip install requests pandas numpy pdfplumber beautifulsoup4 lxml rasterio
 
       - name: Fetch ENSO / Niño3.4 data
         run: python scripts/update_enso.py
@@ -32,17 +32,14 @@ jobs:
       - name: Fetch IOD & SOI data
         run: python scripts/update_iod_soi.py
 
-      - name: Fetch India rainfall (CHIRPS)
+      - name: Fetch India rainfall (CHIRPS v3)
         run: python scripts/update_rainfall.py
-
-      - name: Fetch reservoir storage (CWC)
-        run: python scripts/update_reservoirs.py
 
       - name: Commit updated data files
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/*.json data/*.csv
+          git add src/data/*.json src/data/*.csv
           git diff --cached --quiet || git commit -m "chore: data update $(date -u +%Y-%m-%d)"
           git push
 
@@ -68,7 +65,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "npm"
 
       - name: Install Node dependencies
         run: npm install
