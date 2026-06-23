@@ -133,21 +133,32 @@ ${!rainfallRaw.length ? html`<p class="no-data">Chart will appear after first da
 
 ## 💧 Major Reservoir Storage
 
-${!reservoirs.length ? html`<p class="no-data">Chart will appear after first data fetch.</p>` : Plot.plot({
-  title: "Live Storage vs. 10-Year Average (% of Capacity)",
-  width: 800, height: 350, marginLeft: 200,
-  x: { label: "% of Capacity", domain: [0, 100] },
-  marks: [
-    Plot.barX(reservoirs, {
-      x: "live_storage_pct", y: "name",
-      fill: d => d.live_storage_pct < 30 ? "crimson" : d.live_storage_pct < 50 ? "darkorange" : "steelblue",
-      sort: { y: "-x" },
-    }),
-    Plot.tickX(reservoirs, { x: "ten_yr_avg_pct", y: "name", stroke: "black", strokeWidth: 2 }),
-  ]
-})}
+```js
+const reservoirIsStale = !reservoirs.length ||
+  reservoirs.every(d => d.live_storage_pct === 0) ||
+  reservoirs.some(d => String(d.source ?? "").includes("STALE") || String(d.source ?? "").includes("Stub"));
 
-> Vertical tick = 10-year average. Red/orange bars are critically below normal.
+const reservoirDate = reservoirs.length ? reservoirs[0].date : null;
+```
+
+${reservoirIsStale
+  ? html`<div class="stale-banner">⚠️ <strong>Reservoir data unavailable.</strong> The CWC RSMS live source could not be reached by the automated workflow. ${reservoirDate ? `Last attempted: ${reservoirDate}.` : ""} To enable live data, add the <code>RSMS_SESSION_COOKIE</code> secret — see the <a href="https://github.com/YOUR_USERNAME/elnino-india#-reservoir-data--optional-secret">README</a> for instructions. Stress index is using a neutral reservoir value.</div>`
+  : Plot.plot({
+      title: "Live Storage vs. 10-Year Average (% of Capacity)",
+      width: 800, height: 350, marginLeft: 200,
+      x: { label: "% of Capacity", domain: [0, 100] },
+      marks: [
+        Plot.barX(reservoirs, {
+          x: "live_storage_pct", y: "name",
+          fill: d => d.live_storage_pct < 30 ? "crimson" : d.live_storage_pct < 50 ? "darkorange" : "steelblue",
+          sort: { y: "-x" },
+        }),
+        Plot.tickX(reservoirs, { x: "ten_yr_avg_pct", y: "name", stroke: "black", strokeWidth: 2 }),
+      ]
+  })
+}
+
+${!reservoirIsStale ? html`<p><small>Vertical tick = 10-year average. Red/orange bars are critically below normal.</small></p>` : ""}
 
 ---
 
@@ -170,7 +181,8 @@ ${!dataReady
 ---
 
 <small>
-**Sources:** NOAA/CPC · BOM Australia · CHIRPS · CWC/NWDP · No personal data collected — see <a href="./privacy">Privacy Policy</a>
+**Sources:** NOAA/CPC · NOAA PSL · CHIRPS v3 · CWC RSMS · No personal data collected — see <a href="./privacy">Privacy Policy</a><br>
+<em>Monsoon Stress Index is an experimental composite indicator, not a forecast product.</em>
 </small>
 
 <style>
@@ -186,4 +198,5 @@ ${!dataReady
 .card-value    { font-size: 2rem; font-weight: bold; margin: 0.25rem 0; }
 .card-sub      { font-size: 0.85rem; color: #444; }
 .ai-summary    { background: #f0f6ff; border-left: 4px solid steelblue; padding: 0.75rem 1rem; border-radius: 4px; }
+.stale-banner  { background: #fff8e1; border: 1px solid #ffe082; border-left: 4px solid #f59e0b; border-radius: 6px; padding: 0.75rem 1rem; margin: 0.5rem 0 1rem; color: #78350f; font-size: 0.9rem; }
 </style>
