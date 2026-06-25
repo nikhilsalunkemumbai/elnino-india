@@ -126,6 +126,9 @@ def fetch_weekly_nino34() -> dict | None:
             print("   Weekly Nino3.4: 0 records parsed")
             return None
 
+        # Sort chronologically — wksst file may have footer lines that
+        # cause out-of-order appends; take the genuinely most recent date
+        records.sort(key=lambda r: r["date"])
         latest = records[-1]
         result = {
             "date":    latest["date"],

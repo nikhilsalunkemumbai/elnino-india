@@ -64,13 +64,20 @@ function computeStressIndex(enso, soi, iod, rainPct) {
   const rainScore = Math.min(1, Math.max(0, -rainPct / 30.0)) * 35;
   // IOD: no standalone component — acts only via interaction below
 
+  // Reservoir component (10pts)
+  // CWC bulletin Jun 11 2026: 166 reservoirs at 28.28% capacity
+  // Update CWC_RESERVOIR_PCT weekly from: cwc.gov.in/en/reservoir-level-storage-bulletin
+  // Formula: 50% = neutral (0pts), 0% = max stress (10pts), 100% = negative stress (−10pts)
+  const CWC_RESERVOIR_PCT = 28;  // ← update weekly from CWC bulletin (was 60 neutral)
+  const resScore = Math.min(1, Math.max(0, (50 - CWC_RESERVOIR_PCT) / 50)) * 10;
+
   // Continuous ENSO x IOD interaction (v4, scale=14)
   const ensoNorm   = Math.min(1, Math.max(0, enso / 1.5));
   const iodClamped = Math.max(-1, Math.min(1, iod));
   const interaction = -ensoNorm * iodClamped * 14;
 
   return Math.round(Math.min(100, Math.max(0,
-    ensoScore + soiScore + rainScore + interaction
+    ensoScore + soiScore + rainScore + resScore + interaction
   )));
 }
 
@@ -85,6 +92,16 @@ const stressLabel = stressScore === null ? "—" :
                     stressScore < 25 ? "Low" :
                     stressScore < 50 ? "Moderate" :
                     stressScore < 75 ? "High" : "Severe";
+
+// ENSO phase: use weekly for current classification (ONI lags 6-8 weeks during rapid onset)
+const weeklyAnom = latestWeekly?.anomaly ?? null;
+const ensoPhase = weeklyAnom !== null
+  ? (weeklyAnom >= 2.0 ? "Strong El Niño (developing)"
+    : weeklyAnom >= 1.5 ? "Moderate El Niño (developing)"
+    : weeklyAnom >= 0.8 ? "Weak El Niño (developing)"
+    : weeklyAnom <= -0.8 ? "La Niña"
+    : "Neutral")
+  : (latestENSO?.label ?? "—");
 
 const stressColor = stressScore === null ? "#aaa" :
                     stressScore < 25 ? "green" :
@@ -103,9 +120,14 @@ const statusCardsEl = !dataReady
   ? html`<p class="no-data">No data yet — awaiting first GitHub Actions run.</p>`
   : html`<div class="status-cards">
   <div class="card ${latestENSO?.el_nino ? 'card-warning' : latestENSO?.la_nina ? 'card-ok' : 'card-neutral'}">
-    <div class="card-label">Niño3.4 Anomaly</div>
+    <div class="card-label">Niño3.4 Anomaly (ONI)</div>
     <div class="card-value">${latestENSO?.anomaly?.toFixed(2) ?? "—"}°C</div>
-    <div class="card-sub">${latestENSO?.label ?? "—"}</div>
+    <div class="card-sub">${latestENSO?.label ?? "—"} · MAM 2026</div>
+  </div>
+  <div class="card ${weeklyAnom !== null && weeklyAnom >= 0.8 ? 'card-warning' : 'card-neutral'}">
+    <div class="card-label">ENSO Phase (current)</div>
+    <div class="card-value" style="font-size:1.1rem">${ensoPhase}</div>
+    <div class="card-sub">Weekly Niño3.4${weeklyAnom !== null ? ` · ${weeklyAnom >= 0 ? "+" : ""}${weeklyAnom?.toFixed(2)}°C` : ""}</div>
   </div>
   <div class="card ${latestSOI?.soi < -7 ? 'card-warning' : 'card-neutral'}">
     <div class="card-label">SOI</div>
@@ -129,16 +151,29 @@ const statusCardsEl = !dataReady
   </div>
 </div>`;
 
+// Data currency check — warn if stress index is likely understated due to data lag
+const rainfallAge = rainfallRaw.length
+  ? Math.round((Date.now() - new Date(rainfallRaw[rainfallRaw.length-1].date)) / 86400000)
+  : null;
+const rainfallLagWarning = rainfallAge && rainfallAge > 45
+  ? ` ⚠️ Rainfall data is ${rainfallAge} days old (CHIRPS lag) — current conditions may be significantly worse.`
+  : "";
+
 const summaryText = !dataReady ? "Summary will generate once data is loaded." : [
   `Current ENSO: Niño3.4 is ${latestENSO?.anomaly >= 0 ? "+" : ""}${latestENSO?.anomaly?.toFixed(2) ?? "N/A"}°C — ${latestENSO?.label ?? "unknown"}.`,
   `Indian Ocean Dipole: ${latestIOD?.label ?? "unknown"} (DMI: ${latestIOD?.dmi?.toFixed(2) ?? "N/A"}°C).`,
   `India rainfall anomaly: ${latestRainfall?.anomaly_pct > 0 ? "+" : ""}${latestRainfall?.anomaly_pct ?? "N/A"}% (${latestRainfall?.status ?? "—"}).`,
   `For live reservoir storage, see the CWC RSMS public dashboard.`,
   `Monsoon Stress Index: ${stressScore}/100 (${stressLabel} risk) — reservoir component at neutral.`,
-  stressScore >= 50
-    ? "⚠️ Conditions suggest potential below-normal monsoon. Monitor IMD forecasts and consider water-conservation measures."
-    : "✅ Conditions do not currently indicate severe monsoon stress.",
-].join(" ");
+  stressScore >= 75
+    ? "🔴 Severe stress. IMD confirms 84% probability of below-normal/deficient monsoon. El Niño Advisory active. Reservoir storage at 28%. Prioritise water conservation and Kharif crop contingency planning."
+    : stressScore >= 50
+    ? "🟠 High stress. IMD below-normal forecast (90% LPA). El Niño conditions developing rapidly. Monitor IMD advisories and CWC reservoir bulletins."
+    : stressScore >= 25
+    ? "🟡 Moderate risk. El Niño developing in Pacific. SOI strongly negative. Index will rise when June CHIRPS data becomes available (~late July)."
+    : "🟢 Stress index Low on current observed data (ONI and CHIRPS have structural lags). See IMD Seasonal Outlook above — official forecast is 84% probability of below-normal or deficient season.",
+  rainfallLagWarning,
+].filter(Boolean).join(" ");
 
 const summaryEl = html`<blockquote class="ai-summary">${summaryText}</blockquote>`;
 ```
@@ -191,6 +226,8 @@ ${!rainfallRaw.length ? html`<p class="no-data">Chart will appear after first da
   ]
 })}
 
+> **Note:** Rainfall data (CHIRPS v3) has a 30–45 day structural lag — the chart currently shows through May 2026. For real-time rainfall tracking, see [IMD daily rainfall](https://mausam.imd.gov.in) or [IMD district-level data](https://www.imd.gov.in/pages/monsoon_main.php).
+
 ---
 
 ## 💧 Reservoir Storage (CWC RSMS)
@@ -209,6 +246,22 @@ The Central Water Commission publishes live weekly reservoir storage data via it
 </div>
 
 > Reservoir storage contributes 10% of the Monsoon Stress Index above. Until live integration is available, a neutral 60% value is used for that component.
+
+---
+
+## 📋 IMD Seasonal Outlook (Jun–Sep 2026)
+
+<div class="imd-outlook">
+  <div class="outlook-row"><span class="outlook-label">IMD Long Range Forecast</span><span class="outlook-val outlook-warn">90% of LPA — Below Normal</span></div>
+  <div class="outlook-row"><span class="outlook-label">Probability below-normal or deficient</span><span class="outlook-val outlook-warn">84%</span></div>
+  <div class="outlook-row"><span class="outlook-label">Probability deficient (&lt;90% LPA)</span><span class="outlook-val outlook-warn">60%</span></div>
+  <div class="outlook-row"><span class="outlook-label">Monsoon Core Zone (rainfed agriculture)</span><span class="outlook-val outlook-warn">Below Normal (&lt;94% LPA)</span></div>
+  <div class="outlook-row"><span class="outlook-label">Reservoir storage (CWC, Jun 11 2026)</span><span class="outlook-val outlook-warn">28.28% capacity — 166 reservoirs</span></div>
+  <div class="outlook-row"><span class="outlook-label">El Niño Advisory status</span><span class="outlook-val outlook-warn">Active — NOAA CPC (Jun 2026)</span></div>
+  <div class="outlook-row"><span class="outlook-label">IRI peak forecast (SON 2026)</span><span class="outlook-val outlook-warn">Niño3.4 ≥ +2.0°C with 60%+ probability</span></div>
+</div>
+
+> **Sources:** [IMD LRF May 29 2026](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2266479) · [IRI ENSO Jun 2026](https://iri.columbia.edu/our-expertise/climate/forecasts/enso/current/) · [CWC Reservoir Bulletin](https://cwc.gov.in/en/reservoir-level-storage-bulletin) · This section shows official forecasts and is separate from the observed Monsoon Stress Index above.
 
 ---
 
@@ -242,4 +295,10 @@ ${summaryEl}
 .rsms-sub       { font-size: 0.85rem; color: #555; margin-bottom: 0.6rem; }
 .rsms-link      { display: inline-block; background: #1a6fba; color: #fff; padding: 0.4rem 1rem; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 500; }
 .rsms-link:hover { background: #1557a0; }
+.imd-outlook   { background: #fff8f0; border: 1.5px solid #f59e0b; border-radius: 8px; padding: 12px 16px; margin: 12px 0; }
+.outlook-row   { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; border-bottom: 0.5px solid #fde68a; font-size: 13px; gap: 12px; }
+.outlook-row:last-child { border-bottom: none; }
+.outlook-label { color: var(--color-text-secondary); }
+.outlook-val   { font-weight: 500; text-align: right; }
+.outlook-warn  { color: #b45309; }
 </style>
