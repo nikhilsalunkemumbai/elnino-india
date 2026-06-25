@@ -21,6 +21,7 @@ const dataReady = ensoData !== null;
 
 // Derived values
 const latestENSO     = ensoData?.latest ?? null;
+const latestWeekly   = ensoData?.latest_weekly ?? null;
 const latestIOD      = iodData?.latest  ?? null;
 const latestSOI      = soiData?.latest  ?? null;
 const latestRainfall = rainfallRaw.at(-1) ?? null;
@@ -89,21 +90,18 @@ const stressColor = stressScore === null ? "#aaa" :
                     stressScore < 25 ? "green" :
                     stressScore < 50 ? "orange" :
                     stressScore < 75 ? "darkorange" : "red";
-```
 
-# 🌊 India El Niño Intelligence Dashboard
+// Pre-built HTML elements for multiline blocks
+// (Observable Framework inline ${} cannot span multiline html`` literals)
+const loadingBannerEl = html`<div class="loading-banner">⏳ Data is being fetched by GitHub Actions. This banner disappears after the first workflow run completes (~2 min). Refresh the page once the workflow shows a green ✅.</div>`;
 
-${dataReady
+const updatedNoteEl = dataReady
   ? html`<p class="updated-note">Data updated: ${new Date(ensoData.updated).toUTCString()}</p>`
-  : html`<div class="loading-banner">⏳ Data is being fetched by GitHub Actions. This banner disappears after the first workflow run completes (~2 min). Refresh the page once the workflow shows a green ✅.</div>`
-}
+  : loadingBannerEl;
 
----
-
-## 📡 Current ENSO Status
-
-${!dataReady ? html`<p class="no-data">No data yet — awaiting first GitHub Actions run.</p>` : html`
-<div class="status-cards">
+const statusCardsEl = !dataReady
+  ? html`<p class="no-data">No data yet — awaiting first GitHub Actions run.</p>`
+  : html`<div class="status-cards">
   <div class="card ${latestENSO?.el_nino ? 'card-warning' : latestENSO?.la_nina ? 'card-ok' : 'card-neutral'}">
     <div class="card-label">Niño3.4 Anomaly</div>
     <div class="card-value">${latestENSO?.anomaly?.toFixed(2) ?? "—"}°C</div>
@@ -119,13 +117,41 @@ ${!dataReady ? html`<p class="no-data">No data yet — awaiting first GitHub Act
     <div class="card-value">${latestIOD?.dmi?.toFixed(2) ?? "—"}°C</div>
     <div class="card-sub">${latestIOD?.label ?? "—"}</div>
   </div>
+  ${latestWeekly ? html`<div class="card card-neutral" title="Weekly Nino3.4 from NOAA OISSTv2 — 1 week lag. ONI (3-month mean) lags by ~6 weeks during rapid El Nino onset.">
+    <div class="card-label">Niño3.4 This Week</div>
+    <div class="card-value" style="color:${latestWeekly.anomaly >= 0.8 ? 'tomato' : latestWeekly.anomaly <= -0.8 ? 'steelblue' : 'inherit'}">${latestWeekly.anomaly >= 0 ? '+' : ''}${latestWeekly.anomaly?.toFixed(2)}°C</div>
+    <div class="card-sub">${latestWeekly.label} · ${latestWeekly.date}</div>
+  </div>` : ""}
   <div class="card" style="border-color: ${stressColor}">
     <div class="card-label">Monsoon Stress Index</div>
     <div class="card-value" style="color: ${stressColor}">${stressScore ?? "—"}/100</div>
     <div class="card-sub">${stressLabel} Risk</div>
   </div>
-</div>
-`}
+</div>`;
+
+const summaryText = !dataReady ? "Summary will generate once data is loaded." : [
+  `Current ENSO: Niño3.4 is ${latestENSO?.anomaly >= 0 ? "+" : ""}${latestENSO?.anomaly?.toFixed(2) ?? "N/A"}°C — ${latestENSO?.label ?? "unknown"}.`,
+  `Indian Ocean Dipole: ${latestIOD?.label ?? "unknown"} (DMI: ${latestIOD?.dmi?.toFixed(2) ?? "N/A"}°C).`,
+  `India rainfall anomaly: ${latestRainfall?.anomaly_pct > 0 ? "+" : ""}${latestRainfall?.anomaly_pct ?? "N/A"}% (${latestRainfall?.status ?? "—"}).`,
+  `For live reservoir storage, see the CWC RSMS public dashboard.`,
+  `Monsoon Stress Index: ${stressScore}/100 (${stressLabel} risk) — reservoir component at neutral.`,
+  stressScore >= 50
+    ? "⚠️ Conditions suggest potential below-normal monsoon. Monitor IMD forecasts and consider water-conservation measures."
+    : "✅ Conditions do not currently indicate severe monsoon stress.",
+].join(" ");
+
+const summaryEl = html`<blockquote class="ai-summary">${summaryText}</blockquote>`;
+```
+
+# 🌊 India El Niño Intelligence Dashboard
+
+${updatedNoteEl}
+
+---
+
+## 📡 Current ENSO Status
+
+${statusCardsEl}
 
 > **El Niño threshold:** Niño3.4 ≥ +0.8°C · **La Niña:** ≤ −0.8°C · **El Niño SOI:** sustained < −7 · *Note: ONI is a 3-month running mean — it lags weekly SST and 30-day SOI readings by 4–6 weeks.*
 
@@ -188,19 +214,7 @@ The Central Water Commission publishes live weekly reservoir storage data via it
 
 ## 🤖 Automated Summary
 
-${!dataReady
-  ? html`<blockquote class="ai-summary">Summary will generate once data is loaded.</blockquote>`
-  : html`<blockquote class="ai-summary">${[
-      `Current ENSO: Niño3.4 is ${latestENSO?.anomaly >= 0 ? "+" : ""}${latestENSO?.anomaly?.toFixed(2) ?? "N/A"}°C — ${latestENSO?.label ?? "unknown"}.`,
-      `Indian Ocean Dipole: ${latestIOD?.label ?? "unknown"} (DMI: ${latestIOD?.dmi?.toFixed(2) ?? "N/A"}°C).`,
-      `India rainfall anomaly: ${latestRainfall?.anomaly_pct > 0 ? "+" : ""}${latestRainfall?.anomaly_pct ?? "N/A"}% (${latestRainfall?.status ?? "—"}).`,
-      `For live reservoir storage, see the CWC RSMS public dashboard.`,
-      `Monsoon Stress Index: ${stressScore}/100 (${stressLabel} risk) — reservoir component at neutral.`,
-      stressScore >= 50
-        ? "⚠️ Conditions suggest potential below-normal monsoon. Monitor IMD forecasts and consider water-conservation measures."
-        : "✅ Conditions do not currently indicate severe monsoon stress.",
-    ].join(" ")}</blockquote>`
-}
+${summaryEl}
 
 ---
 
