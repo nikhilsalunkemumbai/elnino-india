@@ -1,15 +1,11 @@
 {
-<<<<<<< HEAD
-  "updated": "2026-06-24T01:42:50.211345Z",
-=======
-  "updated": "2026-06-25T09:45:56.911813Z",
->>>>>>> 7c8b0e836239785f4220e86d38f9aa58f4b68198
+  "updated": "2026-06-26T01:32:28.233760Z",
   "source": "https://www.cpc.ncep.noaa.gov/data/indices/soi",
   "latest": {
-    "date": "2025-12-01",
-    "year": 2025,
-    "month": 12,
-    "soi": -0.0,
+    "date": "2026-04-01",
+    "year": 2026,
+    "month": 4,
+    "soi": -0.6,
     "label": "Neutral"
   },
   "timeseries": [
@@ -6314,6 +6310,34 @@
       "label": "Neutral"
     },
     {
+      "date": "2026-01-01",
+      "year": 2026,
+      "month": 1,
+      "soi": 1.8,
+      "label": "Neutral"
+    },
+    {
+      "date": "2026-02-01",
+      "year": 2026,
+      "month": 2,
+      "soi": 2.4,
+      "label": "Neutral"
+    },
+    {
+      "date": "2026-03-01",
+      "year": 2026,
+      "month": 3,
+      "soi": 2.0,
+      "label": "Neutral"
+    },
+    {
+      "date": "2026-04-01",
+      "year": 2026,
+      "month": 4,
+      "soi": -1.1,
+      "label": "Neutral"
+    },
+    {
       "date": "1951-01-01",
       "year": 1951,
       "month": 1,
@@ -12611,6 +12635,34 @@
       "year": 2025,
       "month": 12,
       "soi": -0.0,
+      "label": "Neutral"
+    },
+    {
+      "date": "2026-01-01",
+      "year": 2026,
+      "month": 1,
+      "soi": 1.1,
+      "label": "Neutral"
+    },
+    {
+      "date": "2026-02-01",
+      "year": 2026,
+      "month": 2,
+      "soi": 1.4,
+      "label": "Neutral"
+    },
+    {
+      "date": "2026-03-01",
+      "year": 2026,
+      "month": 3,
+      "soi": 1.2,
+      "label": "Neutral"
+    },
+    {
+      "date": "2026-04-01",
+      "year": 2026,
+      "month": 4,
+      "soi": -0.6,
       "label": "Neutral"
     }
   ]
