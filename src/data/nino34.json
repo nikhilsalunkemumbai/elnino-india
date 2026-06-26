@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "updated": "2026-06-24T01:42:50.068070Z",
+=======
+  "updated": "2026-06-25T09:45:56.759251Z",
+>>>>>>> 7c8b0e836239785f4220e86d38f9aa58f4b68198
   "source": "https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt",
   "latest": {
     "date": "2026-04-01",
