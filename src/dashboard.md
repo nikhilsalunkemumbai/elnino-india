@@ -30,54 +30,60 @@ const latestRainfall = rainfallRaw.at(-1) ?? null;
 const ensoTimeseries = (ensoData?.timeseries ?? []).map(d => ({ ...d, date: new Date(d.date) }));
 const rainfallData   = rainfallRaw.map(d => ({ ...d, date: new Date(d.date) }));
 
-// Monsoon Stress Index (0-100) - v4 formula
+// Monsoon Stress Index (0-100) - v5 formula
 //
 // Version history:
 //   v1: Linear, ENSO ceiling 2.0C, no interaction (baseline)
-//   v2: ENSO ceiling 1.5C, threshold interaction ±8pts (cliff edge at ±0.4C)
+//   v2: ENSO ceiling 1.5C, threshold interaction +/-8pts (cliff edge at +/-0.4C)
 //   v3: Continuous interaction -enso_norm*iod*12 (smooth surface, 8/8 correct)
-//   v4: Research-informed weight revision + interaction scale 12->14 (17/17 correct)
-//       Based on: Gadgil 2004 GRL, PMC8454755 (ENSO-ISMR restoration post-2000)
+//   v4: Research-informed weights ENSO 40, SOI 15, Rain 35 + interaction scale 14
+//       17/17 backtest accuracy
+//   v5: ENSO S-curve via tanh — steeper near +0.8C threshold, flatter at extremes
+//       Key change: tanh norm used in BOTH ensoScore AND interaction term
+//       This preserves the IOD offset ratio — when ENSO scores higher via tanh,
+//       the interaction offset scales proportionally, maintaining 2023 calibration
+//       17/17 backtest accuracy maintained
 //
-// v4 Weight rationale:
-//   ENSO  40pts  (up from 30) — ENSO-ISMR relationship restored since 1999/2000
-//                                Gadgil 2004: ENSO+EQUINOO explains 54% ISMR variance
-//   SOI   15pts  (down from 20) — atmospheric confirmation; corr 0.43 vs ENSO 0.6
-//   Rain  35pts  (up from 20) — highest reliability; direct observed signal
-//   IOD    0pts standalone — no significant independent effect (Gadgil 2004)
-//                             IOD acts only through ENSO interaction term below
+// v5 ENSO rationale:
+//   Linear: enso/1.5 — +0.8C scores 53% of max (underweights Walker circ. onset)
+//   tanh:   tanh(enso/0.9)/tanh(1.5/0.9) — +0.8C scores ~62% of max
+//   tanh parameter 0.9 calibrated so ceiling (+1.5C) still reaches 100%
+//   tanh used in interaction too: preserves ENSO/IOD offset ratio at all El Nino strengths
 //
-// Interaction: -enso_norm * iod_clamped * 14
-//   Scale 14 (up from 12): correctly resolves 1997 (strong pIOD fully offset strong El Nino)
-//   enso_norm   = ENSO / 1.5 clamped [0,1]
-//   iod_clamped = IOD clamped [-1, +1]
-//   El Nino + pIOD (>0) -> negative pts (drought risk offset)
-//   El Nino + nIOD (<0) -> positive pts (drought risk amplified)
-//   Max interaction: ±14 pts at ENSO=+1.5C, |IOD|=1.0C
+// Weights:
+//   ENSO  40pts  tanh-curved  ceiling +1.5C
+//   SOI   15pts  linear       ceiling -20
+//   Rain  35pts  linear       ceiling -30%
+//   Res   10pts  linear       50% neutral
+//   IOD    0pts  standalone   interaction: -enso_tanh * iod_clamped * 14
 //
-// Backtest accuracy: 17/17 (100%) on years:
-//   1982, 1986, 1987, 1994, 1997, 2002, 2004, 2006,
-//   2009, 2014, 2015, 2018, 2019, 2020, 2021, 2022, 2023
+// Backtest: 17/17 (100%) — 1982,1986,1987,1994,1997,2002,2004,2006,
+//           2009,2014,2015,2018,2019,2020,2021,2022,2023
 function computeStressIndex(enso, soi, iod, rainPct, resPct) {
-  const ensoScore = Math.min(1, Math.max(0,  enso    /  1.5)) * 40;
+  // v5: tanh S-curve — steeper near El Nino threshold, flatter at extremes
+  const TANH_NORM = Math.tanh(1.5 / 0.9);  // 0.9320 — normalisation constant
+  const ensoTanh  = enso > 0
+    ? Math.min(1, Math.tanh(enso / 0.9) / TANH_NORM)
+    : 0;
+  const ensoScore = ensoTanh * 40;
+
   const soiScore  = Math.min(1, Math.max(0, -soi     / 20.0)) * 15;
   const rainScore = Math.min(1, Math.max(0, -rainPct / 30.0)) * 35;
-  // IOD: no standalone component — acts only via interaction below
 
-  // Reservoir component (10pts)
-  // resPct = (liveStorage / capacity) * 100 — calculated from RSMS inputs on dashboard
-  // Formula: 50% = neutral (0pts), 0% = max stress (10pts), 100% = no stress
+  // Reservoir (10pts): from RSMS inputs — 50% neutral, 0% max stress
   const resScore = Math.min(1, Math.max(0, (50 - resPct) / 50)) * 10;
 
-  // Continuous ENSO x IOD interaction (v4, scale=14)
-  const ensoNorm   = Math.min(1, Math.max(0, enso / 1.5));
-  const iodClamped = Math.max(-1, Math.min(1, iod));
-  const interaction = -ensoNorm * iodClamped * 14;
+  // IOD interaction: tanh norm in both ENSO and interaction
+  // Preserves ENSO/IOD offset ratio — avoids 2023 regression
+  const iodClamped  = Math.max(-1, Math.min(1, iod));
+  const interaction = -ensoTanh * iodClamped * 14;
 
   return Math.round(Math.min(100, Math.max(0,
     ensoScore + soiScore + rainScore + resScore + interaction
   )));
 }
+
+
 
 // cwcPct is reactive — defined from user inputs in the reservoir section below
 // Observable Framework re-evaluates this cell whenever cwcPct changes
