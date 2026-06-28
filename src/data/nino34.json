@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-27T02:02:46.584072Z",
+  "updated": "2026-06-28T02:13:43.687619Z",
   "source": "https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt",
   "weekly_source": "https://www.cpc.ncep.noaa.gov/data/indices/wksst9120.for",
   "note": "ONI (3-month running mean) is the stress index input. latest_weekly shows current-week Nino3.4 for dashboard context \u2014 it typically reads 1-2C higher than ONI during rapid El Nino onset.",
