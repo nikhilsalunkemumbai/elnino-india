@@ -1,5 +1,4 @@
 date,year,month,rainfall_mm,climatology_mm,anomaly_mm,anomaly_pct,status,source
-2024-06-01,2024,6,155.1,163,-7.9,-4.8,Normal,CHIRPS v3 (CHC/UCSB)
 2024-07-01,2024,7,243.0,285,-42.0,-14.7,Deficit,CHIRPS v3 (CHC/UCSB)
 2024-08-01,2024,8,247.3,263,-15.7,-6.0,Normal,CHIRPS v3 (CHC/UCSB)
 2024-09-01,2024,9,173.5,167,6.5,3.9,Normal,CHIRPS v3 (CHC/UCSB)
@@ -23,3 +22,4 @@ date,year,month,rainfall_mm,climatology_mm,anomaly_mm,anomaly_pct,status,source
 2026-03-01,2026,3,37.2,28,9.2,32.9,Surplus,CHIRPS v3 (CHC/UCSB)
 2026-04-01,2026,4,45.1,42,3.1,7.4,Normal,CHIRPS v3 (CHC/UCSB)
 2026-05-01,2026,5,64.5,62,2.5,4.0,Normal,CHIRPS v3 (CHC/UCSB)
+2026-06-01,2026,6,118.5,163,-44.5,-27.3,Deficit,CHIRPS v3 (CHC/UCSB)
