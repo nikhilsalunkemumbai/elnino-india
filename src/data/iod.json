@@ -1,12 +1,12 @@
 {
-  "updated": "2026-07-25T01:28:17.198419Z",
+  "updated": "2026-07-26T01:42:20.591382Z",
   "source": "https://www.jamstec.go.jp/aplinfo/sintexf/DATA/dmi.monthly.txt",
   "note": "Primary: JAMSTEC HadISST monthly DMI. Supplement: JAMSTEC OISST weekly DMI for recent months. Fallback: NOAA PSL (stale after Jan 2025).",
   "latest": {
-    "date": "2025-04-01",
-    "year": 2025,
-    "month": 4,
-    "dmi": 0.149,
+    "date": "2026-05-01",
+    "year": 2026,
+    "month": 5,
+    "dmi": 0.146,
     "label": "Neutral IOD",
     "source": "NOAA PSL HadISST (stale after Jan 2025)"
   },
@@ -23,7 +23,7 @@
       "date": "1870-02-01",
       "year": 1870,
       "month": 2,
-      "dmi": -0.336,
+      "dmi": -0.337,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -103,7 +103,7 @@
       "date": "1870-12-01",
       "year": 1870,
       "month": 12,
-      "dmi": -0.375,
+      "dmi": -0.376,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -199,7 +199,7 @@
       "date": "1871-12-01",
       "year": 1871,
       "month": 12,
-      "dmi": -0.228,
+      "dmi": -0.229,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -223,7 +223,7 @@
       "date": "1872-03-01",
       "year": 1872,
       "month": 3,
-      "dmi": -0.076,
+      "dmi": -0.075,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -231,7 +231,7 @@
       "date": "1872-04-01",
       "year": 1872,
       "month": 4,
-      "dmi": -0.084,
+      "dmi": -0.083,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -247,7 +247,7 @@
       "date": "1872-06-01",
       "year": 1872,
       "month": 6,
-      "dmi": -0.084,
+      "dmi": -0.083,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -295,7 +295,7 @@
       "date": "1872-12-01",
       "year": 1872,
       "month": 12,
-      "dmi": -0.111,
+      "dmi": -0.11,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -303,7 +303,7 @@
       "date": "1873-01-01",
       "year": 1873,
       "month": 1,
-      "dmi": 0.062,
+      "dmi": 0.063,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -351,7 +351,7 @@
       "date": "1873-07-01",
       "year": 1873,
       "month": 7,
-      "dmi": -0.689,
+      "dmi": -0.69,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -423,7 +423,7 @@
       "date": "1874-04-01",
       "year": 1874,
       "month": 4,
-      "dmi": -0.754,
+      "dmi": -0.753,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -455,7 +455,7 @@
       "date": "1874-08-01",
       "year": 1874,
       "month": 8,
-      "dmi": -0.345,
+      "dmi": -0.344,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -495,7 +495,7 @@
       "date": "1875-01-01",
       "year": 1875,
       "month": 1,
-      "dmi": -0.45,
+      "dmi": -0.449,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -503,7 +503,7 @@
       "date": "1875-02-01",
       "year": 1875,
       "month": 2,
-      "dmi": -0.186,
+      "dmi": -0.187,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -527,7 +527,7 @@
       "date": "1875-05-01",
       "year": 1875,
       "month": 5,
-      "dmi": -0.134,
+      "dmi": -0.135,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -535,7 +535,7 @@
       "date": "1875-06-01",
       "year": 1875,
       "month": 6,
-      "dmi": -0.094,
+      "dmi": -0.093,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -559,7 +559,7 @@
       "date": "1875-09-01",
       "year": 1875,
       "month": 9,
-      "dmi": -0.397,
+      "dmi": -0.396,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -575,7 +575,7 @@
       "date": "1875-11-01",
       "year": 1875,
       "month": 11,
-      "dmi": -0.891,
+      "dmi": -0.89,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -623,7 +623,7 @@
       "date": "1876-05-01",
       "year": 1876,
       "month": 5,
-      "dmi": -0.471,
+      "dmi": -0.472,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -631,7 +631,7 @@
       "date": "1876-06-01",
       "year": 1876,
       "month": 6,
-      "dmi": -0.424,
+      "dmi": -0.423,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -735,7 +735,7 @@
       "date": "1877-07-01",
       "year": 1877,
       "month": 7,
-      "dmi": -0.588,
+      "dmi": -0.587,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -799,7 +799,7 @@
       "date": "1878-03-01",
       "year": 1878,
       "month": 3,
-      "dmi": -0.016,
+      "dmi": -0.015,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -815,7 +815,7 @@
       "date": "1878-05-01",
       "year": 1878,
       "month": 5,
-      "dmi": -0.355,
+      "dmi": -0.354,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -871,7 +871,7 @@
       "date": "1878-12-01",
       "year": 1878,
       "month": 12,
-      "dmi": -0.47,
+      "dmi": -0.471,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -879,7 +879,7 @@
       "date": "1879-01-01",
       "year": 1879,
       "month": 1,
-      "dmi": -0.429,
+      "dmi": -0.428,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -903,7 +903,7 @@
       "date": "1879-04-01",
       "year": 1879,
       "month": 4,
-      "dmi": -0.541,
+      "dmi": -0.542,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -943,7 +943,7 @@
       "date": "1879-09-01",
       "year": 1879,
       "month": 9,
-      "dmi": -0.591,
+      "dmi": -0.59,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -967,7 +967,7 @@
       "date": "1879-12-01",
       "year": 1879,
       "month": 12,
-      "dmi": -0.606,
+      "dmi": -0.605,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -1015,7 +1015,7 @@
       "date": "1880-06-01",
       "year": 1880,
       "month": 6,
-      "dmi": -0.299,
+      "dmi": -0.3,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -1111,7 +1111,7 @@
       "date": "1881-06-01",
       "year": 1881,
       "month": 6,
-      "dmi": 0.18,
+      "dmi": 0.179,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -1127,7 +1127,7 @@
       "date": "1881-08-01",
       "year": 1881,
       "month": 8,
-      "dmi": -0.077,
+      "dmi": -0.078,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -1135,7 +1135,7 @@
       "date": "1881-09-01",
       "year": 1881,
       "month": 9,
-      "dmi": -0.299,
+      "dmi": -0.298,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -1167,7 +1167,7 @@
       "date": "1882-01-01",
       "year": 1882,
       "month": 1,
-      "dmi": -0.557,
+      "dmi": -0.558,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -1223,7 +1223,7 @@
       "date": "1882-08-01",
       "year": 1882,
       "month": 8,
-      "dmi": -0.497,
+      "dmi": -0.496,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -1263,7 +1263,7 @@
       "date": "1883-01-01",
       "year": 1883,
       "month": 1,
-      "dmi": -0.705,
+      "dmi": -0.706,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -1287,7 +1287,7 @@
       "date": "1883-04-01",
       "year": 1883,
       "month": 4,
-      "dmi": -0.126,
+      "dmi": -0.127,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -1319,7 +1319,7 @@
       "date": "1883-08-01",
       "year": 1883,
       "month": 8,
-      "dmi": -0.124,
+      "dmi": -0.125,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -1343,7 +1343,7 @@
       "date": "1883-11-01",
       "year": 1883,
       "month": 11,
-      "dmi": -0.36,
+      "dmi": -0.359,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -1511,7 +1511,7 @@
       "date": "1885-08-01",
       "year": 1885,
       "month": 8,
-      "dmi": -0.23,
+      "dmi": -0.229,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -1527,7 +1527,7 @@
       "date": "1885-10-01",
       "year": 1885,
       "month": 10,
-      "dmi": -0.218,
+      "dmi": -0.219,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -1551,7 +1551,7 @@
       "date": "1886-01-01",
       "year": 1886,
       "month": 1,
-      "dmi": -0.614,
+      "dmi": -0.613,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -1615,7 +1615,7 @@
       "date": "1886-09-01",
       "year": 1886,
       "month": 9,
-      "dmi": -0.988,
+      "dmi": -0.989,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -1687,7 +1687,7 @@
       "date": "1887-06-01",
       "year": 1887,
       "month": 6,
-      "dmi": -0.171,
+      "dmi": -0.172,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -1695,7 +1695,7 @@
       "date": "1887-07-01",
       "year": 1887,
       "month": 7,
-      "dmi": -0.232,
+      "dmi": -0.233,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -1703,7 +1703,7 @@
       "date": "1887-08-01",
       "year": 1887,
       "month": 8,
-      "dmi": -0.009,
+      "dmi": -0.01,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -1711,7 +1711,7 @@
       "date": "1887-09-01",
       "year": 1887,
       "month": 9,
-      "dmi": -0.285,
+      "dmi": -0.286,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -1887,7 +1887,7 @@
       "date": "1889-07-01",
       "year": 1889,
       "month": 7,
-      "dmi": -0.516,
+      "dmi": -0.515,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -1903,7 +1903,7 @@
       "date": "1889-09-01",
       "year": 1889,
       "month": 9,
-      "dmi": -0.912,
+      "dmi": -0.911,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -1919,7 +1919,7 @@
       "date": "1889-11-01",
       "year": 1889,
       "month": 11,
-      "dmi": -0.87,
+      "dmi": -0.871,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -1951,7 +1951,7 @@
       "date": "1890-03-01",
       "year": 1890,
       "month": 3,
-      "dmi": -0.198,
+      "dmi": -0.199,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2071,7 +2071,7 @@
       "date": "1891-06-01",
       "year": 1891,
       "month": 6,
-      "dmi": -0.1,
+      "dmi": -0.099,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2095,7 +2095,7 @@
       "date": "1891-09-01",
       "year": 1891,
       "month": 9,
-      "dmi": -0.068,
+      "dmi": -0.067,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2167,7 +2167,7 @@
       "date": "1892-06-01",
       "year": 1892,
       "month": 6,
-      "dmi": -0.486,
+      "dmi": -0.487,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2263,7 +2263,7 @@
       "date": "1893-06-01",
       "year": 1893,
       "month": 6,
-      "dmi": -0.527,
+      "dmi": -0.526,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2335,7 +2335,7 @@
       "date": "1894-03-01",
       "year": 1894,
       "month": 3,
-      "dmi": -0.263,
+      "dmi": -0.264,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2367,7 +2367,7 @@
       "date": "1894-07-01",
       "year": 1894,
       "month": 7,
-      "dmi": -0.179,
+      "dmi": -0.18,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2399,7 +2399,7 @@
       "date": "1894-11-01",
       "year": 1894,
       "month": 11,
-      "dmi": -0.276,
+      "dmi": -0.275,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2415,7 +2415,7 @@
       "date": "1895-01-01",
       "year": 1895,
       "month": 1,
-      "dmi": -0.183,
+      "dmi": -0.184,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2423,7 +2423,7 @@
       "date": "1895-02-01",
       "year": 1895,
       "month": 2,
-      "dmi": -0.057,
+      "dmi": -0.056,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2463,7 +2463,7 @@
       "date": "1895-07-01",
       "year": 1895,
       "month": 7,
-      "dmi": -0.411,
+      "dmi": -0.41,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2495,7 +2495,7 @@
       "date": "1895-11-01",
       "year": 1895,
       "month": 11,
-      "dmi": -0.481,
+      "dmi": -0.482,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2535,7 +2535,7 @@
       "date": "1896-04-01",
       "year": 1896,
       "month": 4,
-      "dmi": -0.293,
+      "dmi": -0.292,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2543,7 +2543,7 @@
       "date": "1896-05-01",
       "year": 1896,
       "month": 5,
-      "dmi": -0.217,
+      "dmi": -0.216,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2575,7 +2575,7 @@
       "date": "1896-09-01",
       "year": 1896,
       "month": 9,
-      "dmi": -0.012,
+      "dmi": -0.011,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2607,7 +2607,7 @@
       "date": "1897-01-01",
       "year": 1897,
       "month": 1,
-      "dmi": -0.184,
+      "dmi": -0.183,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2631,7 +2631,7 @@
       "date": "1897-04-01",
       "year": 1897,
       "month": 4,
-      "dmi": -0.177,
+      "dmi": -0.178,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2663,7 +2663,7 @@
       "date": "1897-08-01",
       "year": 1897,
       "month": 8,
-      "dmi": -0.221,
+      "dmi": -0.22,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2727,7 +2727,7 @@
       "date": "1898-04-01",
       "year": 1898,
       "month": 4,
-      "dmi": -0.378,
+      "dmi": -0.379,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2775,7 +2775,7 @@
       "date": "1898-10-01",
       "year": 1898,
       "month": 10,
-      "dmi": -0.916,
+      "dmi": -0.917,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2815,7 +2815,7 @@
       "date": "1899-03-01",
       "year": 1899,
       "month": 3,
-      "dmi": -0.176,
+      "dmi": -0.177,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2823,7 +2823,7 @@
       "date": "1899-04-01",
       "year": 1899,
       "month": 4,
-      "dmi": -0.129,
+      "dmi": -0.13,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2879,7 +2879,7 @@
       "date": "1899-11-01",
       "year": 1899,
       "month": 11,
-      "dmi": -0.438,
+      "dmi": -0.437,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2903,7 +2903,7 @@
       "date": "1900-02-01",
       "year": 1900,
       "month": 2,
-      "dmi": -0.293,
+      "dmi": -0.294,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2911,7 +2911,7 @@
       "date": "1900-03-01",
       "year": 1900,
       "month": 3,
-      "dmi": -0.464,
+      "dmi": -0.465,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2927,7 +2927,7 @@
       "date": "1900-05-01",
       "year": 1900,
       "month": 5,
-      "dmi": -0.159,
+      "dmi": -0.16,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2943,7 +2943,7 @@
       "date": "1900-07-01",
       "year": 1900,
       "month": 7,
-      "dmi": -0.319,
+      "dmi": -0.318,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -2991,7 +2991,7 @@
       "date": "1901-01-01",
       "year": 1901,
       "month": 1,
-      "dmi": -0.54,
+      "dmi": -0.541,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3015,7 +3015,7 @@
       "date": "1901-04-01",
       "year": 1901,
       "month": 4,
-      "dmi": -0.514,
+      "dmi": -0.513,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3039,7 +3039,7 @@
       "date": "1901-07-01",
       "year": 1901,
       "month": 7,
-      "dmi": -0.713,
+      "dmi": -0.712,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3199,7 +3199,7 @@
       "date": "1903-03-01",
       "year": 1903,
       "month": 3,
-      "dmi": -0.364,
+      "dmi": -0.365,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3255,7 +3255,7 @@
       "date": "1903-10-01",
       "year": 1903,
       "month": 10,
-      "dmi": -1.036,
+      "dmi": -1.035,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3287,7 +3287,7 @@
       "date": "1904-02-01",
       "year": 1904,
       "month": 2,
-      "dmi": -0.234,
+      "dmi": -0.233,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3295,7 +3295,7 @@
       "date": "1904-03-01",
       "year": 1904,
       "month": 3,
-      "dmi": -0.219,
+      "dmi": -0.218,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3303,7 +3303,7 @@
       "date": "1904-04-01",
       "year": 1904,
       "month": 4,
-      "dmi": -0.029,
+      "dmi": -0.03,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3359,7 +3359,7 @@
       "date": "1904-11-01",
       "year": 1904,
       "month": 11,
-      "dmi": -0.353,
+      "dmi": -0.352,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3415,7 +3415,7 @@
       "date": "1905-06-01",
       "year": 1905,
       "month": 6,
-      "dmi": -0.447,
+      "dmi": -0.448,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3551,7 +3551,7 @@
       "date": "1906-11-01",
       "year": 1906,
       "month": 11,
-      "dmi": -0.794,
+      "dmi": -0.795,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3583,7 +3583,7 @@
       "date": "1907-03-01",
       "year": 1907,
       "month": 3,
-      "dmi": -0.051,
+      "dmi": -0.052,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3607,7 +3607,7 @@
       "date": "1907-06-01",
       "year": 1907,
       "month": 6,
-      "dmi": -0.345,
+      "dmi": -0.346,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3695,7 +3695,7 @@
       "date": "1908-05-01",
       "year": 1908,
       "month": 5,
-      "dmi": -0.229,
+      "dmi": -0.23,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3703,7 +3703,7 @@
       "date": "1908-06-01",
       "year": 1908,
       "month": 6,
-      "dmi": 0.041,
+      "dmi": 0.042,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3719,7 +3719,7 @@
       "date": "1908-08-01",
       "year": 1908,
       "month": 8,
-      "dmi": -0.46,
+      "dmi": -0.461,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3727,7 +3727,7 @@
       "date": "1908-09-01",
       "year": 1908,
       "month": 9,
-      "dmi": -0.318,
+      "dmi": -0.317,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3743,7 +3743,7 @@
       "date": "1908-11-01",
       "year": 1908,
       "month": 11,
-      "dmi": -0.508,
+      "dmi": -0.507,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3759,7 +3759,7 @@
       "date": "1909-01-01",
       "year": 1909,
       "month": 1,
-      "dmi": -0.732,
+      "dmi": -0.733,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3767,7 +3767,7 @@
       "date": "1909-02-01",
       "year": 1909,
       "month": 2,
-      "dmi": -0.501,
+      "dmi": -0.5,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3791,7 +3791,7 @@
       "date": "1909-05-01",
       "year": 1909,
       "month": 5,
-      "dmi": -0.802,
+      "dmi": -0.801,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3831,7 +3831,7 @@
       "date": "1909-10-01",
       "year": 1909,
       "month": 10,
-      "dmi": -0.729,
+      "dmi": -0.73,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3863,7 +3863,7 @@
       "date": "1910-02-01",
       "year": 1910,
       "month": 2,
-      "dmi": -0.169,
+      "dmi": -0.168,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3895,7 +3895,7 @@
       "date": "1910-06-01",
       "year": 1910,
       "month": 6,
-      "dmi": -0.46,
+      "dmi": -0.459,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3911,7 +3911,7 @@
       "date": "1910-08-01",
       "year": 1910,
       "month": 8,
-      "dmi": -0.821,
+      "dmi": -0.82,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3951,7 +3951,7 @@
       "date": "1911-01-01",
       "year": 1911,
       "month": 1,
-      "dmi": -0.194,
+      "dmi": -0.195,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3959,7 +3959,7 @@
       "date": "1911-02-01",
       "year": 1911,
       "month": 2,
-      "dmi": -0.486,
+      "dmi": -0.487,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -3983,7 +3983,7 @@
       "date": "1911-05-01",
       "year": 1911,
       "month": 5,
-      "dmi": -0.436,
+      "dmi": -0.435,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4087,7 +4087,7 @@
       "date": "1912-06-01",
       "year": 1912,
       "month": 6,
-      "dmi": -0.003,
+      "dmi": -0.002,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4135,7 +4135,7 @@
       "date": "1912-12-01",
       "year": 1912,
       "month": 12,
-      "dmi": -0.502,
+      "dmi": -0.503,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4143,7 +4143,7 @@
       "date": "1913-01-01",
       "year": 1913,
       "month": 1,
-      "dmi": -0.237,
+      "dmi": -0.236,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4327,7 +4327,7 @@
       "date": "1914-12-01",
       "year": 1914,
       "month": 12,
-      "dmi": -0.712,
+      "dmi": -0.711,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4335,7 +4335,7 @@
       "date": "1915-01-01",
       "year": 1915,
       "month": 1,
-      "dmi": -0.63,
+      "dmi": -0.629,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4351,7 +4351,7 @@
       "date": "1915-03-01",
       "year": 1915,
       "month": 3,
-      "dmi": -0.403,
+      "dmi": -0.402,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4375,7 +4375,7 @@
       "date": "1915-06-01",
       "year": 1915,
       "month": 6,
-      "dmi": -0.202,
+      "dmi": -0.203,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4383,7 +4383,7 @@
       "date": "1915-07-01",
       "year": 1915,
       "month": 7,
-      "dmi": -0.704,
+      "dmi": -0.705,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4439,7 +4439,7 @@
       "date": "1916-02-01",
       "year": 1916,
       "month": 2,
-      "dmi": -0.03,
+      "dmi": -0.031,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4455,7 +4455,7 @@
       "date": "1916-04-01",
       "year": 1916,
       "month": 4,
-      "dmi": 0.138,
+      "dmi": 0.139,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4535,7 +4535,7 @@
       "date": "1917-02-01",
       "year": 1917,
       "month": 2,
-      "dmi": -0.046,
+      "dmi": -0.047,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4599,7 +4599,7 @@
       "date": "1917-10-01",
       "year": 1917,
       "month": 10,
-      "dmi": -1.064,
+      "dmi": -1.065,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4631,7 +4631,7 @@
       "date": "1918-02-01",
       "year": 1918,
       "month": 2,
-      "dmi": 0.135,
+      "dmi": 0.136,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4655,7 +4655,7 @@
       "date": "1918-05-01",
       "year": 1918,
       "month": 5,
-      "dmi": -0.421,
+      "dmi": -0.42,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4727,7 +4727,7 @@
       "date": "1919-02-01",
       "year": 1919,
       "month": 2,
-      "dmi": -0.117,
+      "dmi": -0.116,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4735,7 +4735,7 @@
       "date": "1919-03-01",
       "year": 1919,
       "month": 3,
-      "dmi": -0.27,
+      "dmi": -0.269,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4751,8 +4751,8 @@
       "date": "1919-05-01",
       "year": 1919,
       "month": 5,
-      "dmi": -0.399,
-      "label": "Neutral IOD",
+      "dmi": -0.4,
+      "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
     {
@@ -4815,7 +4815,7 @@
       "date": "1920-01-01",
       "year": 1920,
       "month": 1,
-      "dmi": 0.017,
+      "dmi": 0.018,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4823,7 +4823,7 @@
       "date": "1920-02-01",
       "year": 1920,
       "month": 2,
-      "dmi": 0.055,
+      "dmi": 0.054,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4831,7 +4831,7 @@
       "date": "1920-03-01",
       "year": 1920,
       "month": 3,
-      "dmi": 0.139,
+      "dmi": 0.14,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4855,7 +4855,7 @@
       "date": "1920-06-01",
       "year": 1920,
       "month": 6,
-      "dmi": -0.058,
+      "dmi": -0.057,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4863,7 +4863,7 @@
       "date": "1920-07-01",
       "year": 1920,
       "month": 7,
-      "dmi": -0.59,
+      "dmi": -0.589,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4895,7 +4895,7 @@
       "date": "1920-11-01",
       "year": 1920,
       "month": 11,
-      "dmi": -0.577,
+      "dmi": -0.576,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4919,7 +4919,7 @@
       "date": "1921-02-01",
       "year": 1921,
       "month": 2,
-      "dmi": -0.165,
+      "dmi": -0.164,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4943,7 +4943,7 @@
       "date": "1921-05-01",
       "year": 1921,
       "month": 5,
-      "dmi": -0.041,
+      "dmi": -0.042,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4959,7 +4959,7 @@
       "date": "1921-07-01",
       "year": 1921,
       "month": 7,
-      "dmi": -0.441,
+      "dmi": -0.442,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4967,7 +4967,7 @@
       "date": "1921-08-01",
       "year": 1921,
       "month": 8,
-      "dmi": -0.932,
+      "dmi": -0.931,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -4999,7 +4999,7 @@
       "date": "1921-12-01",
       "year": 1921,
       "month": 12,
-      "dmi": -0.382,
+      "dmi": -0.383,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5015,7 +5015,7 @@
       "date": "1922-02-01",
       "year": 1922,
       "month": 2,
-      "dmi": -0.196,
+      "dmi": -0.197,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5055,7 +5055,7 @@
       "date": "1922-07-01",
       "year": 1922,
       "month": 7,
-      "dmi": -0.548,
+      "dmi": -0.549,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5119,7 +5119,7 @@
       "date": "1923-03-01",
       "year": 1923,
       "month": 3,
-      "dmi": -0.282,
+      "dmi": -0.281,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5135,7 +5135,7 @@
       "date": "1923-05-01",
       "year": 1923,
       "month": 5,
-      "dmi": -0.311,
+      "dmi": -0.312,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5183,7 +5183,7 @@
       "date": "1923-11-01",
       "year": 1923,
       "month": 11,
-      "dmi": 0.448,
+      "dmi": 0.447,
       "label": "Positive IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5207,7 +5207,7 @@
       "date": "1924-02-01",
       "year": 1924,
       "month": 2,
-      "dmi": -0.597,
+      "dmi": -0.596,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5255,7 +5255,7 @@
       "date": "1924-08-01",
       "year": 1924,
       "month": 8,
-      "dmi": -0.418,
+      "dmi": -0.417,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5279,7 +5279,7 @@
       "date": "1924-11-01",
       "year": 1924,
       "month": 11,
-      "dmi": -0.409,
+      "dmi": -0.408,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5327,7 +5327,7 @@
       "date": "1925-05-01",
       "year": 1925,
       "month": 5,
-      "dmi": -0.043,
+      "dmi": -0.042,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5359,7 +5359,7 @@
       "date": "1925-09-01",
       "year": 1925,
       "month": 9,
-      "dmi": 0.389,
+      "dmi": 0.388,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5383,7 +5383,7 @@
       "date": "1925-12-01",
       "year": 1925,
       "month": 12,
-      "dmi": -0.152,
+      "dmi": -0.153,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5391,7 +5391,7 @@
       "date": "1926-01-01",
       "year": 1926,
       "month": 1,
-      "dmi": -0.004,
+      "dmi": -0.003,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5399,7 +5399,7 @@
       "date": "1926-02-01",
       "year": 1926,
       "month": 2,
-      "dmi": -0.359,
+      "dmi": -0.358,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5423,7 +5423,7 @@
       "date": "1926-05-01",
       "year": 1926,
       "month": 5,
-      "dmi": -0.085,
+      "dmi": -0.084,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5447,7 +5447,7 @@
       "date": "1926-08-01",
       "year": 1926,
       "month": 8,
-      "dmi": -0.006,
+      "dmi": -0.007,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5487,7 +5487,7 @@
       "date": "1927-01-01",
       "year": 1927,
       "month": 1,
-      "dmi": -0.201,
+      "dmi": -0.202,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5535,7 +5535,7 @@
       "date": "1927-07-01",
       "year": 1927,
       "month": 7,
-      "dmi": -0.575,
+      "dmi": -0.576,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5655,7 +5655,7 @@
       "date": "1928-10-01",
       "year": 1928,
       "month": 10,
-      "dmi": -0.733,
+      "dmi": -0.732,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5663,7 +5663,7 @@
       "date": "1928-11-01",
       "year": 1928,
       "month": 11,
-      "dmi": -0.206,
+      "dmi": -0.207,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5719,7 +5719,7 @@
       "date": "1929-06-01",
       "year": 1929,
       "month": 6,
-      "dmi": -0.246,
+      "dmi": -0.247,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5727,7 +5727,7 @@
       "date": "1929-07-01",
       "year": 1929,
       "month": 7,
-      "dmi": -0.388,
+      "dmi": -0.389,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5807,7 +5807,7 @@
       "date": "1930-05-01",
       "year": 1930,
       "month": 5,
-      "dmi": -0.445,
+      "dmi": -0.444,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5871,7 +5871,7 @@
       "date": "1931-01-01",
       "year": 1931,
       "month": 1,
-      "dmi": -0.057,
+      "dmi": -0.058,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5895,7 +5895,7 @@
       "date": "1931-04-01",
       "year": 1931,
       "month": 4,
-      "dmi": -0.525,
+      "dmi": -0.524,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5919,7 +5919,7 @@
       "date": "1931-07-01",
       "year": 1931,
       "month": 7,
-      "dmi": -0.413,
+      "dmi": -0.414,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5935,7 +5935,7 @@
       "date": "1931-09-01",
       "year": 1931,
       "month": 9,
-      "dmi": -1.01,
+      "dmi": -1.011,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5943,7 +5943,7 @@
       "date": "1931-10-01",
       "year": 1931,
       "month": 10,
-      "dmi": -0.597,
+      "dmi": -0.596,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -5991,7 +5991,7 @@
       "date": "1932-04-01",
       "year": 1932,
       "month": 4,
-      "dmi": -0.125,
+      "dmi": -0.126,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6015,7 +6015,7 @@
       "date": "1932-07-01",
       "year": 1932,
       "month": 7,
-      "dmi": -0.245,
+      "dmi": -0.246,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6087,7 +6087,7 @@
       "date": "1933-04-01",
       "year": 1933,
       "month": 4,
-      "dmi": 0.178,
+      "dmi": 0.177,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6135,7 +6135,7 @@
       "date": "1933-10-01",
       "year": 1933,
       "month": 10,
-      "dmi": -0.985,
+      "dmi": -0.986,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6223,7 +6223,7 @@
       "date": "1934-09-01",
       "year": 1934,
       "month": 9,
-      "dmi": -0.497,
+      "dmi": -0.498,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6247,7 +6247,7 @@
       "date": "1934-12-01",
       "year": 1934,
       "month": 12,
-      "dmi": -0.159,
+      "dmi": -0.16,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6255,7 +6255,7 @@
       "date": "1935-01-01",
       "year": 1935,
       "month": 1,
-      "dmi": 0.007,
+      "dmi": 0.008,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6263,7 +6263,7 @@
       "date": "1935-02-01",
       "year": 1935,
       "month": 2,
-      "dmi": -0.055,
+      "dmi": -0.054,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6311,7 +6311,7 @@
       "date": "1935-08-01",
       "year": 1935,
       "month": 8,
-      "dmi": -0.024,
+      "dmi": -0.025,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6319,7 +6319,7 @@
       "date": "1935-09-01",
       "year": 1935,
       "month": 9,
-      "dmi": -0.247,
+      "dmi": -0.246,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6407,7 +6407,7 @@
       "date": "1936-08-01",
       "year": 1936,
       "month": 8,
-      "dmi": -0.438,
+      "dmi": -0.437,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6423,7 +6423,7 @@
       "date": "1936-10-01",
       "year": 1936,
       "month": 10,
-      "dmi": -0.691,
+      "dmi": -0.692,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6471,7 +6471,7 @@
       "date": "1937-04-01",
       "year": 1937,
       "month": 4,
-      "dmi": -0.402,
+      "dmi": -0.403,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6495,7 +6495,7 @@
       "date": "1937-07-01",
       "year": 1937,
       "month": 7,
-      "dmi": -0.546,
+      "dmi": -0.547,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6511,7 +6511,7 @@
       "date": "1937-09-01",
       "year": 1937,
       "month": 9,
-      "dmi": -0.091,
+      "dmi": -0.09,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6535,7 +6535,7 @@
       "date": "1937-12-01",
       "year": 1937,
       "month": 12,
-      "dmi": -0.138,
+      "dmi": -0.139,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6583,7 +6583,7 @@
       "date": "1938-06-01",
       "year": 1938,
       "month": 6,
-      "dmi": -0.408,
+      "dmi": -0.407,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6599,7 +6599,7 @@
       "date": "1938-08-01",
       "year": 1938,
       "month": 8,
-      "dmi": -0.15,
+      "dmi": -0.149,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6607,7 +6607,7 @@
       "date": "1938-09-01",
       "year": 1938,
       "month": 9,
-      "dmi": -0.458,
+      "dmi": -0.457,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6751,7 +6751,7 @@
       "date": "1940-03-01",
       "year": 1940,
       "month": 3,
-      "dmi": -0.477,
+      "dmi": -0.476,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6759,7 +6759,7 @@
       "date": "1940-04-01",
       "year": 1940,
       "month": 4,
-      "dmi": -0.492,
+      "dmi": -0.493,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6767,7 +6767,7 @@
       "date": "1940-05-01",
       "year": 1940,
       "month": 5,
-      "dmi": -0.459,
+      "dmi": -0.46,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6783,7 +6783,7 @@
       "date": "1940-07-01",
       "year": 1940,
       "month": 7,
-      "dmi": -0.364,
+      "dmi": -0.363,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6823,7 +6823,7 @@
       "date": "1940-12-01",
       "year": 1940,
       "month": 12,
-      "dmi": -0.315,
+      "dmi": -0.316,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6847,7 +6847,7 @@
       "date": "1941-03-01",
       "year": 1941,
       "month": 3,
-      "dmi": -0.261,
+      "dmi": -0.26,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6855,7 +6855,7 @@
       "date": "1941-04-01",
       "year": 1941,
       "month": 4,
-      "dmi": -0.277,
+      "dmi": -0.278,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6895,7 +6895,7 @@
       "date": "1941-09-01",
       "year": 1941,
       "month": 9,
-      "dmi": -0.333,
+      "dmi": -0.332,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6903,7 +6903,7 @@
       "date": "1941-10-01",
       "year": 1941,
       "month": 10,
-      "dmi": -0.189,
+      "dmi": -0.19,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6927,7 +6927,7 @@
       "date": "1942-01-01",
       "year": 1942,
       "month": 1,
-      "dmi": -0.194,
+      "dmi": -0.193,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -6943,7 +6943,7 @@
       "date": "1942-03-01",
       "year": 1942,
       "month": 3,
-      "dmi": -0.25,
+      "dmi": -0.251,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7031,7 +7031,7 @@
       "date": "1943-02-01",
       "year": 1943,
       "month": 2,
-      "dmi": -0.248,
+      "dmi": -0.249,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7079,7 +7079,7 @@
       "date": "1943-08-01",
       "year": 1943,
       "month": 8,
-      "dmi": 0.035,
+      "dmi": 0.036,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7095,7 +7095,7 @@
       "date": "1943-10-01",
       "year": 1943,
       "month": 10,
-      "dmi": -0.536,
+      "dmi": -0.535,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7119,7 +7119,7 @@
       "date": "1944-01-01",
       "year": 1944,
       "month": 1,
-      "dmi": -0.154,
+      "dmi": -0.155,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7159,7 +7159,7 @@
       "date": "1944-06-01",
       "year": 1944,
       "month": 6,
-      "dmi": -0.114,
+      "dmi": -0.115,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7191,7 +7191,7 @@
       "date": "1944-10-01",
       "year": 1944,
       "month": 10,
-      "dmi": -0.6,
+      "dmi": -0.601,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7207,7 +7207,7 @@
       "date": "1944-12-01",
       "year": 1944,
       "month": 12,
-      "dmi": 0.179,
+      "dmi": 0.178,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7215,7 +7215,7 @@
       "date": "1945-01-01",
       "year": 1945,
       "month": 1,
-      "dmi": -0.14,
+      "dmi": -0.141,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7223,7 +7223,7 @@
       "date": "1945-02-01",
       "year": 1945,
       "month": 2,
-      "dmi": 0.09,
+      "dmi": 0.089,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7295,7 +7295,7 @@
       "date": "1945-11-01",
       "year": 1945,
       "month": 11,
-      "dmi": -0.324,
+      "dmi": -0.323,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7303,7 +7303,7 @@
       "date": "1945-12-01",
       "year": 1945,
       "month": 12,
-      "dmi": -0.328,
+      "dmi": -0.327,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7311,7 +7311,7 @@
       "date": "1946-01-01",
       "year": 1946,
       "month": 1,
-      "dmi": 0.068,
+      "dmi": 0.067,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7375,7 +7375,7 @@
       "date": "1946-09-01",
       "year": 1946,
       "month": 9,
-      "dmi": -0.072,
+      "dmi": -0.071,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7415,7 +7415,7 @@
       "date": "1947-02-01",
       "year": 1947,
       "month": 2,
-      "dmi": 0.029,
+      "dmi": 0.028,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7423,7 +7423,7 @@
       "date": "1947-03-01",
       "year": 1947,
       "month": 3,
-      "dmi": 0.0,
+      "dmi": -0.0,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7455,7 +7455,7 @@
       "date": "1947-07-01",
       "year": 1947,
       "month": 7,
-      "dmi": -0.633,
+      "dmi": -0.632,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7487,7 +7487,7 @@
       "date": "1947-11-01",
       "year": 1947,
       "month": 11,
-      "dmi": -0.319,
+      "dmi": -0.32,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7495,7 +7495,7 @@
       "date": "1947-12-01",
       "year": 1947,
       "month": 12,
-      "dmi": -0.265,
+      "dmi": -0.266,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7575,7 +7575,7 @@
       "date": "1948-10-01",
       "year": 1948,
       "month": 10,
-      "dmi": -0.292,
+      "dmi": -0.293,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7703,7 +7703,7 @@
       "date": "1950-02-01",
       "year": 1950,
       "month": 2,
-      "dmi": -0.554,
+      "dmi": -0.553,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7719,7 +7719,7 @@
       "date": "1950-04-01",
       "year": 1950,
       "month": 4,
-      "dmi": -0.475,
+      "dmi": -0.474,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7735,7 +7735,7 @@
       "date": "1950-06-01",
       "year": 1950,
       "month": 6,
-      "dmi": -0.494,
+      "dmi": -0.493,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7815,7 +7815,7 @@
       "date": "1951-04-01",
       "year": 1951,
       "month": 4,
-      "dmi": -0.513,
+      "dmi": -0.514,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7871,7 +7871,7 @@
       "date": "1951-11-01",
       "year": 1951,
       "month": 11,
-      "dmi": 0.123,
+      "dmi": 0.122,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7879,7 +7879,7 @@
       "date": "1951-12-01",
       "year": 1951,
       "month": 12,
-      "dmi": -0.073,
+      "dmi": -0.072,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7911,7 +7911,7 @@
       "date": "1952-04-01",
       "year": 1952,
       "month": 4,
-      "dmi": 0.073,
+      "dmi": 0.074,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7927,7 +7927,7 @@
       "date": "1952-06-01",
       "year": 1952,
       "month": 6,
-      "dmi": 0.02,
+      "dmi": 0.019,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7951,7 +7951,7 @@
       "date": "1952-09-01",
       "year": 1952,
       "month": 9,
-      "dmi": -0.607,
+      "dmi": -0.606,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -7975,7 +7975,7 @@
       "date": "1952-12-01",
       "year": 1952,
       "month": 12,
-      "dmi": -0.03,
+      "dmi": -0.031,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8087,7 +8087,7 @@
       "date": "1954-02-01",
       "year": 1954,
       "month": 2,
-      "dmi": -0.271,
+      "dmi": -0.272,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8095,7 +8095,7 @@
       "date": "1954-03-01",
       "year": 1954,
       "month": 3,
-      "dmi": -0.162,
+      "dmi": -0.163,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8119,7 +8119,7 @@
       "date": "1954-06-01",
       "year": 1954,
       "month": 6,
-      "dmi": -0.504,
+      "dmi": -0.505,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8143,7 +8143,7 @@
       "date": "1954-09-01",
       "year": 1954,
       "month": 9,
-      "dmi": -0.718,
+      "dmi": -0.719,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8159,7 +8159,7 @@
       "date": "1954-11-01",
       "year": 1954,
       "month": 11,
-      "dmi": -0.45,
+      "dmi": -0.451,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8175,7 +8175,7 @@
       "date": "1955-01-01",
       "year": 1955,
       "month": 1,
-      "dmi": -0.049,
+      "dmi": -0.05,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8183,7 +8183,7 @@
       "date": "1955-02-01",
       "year": 1955,
       "month": 2,
-      "dmi": -0.153,
+      "dmi": -0.152,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8207,7 +8207,7 @@
       "date": "1955-05-01",
       "year": 1955,
       "month": 5,
-      "dmi": -0.695,
+      "dmi": -0.696,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8263,7 +8263,7 @@
       "date": "1955-12-01",
       "year": 1955,
       "month": 12,
-      "dmi": -0.3,
+      "dmi": -0.301,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8359,7 +8359,7 @@
       "date": "1956-12-01",
       "year": 1956,
       "month": 12,
-      "dmi": -0.151,
+      "dmi": -0.15,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8375,7 +8375,7 @@
       "date": "1957-02-01",
       "year": 1957,
       "month": 2,
-      "dmi": -0.564,
+      "dmi": -0.563,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8399,7 +8399,7 @@
       "date": "1957-05-01",
       "year": 1957,
       "month": 5,
-      "dmi": -0.326,
+      "dmi": -0.327,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8407,7 +8407,7 @@
       "date": "1957-06-01",
       "year": 1957,
       "month": 6,
-      "dmi": -0.465,
+      "dmi": -0.466,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8415,7 +8415,7 @@
       "date": "1957-07-01",
       "year": 1957,
       "month": 7,
-      "dmi": -0.488,
+      "dmi": -0.489,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8447,7 +8447,7 @@
       "date": "1957-11-01",
       "year": 1957,
       "month": 11,
-      "dmi": -0.482,
+      "dmi": -0.483,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8487,7 +8487,7 @@
       "date": "1958-04-01",
       "year": 1958,
       "month": 4,
-      "dmi": -0.348,
+      "dmi": -0.347,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8503,7 +8503,7 @@
       "date": "1958-06-01",
       "year": 1958,
       "month": 6,
-      "dmi": -0.854,
+      "dmi": -0.855,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8519,7 +8519,7 @@
       "date": "1958-08-01",
       "year": 1958,
       "month": 8,
-      "dmi": -1.26,
+      "dmi": -1.259,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8535,7 +8535,7 @@
       "date": "1958-10-01",
       "year": 1958,
       "month": 10,
-      "dmi": -0.966,
+      "dmi": -0.967,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8543,7 +8543,7 @@
       "date": "1958-11-01",
       "year": 1958,
       "month": 11,
-      "dmi": -0.674,
+      "dmi": -0.675,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8583,7 +8583,7 @@
       "date": "1959-04-01",
       "year": 1959,
       "month": 4,
-      "dmi": -0.357,
+      "dmi": -0.356,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8639,7 +8639,7 @@
       "date": "1959-11-01",
       "year": 1959,
       "month": 11,
-      "dmi": -0.574,
+      "dmi": -0.575,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8655,7 +8655,7 @@
       "date": "1960-01-01",
       "year": 1960,
       "month": 1,
-      "dmi": -0.236,
+      "dmi": -0.237,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8663,7 +8663,7 @@
       "date": "1960-02-01",
       "year": 1960,
       "month": 2,
-      "dmi": -0.043,
+      "dmi": -0.044,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8687,7 +8687,7 @@
       "date": "1960-05-01",
       "year": 1960,
       "month": 5,
-      "dmi": -0.738,
+      "dmi": -0.739,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8703,7 +8703,7 @@
       "date": "1960-07-01",
       "year": 1960,
       "month": 7,
-      "dmi": -0.734,
+      "dmi": -0.735,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8775,7 +8775,7 @@
       "date": "1961-04-01",
       "year": 1961,
       "month": 4,
-      "dmi": -0.612,
+      "dmi": -0.613,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8807,7 +8807,7 @@
       "date": "1961-08-01",
       "year": 1961,
       "month": 8,
-      "dmi": 0.776,
+      "dmi": 0.775,
       "label": "Positive IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8863,7 +8863,7 @@
       "date": "1962-03-01",
       "year": 1962,
       "month": 3,
-      "dmi": 0.356,
+      "dmi": 0.357,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8871,7 +8871,7 @@
       "date": "1962-04-01",
       "year": 1962,
       "month": 4,
-      "dmi": -0.019,
+      "dmi": -0.02,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8903,7 +8903,7 @@
       "date": "1962-08-01",
       "year": 1962,
       "month": 8,
-      "dmi": -0.303,
+      "dmi": -0.304,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8919,7 +8919,7 @@
       "date": "1962-10-01",
       "year": 1962,
       "month": 10,
-      "dmi": -0.327,
+      "dmi": -0.328,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8943,7 +8943,7 @@
       "date": "1963-01-01",
       "year": 1963,
       "month": 1,
-      "dmi": 0.329,
+      "dmi": 0.328,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8951,7 +8951,7 @@
       "date": "1963-02-01",
       "year": 1963,
       "month": 2,
-      "dmi": 0.395,
+      "dmi": 0.396,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -8983,7 +8983,7 @@
       "date": "1963-06-01",
       "year": 1963,
       "month": 6,
-      "dmi": -0.248,
+      "dmi": -0.247,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9007,7 +9007,7 @@
       "date": "1963-09-01",
       "year": 1963,
       "month": 9,
-      "dmi": 0.081,
+      "dmi": 0.082,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9015,7 +9015,7 @@
       "date": "1963-10-01",
       "year": 1963,
       "month": 10,
-      "dmi": 0.432,
+      "dmi": 0.431,
       "label": "Positive IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9103,7 +9103,7 @@
       "date": "1964-09-01",
       "year": 1964,
       "month": 9,
-      "dmi": -0.981,
+      "dmi": -0.98,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9111,7 +9111,7 @@
       "date": "1964-10-01",
       "year": 1964,
       "month": 10,
-      "dmi": -1.027,
+      "dmi": -1.028,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9175,7 +9175,7 @@
       "date": "1965-06-01",
       "year": 1965,
       "month": 6,
-      "dmi": -0.487,
+      "dmi": -0.488,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9279,7 +9279,7 @@
       "date": "1966-07-01",
       "year": 1966,
       "month": 7,
-      "dmi": -0.004,
+      "dmi": -0.005,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9327,7 +9327,7 @@
       "date": "1967-01-01",
       "year": 1967,
       "month": 1,
-      "dmi": -0.236,
+      "dmi": -0.237,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9343,7 +9343,7 @@
       "date": "1967-03-01",
       "year": 1967,
       "month": 3,
-      "dmi": 0.248,
+      "dmi": 0.249,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9359,7 +9359,7 @@
       "date": "1967-05-01",
       "year": 1967,
       "month": 5,
-      "dmi": -0.165,
+      "dmi": -0.166,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9375,7 +9375,7 @@
       "date": "1967-07-01",
       "year": 1967,
       "month": 7,
-      "dmi": 0.14,
+      "dmi": 0.139,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9399,7 +9399,7 @@
       "date": "1967-10-01",
       "year": 1967,
       "month": 10,
-      "dmi": 0.159,
+      "dmi": 0.158,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9439,7 +9439,7 @@
       "date": "1968-03-01",
       "year": 1968,
       "month": 3,
-      "dmi": 0.154,
+      "dmi": 0.153,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9463,7 +9463,7 @@
       "date": "1968-06-01",
       "year": 1968,
       "month": 6,
-      "dmi": 0.091,
+      "dmi": 0.09,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9471,7 +9471,7 @@
       "date": "1968-07-01",
       "year": 1968,
       "month": 7,
-      "dmi": -0.521,
+      "dmi": -0.522,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9543,7 +9543,7 @@
       "date": "1969-04-01",
       "year": 1969,
       "month": 4,
-      "dmi": -0.051,
+      "dmi": -0.05,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9567,7 +9567,7 @@
       "date": "1969-07-01",
       "year": 1969,
       "month": 7,
-      "dmi": -0.407,
+      "dmi": -0.406,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9615,7 +9615,7 @@
       "date": "1970-01-01",
       "year": 1970,
       "month": 1,
-      "dmi": 0.297,
+      "dmi": 0.298,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9671,7 +9671,7 @@
       "date": "1970-08-01",
       "year": 1970,
       "month": 8,
-      "dmi": -0.351,
+      "dmi": -0.35,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9679,7 +9679,7 @@
       "date": "1970-09-01",
       "year": 1970,
       "month": 9,
-      "dmi": -0.6,
+      "dmi": -0.599,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9791,7 +9791,7 @@
       "date": "1971-11-01",
       "year": 1971,
       "month": 11,
-      "dmi": 0.017,
+      "dmi": 0.018,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9823,7 +9823,7 @@
       "date": "1972-03-01",
       "year": 1972,
       "month": 3,
-      "dmi": 0.031,
+      "dmi": 0.03,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9847,7 +9847,7 @@
       "date": "1972-06-01",
       "year": 1972,
       "month": 6,
-      "dmi": 0.739,
+      "dmi": 0.738,
       "label": "Positive IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9887,7 +9887,7 @@
       "date": "1972-11-01",
       "year": 1972,
       "month": 11,
-      "dmi": 0.671,
+      "dmi": 0.67,
       "label": "Positive IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9927,7 +9927,7 @@
       "date": "1973-04-01",
       "year": 1973,
       "month": 4,
-      "dmi": -0.117,
+      "dmi": -0.116,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -9935,7 +9935,7 @@
       "date": "1973-05-01",
       "year": 1973,
       "month": 5,
-      "dmi": 0.085,
+      "dmi": 0.084,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10055,7 +10055,7 @@
       "date": "1974-08-01",
       "year": 1974,
       "month": 8,
-      "dmi": -0.497,
+      "dmi": -0.498,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10103,7 +10103,7 @@
       "date": "1975-02-01",
       "year": 1975,
       "month": 2,
-      "dmi": -0.249,
+      "dmi": -0.25,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10183,7 +10183,7 @@
       "date": "1975-12-01",
       "year": 1975,
       "month": 12,
-      "dmi": -0.17,
+      "dmi": -0.169,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10239,7 +10239,7 @@
       "date": "1976-07-01",
       "year": 1976,
       "month": 7,
-      "dmi": 0.594,
+      "dmi": 0.593,
       "label": "Positive IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10279,7 +10279,7 @@
       "date": "1976-12-01",
       "year": 1976,
       "month": 12,
-      "dmi": 0.028,
+      "dmi": 0.029,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10343,7 +10343,7 @@
       "date": "1977-08-01",
       "year": 1977,
       "month": 8,
-      "dmi": -0.26,
+      "dmi": -0.261,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10399,7 +10399,7 @@
       "date": "1978-03-01",
       "year": 1978,
       "month": 3,
-      "dmi": -0.582,
+      "dmi": -0.583,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10423,7 +10423,7 @@
       "date": "1978-06-01",
       "year": 1978,
       "month": 6,
-      "dmi": -0.174,
+      "dmi": -0.175,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10447,7 +10447,7 @@
       "date": "1978-09-01",
       "year": 1978,
       "month": 9,
-      "dmi": -0.261,
+      "dmi": -0.26,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10487,7 +10487,7 @@
       "date": "1979-02-01",
       "year": 1979,
       "month": 2,
-      "dmi": -0.158,
+      "dmi": -0.159,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10519,7 +10519,7 @@
       "date": "1979-06-01",
       "year": 1979,
       "month": 6,
-      "dmi": 0.108,
+      "dmi": 0.109,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10543,7 +10543,7 @@
       "date": "1979-09-01",
       "year": 1979,
       "month": 9,
-      "dmi": -0.28,
+      "dmi": -0.279,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10591,7 +10591,7 @@
       "date": "1980-03-01",
       "year": 1980,
       "month": 3,
-      "dmi": -0.417,
+      "dmi": -0.418,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10599,7 +10599,7 @@
       "date": "1980-04-01",
       "year": 1980,
       "month": 4,
-      "dmi": -0.095,
+      "dmi": -0.096,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10647,7 +10647,7 @@
       "date": "1980-10-01",
       "year": 1980,
       "month": 10,
-      "dmi": -0.657,
+      "dmi": -0.658,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10687,7 +10687,7 @@
       "date": "1981-03-01",
       "year": 1981,
       "month": 3,
-      "dmi": 0.027,
+      "dmi": 0.026,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10695,7 +10695,7 @@
       "date": "1981-04-01",
       "year": 1981,
       "month": 4,
-      "dmi": 0.092,
+      "dmi": 0.093,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10711,7 +10711,7 @@
       "date": "1981-06-01",
       "year": 1981,
       "month": 6,
-      "dmi": -0.24,
+      "dmi": -0.239,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10751,7 +10751,7 @@
       "date": "1981-11-01",
       "year": 1981,
       "month": 11,
-      "dmi": -0.328,
+      "dmi": -0.327,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10775,7 +10775,7 @@
       "date": "1982-02-01",
       "year": 1982,
       "month": 2,
-      "dmi": 0.166,
+      "dmi": 0.167,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10839,7 +10839,7 @@
       "date": "1982-10-01",
       "year": 1982,
       "month": 10,
-      "dmi": 0.623,
+      "dmi": 0.624,
       "label": "Positive IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10855,7 +10855,7 @@
       "date": "1982-12-01",
       "year": 1982,
       "month": 12,
-      "dmi": -0.162,
+      "dmi": -0.163,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10871,7 +10871,7 @@
       "date": "1983-02-01",
       "year": 1983,
       "month": 2,
-      "dmi": -0.587,
+      "dmi": -0.588,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10895,7 +10895,7 @@
       "date": "1983-05-01",
       "year": 1983,
       "month": 5,
-      "dmi": -0.059,
+      "dmi": -0.058,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10903,7 +10903,7 @@
       "date": "1983-06-01",
       "year": 1983,
       "month": 6,
-      "dmi": 0.371,
+      "dmi": 0.37,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10927,7 +10927,7 @@
       "date": "1983-09-01",
       "year": 1983,
       "month": 9,
-      "dmi": -0.069,
+      "dmi": -0.068,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10991,7 +10991,7 @@
       "date": "1984-05-01",
       "year": 1984,
       "month": 5,
-      "dmi": -0.305,
+      "dmi": -0.304,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -10999,7 +10999,7 @@
       "date": "1984-06-01",
       "year": 1984,
       "month": 6,
-      "dmi": -0.357,
+      "dmi": -0.356,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -11015,7 +11015,7 @@
       "date": "1984-08-01",
       "year": 1984,
       "month": 8,
-      "dmi": -0.498,
+      "dmi": -0.497,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -11055,7 +11055,7 @@
       "date": "1985-01-01",
       "year": 1985,
       "month": 1,
-      "dmi": -0.466,
+      "dmi": -0.467,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -11103,7 +11103,7 @@
       "date": "1985-07-01",
       "year": 1985,
       "month": 7,
-      "dmi": -0.403,
+      "dmi": -0.404,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -11191,7 +11191,7 @@
       "date": "1986-06-01",
       "year": 1986,
       "month": 6,
-      "dmi": -0.278,
+      "dmi": -0.279,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -11231,7 +11231,7 @@
       "date": "1986-11-01",
       "year": 1986,
       "month": 11,
-      "dmi": -0.244,
+      "dmi": -0.243,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -11263,7 +11263,7 @@
       "date": "1987-03-01",
       "year": 1987,
       "month": 3,
-      "dmi": -0.137,
+      "dmi": -0.138,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -11295,7 +11295,7 @@
       "date": "1987-07-01",
       "year": 1987,
       "month": 7,
-      "dmi": 0.207,
+      "dmi": 0.206,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -11311,7 +11311,7 @@
       "date": "1987-09-01",
       "year": 1987,
       "month": 9,
-      "dmi": 0.393,
+      "dmi": 0.392,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -11319,7 +11319,7 @@
       "date": "1987-10-01",
       "year": 1987,
       "month": 10,
-      "dmi": 0.255,
+      "dmi": 0.254,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -11423,7 +11423,7 @@
       "date": "1988-11-01",
       "year": 1988,
       "month": 11,
-      "dmi": -0.183,
+      "dmi": -0.184,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -11503,7 +11503,7 @@
       "date": "1989-09-01",
       "year": 1989,
       "month": 9,
-      "dmi": -0.225,
+      "dmi": -0.224,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -11567,7 +11567,7 @@
       "date": "1990-05-01",
       "year": 1990,
       "month": 5,
-      "dmi": -0.348,
+      "dmi": -0.349,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -11591,7 +11591,7 @@
       "date": "1990-08-01",
       "year": 1990,
       "month": 8,
-      "dmi": -0.392,
+      "dmi": -0.391,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -11615,7 +11615,7 @@
       "date": "1990-11-01",
       "year": 1990,
       "month": 11,
-      "dmi": -0.094,
+      "dmi": -0.095,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -11655,7 +11655,7 @@
       "date": "1991-04-01",
       "year": 1991,
       "month": 4,
-      "dmi": 0.289,
+      "dmi": 0.288,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -11679,7 +11679,7 @@
       "date": "1991-07-01",
       "year": 1991,
       "month": 7,
-      "dmi": 0.27,
+      "dmi": 0.269,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -11703,7 +11703,7 @@
       "date": "1991-10-01",
       "year": 1991,
       "month": 10,
-      "dmi": -0.03,
+      "dmi": -0.031,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -11735,7 +11735,7 @@
       "date": "1992-02-01",
       "year": 1992,
       "month": 2,
-      "dmi": -0.389,
+      "dmi": -0.388,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -11807,15 +11807,15 @@
       "date": "1992-11-01",
       "year": 1992,
       "month": 11,
-      "dmi": -0.399,
-      "label": "Neutral IOD",
+      "dmi": -0.4,
+      "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
     {
       "date": "1992-12-01",
       "year": 1992,
       "month": 12,
-      "dmi": -0.317,
+      "dmi": -0.316,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -11879,7 +11879,7 @@
       "date": "1993-08-01",
       "year": 1993,
       "month": 8,
-      "dmi": -0.305,
+      "dmi": -0.306,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -12015,7 +12015,7 @@
       "date": "1995-01-01",
       "year": 1995,
       "month": 1,
-      "dmi": 0.14,
+      "dmi": 0.139,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -12095,7 +12095,7 @@
       "date": "1995-11-01",
       "year": 1995,
       "month": 11,
-      "dmi": -0.294,
+      "dmi": -0.295,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -12151,7 +12151,7 @@
       "date": "1996-06-01",
       "year": 1996,
       "month": 6,
-      "dmi": -0.394,
+      "dmi": -0.395,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -12159,7 +12159,7 @@
       "date": "1996-07-01",
       "year": 1996,
       "month": 7,
-      "dmi": -0.643,
+      "dmi": -0.644,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -12183,7 +12183,7 @@
       "date": "1996-10-01",
       "year": 1996,
       "month": 10,
-      "dmi": -1.108,
+      "dmi": -1.109,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -12239,7 +12239,7 @@
       "date": "1997-05-01",
       "year": 1997,
       "month": 5,
-      "dmi": 0.025,
+      "dmi": 0.026,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -12247,7 +12247,7 @@
       "date": "1997-06-01",
       "year": 1997,
       "month": 6,
-      "dmi": 0.082,
+      "dmi": 0.081,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -12263,7 +12263,7 @@
       "date": "1997-08-01",
       "year": 1997,
       "month": 8,
-      "dmi": 0.634,
+      "dmi": 0.633,
       "label": "Positive IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -12279,7 +12279,7 @@
       "date": "1997-10-01",
       "year": 1997,
       "month": 10,
-      "dmi": 0.873,
+      "dmi": 0.874,
       "label": "Positive IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -12423,7 +12423,7 @@
       "date": "1999-04-01",
       "year": 1999,
       "month": 4,
-      "dmi": -0.002,
+      "dmi": -0.001,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -12439,7 +12439,7 @@
       "date": "1999-06-01",
       "year": 1999,
       "month": 6,
-      "dmi": -0.145,
+      "dmi": -0.146,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -12447,7 +12447,7 @@
       "date": "1999-07-01",
       "year": 1999,
       "month": 7,
-      "dmi": 0.112,
+      "dmi": 0.111,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -12463,7 +12463,7 @@
       "date": "1999-09-01",
       "year": 1999,
       "month": 9,
-      "dmi": -0.05,
+      "dmi": -0.049,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -12471,7 +12471,7 @@
       "date": "1999-10-01",
       "year": 1999,
       "month": 10,
-      "dmi": -0.19,
+      "dmi": -0.189,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -12511,7 +12511,7 @@
       "date": "2000-03-01",
       "year": 2000,
       "month": 3,
-      "dmi": 0.14,
+      "dmi": 0.141,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -12599,7 +12599,7 @@
       "date": "2001-02-01",
       "year": 2001,
       "month": 2,
-      "dmi": -0.017,
+      "dmi": -0.016,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -12727,7 +12727,7 @@
       "date": "2002-06-01",
       "year": 2002,
       "month": 6,
-      "dmi": -0.19,
+      "dmi": -0.189,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -12735,7 +12735,7 @@
       "date": "2002-07-01",
       "year": 2002,
       "month": 7,
-      "dmi": -0.26,
+      "dmi": -0.261,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -12847,7 +12847,7 @@
       "date": "2003-09-01",
       "year": 2003,
       "month": 9,
-      "dmi": -0.061,
+      "dmi": -0.06,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -12903,7 +12903,7 @@
       "date": "2004-04-01",
       "year": 2004,
       "month": 4,
-      "dmi": -0.08,
+      "dmi": -0.079,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -12935,7 +12935,7 @@
       "date": "2004-08-01",
       "year": 2004,
       "month": 8,
-      "dmi": -0.132,
+      "dmi": -0.133,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -12991,7 +12991,7 @@
       "date": "2005-03-01",
       "year": 2005,
       "month": 3,
-      "dmi": -0.432,
+      "dmi": -0.433,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -13079,7 +13079,7 @@
       "date": "2006-02-01",
       "year": 2006,
       "month": 2,
-      "dmi": -0.305,
+      "dmi": -0.306,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -13103,7 +13103,7 @@
       "date": "2006-05-01",
       "year": 2006,
       "month": 5,
-      "dmi": -0.207,
+      "dmi": -0.208,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -13167,7 +13167,7 @@
       "date": "2007-01-01",
       "year": 2007,
       "month": 1,
-      "dmi": 0.224,
+      "dmi": 0.225,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -13183,7 +13183,7 @@
       "date": "2007-03-01",
       "year": 2007,
       "month": 3,
-      "dmi": 0.116,
+      "dmi": 0.115,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -13207,7 +13207,7 @@
       "date": "2007-06-01",
       "year": 2007,
       "month": 6,
-      "dmi": 0.03,
+      "dmi": 0.031,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -13223,7 +13223,7 @@
       "date": "2007-08-01",
       "year": 2007,
       "month": 8,
-      "dmi": 0.236,
+      "dmi": 0.237,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -13295,7 +13295,7 @@
       "date": "2008-05-01",
       "year": 2008,
       "month": 5,
-      "dmi": 0.178,
+      "dmi": 0.179,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -13391,7 +13391,7 @@
       "date": "2009-05-01",
       "year": 2009,
       "month": 5,
-      "dmi": 0.256,
+      "dmi": 0.257,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -13487,7 +13487,7 @@
       "date": "2010-05-01",
       "year": 2010,
       "month": 5,
-      "dmi": -0.03,
+      "dmi": -0.029,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -13511,7 +13511,7 @@
       "date": "2010-08-01",
       "year": 2010,
       "month": 8,
-      "dmi": -0.062,
+      "dmi": -0.061,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -13519,7 +13519,7 @@
       "date": "2010-09-01",
       "year": 2010,
       "month": 9,
-      "dmi": -0.268,
+      "dmi": -0.267,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -13551,7 +13551,7 @@
       "date": "2011-01-01",
       "year": 2011,
       "month": 1,
-      "dmi": 0.192,
+      "dmi": 0.191,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -13559,7 +13559,7 @@
       "date": "2011-02-01",
       "year": 2011,
       "month": 2,
-      "dmi": 0.242,
+      "dmi": 0.241,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -13687,7 +13687,7 @@
       "date": "2012-06-01",
       "year": 2012,
       "month": 6,
-      "dmi": 0.001,
+      "dmi": 0.0,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -13727,7 +13727,7 @@
       "date": "2012-11-01",
       "year": 2012,
       "month": 11,
-      "dmi": -0.1,
+      "dmi": -0.099,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -13735,7 +13735,7 @@
       "date": "2012-12-01",
       "year": 2012,
       "month": 12,
-      "dmi": 0.268,
+      "dmi": 0.267,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -13791,7 +13791,7 @@
       "date": "2013-07-01",
       "year": 2013,
       "month": 7,
-      "dmi": -0.18,
+      "dmi": -0.181,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -13919,7 +13919,7 @@
       "date": "2014-11-01",
       "year": 2014,
       "month": 11,
-      "dmi": 0.01,
+      "dmi": 0.009,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -13991,7 +13991,7 @@
       "date": "2015-08-01",
       "year": 2015,
       "month": 8,
-      "dmi": 0.567,
+      "dmi": 0.568,
       "label": "Positive IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14007,7 +14007,7 @@
       "date": "2015-10-01",
       "year": 2015,
       "month": 10,
-      "dmi": 0.483,
+      "dmi": 0.482,
       "label": "Positive IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14031,7 +14031,7 @@
       "date": "2016-01-01",
       "year": 2016,
       "month": 1,
-      "dmi": 0.266,
+      "dmi": 0.265,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14047,7 +14047,7 @@
       "date": "2016-03-01",
       "year": 2016,
       "month": 3,
-      "dmi": -0.009,
+      "dmi": -0.008,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14079,7 +14079,7 @@
       "date": "2016-07-01",
       "year": 2016,
       "month": 7,
-      "dmi": -0.758,
+      "dmi": -0.757,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14087,7 +14087,7 @@
       "date": "2016-08-01",
       "year": 2016,
       "month": 8,
-      "dmi": -0.444,
+      "dmi": -0.443,
       "label": "Negative IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14103,7 +14103,7 @@
       "date": "2016-10-01",
       "year": 2016,
       "month": 10,
-      "dmi": -0.372,
+      "dmi": -0.371,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14151,7 +14151,7 @@
       "date": "2017-04-01",
       "year": 2017,
       "month": 4,
-      "dmi": 0.499,
+      "dmi": 0.498,
       "label": "Positive IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14191,7 +14191,7 @@
       "date": "2017-09-01",
       "year": 2017,
       "month": 9,
-      "dmi": 0.034,
+      "dmi": 0.035,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14199,7 +14199,7 @@
       "date": "2017-10-01",
       "year": 2017,
       "month": 10,
-      "dmi": 0.016,
+      "dmi": 0.015,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14215,7 +14215,7 @@
       "date": "2017-12-01",
       "year": 2017,
       "month": 12,
-      "dmi": 0.109,
+      "dmi": 0.11,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14231,7 +14231,7 @@
       "date": "2018-02-01",
       "year": 2018,
       "month": 2,
-      "dmi": 0.215,
+      "dmi": 0.216,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14279,7 +14279,7 @@
       "date": "2018-08-01",
       "year": 2018,
       "month": 8,
-      "dmi": 0.122,
+      "dmi": 0.121,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14295,7 +14295,7 @@
       "date": "2018-10-01",
       "year": 2018,
       "month": 10,
-      "dmi": 0.685,
+      "dmi": 0.684,
       "label": "Positive IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14335,7 +14335,7 @@
       "date": "2019-03-01",
       "year": 2019,
       "month": 3,
-      "dmi": 0.224,
+      "dmi": 0.225,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14351,7 +14351,7 @@
       "date": "2019-05-01",
       "year": 2019,
       "month": 5,
-      "dmi": 0.539,
+      "dmi": 0.54,
       "label": "Positive IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14383,7 +14383,7 @@
       "date": "2019-09-01",
       "year": 2019,
       "month": 9,
-      "dmi": 0.893,
+      "dmi": 0.892,
       "label": "Positive IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14455,7 +14455,7 @@
       "date": "2020-06-01",
       "year": 2020,
       "month": 6,
-      "dmi": 0.454,
+      "dmi": 0.455,
       "label": "Positive IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14463,7 +14463,7 @@
       "date": "2020-07-01",
       "year": 2020,
       "month": 7,
-      "dmi": 0.32,
+      "dmi": 0.319,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14479,7 +14479,7 @@
       "date": "2020-09-01",
       "year": 2020,
       "month": 9,
-      "dmi": -0.19,
+      "dmi": -0.189,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14503,7 +14503,7 @@
       "date": "2020-12-01",
       "year": 2020,
       "month": 12,
-      "dmi": 0.03,
+      "dmi": 0.031,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14527,7 +14527,7 @@
       "date": "2021-03-01",
       "year": 2021,
       "month": 3,
-      "dmi": 0.266,
+      "dmi": 0.267,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14559,7 +14559,7 @@
       "date": "2021-07-01",
       "year": 2021,
       "month": 7,
-      "dmi": -0.228,
+      "dmi": -0.229,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14615,7 +14615,7 @@
       "date": "2022-02-01",
       "year": 2022,
       "month": 2,
-      "dmi": -0.083,
+      "dmi": -0.082,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14695,7 +14695,7 @@
       "date": "2022-12-01",
       "year": 2022,
       "month": 12,
-      "dmi": -0.092,
+      "dmi": -0.091,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14703,7 +14703,7 @@
       "date": "2023-01-01",
       "year": 2023,
       "month": 1,
-      "dmi": 0.109,
+      "dmi": 0.11,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14719,7 +14719,7 @@
       "date": "2023-03-01",
       "year": 2023,
       "month": 3,
-      "dmi": 0.415,
+      "dmi": 0.414,
       "label": "Positive IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14759,7 +14759,7 @@
       "date": "2023-08-01",
       "year": 2023,
       "month": 8,
-      "dmi": 0.825,
+      "dmi": 0.826,
       "label": "Positive IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14791,7 +14791,7 @@
       "date": "2023-12-01",
       "year": 2023,
       "month": 12,
-      "dmi": 0.851,
+      "dmi": 0.852,
       "label": "Positive IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14807,7 +14807,7 @@
       "date": "2024-02-01",
       "year": 2024,
       "month": 2,
-      "dmi": 0.328,
+      "dmi": 0.327,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14831,7 +14831,7 @@
       "date": "2024-05-01",
       "year": 2024,
       "month": 5,
-      "dmi": 0.297,
+      "dmi": 0.298,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14879,7 +14879,7 @@
       "date": "2024-11-01",
       "year": 2024,
       "month": 11,
-      "dmi": -0.383,
+      "dmi": -0.382,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14911,7 +14911,7 @@
       "date": "2025-03-01",
       "year": 2025,
       "month": 3,
-      "dmi": 0.059,
+      "dmi": 0.058,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     },
@@ -14920,6 +14920,110 @@
       "year": 2025,
       "month": 4,
       "dmi": 0.149,
+      "label": "Neutral IOD",
+      "source": "NOAA PSL HadISST (stale after Jan 2025)"
+    },
+    {
+      "date": "2025-05-01",
+      "year": 2025,
+      "month": 5,
+      "dmi": 0.107,
+      "label": "Neutral IOD",
+      "source": "NOAA PSL HadISST (stale after Jan 2025)"
+    },
+    {
+      "date": "2025-06-01",
+      "year": 2025,
+      "month": 6,
+      "dmi": -0.014,
+      "label": "Neutral IOD",
+      "source": "NOAA PSL HadISST (stale after Jan 2025)"
+    },
+    {
+      "date": "2025-07-01",
+      "year": 2025,
+      "month": 7,
+      "dmi": -0.072,
+      "label": "Neutral IOD",
+      "source": "NOAA PSL HadISST (stale after Jan 2025)"
+    },
+    {
+      "date": "2025-08-01",
+      "year": 2025,
+      "month": 8,
+      "dmi": -0.42,
+      "label": "Negative IOD",
+      "source": "NOAA PSL HadISST (stale after Jan 2025)"
+    },
+    {
+      "date": "2025-09-01",
+      "year": 2025,
+      "month": 9,
+      "dmi": -0.467,
+      "label": "Negative IOD",
+      "source": "NOAA PSL HadISST (stale after Jan 2025)"
+    },
+    {
+      "date": "2025-10-01",
+      "year": 2025,
+      "month": 10,
+      "dmi": -0.448,
+      "label": "Negative IOD",
+      "source": "NOAA PSL HadISST (stale after Jan 2025)"
+    },
+    {
+      "date": "2025-11-01",
+      "year": 2025,
+      "month": 11,
+      "dmi": -0.256,
+      "label": "Neutral IOD",
+      "source": "NOAA PSL HadISST (stale after Jan 2025)"
+    },
+    {
+      "date": "2025-12-01",
+      "year": 2025,
+      "month": 12,
+      "dmi": -0.017,
+      "label": "Neutral IOD",
+      "source": "NOAA PSL HadISST (stale after Jan 2025)"
+    },
+    {
+      "date": "2026-01-01",
+      "year": 2026,
+      "month": 1,
+      "dmi": 0.123,
+      "label": "Neutral IOD",
+      "source": "NOAA PSL HadISST (stale after Jan 2025)"
+    },
+    {
+      "date": "2026-02-01",
+      "year": 2026,
+      "month": 2,
+      "dmi": 0.529,
+      "label": "Positive IOD",
+      "source": "NOAA PSL HadISST (stale after Jan 2025)"
+    },
+    {
+      "date": "2026-03-01",
+      "year": 2026,
+      "month": 3,
+      "dmi": 0.285,
+      "label": "Neutral IOD",
+      "source": "NOAA PSL HadISST (stale after Jan 2025)"
+    },
+    {
+      "date": "2026-04-01",
+      "year": 2026,
+      "month": 4,
+      "dmi": 0.279,
+      "label": "Neutral IOD",
+      "source": "NOAA PSL HadISST (stale after Jan 2025)"
+    },
+    {
+      "date": "2026-05-01",
+      "year": 2026,
+      "month": 5,
+      "dmi": 0.146,
       "label": "Neutral IOD",
       "source": "NOAA PSL HadISST (stale after Jan 2025)"
     }
