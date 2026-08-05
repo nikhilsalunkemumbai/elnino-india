@@ -1,14 +1,14 @@
 {
-  "updated": "2026-08-04T01:20:30.554332Z",
+  "updated": "2026-08-05T01:25:30.707630Z",
   "source": "https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt",
   "weekly_source": "https://www.cpc.ncep.noaa.gov/data/indices/wksst9120.for",
   "note": "ONI (3-month running mean) is the stress index input. latest_weekly shows current-week Nino3.4 for dashboard context \u2014 it typically reads 1-2C higher than ONI during rapid El Nino onset.",
   "latest": {
-    "date": "2026-06-01",
-    "season": "MJJ",
+    "date": "2026-05-01",
+    "season": "AMJ",
     "year": 2026,
-    "month": 6,
-    "anomaly": 1.39,
+    "month": 5,
+    "anomaly": 0.98,
     "el_nino": true,
     "la_nina": false,
     "label": "Weak El Ni\u00f1o"
@@ -26,7 +26,7 @@
       "season": "DJF",
       "year": 1950,
       "month": 1,
-      "anomaly": -1.32,
+      "anomaly": -1.53,
       "el_nino": false,
       "la_nina": true
     },
@@ -35,7 +35,7 @@
       "season": "JFM",
       "year": 1950,
       "month": 2,
-      "anomaly": -1.2,
+      "anomaly": -1.34,
       "el_nino": false,
       "la_nina": true
     },
@@ -44,7 +44,7 @@
       "season": "FMA",
       "year": 1950,
       "month": 3,
-      "anomaly": -1.12,
+      "anomaly": -1.16,
       "el_nino": false,
       "la_nina": true
     },
@@ -53,7 +53,7 @@
       "season": "MAM",
       "year": 1950,
       "month": 4,
-      "anomaly": -1.08,
+      "anomaly": -1.18,
       "el_nino": false,
       "la_nina": true
     },
@@ -62,7 +62,7 @@
       "season": "AMJ",
       "year": 1950,
       "month": 5,
-      "anomaly": -1.1,
+      "anomaly": -1.07,
       "el_nino": false,
       "la_nina": true
     },
@@ -71,7 +71,7 @@
       "season": "MJJ",
       "year": 1950,
       "month": 6,
-      "anomaly": -0.9,
+      "anomaly": -0.85,
       "el_nino": false,
       "la_nina": true
     },
@@ -80,7 +80,7 @@
       "season": "JJA",
       "year": 1950,
       "month": 7,
-      "anomaly": -0.62,
+      "anomaly": -0.54,
       "el_nino": false,
       "la_nina": false
     },
@@ -89,7 +89,7 @@
       "season": "JAS",
       "year": 1950,
       "month": 8,
-      "anomaly": -0.57,
+      "anomaly": -0.42,
       "el_nino": false,
       "la_nina": false
     },
@@ -98,7 +98,7 @@
       "season": "ASO",
       "year": 1950,
       "month": 9,
-      "anomaly": -0.56,
+      "anomaly": -0.39,
       "el_nino": false,
       "la_nina": false
     },
@@ -107,7 +107,7 @@
       "season": "SON",
       "year": 1950,
       "month": 10,
-      "anomaly": -0.62,
+      "anomaly": -0.44,
       "el_nino": false,
       "la_nina": false
     },
@@ -116,7 +116,7 @@
       "season": "OND",
       "year": 1950,
       "month": 11,
-      "anomaly": -0.66,
+      "anomaly": -0.6,
       "el_nino": false,
       "la_nina": false
     },
@@ -125,25 +125,25 @@
       "season": "NDJ",
       "year": 1950,
       "month": 12,
-      "anomaly": -0.79,
+      "anomaly": -0.8,
       "el_nino": false,
-      "la_nina": false
+      "la_nina": true
     },
     {
       "date": "1951-01-01",
       "season": "DJF",
       "year": 1951,
       "month": 1,
-      "anomaly": -0.66,
+      "anomaly": -0.82,
       "el_nino": false,
-      "la_nina": false
+      "la_nina": true
     },
     {
       "date": "1951-02-01",
       "season": "JFM",
       "year": 1951,
       "month": 2,
-      "anomaly": -0.36,
+      "anomaly": -0.54,
       "el_nino": false,
       "la_nina": false
     },
@@ -152,7 +152,7 @@
       "season": "FMA",
       "year": 1951,
       "month": 3,
-      "anomaly": -0.04,
+      "anomaly": -0.17,
       "el_nino": false,
       "la_nina": false
     },
@@ -161,7 +161,7 @@
       "season": "MAM",
       "year": 1951,
       "month": 4,
-      "anomaly": 0.16,
+      "anomaly": 0.18,
       "el_nino": false,
       "la_nina": false
     },
@@ -170,7 +170,7 @@
       "season": "AMJ",
       "year": 1951,
       "month": 5,
-      "anomaly": 0.27,
+      "anomaly": 0.36,
       "el_nino": false,
       "la_nina": false
     },
@@ -179,7 +179,7 @@
       "season": "MJJ",
       "year": 1951,
       "month": 6,
-      "anomaly": 0.5,
+      "anomaly": 0.58,
       "el_nino": false,
       "la_nina": false
     },
@@ -188,7 +188,7 @@
       "season": "JJA",
       "year": 1951,
       "month": 7,
-      "anomaly": 0.71,
+      "anomaly": 0.7,
       "el_nino": false,
       "la_nina": false
     },
@@ -197,7 +197,7 @@
       "season": "JAS",
       "year": 1951,
       "month": 8,
-      "anomaly": 0.9,
+      "anomaly": 0.89,
       "el_nino": true,
       "la_nina": false
     },
@@ -206,7 +206,7 @@
       "season": "ASO",
       "year": 1951,
       "month": 9,
-      "anomaly": 1.02,
+      "anomaly": 0.99,
       "el_nino": true,
       "la_nina": false
     },
@@ -215,7 +215,7 @@
       "season": "SON",
       "year": 1951,
       "month": 10,
-      "anomaly": 1.03,
+      "anomaly": 1.15,
       "el_nino": true,
       "la_nina": false
     },
@@ -224,7 +224,7 @@
       "season": "OND",
       "year": 1951,
       "month": 11,
-      "anomaly": 0.96,
+      "anomaly": 1.04,
       "el_nino": true,
       "la_nina": false
     },
@@ -233,8 +233,8 @@
       "season": "NDJ",
       "year": 1951,
       "month": 12,
-      "anomaly": 0.71,
-      "el_nino": false,
+      "anomaly": 0.81,
+      "el_nino": true,
       "la_nina": false
     },
     {
@@ -242,7 +242,7 @@
       "season": "DJF",
       "year": 1952,
       "month": 1,
-      "anomaly": 0.52,
+      "anomaly": 0.53,
       "el_nino": false,
       "la_nina": false
     },
@@ -251,7 +251,7 @@
       "season": "JFM",
       "year": 1952,
       "month": 2,
-      "anomaly": 0.27,
+      "anomaly": 0.37,
       "el_nino": false,
       "la_nina": false
     },
@@ -260,7 +260,7 @@
       "season": "FMA",
       "year": 1952,
       "month": 3,
-      "anomaly": 0.33,
+      "anomaly": 0.34,
       "el_nino": false,
       "la_nina": false
     },
@@ -269,7 +269,7 @@
       "season": "MAM",
       "year": 1952,
       "month": 4,
-      "anomaly": 0.18,
+      "anomaly": 0.29,
       "el_nino": false,
       "la_nina": false
     },
@@ -278,7 +278,7 @@
       "season": "AMJ",
       "year": 1952,
       "month": 5,
-      "anomaly": -0.07,
+      "anomaly": 0.2,
       "el_nino": false,
       "la_nina": false
     },
@@ -287,7 +287,7 @@
       "season": "MJJ",
       "year": 1952,
       "month": 6,
-      "anomaly": -0.44,
+      "anomaly": 0.0,
       "el_nino": false,
       "la_nina": false
     },
@@ -296,7 +296,7 @@
       "season": "JJA",
       "year": 1952,
       "month": 7,
-      "anomaly": -0.45,
+      "anomaly": -0.08,
       "el_nino": false,
       "la_nina": false
     },
@@ -305,7 +305,7 @@
       "season": "JAS",
       "year": 1952,
       "month": 8,
-      "anomaly": -0.2,
+      "anomaly": 0.0,
       "el_nino": false,
       "la_nina": false
     },
@@ -314,7 +314,7 @@
       "season": "ASO",
       "year": 1952,
       "month": 9,
-      "anomaly": 0.03,
+      "anomaly": 0.15,
       "el_nino": false,
       "la_nina": false
     },
@@ -323,7 +323,7 @@
       "season": "SON",
       "year": 1952,
       "month": 10,
-      "anomaly": 0.04,
+      "anomaly": 0.1,
       "el_nino": false,
       "la_nina": false
     },
@@ -332,7 +332,7 @@
       "season": "OND",
       "year": 1952,
       "month": 11,
-      "anomaly": -0.11,
+      "anomaly": 0.04,
       "el_nino": false,
       "la_nina": false
     },
@@ -341,7 +341,7 @@
       "season": "NDJ",
       "year": 1952,
       "month": 12,
-      "anomaly": 0.06,
+      "anomaly": 0.15,
       "el_nino": false,
       "la_nina": false
     },
@@ -350,7 +350,7 @@
       "season": "DJF",
       "year": 1953,
       "month": 1,
-      "anomaly": 0.25,
+      "anomaly": 0.4,
       "el_nino": false,
       "la_nina": false
     },
@@ -359,7 +359,7 @@
       "season": "JFM",
       "year": 1953,
       "month": 2,
-      "anomaly": 0.5,
+      "anomaly": 0.6,
       "el_nino": false,
       "la_nina": false
     },
@@ -368,7 +368,7 @@
       "season": "FMA",
       "year": 1953,
       "month": 3,
-      "anomaly": 0.48,
+      "anomaly": 0.63,
       "el_nino": false,
       "la_nina": false
     },
@@ -377,7 +377,7 @@
       "season": "MAM",
       "year": 1953,
       "month": 4,
-      "anomaly": 0.56,
+      "anomaly": 0.66,
       "el_nino": false,
       "la_nina": false
     },
@@ -386,7 +386,7 @@
       "season": "AMJ",
       "year": 1953,
       "month": 5,
-      "anomaly": 0.77,
+      "anomaly": 0.75,
       "el_nino": false,
       "la_nina": false
     },
@@ -395,7 +395,7 @@
       "season": "MJJ",
       "year": 1953,
       "month": 6,
-      "anomaly": 0.74,
+      "anomaly": 0.77,
       "el_nino": false,
       "la_nina": false
     },
@@ -404,7 +404,7 @@
       "season": "JJA",
       "year": 1953,
       "month": 7,
-      "anomaly": 0.63,
+      "anomaly": 0.75,
       "el_nino": false,
       "la_nina": false
     },
@@ -413,7 +413,7 @@
       "season": "JAS",
       "year": 1953,
       "month": 8,
-      "anomaly": 0.68,
+      "anomaly": 0.73,
       "el_nino": false,
       "la_nina": false
     },
@@ -422,7 +422,7 @@
       "season": "ASO",
       "year": 1953,
       "month": 9,
-      "anomaly": 0.59,
+      "anomaly": 0.78,
       "el_nino": false,
       "la_nina": false
     },
@@ -431,8 +431,8 @@
       "season": "SON",
       "year": 1953,
       "month": 10,
-      "anomaly": 0.78,
-      "el_nino": false,
+      "anomaly": 0.84,
+      "el_nino": true,
       "la_nina": false
     },
     {
@@ -440,8 +440,8 @@
       "season": "OND",
       "year": 1953,
       "month": 11,
-      "anomaly": 0.52,
-      "el_nino": false,
+      "anomaly": 0.84,
+      "el_nino": true,
       "la_nina": false
     },
     {
@@ -449,8 +449,8 @@
       "season": "NDJ",
       "year": 1953,
       "month": 12,
-      "anomaly": 0.56,
-      "el_nino": false,
+      "anomaly": 0.81,
+      "el_nino": true,
       "la_nina": false
     },
     {
@@ -458,7 +458,7 @@
       "season": "DJF",
       "year": 1954,
       "month": 1,
-      "anomaly": 0.41,
+      "anomaly": 0.76,
       "el_nino": false,
       "la_nina": false
     },
@@ -467,7 +467,7 @@
       "season": "JFM",
       "year": 1954,
       "month": 2,
-      "anomaly": 0.35,
+      "anomaly": 0.47,
       "el_nino": false,
       "la_nina": false
     },
@@ -476,7 +476,7 @@
       "season": "FMA",
       "year": 1954,
       "month": 3,
-      "anomaly": 0.01,
+      "anomaly": -0.05,
       "el_nino": false,
       "la_nina": false
     },
@@ -485,7 +485,7 @@
       "season": "MAM",
       "year": 1954,
       "month": 4,
-      "anomaly": -0.27,
+      "anomaly": -0.41,
       "el_nino": false,
       "la_nina": false
     },
@@ -494,7 +494,7 @@
       "season": "AMJ",
       "year": 1954,
       "month": 5,
-      "anomaly": -0.48,
+      "anomaly": -0.54,
       "el_nino": false,
       "la_nina": false
     },
@@ -503,7 +503,7 @@
       "season": "MJJ",
       "year": 1954,
       "month": 6,
-      "anomaly": -0.48,
+      "anomaly": -0.5,
       "el_nino": false,
       "la_nina": false
     },
@@ -512,7 +512,7 @@
       "season": "JJA",
       "year": 1954,
       "month": 7,
-      "anomaly": -0.67,
+      "anomaly": -0.64,
       "el_nino": false,
       "la_nina": false
     },
@@ -521,7 +521,7 @@
       "season": "JAS",
       "year": 1954,
       "month": 8,
-      "anomaly": -0.83,
+      "anomaly": -0.84,
       "el_nino": false,
       "la_nina": true
     },
@@ -530,16 +530,16 @@
       "season": "ASO",
       "year": 1954,
       "month": 9,
-      "anomaly": -0.73,
+      "anomaly": -0.9,
       "el_nino": false,
-      "la_nina": false
+      "la_nina": true
     },
     {
       "date": "1954-10-01",
       "season": "SON",
       "year": 1954,
       "month": 10,
-      "anomaly": -0.52,
+      "anomaly": -0.77,
       "el_nino": false,
       "la_nina": false
     },
@@ -548,7 +548,7 @@
       "season": "OND",
       "year": 1954,
       "month": 11,
-      "anomaly": -0.4,
+      "anomaly": -0.73,
       "el_nino": false,
       "la_nina": false
     },
@@ -557,7 +557,7 @@
       "season": "NDJ",
       "year": 1954,
       "month": 12,
-      "anomaly": -0.44,
+      "anomaly": -0.66,
       "el_nino": false,
       "la_nina": false
     },
@@ -566,7 +566,7 @@
       "season": "DJF",
       "year": 1955,
       "month": 1,
-      "anomaly": -0.5,
+      "anomaly": -0.68,
       "el_nino": false,
       "la_nina": false
     },
@@ -575,7 +575,7 @@
       "season": "JFM",
       "year": 1955,
       "month": 2,
-      "anomaly": -0.48,
+      "anomaly": -0.62,
       "el_nino": false,
       "la_nina": false
     },
@@ -584,7 +584,7 @@
       "season": "FMA",
       "year": 1955,
       "month": 3,
-      "anomaly": -0.58,
+      "anomaly": -0.69,
       "el_nino": false,
       "la_nina": false
     },
@@ -593,16 +593,16 @@
       "season": "MAM",
       "year": 1955,
       "month": 4,
-      "anomaly": -0.76,
+      "anomaly": -0.8,
       "el_nino": false,
-      "la_nina": false
+      "la_nina": true
     },
     {
       "date": "1955-05-01",
       "season": "AMJ",
       "year": 1955,
       "month": 5,
-      "anomaly": -0.78,
+      "anomaly": -0.79,
       "el_nino": false,
       "la_nina": false
     },
@@ -611,16 +611,16 @@
       "season": "MJJ",
       "year": 1955,
       "month": 6,
-      "anomaly": -0.88,
+      "anomaly": -0.72,
       "el_nino": false,
-      "la_nina": true
+      "la_nina": false
     },
     {
       "date": "1955-07-01",
       "season": "JJA",
       "year": 1955,
       "month": 7,
-      "anomaly": -0.72,
+      "anomaly": -0.68,
       "el_nino": false,
       "la_nina": false
     },
@@ -629,16 +629,16 @@
       "season": "JAS",
       "year": 1955,
       "month": 8,
-      "anomaly": -0.92,
+      "anomaly": -0.75,
       "el_nino": false,
-      "la_nina": true
+      "la_nina": false
     },
     {
       "date": "1955-09-01",
       "season": "ASO",
       "year": 1955,
       "month": 9,
-      "anomaly": -1.11,
+      "anomaly": -1.09,
       "el_nino": false,
       "la_nina": true
     },
@@ -647,7 +647,7 @@
       "season": "SON",
       "year": 1955,
       "month": 10,
-      "anomaly": -1.44,
+      "anomaly": -1.42,
       "el_nino": false,
       "la_nina": true
     },
@@ -656,7 +656,7 @@
       "season": "OND",
       "year": 1955,
       "month": 11,
-      "anomaly": -1.59,
+      "anomaly": -1.67,
       "el_nino": false,
       "la_nina": true
     },
@@ -665,7 +665,7 @@
       "season": "NDJ",
       "year": 1955,
       "month": 12,
-      "anomaly": -1.51,
+      "anomaly": -1.47,
       "el_nino": false,
       "la_nina": true
     },
@@ -674,7 +674,7 @@
       "season": "DJF",
       "year": 1956,
       "month": 1,
-      "anomaly": -1.17,
+      "anomaly": -1.11,
       "el_nino": false,
       "la_nina": true
     },
@@ -683,16 +683,16 @@
       "season": "JFM",
       "year": 1956,
       "month": 2,
-      "anomaly": -0.81,
+      "anomaly": -0.76,
       "el_nino": false,
-      "la_nina": true
+      "la_nina": false
     },
     {
       "date": "1956-03-01",
       "season": "FMA",
       "year": 1956,
       "month": 3,
-      "anomaly": -0.57,
+      "anomaly": -0.63,
       "el_nino": false,
       "la_nina": false
     },
@@ -701,7 +701,7 @@
       "season": "MAM",
       "year": 1956,
       "month": 4,
-      "anomaly": -0.51,
+      "anomaly": -0.54,
       "el_nino": false,
       "la_nina": false
     },
@@ -710,7 +710,7 @@
       "season": "AMJ",
       "year": 1956,
       "month": 5,
-      "anomaly": -0.49,
+      "anomaly": -0.52,
       "el_nino": false,
       "la_nina": false
     },
@@ -719,7 +719,7 @@
       "season": "MJJ",
       "year": 1956,
       "month": 6,
-      "anomaly": -0.47,
+      "anomaly": -0.51,
       "el_nino": false,
       "la_nina": false
     },
@@ -728,7 +728,7 @@
       "season": "JJA",
       "year": 1956,
       "month": 7,
-      "anomaly": -0.55,
+      "anomaly": -0.57,
       "el_nino": false,
       "la_nina": false
     },
@@ -737,7 +737,7 @@
       "season": "JAS",
       "year": 1956,
       "month": 8,
-      "anomaly": -0.52,
+      "anomaly": -0.55,
       "el_nino": false,
       "la_nina": false
     },
@@ -746,7 +746,7 @@
       "season": "ASO",
       "year": 1956,
       "month": 9,
-      "anomaly": -0.43,
+      "anomaly": -0.46,
       "el_nino": false,
       "la_nina": false
     },
@@ -755,7 +755,7 @@
       "season": "SON",
       "year": 1956,
       "month": 10,
-      "anomaly": -0.39,
+      "anomaly": -0.42,
       "el_nino": false,
       "la_nina": false
     },
@@ -764,7 +764,7 @@
       "season": "OND",
       "year": 1956,
       "month": 11,
-      "anomaly": -0.37,
+      "anomaly": -0.43,
       "el_nino": false,
       "la_nina": false
     },
@@ -773,7 +773,7 @@
       "season": "NDJ",
       "year": 1956,
       "month": 12,
-      "anomaly": -0.39,
+      "anomaly": -0.43,
       "el_nino": false,
       "la_nina": false
     },
@@ -782,7 +782,7 @@
       "season": "DJF",
       "year": 1957,
       "month": 1,
-      "anomaly": -0.27,
+      "anomaly": -0.25,
       "el_nino": false,
       "la_nina": false
     },
@@ -791,7 +791,7 @@
       "season": "JFM",
       "year": 1957,
       "month": 2,
-      "anomaly": -0.06,
+      "anomaly": 0.06,
       "el_nino": false,
       "la_nina": false
     },
@@ -800,7 +800,7 @@
       "season": "FMA",
       "year": 1957,
       "month": 3,
-      "anomaly": 0.26,
+      "anomaly": 0.41,
       "el_nino": false,
       "la_nina": false
     },
@@ -809,7 +809,7 @@
       "season": "MAM",
       "year": 1957,
       "month": 4,
-      "anomaly": 0.63,
+      "anomaly": 0.72,
       "el_nino": false,
       "la_nina": false
     },
@@ -818,8 +818,8 @@
       "season": "AMJ",
       "year": 1957,
       "month": 5,
-      "anomaly": 0.72,
-      "el_nino": false,
+      "anomaly": 0.92,
+      "el_nino": true,
       "la_nina": false
     },
     {
@@ -827,7 +827,7 @@
       "season": "MJJ",
       "year": 1957,
       "month": 6,
-      "anomaly": 0.82,
+      "anomaly": 1.11,
       "el_nino": true,
       "la_nina": false
     },
@@ -836,7 +836,7 @@
       "season": "JJA",
       "year": 1957,
       "month": 7,
-      "anomaly": 0.96,
+      "anomaly": 1.25,
       "el_nino": true,
       "la_nina": false
     },
@@ -845,7 +845,7 @@
       "season": "JAS",
       "year": 1957,
       "month": 8,
-      "anomaly": 1.03,
+      "anomaly": 1.32,
       "el_nino": true,
       "la_nina": false
     },
@@ -854,7 +854,7 @@
       "season": "ASO",
       "year": 1957,
       "month": 9,
-      "anomaly": 1.12,
+      "anomaly": 1.33,
       "el_nino": true,
       "la_nina": false
     },
@@ -863,7 +863,7 @@
       "season": "SON",
       "year": 1957,
       "month": 10,
-      "anomaly": 1.15,
+      "anomaly": 1.39,
       "el_nino": true,
       "la_nina": false
     },
@@ -872,7 +872,7 @@
       "season": "OND",
       "year": 1957,
       "month": 11,
-      "anomaly": 1.39,
+      "anomaly": 1.53,
       "el_nino": true,
       "la_nina": false
     },
@@ -881,7 +881,7 @@
       "season": "NDJ",
       "year": 1957,
       "month": 12,
-      "anomaly": 1.62,
+      "anomaly": 1.74,
       "el_nino": true,
       "la_nina": false
     },
@@ -890,7 +890,7 @@
       "season": "DJF",
       "year": 1958,
       "month": 1,
-      "anomaly": 1.69,
+      "anomaly": 1.81,
       "el_nino": true,
       "la_nina": false
     },
@@ -899,7 +899,7 @@
       "season": "JFM",
       "year": 1958,
       "month": 2,
-      "anomaly": 1.59,
+      "anomaly": 1.66,
       "el_nino": true,
       "la_nina": false
     },
@@ -908,7 +908,7 @@
       "season": "FMA",
       "year": 1958,
       "month": 3,
-      "anomaly": 1.17,
+      "anomaly": 1.27,
       "el_nino": true,
       "la_nina": false
     },
@@ -917,7 +917,7 @@
       "season": "MAM",
       "year": 1958,
       "month": 4,
-      "anomaly": 0.84,
+      "anomaly": 0.93,
       "el_nino": true,
       "la_nina": false
     },
@@ -926,7 +926,7 @@
       "season": "AMJ",
       "year": 1958,
       "month": 5,
-      "anomaly": 0.57,
+      "anomaly": 0.74,
       "el_nino": false,
       "la_nina": false
     },
@@ -935,7 +935,7 @@
       "season": "MJJ",
       "year": 1958,
       "month": 6,
-      "anomaly": 0.49,
+      "anomaly": 0.64,
       "el_nino": false,
       "la_nina": false
     },
@@ -944,7 +944,7 @@
       "season": "JJA",
       "year": 1958,
       "month": 7,
-      "anomaly": 0.43,
+      "anomaly": 0.57,
       "el_nino": false,
       "la_nina": false
     },
@@ -953,7 +953,7 @@
       "season": "JAS",
       "year": 1958,
       "month": 8,
-      "anomaly": 0.32,
+      "anomaly": 0.43,
       "el_nino": false,
       "la_nina": false
     },
@@ -962,7 +962,7 @@
       "season": "ASO",
       "year": 1958,
       "month": 9,
-      "anomaly": 0.28,
+      "anomaly": 0.39,
       "el_nino": false,
       "la_nina": false
     },
@@ -971,7 +971,7 @@
       "season": "SON",
       "year": 1958,
       "month": 10,
-      "anomaly": 0.3,
+      "anomaly": 0.44,
       "el_nino": false,
       "la_nina": false
     },
@@ -980,7 +980,7 @@
       "season": "OND",
       "year": 1958,
       "month": 11,
-      "anomaly": 0.36,
+      "anomaly": 0.5,
       "el_nino": false,
       "la_nina": false
     },
@@ -989,7 +989,7 @@
       "season": "NDJ",
       "year": 1958,
       "month": 12,
-      "anomaly": 0.56,
+      "anomaly": 0.61,
       "el_nino": false,
       "la_nina": false
     },
@@ -998,7 +998,7 @@
       "season": "DJF",
       "year": 1959,
       "month": 1,
-      "anomaly": 0.6,
+      "anomaly": 0.61,
       "el_nino": false,
       "la_nina": false
     },
@@ -1007,7 +1007,7 @@
       "season": "JFM",
       "year": 1959,
       "month": 2,
-      "anomaly": 0.64,
+      "anomaly": 0.62,
       "el_nino": false,
       "la_nina": false
     },
@@ -1016,7 +1016,7 @@
       "season": "FMA",
       "year": 1959,
       "month": 3,
-      "anomaly": 0.48,
+      "anomaly": 0.52,
       "el_nino": false,
       "la_nina": false
     },
@@ -1025,7 +1025,7 @@
       "season": "MAM",
       "year": 1959,
       "month": 4,
-      "anomaly": 0.39,
+      "anomaly": 0.33,
       "el_nino": false,
       "la_nina": false
     },
@@ -1034,7 +1034,7 @@
       "season": "AMJ",
       "year": 1959,
       "month": 5,
-      "anomaly": 0.24,
+      "anomaly": 0.2,
       "el_nino": false,
       "la_nina": false
     },
@@ -1043,7 +1043,7 @@
       "season": "MJJ",
       "year": 1959,
       "month": 6,
-      "anomaly": 0.02,
+      "anomaly": -0.07,
       "el_nino": false,
       "la_nina": false
     },
@@ -1052,7 +1052,7 @@
       "season": "JJA",
       "year": 1959,
       "month": 7,
-      "anomaly": -0.19,
+      "anomaly": -0.18,
       "el_nino": false,
       "la_nina": false
     },
@@ -1061,7 +1061,7 @@
       "season": "JAS",
       "year": 1959,
       "month": 8,
-      "anomaly": -0.23,
+      "anomaly": -0.28,
       "el_nino": false,
       "la_nina": false
     },
@@ -1070,7 +1070,7 @@
       "season": "ASO",
       "year": 1959,
       "month": 9,
-      "anomaly": -0.04,
+      "anomaly": -0.09,
       "el_nino": false,
       "la_nina": false
     },
@@ -1079,7 +1079,7 @@
       "season": "SON",
       "year": 1959,
       "month": 10,
-      "anomaly": 0.11,
+      "anomaly": -0.03,
       "el_nino": false,
       "la_nina": false
     },
@@ -1088,7 +1088,7 @@
       "season": "OND",
       "year": 1959,
       "month": 11,
-      "anomaly": 0.23,
+      "anomaly": 0.05,
       "el_nino": false,
       "la_nina": false
     },
@@ -1097,7 +1097,7 @@
       "season": "NDJ",
       "year": 1959,
       "month": 12,
-      "anomaly": 0.14,
+      "anomaly": -0.04,
       "el_nino": false,
       "la_nina": false
     },
@@ -1106,7 +1106,7 @@
       "season": "DJF",
       "year": 1960,
       "month": 1,
-      "anomaly": 0.02,
+      "anomaly": -0.1,
       "el_nino": false,
       "la_nina": false
     },
@@ -1115,7 +1115,7 @@
       "season": "JFM",
       "year": 1960,
       "month": 2,
-      "anomaly": 0.03,
+      "anomaly": -0.1,
       "el_nino": false,
       "la_nina": false
     },
@@ -1124,7 +1124,7 @@
       "season": "FMA",
       "year": 1960,
       "month": 3,
-      "anomaly": 0.06,
+      "anomaly": -0.07,
       "el_nino": false,
       "la_nina": false
     },
@@ -1133,7 +1133,7 @@
       "season": "MAM",
       "year": 1960,
       "month": 4,
-      "anomaly": 0.17,
+      "anomaly": 0.03,
       "el_nino": false,
       "la_nina": false
     },
@@ -1142,7 +1142,7 @@
       "season": "AMJ",
       "year": 1960,
       "month": 5,
-      "anomaly": 0.04,
+      "anomaly": 0.02,
       "el_nino": false,
       "la_nina": false
     },
@@ -1151,7 +1151,7 @@
       "season": "MJJ",
       "year": 1960,
       "month": 6,
-      "anomaly": 0.0,
+      "anomaly": 0.03,
       "el_nino": false,
       "la_nina": false
     },
@@ -1160,7 +1160,7 @@
       "season": "JJA",
       "year": 1960,
       "month": 7,
-      "anomaly": 0.01,
+      "anomaly": 0.13,
       "el_nino": false,
       "la_nina": false
     },
@@ -1169,7 +1169,7 @@
       "season": "JAS",
       "year": 1960,
       "month": 8,
-      "anomaly": 0.15,
+      "anomaly": 0.24,
       "el_nino": false,
       "la_nina": false
     },
@@ -1178,7 +1178,7 @@
       "season": "ASO",
       "year": 1960,
       "month": 9,
-      "anomaly": 0.19,
+      "anomaly": 0.27,
       "el_nino": false,
       "la_nina": false
     },
@@ -1187,7 +1187,7 @@
       "season": "SON",
       "year": 1960,
       "month": 10,
-      "anomaly": 0.08,
+      "anomaly": 0.2,
       "el_nino": false,
       "la_nina": false
     },
@@ -1196,7 +1196,7 @@
       "season": "OND",
       "year": 1960,
       "month": 11,
-      "anomaly": -0.07,
+      "anomaly": 0.12,
       "el_nino": false,
       "la_nina": false
     },
@@ -1205,7 +1205,7 @@
       "season": "NDJ",
       "year": 1960,
       "month": 12,
-      "anomaly": -0.07,
+      "anomaly": 0.05,
       "el_nino": false,
       "la_nina": false
     },
@@ -1214,7 +1214,7 @@
       "season": "DJF",
       "year": 1961,
       "month": 1,
-      "anomaly": 0.0,
+      "anomaly": 0.04,
       "el_nino": false,
       "la_nina": false
     },
@@ -1232,7 +1232,7 @@
       "season": "FMA",
       "year": 1961,
       "month": 3,
-      "anomaly": 0.01,
+      "anomaly": 0.04,
       "el_nino": false,
       "la_nina": false
     },
@@ -1241,7 +1241,7 @@
       "season": "MAM",
       "year": 1961,
       "month": 4,
-      "anomaly": 0.05,
+      "anomaly": 0.09,
       "el_nino": false,
       "la_nina": false
     },
@@ -1250,7 +1250,7 @@
       "season": "AMJ",
       "year": 1961,
       "month": 5,
-      "anomaly": 0.22,
+      "anomaly": 0.23,
       "el_nino": false,
       "la_nina": false
     },
@@ -1259,7 +1259,7 @@
       "season": "MJJ",
       "year": 1961,
       "month": 6,
-      "anomaly": 0.22,
+      "anomaly": 0.27,
       "el_nino": false,
       "la_nina": false
     },
@@ -1268,7 +1268,7 @@
       "season": "JJA",
       "year": 1961,
       "month": 7,
-      "anomaly": 0.08,
+      "anomaly": 0.14,
       "el_nino": false,
       "la_nina": false
     },
@@ -1277,7 +1277,7 @@
       "season": "JAS",
       "year": 1961,
       "month": 8,
-      "anomaly": -0.2,
+      "anomaly": -0.13,
       "el_nino": false,
       "la_nina": false
     },
@@ -1286,7 +1286,7 @@
       "season": "ASO",
       "year": 1961,
       "month": 9,
-      "anomaly": -0.32,
+      "anomaly": -0.3,
       "el_nino": false,
       "la_nina": false
     },
@@ -1295,7 +1295,7 @@
       "season": "SON",
       "year": 1961,
       "month": 10,
-      "anomaly": -0.22,
+      "anomaly": -0.26,
       "el_nino": false,
       "la_nina": false
     },
@@ -1304,7 +1304,7 @@
       "season": "OND",
       "year": 1961,
       "month": 11,
-      "anomaly": -0.11,
+      "anomaly": -0.19,
       "el_nino": false,
       "la_nina": false
     },
@@ -1313,7 +1313,7 @@
       "season": "NDJ",
       "year": 1961,
       "month": 12,
-      "anomaly": -0.05,
+      "anomaly": -0.16,
       "el_nino": false,
       "la_nina": false
     },
@@ -1322,7 +1322,7 @@
       "season": "DJF",
       "year": 1962,
       "month": 1,
-      "anomaly": -0.16,
+      "anomaly": -0.24,
       "el_nino": false,
       "la_nina": false
     },
@@ -1331,7 +1331,7 @@
       "season": "JFM",
       "year": 1962,
       "month": 2,
-      "anomaly": -0.17,
+      "anomaly": -0.22,
       "el_nino": false,
       "la_nina": false
     },
@@ -1340,7 +1340,7 @@
       "season": "FMA",
       "year": 1962,
       "month": 3,
-      "anomaly": -0.15,
+      "anomaly": -0.2,
       "el_nino": false,
       "la_nina": false
     },
@@ -1349,7 +1349,7 @@
       "season": "MAM",
       "year": 1962,
       "month": 4,
-      "anomaly": -0.2,
+      "anomaly": -0.26,
       "el_nino": false,
       "la_nina": false
     },
@@ -1358,7 +1358,7 @@
       "season": "AMJ",
       "year": 1962,
       "month": 5,
-      "anomaly": -0.19,
+      "anomaly": -0.28,
       "el_nino": false,
       "la_nina": false
     },
@@ -1367,7 +1367,7 @@
       "season": "MJJ",
       "year": 1962,
       "month": 6,
-      "anomaly": -0.13,
+      "anomaly": -0.2,
       "el_nino": false,
       "la_nina": false
     },
@@ -1376,7 +1376,7 @@
       "season": "JJA",
       "year": 1962,
       "month": 7,
-      "anomaly": 0.0,
+      "anomaly": -0.04,
       "el_nino": false,
       "la_nina": false
     },
@@ -1385,7 +1385,7 @@
       "season": "JAS",
       "year": 1962,
       "month": 8,
-      "anomaly": -0.1,
+      "anomaly": -0.07,
       "el_nino": false,
       "la_nina": false
     },
@@ -1394,7 +1394,7 @@
       "season": "ASO",
       "year": 1962,
       "month": 9,
-      "anomaly": -0.16,
+      "anomaly": -0.11,
       "el_nino": false,
       "la_nina": false
     },
@@ -1403,7 +1403,7 @@
       "season": "SON",
       "year": 1962,
       "month": 10,
-      "anomaly": -0.25,
+      "anomaly": -0.22,
       "el_nino": false,
       "la_nina": false
     },
@@ -1412,7 +1412,7 @@
       "season": "OND",
       "year": 1962,
       "month": 11,
-      "anomaly": -0.25,
+      "anomaly": -0.31,
       "el_nino": false,
       "la_nina": false
     },
@@ -1421,7 +1421,7 @@
       "season": "NDJ",
       "year": 1962,
       "month": 12,
-      "anomaly": -0.32,
+      "anomaly": -0.43,
       "el_nino": false,
       "la_nina": false
     },
@@ -1430,7 +1430,7 @@
       "season": "DJF",
       "year": 1963,
       "month": 1,
-      "anomaly": -0.33,
+      "anomaly": -0.4,
       "el_nino": false,
       "la_nina": false
     },
@@ -1439,7 +1439,7 @@
       "season": "JFM",
       "year": 1963,
       "month": 2,
-      "anomaly": -0.17,
+      "anomaly": -0.15,
       "el_nino": false,
       "la_nina": false
     },
@@ -1448,7 +1448,7 @@
       "season": "FMA",
       "year": 1963,
       "month": 3,
-      "anomaly": 0.01,
+      "anomaly": 0.15,
       "el_nino": false,
       "la_nina": false
     },
@@ -1457,7 +1457,7 @@
       "season": "MAM",
       "year": 1963,
       "month": 4,
-      "anomaly": 0.13,
+      "anomaly": 0.27,
       "el_nino": false,
       "la_nina": false
     },
@@ -1466,7 +1466,7 @@
       "season": "AMJ",
       "year": 1963,
       "month": 5,
-      "anomaly": 0.12,
+      "anomaly": 0.31,
       "el_nino": false,
       "la_nina": false
     },
@@ -1475,7 +1475,7 @@
       "season": "MJJ",
       "year": 1963,
       "month": 6,
-      "anomaly": 0.45,
+      "anomaly": 0.52,
       "el_nino": false,
       "la_nina": false
     },
@@ -1484,8 +1484,8 @@
       "season": "JJA",
       "year": 1963,
       "month": 7,
-      "anomaly": 0.76,
-      "el_nino": false,
+      "anomaly": 0.86,
+      "el_nino": true,
       "la_nina": false
     },
     {
@@ -1493,7 +1493,7 @@
       "season": "JAS",
       "year": 1963,
       "month": 8,
-      "anomaly": 1.09,
+      "anomaly": 1.14,
       "el_nino": true,
       "la_nina": false
     },
@@ -1502,7 +1502,7 @@
       "season": "ASO",
       "year": 1963,
       "month": 9,
-      "anomaly": 1.09,
+      "anomaly": 1.22,
       "el_nino": true,
       "la_nina": false
     },
@@ -1511,7 +1511,7 @@
       "season": "SON",
       "year": 1963,
       "month": 10,
-      "anomaly": 1.13,
+      "anomaly": 1.29,
       "el_nino": true,
       "la_nina": false
     },
@@ -1520,7 +1520,7 @@
       "season": "OND",
       "year": 1963,
       "month": 11,
-      "anomaly": 1.19,
+      "anomaly": 1.37,
       "el_nino": true,
       "la_nina": false
     },
@@ -1529,7 +1529,7 @@
       "season": "NDJ",
       "year": 1963,
       "month": 12,
-      "anomaly": 1.13,
+      "anomaly": 1.31,
       "el_nino": true,
       "la_nina": false
     },
@@ -1538,7 +1538,7 @@
       "season": "DJF",
       "year": 1964,
       "month": 1,
-      "anomaly": 0.95,
+      "anomaly": 1.07,
       "el_nino": true,
       "la_nina": false
     },
@@ -1547,7 +1547,7 @@
       "season": "JFM",
       "year": 1964,
       "month": 2,
-      "anomaly": 0.52,
+      "anomaly": 0.62,
       "el_nino": false,
       "la_nina": false
     },
@@ -1556,7 +1556,7 @@
       "season": "FMA",
       "year": 1964,
       "month": 3,
-      "anomaly": 0.06,
+      "anomaly": 0.12,
       "el_nino": false,
       "la_nina": false
     },
@@ -1565,7 +1565,7 @@
       "season": "MAM",
       "year": 1964,
       "month": 4,
-      "anomaly": -0.35,
+      "anomaly": -0.33,
       "el_nino": false,
       "la_nina": false
     },
@@ -1574,7 +1574,7 @@
       "season": "AMJ",
       "year": 1964,
       "month": 5,
-      "anomaly": -0.6,
+      "anomaly": -0.58,
       "el_nino": false,
       "la_nina": false
     },
@@ -1583,7 +1583,7 @@
       "season": "MJJ",
       "year": 1964,
       "month": 6,
-      "anomaly": -0.66,
+      "anomaly": -0.58,
       "el_nino": false,
       "la_nina": false
     },
@@ -1592,7 +1592,7 @@
       "season": "JJA",
       "year": 1964,
       "month": 7,
-      "anomaly": -0.67,
+      "anomaly": -0.6,
       "el_nino": false,
       "la_nina": false
     },
@@ -1601,7 +1601,7 @@
       "season": "JAS",
       "year": 1964,
       "month": 8,
-      "anomaly": -0.7,
+      "anomaly": -0.66,
       "el_nino": false,
       "la_nina": false
     },
@@ -1610,7 +1610,7 @@
       "season": "ASO",
       "year": 1964,
       "month": 9,
-      "anomaly": -0.72,
+      "anomaly": -0.76,
       "el_nino": false,
       "la_nina": false
     },
@@ -1628,16 +1628,16 @@
       "season": "OND",
       "year": 1964,
       "month": 11,
-      "anomaly": -0.79,
+      "anomaly": -0.82,
       "el_nino": false,
-      "la_nina": false
+      "la_nina": true
     },
     {
       "date": "1964-12-01",
       "season": "NDJ",
       "year": 1964,
       "month": 12,
-      "anomaly": -0.75,
+      "anomaly": -0.78,
       "el_nino": false,
       "la_nina": false
     },
@@ -1646,7 +1646,7 @@
       "season": "DJF",
       "year": 1965,
       "month": 1,
-      "anomaly": -0.51,
+      "anomaly": -0.59,
       "el_nino": false,
       "la_nina": false
     },
@@ -1655,7 +1655,7 @@
       "season": "JFM",
       "year": 1965,
       "month": 2,
-      "anomaly": -0.25,
+      "anomaly": -0.28,
       "el_nino": false,
       "la_nina": false
     },
@@ -1664,7 +1664,7 @@
       "season": "FMA",
       "year": 1965,
       "month": 3,
-      "anomaly": -0.04,
+      "anomaly": -0.07,
       "el_nino": false,
       "la_nina": false
     },
@@ -1673,7 +1673,7 @@
       "season": "MAM",
       "year": 1965,
       "month": 4,
-      "anomaly": 0.16,
+      "anomaly": 0.18,
       "el_nino": false,
       "la_nina": false
     },
@@ -1682,7 +1682,7 @@
       "season": "AMJ",
       "year": 1965,
       "month": 5,
-      "anomaly": 0.47,
+      "anomaly": 0.46,
       "el_nino": false,
       "la_nina": false
     },
@@ -1691,8 +1691,8 @@
       "season": "MJJ",
       "year": 1965,
       "month": 6,
-      "anomaly": 0.79,
-      "el_nino": false,
+      "anomaly": 0.83,
+      "el_nino": true,
       "la_nina": false
     },
     {
@@ -1700,7 +1700,7 @@
       "season": "JJA",
       "year": 1965,
       "month": 7,
-      "anomaly": 1.1,
+      "anomaly": 1.22,
       "el_nino": true,
       "la_nina": false
     },
@@ -1709,7 +1709,7 @@
       "season": "JAS",
       "year": 1965,
       "month": 8,
-      "anomaly": 1.27,
+      "anomaly": 1.54,
       "el_nino": true,
       "la_nina": false
     },
@@ -1718,7 +1718,7 @@
       "season": "ASO",
       "year": 1965,
       "month": 9,
-      "anomaly": 1.55,
+      "anomaly": 1.85,
       "el_nino": true,
       "la_nina": false
     },
@@ -1727,7 +1727,7 @@
       "season": "SON",
       "year": 1965,
       "month": 10,
-      "anomaly": 1.7,
+      "anomaly": 1.98,
       "el_nino": true,
       "la_nina": false
     },
@@ -1736,7 +1736,7 @@
       "season": "OND",
       "year": 1965,
       "month": 11,
-      "anomaly": 1.82,
+      "anomaly": 1.97,
       "el_nino": true,
       "la_nina": false
     },
@@ -1745,7 +1745,7 @@
       "season": "NDJ",
       "year": 1965,
       "month": 12,
-      "anomaly": 1.6,
+      "anomaly": 1.72,
       "el_nino": true,
       "la_nina": false
     },
@@ -1754,7 +1754,7 @@
       "season": "DJF",
       "year": 1966,
       "month": 1,
-      "anomaly": 1.24,
+      "anomaly": 1.37,
       "el_nino": true,
       "la_nina": false
     },
@@ -1763,7 +1763,7 @@
       "season": "JFM",
       "year": 1966,
       "month": 2,
-      "anomaly": 0.95,
+      "anomaly": 1.17,
       "el_nino": true,
       "la_nina": false
     },
@@ -1772,8 +1772,8 @@
       "season": "FMA",
       "year": 1966,
       "month": 3,
-      "anomaly": 0.76,
-      "el_nino": false,
+      "anomaly": 0.98,
+      "el_nino": true,
       "la_nina": false
     },
     {
@@ -1781,7 +1781,7 @@
       "season": "MAM",
       "year": 1966,
       "month": 4,
-      "anomaly": 0.43,
+      "anomaly": 0.66,
       "el_nino": false,
       "la_nina": false
     },
@@ -1790,7 +1790,7 @@
       "season": "AMJ",
       "year": 1966,
       "month": 5,
-      "anomaly": 0.24,
+      "anomaly": 0.35,
       "el_nino": false,
       "la_nina": false
     },
@@ -1799,7 +1799,7 @@
       "season": "MJJ",
       "year": 1966,
       "month": 6,
-      "anomaly": 0.18,
+      "anomaly": 0.24,
       "el_nino": false,
       "la_nina": false
     },
@@ -1808,7 +1808,7 @@
       "season": "JJA",
       "year": 1966,
       "month": 7,
-      "anomaly": 0.25,
+      "anomaly": 0.24,
       "el_nino": false,
       "la_nina": false
     },
@@ -1817,7 +1817,7 @@
       "season": "JAS",
       "year": 1966,
       "month": 8,
-      "anomaly": 0.13,
+      "anomaly": 0.12,
       "el_nino": false,
       "la_nina": false
     },
@@ -1826,7 +1826,7 @@
       "season": "ASO",
       "year": 1966,
       "month": 9,
-      "anomaly": -0.09,
+      "anomaly": -0.05,
       "el_nino": false,
       "la_nina": false
     },
@@ -1835,7 +1835,7 @@
       "season": "SON",
       "year": 1966,
       "month": 10,
-      "anomaly": -0.12,
+      "anomaly": -0.1,
       "el_nino": false,
       "la_nina": false
     },
@@ -1844,7 +1844,7 @@
       "season": "OND",
       "year": 1966,
       "month": 11,
-      "anomaly": -0.23,
+      "anomaly": -0.18,
       "el_nino": false,
       "la_nina": false
     },
@@ -1853,7 +1853,7 @@
       "season": "NDJ",
       "year": 1966,
       "month": 12,
-      "anomaly": -0.35,
+      "anomaly": -0.3,
       "el_nino": false,
       "la_nina": false
     },
@@ -1862,7 +1862,7 @@
       "season": "DJF",
       "year": 1967,
       "month": 1,
-      "anomaly": -0.46,
+      "anomaly": -0.41,
       "el_nino": false,
       "la_nina": false
     },
@@ -1880,7 +1880,7 @@
       "season": "FMA",
       "year": 1967,
       "month": 3,
-      "anomaly": -0.5,
+      "anomaly": -0.53,
       "el_nino": false,
       "la_nina": false
     },
@@ -1889,7 +1889,7 @@
       "season": "MAM",
       "year": 1967,
       "month": 4,
-      "anomaly": -0.37,
+      "anomaly": -0.45,
       "el_nino": false,
       "la_nina": false
     },
@@ -1898,7 +1898,7 @@
       "season": "AMJ",
       "year": 1967,
       "month": 5,
-      "anomaly": -0.15,
+      "anomaly": -0.24,
       "el_nino": false,
       "la_nina": false
     },
@@ -1907,7 +1907,7 @@
       "season": "MJJ",
       "year": 1967,
       "month": 6,
-      "anomaly": 0.05,
+      "anomaly": -0.0,
       "el_nino": false,
       "la_nina": false
     },
@@ -1916,7 +1916,7 @@
       "season": "JJA",
       "year": 1967,
       "month": 7,
-      "anomaly": -0.02,
+      "anomaly": 0.05,
       "el_nino": false,
       "la_nina": false
     },
@@ -1925,7 +1925,7 @@
       "season": "JAS",
       "year": 1967,
       "month": 8,
-      "anomaly": -0.26,
+      "anomaly": -0.16,
       "el_nino": false,
       "la_nina": false
     },
@@ -1934,7 +1934,7 @@
       "season": "ASO",
       "year": 1967,
       "month": 9,
-      "anomaly": -0.4,
+      "anomaly": -0.3,
       "el_nino": false,
       "la_nina": false
     },
@@ -1943,7 +1943,7 @@
       "season": "SON",
       "year": 1967,
       "month": 10,
-      "anomaly": -0.4,
+      "anomaly": -0.38,
       "el_nino": false,
       "la_nina": false
     },
@@ -1952,7 +1952,7 @@
       "season": "OND",
       "year": 1967,
       "month": 11,
-      "anomaly": -0.36,
+      "anomaly": -0.34,
       "el_nino": false,
       "la_nina": false
     },
@@ -1961,7 +1961,7 @@
       "season": "NDJ",
       "year": 1967,
       "month": 12,
-      "anomaly": -0.42,
+      "anomaly": -0.44,
       "el_nino": false,
       "la_nina": false
     },
@@ -1970,7 +1970,7 @@
       "season": "DJF",
       "year": 1968,
       "month": 1,
-      "anomaly": -0.62,
+      "anomaly": -0.64,
       "el_nino": false,
       "la_nina": false
     },
@@ -1979,7 +1979,7 @@
       "season": "JFM",
       "year": 1968,
       "month": 2,
-      "anomaly": -0.73,
+      "anomaly": -0.74,
       "el_nino": false,
       "la_nina": false
     },
@@ -1988,7 +1988,7 @@
       "season": "FMA",
       "year": 1968,
       "month": 3,
-      "anomaly": -0.63,
+      "anomaly": -0.62,
       "el_nino": false,
       "la_nina": false
     },
@@ -1997,7 +1997,7 @@
       "season": "MAM",
       "year": 1968,
       "month": 4,
-      "anomaly": -0.48,
+      "anomaly": -0.44,
       "el_nino": false,
       "la_nina": false
     },
@@ -2006,7 +2006,7 @@
       "season": "AMJ",
       "year": 1968,
       "month": 5,
-      "anomaly": -0.1,
+      "anomaly": -0.04,
       "el_nino": false,
       "la_nina": false
     },
@@ -2015,7 +2015,7 @@
       "season": "MJJ",
       "year": 1968,
       "month": 6,
-      "anomaly": 0.17,
+      "anomaly": 0.28,
       "el_nino": false,
       "la_nina": false
     },
@@ -2024,7 +2024,7 @@
       "season": "JJA",
       "year": 1968,
       "month": 7,
-      "anomaly": 0.44,
+      "anomaly": 0.58,
       "el_nino": false,
       "la_nina": false
     },
@@ -2033,7 +2033,7 @@
       "season": "JAS",
       "year": 1968,
       "month": 8,
-      "anomaly": 0.38,
+      "anomaly": 0.53,
       "el_nino": false,
       "la_nina": false
     },
@@ -2042,7 +2042,7 @@
       "season": "ASO",
       "year": 1968,
       "month": 9,
-      "anomaly": 0.34,
+      "anomaly": 0.45,
       "el_nino": false,
       "la_nina": false
     },
@@ -2051,7 +2051,7 @@
       "season": "SON",
       "year": 1968,
       "month": 10,
-      "anomaly": 0.5,
+      "anomaly": 0.55,
       "el_nino": false,
       "la_nina": false
     },
@@ -2060,7 +2060,7 @@
       "season": "OND",
       "year": 1968,
       "month": 11,
-      "anomaly": 0.66,
+      "anomaly": 0.73,
       "el_nino": false,
       "la_nina": false
     },
@@ -2069,7 +2069,7 @@
       "season": "NDJ",
       "year": 1968,
       "month": 12,
-      "anomaly": 0.93,
+      "anomaly": 0.98,
       "el_nino": true,
       "la_nina": false
     },
@@ -2078,7 +2078,7 @@
       "season": "DJF",
       "year": 1969,
       "month": 1,
-      "anomaly": 0.98,
+      "anomaly": 1.13,
       "el_nino": true,
       "la_nina": false
     },
@@ -2087,7 +2087,7 @@
       "season": "JFM",
       "year": 1969,
       "month": 2,
-      "anomaly": 0.98,
+      "anomaly": 1.09,
       "el_nino": true,
       "la_nina": false
     },
@@ -2096,8 +2096,8 @@
       "season": "FMA",
       "year": 1969,
       "month": 3,
-      "anomaly": 0.77,
-      "el_nino": false,
+      "anomaly": 0.95,
+      "el_nino": true,
       "la_nina": false
     },
     {
@@ -2105,7 +2105,7 @@
       "season": "MAM",
       "year": 1969,
       "month": 4,
-      "anomaly": 0.69,
+      "anomaly": 0.77,
       "el_nino": false,
       "la_nina": false
     },
@@ -2114,7 +2114,7 @@
       "season": "AMJ",
       "year": 1969,
       "month": 5,
-      "anomaly": 0.62,
+      "anomaly": 0.61,
       "el_nino": false,
       "la_nina": false
     },
@@ -2123,7 +2123,7 @@
       "season": "MJJ",
       "year": 1969,
       "month": 6,
-      "anomaly": 0.48,
+      "anomaly": 0.43,
       "el_nino": false,
       "la_nina": false
     },
@@ -2132,7 +2132,7 @@
       "season": "JJA",
       "year": 1969,
       "month": 7,
-      "anomaly": 0.37,
+      "anomaly": 0.36,
       "el_nino": false,
       "la_nina": false
     },
@@ -2141,7 +2141,7 @@
       "season": "JAS",
       "year": 1969,
       "month": 8,
-      "anomaly": 0.41,
+      "anomaly": 0.51,
       "el_nino": false,
       "la_nina": false
     },
@@ -2150,7 +2150,7 @@
       "season": "ASO",
       "year": 1969,
       "month": 9,
-      "anomaly": 0.61,
+      "anomaly": 0.79,
       "el_nino": false,
       "la_nina": false
     },
@@ -2159,8 +2159,8 @@
       "season": "SON",
       "year": 1969,
       "month": 10,
-      "anomaly": 0.71,
-      "el_nino": false,
+      "anomaly": 0.86,
+      "el_nino": true,
       "la_nina": false
     },
     {
@@ -2177,7 +2177,7 @@
       "season": "NDJ",
       "year": 1969,
       "month": 12,
-      "anomaly": 0.71,
+      "anomaly": 0.63,
       "el_nino": false,
       "la_nina": false
     },
@@ -2186,7 +2186,7 @@
       "season": "DJF",
       "year": 1970,
       "month": 1,
-      "anomaly": 0.46,
+      "anomaly": 0.51,
       "el_nino": false,
       "la_nina": false
     },
@@ -2195,7 +2195,7 @@
       "season": "JFM",
       "year": 1970,
       "month": 2,
-      "anomaly": 0.23,
+      "anomaly": 0.34,
       "el_nino": false,
       "la_nina": false
     },
@@ -2204,7 +2204,7 @@
       "season": "FMA",
       "year": 1970,
       "month": 3,
-      "anomaly": 0.23,
+      "anomaly": 0.29,
       "el_nino": false,
       "la_nina": false
     },
@@ -2213,7 +2213,7 @@
       "season": "MAM",
       "year": 1970,
       "month": 4,
-      "anomaly": 0.28,
+      "anomaly": 0.19,
       "el_nino": false,
       "la_nina": false
     },
@@ -2222,7 +2222,7 @@
       "season": "AMJ",
       "year": 1970,
       "month": 5,
-      "anomaly": 0.11,
+      "anomaly": 0.04,
       "el_nino": false,
       "la_nina": false
     },
@@ -2231,7 +2231,7 @@
       "season": "MJJ",
       "year": 1970,
       "month": 6,
-      "anomaly": -0.26,
+      "anomaly": -0.3,
       "el_nino": false,
       "la_nina": false
     },
@@ -2240,7 +2240,7 @@
       "season": "JJA",
       "year": 1970,
       "month": 7,
-      "anomaly": -0.55,
+      "anomaly": -0.63,
       "el_nino": false,
       "la_nina": false
     },
@@ -2249,7 +2249,7 @@
       "season": "JAS",
       "year": 1970,
       "month": 8,
-      "anomaly": -0.72,
+      "anomaly": -0.76,
       "el_nino": false,
       "la_nina": false
     },
@@ -2258,7 +2258,7 @@
       "season": "ASO",
       "year": 1970,
       "month": 9,
-      "anomaly": -0.69,
+      "anomaly": -0.77,
       "el_nino": false,
       "la_nina": false
     },
@@ -2267,7 +2267,7 @@
       "season": "SON",
       "year": 1970,
       "month": 10,
-      "anomaly": -0.72,
+      "anomaly": -0.74,
       "el_nino": false,
       "la_nina": false
     },
@@ -2276,16 +2276,16 @@
       "season": "OND",
       "year": 1970,
       "month": 11,
-      "anomaly": -0.78,
+      "anomaly": -0.86,
       "el_nino": false,
-      "la_nina": false
+      "la_nina": true
     },
     {
       "date": "1970-12-01",
       "season": "NDJ",
       "year": 1970,
       "month": 12,
-      "anomaly": -1.1,
+      "anomaly": -1.15,
       "el_nino": false,
       "la_nina": true
     },
@@ -2294,7 +2294,7 @@
       "season": "DJF",
       "year": 1971,
       "month": 1,
-      "anomaly": -1.29,
+      "anomaly": -1.36,
       "el_nino": false,
       "la_nina": true
     },
@@ -2303,7 +2303,7 @@
       "season": "JFM",
       "year": 1971,
       "month": 2,
-      "anomaly": -1.36,
+      "anomaly": -1.38,
       "el_nino": false,
       "la_nina": true
     },
@@ -2312,7 +2312,7 @@
       "season": "FMA",
       "year": 1971,
       "month": 3,
-      "anomaly": -1.08,
+      "anomaly": -1.12,
       "el_nino": false,
       "la_nina": true
     },
@@ -2321,7 +2321,7 @@
       "season": "MAM",
       "year": 1971,
       "month": 4,
-      "anomaly": -0.81,
+      "anomaly": -0.85,
       "el_nino": false,
       "la_nina": true
     },
@@ -2330,7 +2330,7 @@
       "season": "AMJ",
       "year": 1971,
       "month": 5,
-      "anomaly": -0.72,
+      "anomaly": -0.73,
       "el_nino": false,
       "la_nina": false
     },
@@ -2339,7 +2339,7 @@
       "season": "MJJ",
       "year": 1971,
       "month": 6,
-      "anomaly": -0.69,
+      "anomaly": -0.74,
       "el_nino": false,
       "la_nina": false
     },
@@ -2348,16 +2348,16 @@
       "season": "JJA",
       "year": 1971,
       "month": 7,
-      "anomaly": -0.68,
+      "anomaly": -0.8,
       "el_nino": false,
-      "la_nina": false
+      "la_nina": true
     },
     {
       "date": "1971-08-01",
       "season": "JAS",
       "year": 1971,
       "month": 8,
-      "anomaly": -0.6,
+      "anomaly": -0.77,
       "el_nino": false,
       "la_nina": false
     },
@@ -2366,25 +2366,25 @@
       "season": "ASO",
       "year": 1971,
       "month": 9,
-      "anomaly": -0.68,
+      "anomaly": -0.82,
       "el_nino": false,
-      "la_nina": false
+      "la_nina": true
     },
     {
       "date": "1971-10-01",
       "season": "SON",
       "year": 1971,
       "month": 10,
-      "anomaly": -0.78,
+      "anomaly": -0.85,
       "el_nino": false,
-      "la_nina": false
+      "la_nina": true
     },
     {
       "date": "1971-11-01",
       "season": "OND",
       "year": 1971,
       "month": 11,
-      "anomaly": -0.86,
+      "anomaly": -0.96,
       "el_nino": false,
       "la_nina": true
     },
@@ -2393,16 +2393,16 @@
       "season": "NDJ",
       "year": 1971,
       "month": 12,
-      "anomaly": -0.78,
+      "anomaly": -0.9,
       "el_nino": false,
-      "la_nina": false
+      "la_nina": true
     },
     {
       "date": "1972-01-01",
       "season": "DJF",
       "year": 1972,
       "month": 1,
-      "anomaly": -0.57,
+      "anomaly": -0.71,
       "el_nino": false,
       "la_nina": false
     },
@@ -2411,7 +2411,7 @@
       "season": "JFM",
       "year": 1972,
       "month": 2,
-      "anomaly": -0.27,
+      "anomaly": -0.35,
       "el_nino": false,
       "la_nina": false
     },
@@ -2420,7 +2420,7 @@
       "season": "FMA",
       "year": 1972,
       "month": 3,
-      "anomaly": 0.04,
+      "anomaly": 0.06,
       "el_nino": false,
       "la_nina": false
     },
@@ -2429,7 +2429,7 @@
       "season": "MAM",
       "year": 1972,
       "month": 4,
-      "anomaly": 0.25,
+      "anomaly": 0.41,
       "el_nino": false,
       "la_nina": false
     },
@@ -2438,7 +2438,7 @@
       "season": "AMJ",
       "year": 1972,
       "month": 5,
-      "anomaly": 0.48,
+      "anomaly": 0.67,
       "el_nino": false,
       "la_nina": false
     },
@@ -2447,8 +2447,8 @@
       "season": "MJJ",
       "year": 1972,
       "month": 6,
-      "anomaly": 0.7,
-      "el_nino": false,
+      "anomaly": 0.92,
+      "el_nino": true,
       "la_nina": false
     },
     {
@@ -2456,7 +2456,7 @@
       "season": "JJA",
       "year": 1972,
       "month": 7,
-      "anomaly": 1.0,
+      "anomaly": 1.13,
       "el_nino": true,
       "la_nina": false
     },
@@ -2465,7 +2465,7 @@
       "season": "JAS",
       "year": 1972,
       "month": 8,
-      "anomaly": 1.26,
+      "anomaly": 1.37,
       "el_nino": true,
       "la_nina": false
     },
@@ -2474,7 +2474,7 @@
       "season": "ASO",
       "year": 1972,
       "month": 9,
-      "anomaly": 1.49,
+      "anomaly": 1.58,
       "el_nino": true,
       "la_nina": false
     },
@@ -2483,7 +2483,7 @@
       "season": "SON",
       "year": 1972,
       "month": 10,
-      "anomaly": 1.69,
+      "anomaly": 1.84,
       "el_nino": true,
       "la_nina": false
     },
@@ -2492,7 +2492,7 @@
       "season": "OND",
       "year": 1972,
       "month": 11,
-      "anomaly": 1.84,
+      "anomaly": 2.09,
       "el_nino": true,
       "la_nina": false
     },
@@ -2501,7 +2501,7 @@
       "season": "NDJ",
       "year": 1972,
       "month": 12,
-      "anomaly": 1.77,
+      "anomaly": 2.12,
       "el_nino": true,
       "la_nina": false
     },
@@ -2510,7 +2510,7 @@
       "season": "DJF",
       "year": 1973,
       "month": 1,
-      "anomaly": 1.55,
+      "anomaly": 1.84,
       "el_nino": true,
       "la_nina": false
     },
@@ -2519,7 +2519,7 @@
       "season": "JFM",
       "year": 1973,
       "month": 2,
-      "anomaly": 1.13,
+      "anomaly": 1.25,
       "el_nino": true,
       "la_nina": false
     },
@@ -2528,7 +2528,7 @@
       "season": "FMA",
       "year": 1973,
       "month": 3,
-      "anomaly": 0.56,
+      "anomaly": 0.54,
       "el_nino": false,
       "la_nina": false
     },
@@ -2537,7 +2537,7 @@
       "season": "MAM",
       "year": 1973,
       "month": 4,
-      "anomaly": -0.03,
+      "anomaly": -0.1,
       "el_nino": false,
       "la_nina": false
     },
@@ -2546,7 +2546,7 @@
       "season": "AMJ",
       "year": 1973,
       "month": 5,
-      "anomaly": -0.51,
+      "anomaly": -0.54,
       "el_nino": false,
       "la_nina": false
     },
@@ -2555,7 +2555,7 @@
       "season": "MJJ",
       "year": 1973,
       "month": 6,
-      "anomaly": -0.8,
+      "anomaly": -0.87,
       "el_nino": false,
       "la_nina": true
     },
@@ -2564,7 +2564,7 @@
       "season": "JJA",
       "year": 1973,
       "month": 7,
-      "anomaly": -0.99,
+      "anomaly": -1.11,
       "el_nino": false,
       "la_nina": true
     },
@@ -2573,7 +2573,7 @@
       "season": "JAS",
       "year": 1973,
       "month": 8,
-      "anomaly": -1.11,
+      "anomaly": -1.28,
       "el_nino": false,
       "la_nina": true
     },
@@ -2582,7 +2582,7 @@
       "season": "ASO",
       "year": 1973,
       "month": 9,
-      "anomaly": -1.26,
+      "anomaly": -1.45,
       "el_nino": false,
       "la_nina": true
     },
@@ -2591,7 +2591,7 @@
       "season": "SON",
       "year": 1973,
       "month": 10,
-      "anomaly": -1.58,
+      "anomaly": -1.71,
       "el_nino": false,
       "la_nina": true
     },
@@ -2600,7 +2600,7 @@
       "season": "OND",
       "year": 1973,
       "month": 11,
-      "anomaly": -1.89,
+      "anomaly": -1.95,
       "el_nino": false,
       "la_nina": true
     },
@@ -2609,7 +2609,7 @@
       "season": "NDJ",
       "year": 1973,
       "month": 12,
-      "anomaly": -2.04,
+      "anomaly": -2.03,
       "el_nino": false,
       "la_nina": true
     },
@@ -2618,7 +2618,7 @@
       "season": "DJF",
       "year": 1974,
       "month": 1,
-      "anomaly": -1.87,
+      "anomaly": -1.84,
       "el_nino": false,
       "la_nina": true
     },
@@ -2627,7 +2627,7 @@
       "season": "JFM",
       "year": 1974,
       "month": 2,
-      "anomaly": -1.59,
+      "anomaly": -1.55,
       "el_nino": false,
       "la_nina": true
     },
@@ -2636,7 +2636,7 @@
       "season": "FMA",
       "year": 1974,
       "month": 3,
-      "anomaly": -1.24,
+      "anomaly": -1.23,
       "el_nino": false,
       "la_nina": true
     },
@@ -2645,7 +2645,7 @@
       "season": "MAM",
       "year": 1974,
       "month": 4,
-      "anomaly": -0.99,
+      "anomaly": -1.03,
       "el_nino": false,
       "la_nina": true
     },
@@ -2654,16 +2654,16 @@
       "season": "AMJ",
       "year": 1974,
       "month": 5,
-      "anomaly": -0.71,
+      "anomaly": -0.91,
       "el_nino": false,
-      "la_nina": false
+      "la_nina": true
     },
     {
       "date": "1974-06-01",
       "season": "MJJ",
       "year": 1974,
       "month": 6,
-      "anomaly": -0.64,
+      "anomaly": -0.77,
       "el_nino": false,
       "la_nina": false
     },
@@ -2672,7 +2672,7 @@
       "season": "JJA",
       "year": 1974,
       "month": 7,
-      "anomaly": -0.46,
+      "anomaly": -0.53,
       "el_nino": false,
       "la_nina": false
     },
@@ -2681,7 +2681,7 @@
       "season": "JAS",
       "year": 1974,
       "month": 8,
-      "anomaly": -0.4,
+      "anomaly": -0.37,
       "el_nino": false,
       "la_nina": false
     },
@@ -2690,7 +2690,7 @@
       "season": "ASO",
       "year": 1974,
       "month": 9,
-      "anomaly": -0.47,
+      "anomaly": -0.41,
       "el_nino": false,
       "la_nina": false
     },
@@ -2699,7 +2699,7 @@
       "season": "SON",
       "year": 1974,
       "month": 10,
-      "anomaly": -0.69,
+      "anomaly": -0.61,
       "el_nino": false,
       "la_nina": false
     },
@@ -2708,16 +2708,16 @@
       "season": "OND",
       "year": 1974,
       "month": 11,
-      "anomaly": -0.88,
+      "anomaly": -0.75,
       "el_nino": false,
-      "la_nina": true
+      "la_nina": false
     },
     {
       "date": "1974-12-01",
       "season": "NDJ",
       "year": 1974,
       "month": 12,
-      "anomaly": -0.71,
+      "anomaly": -0.64,
       "el_nino": false,
       "la_nina": false
     },
@@ -2726,7 +2726,7 @@
       "season": "DJF",
       "year": 1975,
       "month": 1,
-      "anomaly": -0.56,
+      "anomaly": -0.54,
       "el_nino": false,
       "la_nina": false
     },
@@ -2735,7 +2735,7 @@
       "season": "JFM",
       "year": 1975,
       "month": 2,
-      "anomaly": -0.55,
+      "anomaly": -0.57,
       "el_nino": false,
       "la_nina": false
     },
@@ -2744,7 +2744,7 @@
       "season": "FMA",
       "year": 1975,
       "month": 3,
-      "anomaly": -0.61,
+      "anomaly": -0.65,
       "el_nino": false,
       "la_nina": false
     },
@@ -2753,7 +2753,7 @@
       "season": "MAM",
       "year": 1975,
       "month": 4,
-      "anomaly": -0.66,
+      "anomaly": -0.73,
       "el_nino": false,
       "la_nina": false
     },
@@ -2762,7 +2762,7 @@
       "season": "AMJ",
       "year": 1975,
       "month": 5,
-      "anomaly": -0.8,
+      "anomaly": -0.83,
       "el_nino": false,
       "la_nina": true
     },
@@ -2771,7 +2771,7 @@
       "season": "MJJ",
       "year": 1975,
       "month": 6,
-      "anomaly": -0.92,
+      "anomaly": -0.98,
       "el_nino": false,
       "la_nina": true
     },
@@ -2780,7 +2780,7 @@
       "season": "JJA",
       "year": 1975,
       "month": 7,
-      "anomaly": -1.08,
+      "anomaly": -1.13,
       "el_nino": false,
       "la_nina": true
     },
@@ -2789,7 +2789,7 @@
       "season": "JAS",
       "year": 1975,
       "month": 8,
-      "anomaly": -1.12,
+      "anomaly": -1.2,
       "el_nino": false,
       "la_nina": true
     },
@@ -2798,7 +2798,7 @@
       "season": "ASO",
       "year": 1975,
       "month": 9,
-      "anomaly": -1.29,
+      "anomaly": -1.37,
       "el_nino": false,
       "la_nina": true
     },
@@ -2807,7 +2807,7 @@
       "season": "SON",
       "year": 1975,
       "month": 10,
-      "anomaly": -1.32,
+      "anomaly": -1.43,
       "el_nino": false,
       "la_nina": true
     },
@@ -2816,7 +2816,7 @@
       "season": "OND",
       "year": 1975,
       "month": 11,
-      "anomaly": -1.47,
+      "anomaly": -1.55,
       "el_nino": false,
       "la_nina": true
     },
@@ -2825,7 +2825,7 @@
       "season": "NDJ",
       "year": 1975,
       "month": 12,
-      "anomaly": -1.58,
+      "anomaly": -1.65,
       "el_nino": false,
       "la_nina": true
     },
@@ -2834,7 +2834,7 @@
       "season": "DJF",
       "year": 1976,
       "month": 1,
-      "anomaly": -1.49,
+      "anomaly": -1.56,
       "el_nino": false,
       "la_nina": true
     },
@@ -2843,7 +2843,7 @@
       "season": "JFM",
       "year": 1976,
       "month": 2,
-      "anomaly": -1.11,
+      "anomaly": -1.17,
       "el_nino": false,
       "la_nina": true
     },
@@ -2852,7 +2852,7 @@
       "season": "FMA",
       "year": 1976,
       "month": 3,
-      "anomaly": -0.65,
+      "anomaly": -0.73,
       "el_nino": false,
       "la_nina": false
     },
@@ -2861,7 +2861,7 @@
       "season": "MAM",
       "year": 1976,
       "month": 4,
-      "anomaly": -0.45,
+      "anomaly": -0.47,
       "el_nino": false,
       "la_nina": false
     },
@@ -2870,7 +2870,7 @@
       "season": "AMJ",
       "year": 1976,
       "month": 5,
-      "anomaly": -0.23,
+      "anomaly": -0.28,
       "el_nino": false,
       "la_nina": false
     },
@@ -2879,7 +2879,7 @@
       "season": "MJJ",
       "year": 1976,
       "month": 6,
-      "anomaly": 0.0,
+      "anomaly": -0.05,
       "el_nino": false,
       "la_nina": false
     },
@@ -2888,7 +2888,7 @@
       "season": "JJA",
       "year": 1976,
       "month": 7,
-      "anomaly": 0.23,
+      "anomaly": 0.18,
       "el_nino": false,
       "la_nina": false
     },
@@ -2897,7 +2897,7 @@
       "season": "JAS",
       "year": 1976,
       "month": 8,
-      "anomaly": 0.4,
+      "anomaly": 0.35,
       "el_nino": false,
       "la_nina": false
     },
@@ -2906,7 +2906,7 @@
       "season": "ASO",
       "year": 1976,
       "month": 9,
-      "anomaly": 0.6,
+      "anomaly": 0.62,
       "el_nino": false,
       "la_nina": false
     },
@@ -2915,8 +2915,8 @@
       "season": "SON",
       "year": 1976,
       "month": 10,
-      "anomaly": 0.79,
-      "el_nino": false,
+      "anomaly": 0.81,
+      "el_nino": true,
       "la_nina": false
     },
     {
@@ -2924,7 +2924,7 @@
       "season": "OND",
       "year": 1976,
       "month": 11,
-      "anomaly": 0.81,
+      "anomaly": 0.86,
       "el_nino": true,
       "la_nina": false
     },
@@ -2933,7 +2933,7 @@
       "season": "NDJ",
       "year": 1976,
       "month": 12,
-      "anomaly": 0.84,
+      "anomaly": 0.85,
       "el_nino": true,
       "la_nina": false
     },
@@ -2951,7 +2951,7 @@
       "season": "JFM",
       "year": 1977,
       "month": 2,
-      "anomaly": 0.66,
+      "anomaly": 0.64,
       "el_nino": false,
       "la_nina": false
     },
@@ -2960,7 +2960,7 @@
       "season": "FMA",
       "year": 1977,
       "month": 3,
-      "anomaly": 0.33,
+      "anomaly": 0.34,
       "el_nino": false,
       "la_nina": false
     },
@@ -2969,7 +2969,7 @@
       "season": "MAM",
       "year": 1977,
       "month": 4,
-      "anomaly": 0.26,
+      "anomaly": 0.23,
       "el_nino": false,
       "la_nina": false
     },
@@ -2978,7 +2978,7 @@
       "season": "AMJ",
       "year": 1977,
       "month": 5,
-      "anomaly": 0.26,
+      "anomaly": 0.21,
       "el_nino": false,
       "la_nina": false
     },
@@ -2987,7 +2987,7 @@
       "season": "MJJ",
       "year": 1977,
       "month": 6,
-      "anomaly": 0.46,
+      "anomaly": 0.34,
       "el_nino": false,
       "la_nina": false
     },
@@ -2996,7 +2996,7 @@
       "season": "JJA",
       "year": 1977,
       "month": 7,
-      "anomaly": 0.39,
+      "anomaly": 0.35,
       "el_nino": false,
       "la_nina": false
     },
@@ -3005,7 +3005,7 @@
       "season": "JAS",
       "year": 1977,
       "month": 8,
-      "anomaly": 0.35,
+      "anomaly": 0.42,
       "el_nino": false,
       "la_nina": false
     },
@@ -3014,7 +3014,7 @@
       "season": "ASO",
       "year": 1977,
       "month": 9,
-      "anomaly": 0.45,
+      "anomaly": 0.57,
       "el_nino": false,
       "la_nina": false
     },
@@ -3023,7 +3023,7 @@
       "season": "SON",
       "year": 1977,
       "month": 10,
-      "anomaly": 0.68,
+      "anomaly": 0.73,
       "el_nino": false,
       "la_nina": false
     },
@@ -3032,7 +3032,7 @@
       "season": "OND",
       "year": 1977,
       "month": 11,
-      "anomaly": 0.84,
+      "anomaly": 0.81,
       "el_nino": true,
       "la_nina": false
     },
@@ -3041,8 +3041,8 @@
       "season": "NDJ",
       "year": 1977,
       "month": 12,
-      "anomaly": 0.82,
-      "el_nino": true,
+      "anomaly": 0.79,
+      "el_nino": false,
       "la_nina": false
     },
     {
@@ -3050,7 +3050,7 @@
       "season": "DJF",
       "year": 1978,
       "month": 1,
-      "anomaly": 0.71,
+      "anomaly": 0.69,
       "el_nino": false,
       "la_nina": false
     },
@@ -3059,7 +3059,7 @@
       "season": "JFM",
       "year": 1978,
       "month": 2,
-      "anomaly": 0.52,
+      "anomaly": 0.42,
       "el_nino": false,
       "la_nina": false
     },
@@ -3068,7 +3068,7 @@
       "season": "FMA",
       "year": 1978,
       "month": 3,
-      "anomaly": 0.17,
+      "anomaly": 0.06,
       "el_nino": false,
       "la_nina": false
     },
@@ -3077,7 +3077,7 @@
       "season": "MAM",
       "year": 1978,
       "month": 4,
-      "anomaly": -0.06,
+      "anomaly": -0.18,
       "el_nino": false,
       "la_nina": false
     },
@@ -3086,7 +3086,7 @@
       "season": "AMJ",
       "year": 1978,
       "month": 5,
-      "anomaly": -0.28,
+      "anomaly": -0.31,
       "el_nino": false,
       "la_nina": false
     },
@@ -3095,7 +3095,7 @@
       "season": "MJJ",
       "year": 1978,
       "month": 6,
-      "anomaly": -0.24,
+      "anomaly": -0.29,
       "el_nino": false,
       "la_nina": false
     },
@@ -3104,7 +3104,7 @@
       "season": "JJA",
       "year": 1978,
       "month": 7,
-      "anomaly": -0.37,
+      "anomaly": -0.36,
       "el_nino": false,
       "la_nina": false
     },
@@ -3113,7 +3113,7 @@
       "season": "JAS",
       "year": 1978,
       "month": 8,
-      "anomaly": -0.37,
+      "anomaly": -0.42,
       "el_nino": false,
       "la_nina": false
     },
@@ -3122,7 +3122,7 @@
       "season": "ASO",
       "year": 1978,
       "month": 9,
-      "anomaly": -0.44,
+      "anomaly": -0.42,
       "el_nino": false,
       "la_nina": false
     },
@@ -3131,7 +3131,7 @@
       "season": "SON",
       "year": 1978,
       "month": 10,
-      "anomaly": -0.27,
+      "anomaly": -0.29,
       "el_nino": false,
       "la_nina": false
     },
@@ -3140,7 +3140,7 @@
       "season": "OND",
       "year": 1978,
       "month": 11,
-      "anomaly": -0.07,
+      "anomaly": -0.08,
       "el_nino": false,
       "la_nina": false
     },
@@ -3149,7 +3149,7 @@
       "season": "NDJ",
       "year": 1978,
       "month": 12,
-      "anomaly": 0.11,
+      "anomaly": 0.0,
       "el_nino": false,
       "la_nina": false
     },
@@ -3158,7 +3158,7 @@
       "season": "DJF",
       "year": 1979,
       "month": 1,
-      "anomaly": 0.19,
+      "anomaly": 0.03,
       "el_nino": false,
       "la_nina": false
     },
@@ -3167,7 +3167,7 @@
       "season": "JFM",
       "year": 1979,
       "month": 2,
-      "anomaly": 0.21,
+      "anomaly": 0.07,
       "el_nino": false,
       "la_nina": false
     },
@@ -3176,7 +3176,7 @@
       "season": "FMA",
       "year": 1979,
       "month": 3,
-      "anomaly": 0.29,
+      "anomaly": 0.2,
       "el_nino": false,
       "la_nina": false
     },
@@ -3185,7 +3185,7 @@
       "season": "MAM",
       "year": 1979,
       "month": 4,
-      "anomaly": 0.32,
+      "anomaly": 0.28,
       "el_nino": false,
       "la_nina": false
     },
@@ -3194,7 +3194,7 @@
       "season": "AMJ",
       "year": 1979,
       "month": 5,
-      "anomaly": 0.29,
+      "anomaly": 0.23,
       "el_nino": false,
       "la_nina": false
     },
@@ -3203,7 +3203,7 @@
       "season": "MJJ",
       "year": 1979,
       "month": 6,
-      "anomaly": 0.14,
+      "anomaly": 0.05,
       "el_nino": false,
       "la_nina": false
     },
@@ -3212,7 +3212,7 @@
       "season": "JJA",
       "year": 1979,
       "month": 7,
-      "anomaly": 0.09,
+      "anomaly": 0.04,
       "el_nino": false,
       "la_nina": false
     },
@@ -3221,7 +3221,7 @@
       "season": "JAS",
       "year": 1979,
       "month": 8,
-      "anomaly": 0.22,
+      "anomaly": 0.17,
       "el_nino": false,
       "la_nina": false
     },
@@ -3230,7 +3230,7 @@
       "season": "ASO",
       "year": 1979,
       "month": 9,
-      "anomaly": 0.34,
+      "anomaly": 0.33,
       "el_nino": false,
       "la_nina": false
     },
@@ -3239,7 +3239,7 @@
       "season": "SON",
       "year": 1979,
       "month": 10,
-      "anomaly": 0.47,
+      "anomaly": 0.45,
       "el_nino": false,
       "la_nina": false
     },
@@ -3248,7 +3248,7 @@
       "season": "OND",
       "year": 1979,
       "month": 11,
-      "anomaly": 0.5,
+      "anomaly": 0.52,
       "el_nino": false,
       "la_nina": false
     },
@@ -3266,7 +3266,7 @@
       "season": "DJF",
       "year": 1980,
       "month": 1,
-      "anomaly": 0.62,
+      "anomaly": 0.59,
       "el_nino": false,
       "la_nina": false
     },
@@ -3275,7 +3275,7 @@
       "season": "JFM",
       "year": 1980,
       "month": 2,
-      "anomaly": 0.47,
+      "anomaly": 0.46,
       "el_nino": false,
       "la_nina": false
     },
@@ -3284,7 +3284,7 @@
       "season": "FMA",
       "year": 1980,
       "month": 3,
-      "anomaly": 0.35,
+      "anomaly": 0.34,
       "el_nino": false,
       "la_nina": false
     },
@@ -3293,7 +3293,7 @@
       "season": "MAM",
       "year": 1980,
       "month": 4,
-      "anomaly": 0.34,
+      "anomaly": 0.38,
       "el_nino": false,
       "la_nina": false
     },
@@ -3302,7 +3302,7 @@
       "season": "AMJ",
       "year": 1980,
       "month": 5,
-      "anomaly": 0.45,
+      "anomaly": 0.48,
       "el_nino": false,
       "la_nina": false
     },
@@ -3311,7 +3311,7 @@
       "season": "MJJ",
       "year": 1980,
       "month": 6,
-      "anomaly": 0.4,
+      "anomaly": 0.46,
       "el_nino": false,
       "la_nina": false
     },
@@ -3320,7 +3320,7 @@
       "season": "JJA",
       "year": 1980,
       "month": 7,
-      "anomaly": 0.18,
+      "anomaly": 0.25,
       "el_nino": false,
       "la_nina": false
     },
@@ -3329,7 +3329,7 @@
       "season": "JAS",
       "year": 1980,
       "month": 8,
-      "anomaly": -0.06,
+      "anomaly": 0.03,
       "el_nino": false,
       "la_nina": false
     },
@@ -3338,7 +3338,7 @@
       "season": "ASO",
       "year": 1980,
       "month": 9,
-      "anomaly": -0.17,
+      "anomaly": -0.07,
       "el_nino": false,
       "la_nina": false
     },
@@ -3347,7 +3347,7 @@
       "season": "SON",
       "year": 1980,
       "month": 10,
-      "anomaly": -0.07,
+      "anomaly": 0.02,
       "el_nino": false,
       "la_nina": false
     },
@@ -3356,7 +3356,7 @@
       "season": "OND",
       "year": 1980,
       "month": 11,
-      "anomaly": 0.08,
+      "anomaly": 0.11,
       "el_nino": false,
       "la_nina": false
     },
@@ -3365,7 +3365,7 @@
       "season": "NDJ",
       "year": 1980,
       "month": 12,
-      "anomaly": -0.05,
+      "anomaly": -0.01,
       "el_nino": false,
       "la_nina": false
     },
@@ -3374,7 +3374,7 @@
       "season": "DJF",
       "year": 1981,
       "month": 1,
-      "anomaly": -0.27,
+      "anomaly": -0.26,
       "el_nino": false,
       "la_nina": false
     },
@@ -3383,7 +3383,7 @@
       "season": "JFM",
       "year": 1981,
       "month": 2,
-      "anomaly": -0.42,
+      "anomaly": -0.5,
       "el_nino": false,
       "la_nina": false
     },
@@ -3392,7 +3392,7 @@
       "season": "FMA",
       "year": 1981,
       "month": 3,
-      "anomaly": -0.41,
+      "anomaly": -0.47,
       "el_nino": false,
       "la_nina": false
     },
@@ -3401,7 +3401,7 @@
       "season": "MAM",
       "year": 1981,
       "month": 4,
-      "anomaly": -0.27,
+      "anomaly": -0.37,
       "el_nino": false,
       "la_nina": false
     },
@@ -3410,7 +3410,7 @@
       "season": "AMJ",
       "year": 1981,
       "month": 5,
-      "anomaly": -0.28,
+      "anomaly": -0.26,
       "el_nino": false,
       "la_nina": false
     },
@@ -3419,7 +3419,7 @@
       "season": "MJJ",
       "year": 1981,
       "month": 6,
-      "anomaly": -0.27,
+      "anomaly": -0.29,
       "el_nino": false,
       "la_nina": false
     },
@@ -3428,7 +3428,7 @@
       "season": "JJA",
       "year": 1981,
       "month": 7,
-      "anomaly": -0.28,
+      "anomaly": -0.3,
       "el_nino": false,
       "la_nina": false
     },
@@ -3437,7 +3437,7 @@
       "season": "JAS",
       "year": 1981,
       "month": 8,
-      "anomaly": -0.23,
+      "anomaly": -0.25,
       "el_nino": false,
       "la_nina": false
     },
@@ -3446,7 +3446,7 @@
       "season": "ASO",
       "year": 1981,
       "month": 9,
-      "anomaly": -0.08,
+      "anomaly": -0.16,
       "el_nino": false,
       "la_nina": false
     },
@@ -3455,7 +3455,7 @@
       "season": "SON",
       "year": 1981,
       "month": 10,
-      "anomaly": -0.16,
+      "anomaly": -0.13,
       "el_nino": false,
       "la_nina": false
     },
@@ -3464,7 +3464,7 @@
       "season": "OND",
       "year": 1981,
       "month": 11,
-      "anomaly": -0.19,
+      "anomaly": -0.15,
       "el_nino": false,
       "la_nina": false
     },
@@ -3473,7 +3473,7 @@
       "season": "NDJ",
       "year": 1981,
       "month": 12,
-      "anomaly": -0.14,
+      "anomaly": -0.08,
       "el_nino": false,
       "la_nina": false
     },
@@ -3491,7 +3491,7 @@
       "season": "JFM",
       "year": 1982,
       "month": 2,
-      "anomaly": 0.02,
+      "anomaly": 0.07,
       "el_nino": false,
       "la_nina": false
     },
@@ -3500,7 +3500,7 @@
       "season": "FMA",
       "year": 1982,
       "month": 3,
-      "anomaly": 0.07,
+      "anomaly": 0.19,
       "el_nino": false,
       "la_nina": false
     },
@@ -3509,7 +3509,7 @@
       "season": "MAM",
       "year": 1982,
       "month": 4,
-      "anomaly": 0.34,
+      "anomaly": 0.47,
       "el_nino": false,
       "la_nina": false
     },
@@ -3518,7 +3518,7 @@
       "season": "AMJ",
       "year": 1982,
       "month": 5,
-      "anomaly": 0.65,
+      "anomaly": 0.66,
       "el_nino": false,
       "la_nina": false
     },
@@ -3527,7 +3527,7 @@
       "season": "MJJ",
       "year": 1982,
       "month": 6,
-      "anomaly": 0.73,
+      "anomaly": 0.72,
       "el_nino": false,
       "la_nina": false
     },
@@ -3536,7 +3536,7 @@
       "season": "JJA",
       "year": 1982,
       "month": 7,
-      "anomaly": 0.78,
+      "anomaly": 0.79,
       "el_nino": false,
       "la_nina": false
     },
@@ -3545,7 +3545,7 @@
       "season": "JAS",
       "year": 1982,
       "month": 8,
-      "anomaly": 0.99,
+      "anomaly": 1.07,
       "el_nino": true,
       "la_nina": false
     },
@@ -3554,7 +3554,7 @@
       "season": "ASO",
       "year": 1982,
       "month": 9,
-      "anomaly": 1.45,
+      "anomaly": 1.58,
       "el_nino": true,
       "la_nina": false
     },
@@ -3563,7 +3563,7 @@
       "season": "SON",
       "year": 1982,
       "month": 10,
-      "anomaly": 1.82,
+      "anomaly": 1.97,
       "el_nino": true,
       "la_nina": false
     },
@@ -3572,7 +3572,7 @@
       "season": "OND",
       "year": 1982,
       "month": 11,
-      "anomaly": 2.03,
+      "anomaly": 2.18,
       "el_nino": true,
       "la_nina": false
     },
@@ -3581,7 +3581,7 @@
       "season": "NDJ",
       "year": 1982,
       "month": 12,
-      "anomaly": 2.12,
+      "anomaly": 2.23,
       "el_nino": true,
       "la_nina": false
     },
@@ -3590,7 +3590,7 @@
       "season": "DJF",
       "year": 1983,
       "month": 1,
-      "anomaly": 2.14,
+      "anomaly": 2.18,
       "el_nino": true,
       "la_nina": false
     },
@@ -3599,7 +3599,7 @@
       "season": "JFM",
       "year": 1983,
       "month": 2,
-      "anomaly": 1.91,
+      "anomaly": 1.92,
       "el_nino": true,
       "la_nina": false
     },
@@ -3608,7 +3608,7 @@
       "season": "FMA",
       "year": 1983,
       "month": 3,
-      "anomaly": 1.52,
+      "anomaly": 1.54,
       "el_nino": true,
       "la_nina": false
     },
@@ -3617,7 +3617,7 @@
       "season": "MAM",
       "year": 1983,
       "month": 4,
-      "anomaly": 1.23,
+      "anomaly": 1.29,
       "el_nino": true,
       "la_nina": false
     },
@@ -3626,7 +3626,7 @@
       "season": "AMJ",
       "year": 1983,
       "month": 5,
-      "anomaly": 0.95,
+      "anomaly": 1.06,
       "el_nino": true,
       "la_nina": false
     },
@@ -3635,7 +3635,7 @@
       "season": "MJJ",
       "year": 1983,
       "month": 6,
-      "anomaly": 0.62,
+      "anomaly": 0.72,
       "el_nino": false,
       "la_nina": false
     },
@@ -3644,7 +3644,7 @@
       "season": "JJA",
       "year": 1983,
       "month": 7,
-      "anomaly": 0.25,
+      "anomaly": 0.31,
       "el_nino": false,
       "la_nina": false
     },
@@ -3653,7 +3653,7 @@
       "season": "JAS",
       "year": 1983,
       "month": 8,
-      "anomaly": -0.06,
+      "anomaly": -0.08,
       "el_nino": false,
       "la_nina": false
     },
@@ -3662,7 +3662,7 @@
       "season": "ASO",
       "year": 1983,
       "month": 9,
-      "anomaly": -0.43,
+      "anomaly": -0.46,
       "el_nino": false,
       "la_nina": false
     },
@@ -3671,16 +3671,16 @@
       "season": "SON",
       "year": 1983,
       "month": 10,
-      "anomaly": -0.76,
+      "anomaly": -0.81,
       "el_nino": false,
-      "la_nina": false
+      "la_nina": true
     },
     {
       "date": "1983-11-01",
       "season": "OND",
       "year": 1983,
       "month": 11,
-      "anomaly": -0.96,
+      "anomaly": -1.0,
       "el_nino": false,
       "la_nina": true
     },
@@ -3689,7 +3689,7 @@
       "season": "NDJ",
       "year": 1983,
       "month": 12,
-      "anomaly": -0.89,
+      "anomaly": -0.91,
       "el_nino": false,
       "la_nina": true
     },
@@ -3698,7 +3698,7 @@
       "season": "DJF",
       "year": 1984,
       "month": 1,
-      "anomaly": -0.63,
+      "anomaly": -0.6,
       "el_nino": false,
       "la_nina": false
     },
@@ -3707,7 +3707,7 @@
       "season": "JFM",
       "year": 1984,
       "month": 2,
-      "anomaly": -0.51,
+      "anomaly": -0.42,
       "el_nino": false,
       "la_nina": false
     },
@@ -3716,7 +3716,7 @@
       "season": "FMA",
       "year": 1984,
       "month": 3,
-      "anomaly": -0.38,
+      "anomaly": -0.34,
       "el_nino": false,
       "la_nina": false
     },
@@ -3725,7 +3725,7 @@
       "season": "MAM",
       "year": 1984,
       "month": 4,
-      "anomaly": -0.47,
+      "anomaly": -0.43,
       "el_nino": false,
       "la_nina": false
     },
@@ -3734,7 +3734,7 @@
       "season": "AMJ",
       "year": 1984,
       "month": 5,
-      "anomaly": -0.55,
+      "anomaly": -0.51,
       "el_nino": false,
       "la_nina": false
     },
@@ -3743,7 +3743,7 @@
       "season": "MJJ",
       "year": 1984,
       "month": 6,
-      "anomaly": -0.52,
+      "anomaly": -0.45,
       "el_nino": false,
       "la_nina": false
     },
@@ -3752,7 +3752,7 @@
       "season": "JJA",
       "year": 1984,
       "month": 7,
-      "anomaly": -0.39,
+      "anomaly": -0.3,
       "el_nino": false,
       "la_nina": false
     },
@@ -3761,7 +3761,7 @@
       "season": "JAS",
       "year": 1984,
       "month": 8,
-      "anomaly": -0.22,
+      "anomaly": -0.16,
       "el_nino": false,
       "la_nina": false
     },
@@ -3770,7 +3770,7 @@
       "season": "ASO",
       "year": 1984,
       "month": 9,
-      "anomaly": -0.32,
+      "anomaly": -0.24,
       "el_nino": false,
       "la_nina": false
     },
@@ -3779,7 +3779,7 @@
       "season": "SON",
       "year": 1984,
       "month": 10,
-      "anomaly": -0.62,
+      "anomaly": -0.56,
       "el_nino": false,
       "la_nina": false
     },
@@ -3788,7 +3788,7 @@
       "season": "OND",
       "year": 1984,
       "month": 11,
-      "anomaly": -0.95,
+      "anomaly": -0.92,
       "el_nino": false,
       "la_nina": true
     },
@@ -3797,7 +3797,7 @@
       "season": "NDJ",
       "year": 1984,
       "month": 12,
-      "anomaly": -1.06,
+      "anomaly": -1.14,
       "el_nino": false,
       "la_nina": true
     },
@@ -3806,7 +3806,7 @@
       "season": "DJF",
       "year": 1985,
       "month": 1,
-      "anomaly": -1.01,
+      "anomaly": -1.04,
       "el_nino": false,
       "la_nina": true
     },
@@ -3815,7 +3815,7 @@
       "season": "JFM",
       "year": 1985,
       "month": 2,
-      "anomaly": -0.86,
+      "anomaly": -0.85,
       "el_nino": false,
       "la_nina": true
     },
@@ -3824,25 +3824,25 @@
       "season": "FMA",
       "year": 1985,
       "month": 3,
-      "anomaly": -0.85,
+      "anomaly": -0.77,
       "el_nino": false,
-      "la_nina": true
+      "la_nina": false
     },
     {
       "date": "1985-04-01",
       "season": "MAM",
       "year": 1985,
       "month": 4,
-      "anomaly": -0.8,
+      "anomaly": -0.78,
       "el_nino": false,
-      "la_nina": true
+      "la_nina": false
     },
     {
       "date": "1985-05-01",
       "season": "AMJ",
       "year": 1985,
       "month": 5,
-      "anomaly": -0.79,
+      "anomaly": -0.78,
       "el_nino": false,
       "la_nina": false
     },
@@ -3851,7 +3851,7 @@
       "season": "MJJ",
       "year": 1985,
       "month": 6,
-      "anomaly": -0.6,
+      "anomaly": -0.63,
       "el_nino": false,
       "la_nina": false
     },
@@ -3860,7 +3860,7 @@
       "season": "JJA",
       "year": 1985,
       "month": 7,
-      "anomaly": -0.44,
+      "anomaly": -0.49,
       "el_nino": false,
       "la_nina": false
     },
@@ -3869,7 +3869,7 @@
       "season": "JAS",
       "year": 1985,
       "month": 8,
-      "anomaly": -0.33,
+      "anomaly": -0.46,
       "el_nino": false,
       "la_nina": false
     },
@@ -3878,7 +3878,7 @@
       "season": "ASO",
       "year": 1985,
       "month": 9,
-      "anomaly": -0.31,
+      "anomaly": -0.4,
       "el_nino": false,
       "la_nina": false
     },
@@ -3887,7 +3887,7 @@
       "season": "SON",
       "year": 1985,
       "month": 10,
-      "anomaly": -0.3,
+      "anomaly": -0.35,
       "el_nino": false,
       "la_nina": false
     },
@@ -3896,7 +3896,7 @@
       "season": "OND",
       "year": 1985,
       "month": 11,
-      "anomaly": -0.28,
+      "anomaly": -0.27,
       "el_nino": false,
       "la_nina": false
     },
@@ -3914,7 +3914,7 @@
       "season": "DJF",
       "year": 1986,
       "month": 1,
-      "anomaly": -0.4,
+      "anomaly": -0.49,
       "el_nino": false,
       "la_nina": false
     },
@@ -3923,7 +3923,7 @@
       "season": "JFM",
       "year": 1986,
       "month": 2,
-      "anomaly": -0.38,
+      "anomaly": -0.47,
       "el_nino": false,
       "la_nina": false
     },
@@ -3932,7 +3932,7 @@
       "season": "FMA",
       "year": 1986,
       "month": 3,
-      "anomaly": -0.25,
+      "anomaly": -0.31,
       "el_nino": false,
       "la_nina": false
     },
@@ -3941,7 +3941,7 @@
       "season": "MAM",
       "year": 1986,
       "month": 4,
-      "anomaly": -0.17,
+      "anomaly": -0.2,
       "el_nino": false,
       "la_nina": false
     },
@@ -3950,7 +3950,7 @@
       "season": "AMJ",
       "year": 1986,
       "month": 5,
-      "anomaly": -0.09,
+      "anomaly": -0.12,
       "el_nino": false,
       "la_nina": false
     },
@@ -3959,7 +3959,7 @@
       "season": "MJJ",
       "year": 1986,
       "month": 6,
-      "anomaly": 0.02,
+      "anomaly": -0.04,
       "el_nino": false,
       "la_nina": false
     },
@@ -3968,7 +3968,7 @@
       "season": "JJA",
       "year": 1986,
       "month": 7,
-      "anomaly": 0.24,
+      "anomaly": 0.22,
       "el_nino": false,
       "la_nina": false
     },
@@ -3977,7 +3977,7 @@
       "season": "JAS",
       "year": 1986,
       "month": 8,
-      "anomaly": 0.46,
+      "anomaly": 0.44,
       "el_nino": false,
       "la_nina": false
     },
@@ -3986,7 +3986,7 @@
       "season": "ASO",
       "year": 1986,
       "month": 9,
-      "anomaly": 0.64,
+      "anomaly": 0.71,
       "el_nino": false,
       "la_nina": false
     },
@@ -3995,7 +3995,7 @@
       "season": "SON",
       "year": 1986,
       "month": 10,
-      "anomaly": 0.86,
+      "anomaly": 0.94,
       "el_nino": true,
       "la_nina": false
     },
@@ -4004,7 +4004,7 @@
       "season": "OND",
       "year": 1986,
       "month": 11,
-      "anomaly": 1.06,
+      "anomaly": 1.14,
       "el_nino": true,
       "la_nina": false
     },
@@ -4013,7 +4013,7 @@
       "season": "NDJ",
       "year": 1986,
       "month": 12,
-      "anomaly": 1.21,
+      "anomaly": 1.22,
       "el_nino": true,
       "la_nina": false
     },
@@ -4022,7 +4022,7 @@
       "season": "DJF",
       "year": 1987,
       "month": 1,
-      "anomaly": 1.18,
+      "anomaly": 1.23,
       "el_nino": true,
       "la_nina": false
     },
@@ -4031,7 +4031,7 @@
       "season": "JFM",
       "year": 1987,
       "month": 2,
-      "anomaly": 1.13,
+      "anomaly": 1.19,
       "el_nino": true,
       "la_nina": false
     },
@@ -4040,7 +4040,7 @@
       "season": "FMA",
       "year": 1987,
       "month": 3,
-      "anomaly": 1.02,
+      "anomaly": 1.06,
       "el_nino": true,
       "la_nina": false
     },
@@ -4049,7 +4049,7 @@
       "season": "MAM",
       "year": 1987,
       "month": 4,
-      "anomaly": 0.94,
+      "anomaly": 0.95,
       "el_nino": true,
       "la_nina": false
     },
@@ -4058,7 +4058,7 @@
       "season": "AMJ",
       "year": 1987,
       "month": 5,
-      "anomaly": 0.95,
+      "anomaly": 0.97,
       "el_nino": true,
       "la_nina": false
     },
@@ -4067,7 +4067,7 @@
       "season": "MJJ",
       "year": 1987,
       "month": 6,
-      "anomaly": 1.11,
+      "anomaly": 1.22,
       "el_nino": true,
       "la_nina": false
     },
@@ -4076,7 +4076,7 @@
       "season": "JJA",
       "year": 1987,
       "month": 7,
-      "anomaly": 1.3,
+      "anomaly": 1.51,
       "el_nino": true,
       "la_nina": false
     },
@@ -4085,7 +4085,7 @@
       "season": "JAS",
       "year": 1987,
       "month": 8,
-      "anomaly": 1.46,
+      "anomaly": 1.7,
       "el_nino": true,
       "la_nina": false
     },
@@ -4094,7 +4094,7 @@
       "season": "ASO",
       "year": 1987,
       "month": 9,
-      "anomaly": 1.49,
+      "anomaly": 1.65,
       "el_nino": true,
       "la_nina": false
     },
@@ -4103,7 +4103,7 @@
       "season": "SON",
       "year": 1987,
       "month": 10,
-      "anomaly": 1.41,
+      "anomaly": 1.48,
       "el_nino": true,
       "la_nina": false
     },
@@ -4112,7 +4112,7 @@
       "season": "OND",
       "year": 1987,
       "month": 11,
-      "anomaly": 1.2,
+      "anomaly": 1.25,
       "el_nino": true,
       "la_nina": false
     },
@@ -4121,7 +4121,7 @@
       "season": "NDJ",
       "year": 1987,
       "month": 12,
-      "anomaly": 1.0,
+      "anomaly": 1.11,
       "el_nino": true,
       "la_nina": false
     },
@@ -4130,8 +4130,8 @@
       "season": "DJF",
       "year": 1988,
       "month": 1,
-      "anomaly": 0.63,
-      "el_nino": false,
+      "anomaly": 0.81,
+      "el_nino": true,
       "la_nina": false
     },
     {
@@ -4139,7 +4139,7 @@
       "season": "JFM",
       "year": 1988,
       "month": 2,
-      "anomaly": 0.37,
+      "anomaly": 0.54,
       "el_nino": false,
       "la_nina": false
     },
@@ -4148,7 +4148,7 @@
       "season": "FMA",
       "year": 1988,
       "month": 3,
-      "anomaly": -0.03,
+      "anomaly": 0.14,
       "el_nino": false,
       "la_nina": false
     },
@@ -4157,7 +4157,7 @@
       "season": "MAM",
       "year": 1988,
       "month": 4,
-      "anomaly": -0.45,
+      "anomaly": -0.31,
       "el_nino": false,
       "la_nina": false
     },
@@ -4166,7 +4166,7 @@
       "season": "AMJ",
       "year": 1988,
       "month": 5,
-      "anomaly": -0.99,
+      "anomaly": -0.88,
       "el_nino": false,
       "la_nina": true
     },
@@ -4193,7 +4193,7 @@
       "season": "JAS",
       "year": 1988,
       "month": 8,
-      "anomaly": -1.14,
+      "anomaly": -1.11,
       "el_nino": false,
       "la_nina": true
     },
@@ -4202,7 +4202,7 @@
       "season": "ASO",
       "year": 1988,
       "month": 9,
-      "anomaly": -1.27,
+      "anomaly": -1.19,
       "el_nino": false,
       "la_nina": true
     },
@@ -4211,7 +4211,7 @@
       "season": "SON",
       "year": 1988,
       "month": 10,
-      "anomaly": -1.54,
+      "anomaly": -1.48,
       "el_nino": false,
       "la_nina": true
     },
@@ -4220,7 +4220,7 @@
       "season": "OND",
       "year": 1988,
       "month": 11,
-      "anomaly": -1.81,
+      "anomaly": -1.8,
       "el_nino": false,
       "la_nina": true
     },
@@ -4238,7 +4238,7 @@
       "season": "DJF",
       "year": 1989,
       "month": 1,
-      "anomaly": -1.64,
+      "anomaly": -1.69,
       "el_nino": false,
       "la_nina": true
     },
@@ -4247,7 +4247,7 @@
       "season": "JFM",
       "year": 1989,
       "month": 2,
-      "anomaly": -1.38,
+      "anomaly": -1.43,
       "el_nino": false,
       "la_nina": true
     },
@@ -4256,7 +4256,7 @@
       "season": "FMA",
       "year": 1989,
       "month": 3,
-      "anomaly": -1.09,
+      "anomaly": -1.08,
       "el_nino": false,
       "la_nina": true
     },
@@ -4265,7 +4265,7 @@
       "season": "MAM",
       "year": 1989,
       "month": 4,
-      "anomaly": -0.85,
+      "anomaly": -0.83,
       "el_nino": false,
       "la_nina": true
     },
@@ -4274,7 +4274,7 @@
       "season": "AMJ",
       "year": 1989,
       "month": 5,
-      "anomaly": -0.61,
+      "anomaly": -0.58,
       "el_nino": false,
       "la_nina": false
     },
@@ -4292,7 +4292,7 @@
       "season": "JJA",
       "year": 1989,
       "month": 7,
-      "anomaly": -0.37,
+      "anomaly": -0.31,
       "el_nino": false,
       "la_nina": false
     },
@@ -4301,7 +4301,7 @@
       "season": "JAS",
       "year": 1989,
       "month": 8,
-      "anomaly": -0.36,
+      "anomaly": -0.27,
       "el_nino": false,
       "la_nina": false
     },
@@ -4310,7 +4310,7 @@
       "season": "ASO",
       "year": 1989,
       "month": 9,
-      "anomaly": -0.33,
+      "anomaly": -0.24,
       "el_nino": false,
       "la_nina": false
     },
@@ -4319,7 +4319,7 @@
       "season": "SON",
       "year": 1989,
       "month": 10,
-      "anomaly": -0.25,
+      "anomaly": -0.22,
       "el_nino": false,
       "la_nina": false
     },
@@ -4328,7 +4328,7 @@
       "season": "OND",
       "year": 1989,
       "month": 11,
-      "anomaly": -0.12,
+      "anomaly": -0.16,
       "el_nino": false,
       "la_nina": false
     },
@@ -4337,7 +4337,7 @@
       "season": "NDJ",
       "year": 1989,
       "month": 12,
-      "anomaly": -0.04,
+      "anomaly": -0.05,
       "el_nino": false,
       "la_nina": false
     },
@@ -4346,7 +4346,7 @@
       "season": "DJF",
       "year": 1990,
       "month": 1,
-      "anomaly": 0.18,
+      "anomaly": 0.14,
       "el_nino": false,
       "la_nina": false
     },
@@ -4355,7 +4355,7 @@
       "season": "JFM",
       "year": 1990,
       "month": 2,
-      "anomaly": 0.19,
+      "anomaly": 0.21,
       "el_nino": false,
       "la_nina": false
     },
@@ -4364,7 +4364,7 @@
       "season": "FMA",
       "year": 1990,
       "month": 3,
-      "anomaly": 0.3,
+      "anomaly": 0.28,
       "el_nino": false,
       "la_nina": false
     },
@@ -4373,7 +4373,7 @@
       "season": "MAM",
       "year": 1990,
       "month": 4,
-      "anomaly": 0.27,
+      "anomaly": 0.29,
       "el_nino": false,
       "la_nina": false
     },
@@ -4382,7 +4382,7 @@
       "season": "AMJ",
       "year": 1990,
       "month": 5,
-      "anomaly": 0.25,
+      "anomaly": 0.29,
       "el_nino": false,
       "la_nina": false
     },
@@ -4391,7 +4391,7 @@
       "season": "MJJ",
       "year": 1990,
       "month": 6,
-      "anomaly": 0.25,
+      "anomaly": 0.31,
       "el_nino": false,
       "la_nina": false
     },
@@ -4400,7 +4400,7 @@
       "season": "JJA",
       "year": 1990,
       "month": 7,
-      "anomaly": 0.26,
+      "anomaly": 0.33,
       "el_nino": false,
       "la_nina": false
     },
@@ -4409,7 +4409,7 @@
       "season": "JAS",
       "year": 1990,
       "month": 8,
-      "anomaly": 0.32,
+      "anomaly": 0.38,
       "el_nino": false,
       "la_nina": false
     },
@@ -4418,7 +4418,7 @@
       "season": "ASO",
       "year": 1990,
       "month": 9,
-      "anomaly": 0.31,
+      "anomaly": 0.39,
       "el_nino": false,
       "la_nina": false
     },
@@ -4427,7 +4427,7 @@
       "season": "SON",
       "year": 1990,
       "month": 10,
-      "anomaly": 0.27,
+      "anomaly": 0.35,
       "el_nino": false,
       "la_nina": false
     },
@@ -4436,7 +4436,7 @@
       "season": "OND",
       "year": 1990,
       "month": 11,
-      "anomaly": 0.31,
+      "anomaly": 0.4,
       "el_nino": false,
       "la_nina": false
     },
@@ -4445,7 +4445,7 @@
       "season": "NDJ",
       "year": 1990,
       "month": 12,
-      "anomaly": 0.34,
+      "anomaly": 0.41,
       "el_nino": false,
       "la_nina": false
     },
@@ -4454,7 +4454,7 @@
       "season": "DJF",
       "year": 1991,
       "month": 1,
-      "anomaly": 0.35,
+      "anomaly": 0.41,
       "el_nino": false,
       "la_nina": false
     },
@@ -4472,7 +4472,7 @@
       "season": "FMA",
       "year": 1991,
       "month": 3,
-      "anomaly": 0.23,
+      "anomaly": 0.22,
       "el_nino": false,
       "la_nina": false
     },
@@ -4481,7 +4481,7 @@
       "season": "MAM",
       "year": 1991,
       "month": 4,
-      "anomaly": 0.29,
+      "anomaly": 0.26,
       "el_nino": false,
       "la_nina": false
     },
@@ -4490,7 +4490,7 @@
       "season": "AMJ",
       "year": 1991,
       "month": 5,
-      "anomaly": 0.49,
+      "anomaly": 0.45,
       "el_nino": false,
       "la_nina": false
     },
@@ -4499,7 +4499,7 @@
       "season": "MJJ",
       "year": 1991,
       "month": 6,
-      "anomaly": 0.63,
+      "anomaly": 0.64,
       "el_nino": false,
       "la_nina": false
     },
@@ -4508,7 +4508,7 @@
       "season": "JJA",
       "year": 1991,
       "month": 7,
-      "anomaly": 0.77,
+      "anomaly": 0.73,
       "el_nino": false,
       "la_nina": false
     },
@@ -4517,7 +4517,7 @@
       "season": "JAS",
       "year": 1991,
       "month": 8,
-      "anomaly": 0.67,
+      "anomaly": 0.64,
       "el_nino": false,
       "la_nina": false
     },
@@ -4526,7 +4526,7 @@
       "season": "ASO",
       "year": 1991,
       "month": 9,
-      "anomaly": 0.72,
+      "anomaly": 0.62,
       "el_nino": false,
       "la_nina": false
     },
@@ -4535,8 +4535,8 @@
       "season": "SON",
       "year": 1991,
       "month": 10,
-      "anomaly": 0.83,
-      "el_nino": true,
+      "anomaly": 0.79,
+      "el_nino": false,
       "la_nina": false
     },
     {
@@ -4544,7 +4544,7 @@
       "season": "OND",
       "year": 1991,
       "month": 11,
-      "anomaly": 1.18,
+      "anomaly": 1.21,
       "el_nino": true,
       "la_nina": false
     },
@@ -4553,7 +4553,7 @@
       "season": "NDJ",
       "year": 1991,
       "month": 12,
-      "anomaly": 1.43,
+      "anomaly": 1.53,
       "el_nino": true,
       "la_nina": false
     },
@@ -4562,7 +4562,7 @@
       "season": "DJF",
       "year": 1992,
       "month": 1,
-      "anomaly": 1.54,
+      "anomaly": 1.71,
       "el_nino": true,
       "la_nina": false
     },
@@ -4571,7 +4571,7 @@
       "season": "JFM",
       "year": 1992,
       "month": 2,
-      "anomaly": 1.5,
+      "anomaly": 1.63,
       "el_nino": true,
       "la_nina": false
     },
@@ -4580,7 +4580,7 @@
       "season": "FMA",
       "year": 1992,
       "month": 3,
-      "anomaly": 1.4,
+      "anomaly": 1.48,
       "el_nino": true,
       "la_nina": false
     },
@@ -4589,7 +4589,7 @@
       "season": "MAM",
       "year": 1992,
       "month": 4,
-      "anomaly": 1.3,
+      "anomaly": 1.29,
       "el_nino": true,
       "la_nina": false
     },
@@ -4598,7 +4598,7 @@
       "season": "AMJ",
       "year": 1992,
       "month": 5,
-      "anomaly": 1.08,
+      "anomaly": 1.06,
       "el_nino": true,
       "la_nina": false
     },
@@ -4607,7 +4607,7 @@
       "season": "MJJ",
       "year": 1992,
       "month": 6,
-      "anomaly": 0.72,
+      "anomaly": 0.73,
       "el_nino": false,
       "la_nina": false
     },
@@ -4616,7 +4616,7 @@
       "season": "JJA",
       "year": 1992,
       "month": 7,
-      "anomaly": 0.35,
+      "anomaly": 0.37,
       "el_nino": false,
       "la_nina": false
     },
@@ -4625,7 +4625,7 @@
       "season": "JAS",
       "year": 1992,
       "month": 8,
-      "anomaly": 0.08,
+      "anomaly": 0.09,
       "el_nino": false,
       "la_nina": false
     },
@@ -4634,7 +4634,7 @@
       "season": "ASO",
       "year": 1992,
       "month": 9,
-      "anomaly": -0.15,
+      "anomaly": -0.13,
       "el_nino": false,
       "la_nina": false
     },
@@ -4643,7 +4643,7 @@
       "season": "SON",
       "year": 1992,
       "month": 10,
-      "anomaly": -0.22,
+      "anomaly": -0.25,
       "el_nino": false,
       "la_nina": false
     },
@@ -4652,7 +4652,7 @@
       "season": "OND",
       "year": 1992,
       "month": 11,
-      "anomaly": -0.24,
+      "anomaly": -0.28,
       "el_nino": false,
       "la_nina": false
     },
@@ -4661,7 +4661,7 @@
       "season": "NDJ",
       "year": 1992,
       "month": 12,
-      "anomaly": -0.05,
+      "anomaly": -0.13,
       "el_nino": false,
       "la_nina": false
     },
@@ -4670,7 +4670,7 @@
       "season": "DJF",
       "year": 1993,
       "month": 1,
-      "anomaly": 0.13,
+      "anomaly": 0.09,
       "el_nino": false,
       "la_nina": false
     },
@@ -4679,7 +4679,7 @@
       "season": "JFM",
       "year": 1993,
       "month": 2,
-      "anomaly": 0.31,
+      "anomaly": 0.3,
       "el_nino": false,
       "la_nina": false
     },
@@ -4697,7 +4697,7 @@
       "season": "MAM",
       "year": 1993,
       "month": 4,
-      "anomaly": 0.73,
+      "anomaly": 0.67,
       "el_nino": false,
       "la_nina": false
     },
@@ -4706,7 +4706,7 @@
       "season": "AMJ",
       "year": 1993,
       "month": 5,
-      "anomaly": 0.76,
+      "anomaly": 0.7,
       "el_nino": false,
       "la_nina": false
     },
@@ -4715,7 +4715,7 @@
       "season": "MJJ",
       "year": 1993,
       "month": 6,
-      "anomaly": 0.56,
+      "anomaly": 0.57,
       "el_nino": false,
       "la_nina": false
     },
@@ -4724,7 +4724,7 @@
       "season": "JJA",
       "year": 1993,
       "month": 7,
-      "anomaly": 0.28,
+      "anomaly": 0.32,
       "el_nino": false,
       "la_nina": false
     },
@@ -4733,7 +4733,7 @@
       "season": "JAS",
       "year": 1993,
       "month": 8,
-      "anomaly": 0.22,
+      "anomaly": 0.25,
       "el_nino": false,
       "la_nina": false
     },
@@ -4742,7 +4742,7 @@
       "season": "ASO",
       "year": 1993,
       "month": 9,
-      "anomaly": 0.2,
+      "anomaly": 0.15,
       "el_nino": false,
       "la_nina": false
     },
@@ -4751,7 +4751,7 @@
       "season": "SON",
       "year": 1993,
       "month": 10,
-      "anomaly": 0.2,
+      "anomaly": 0.1,
       "el_nino": false,
       "la_nina": false
     },
@@ -4760,7 +4760,7 @@
       "season": "OND",
       "year": 1993,
       "month": 11,
-      "anomaly": 0.2,
+      "anomaly": 0.04,
       "el_nino": false,
       "la_nina": false
     },
@@ -4769,7 +4769,7 @@
       "season": "NDJ",
       "year": 1993,
       "month": 12,
-      "anomaly": 0.19,
+      "anomaly": 0.06,
       "el_nino": false,
       "la_nina": false
     },
@@ -4778,7 +4778,7 @@
       "season": "DJF",
       "year": 1994,
       "month": 1,
-      "anomaly": 0.07,
+      "anomaly": 0.06,
       "el_nino": false,
       "la_nina": false
     },
@@ -4787,7 +4787,7 @@
       "season": "JFM",
       "year": 1994,
       "month": 2,
-      "anomaly": 0.0,
+      "anomaly": 0.07,
       "el_nino": false,
       "la_nina": false
     },
@@ -4796,7 +4796,7 @@
       "season": "FMA",
       "year": 1994,
       "month": 3,
-      "anomaly": 0.04,
+      "anomaly": 0.17,
       "el_nino": false,
       "la_nina": false
     },
@@ -4805,7 +4805,7 @@
       "season": "MAM",
       "year": 1994,
       "month": 4,
-      "anomaly": 0.17,
+      "anomaly": 0.31,
       "el_nino": false,
       "la_nina": false
     },
@@ -4814,7 +4814,7 @@
       "season": "AMJ",
       "year": 1994,
       "month": 5,
-      "anomaly": 0.25,
+      "anomaly": 0.42,
       "el_nino": false,
       "la_nina": false
     },
@@ -4823,7 +4823,7 @@
       "season": "MJJ",
       "year": 1994,
       "month": 6,
-      "anomaly": 0.23,
+      "anomaly": 0.41,
       "el_nino": false,
       "la_nina": false
     },
@@ -4832,7 +4832,7 @@
       "season": "JJA",
       "year": 1994,
       "month": 7,
-      "anomaly": 0.3,
+      "anomaly": 0.44,
       "el_nino": false,
       "la_nina": false
     },
@@ -4841,7 +4841,7 @@
       "season": "JAS",
       "year": 1994,
       "month": 8,
-      "anomaly": 0.3,
+      "anomaly": 0.43,
       "el_nino": false,
       "la_nina": false
     },
@@ -4850,7 +4850,7 @@
       "season": "ASO",
       "year": 1994,
       "month": 9,
-      "anomaly": 0.47,
+      "anomaly": 0.55,
       "el_nino": false,
       "la_nina": false
     },
@@ -4859,7 +4859,7 @@
       "season": "SON",
       "year": 1994,
       "month": 10,
-      "anomaly": 0.66,
+      "anomaly": 0.74,
       "el_nino": false,
       "la_nina": false
     },
@@ -4868,7 +4868,7 @@
       "season": "OND",
       "year": 1994,
       "month": 11,
-      "anomaly": 0.93,
+      "anomaly": 1.01,
       "el_nino": true,
       "la_nina": false
     },
@@ -4877,7 +4877,7 @@
       "season": "NDJ",
       "year": 1994,
       "month": 12,
-      "anomaly": 0.97,
+      "anomaly": 1.09,
       "el_nino": true,
       "la_nina": false
     },
@@ -4886,7 +4886,7 @@
       "season": "DJF",
       "year": 1995,
       "month": 1,
-      "anomaly": 0.88,
+      "anomaly": 0.96,
       "el_nino": true,
       "la_nina": false
     },
@@ -4895,7 +4895,7 @@
       "season": "JFM",
       "year": 1995,
       "month": 2,
-      "anomaly": 0.65,
+      "anomaly": 0.72,
       "el_nino": false,
       "la_nina": false
     },
@@ -4904,7 +4904,7 @@
       "season": "FMA",
       "year": 1995,
       "month": 3,
-      "anomaly": 0.46,
+      "anomaly": 0.53,
       "el_nino": false,
       "la_nina": false
     },
@@ -4913,7 +4913,7 @@
       "season": "MAM",
       "year": 1995,
       "month": 4,
-      "anomaly": 0.19,
+      "anomaly": 0.3,
       "el_nino": false,
       "la_nina": false
     },
@@ -4922,7 +4922,7 @@
       "season": "AMJ",
       "year": 1995,
       "month": 5,
-      "anomaly": 0.03,
+      "anomaly": 0.14,
       "el_nino": false,
       "la_nina": false
     },
@@ -4931,7 +4931,7 @@
       "season": "MJJ",
       "year": 1995,
       "month": 6,
-      "anomaly": -0.11,
+      "anomaly": -0.03,
       "el_nino": false,
       "la_nina": false
     },
@@ -4940,7 +4940,7 @@
       "season": "JJA",
       "year": 1995,
       "month": 7,
-      "anomaly": -0.3,
+      "anomaly": -0.24,
       "el_nino": false,
       "la_nina": false
     },
@@ -4949,7 +4949,7 @@
       "season": "JAS",
       "year": 1995,
       "month": 8,
-      "anomaly": -0.55,
+      "anomaly": -0.54,
       "el_nino": false,
       "la_nina": false
     },
@@ -4976,7 +4976,7 @@
       "season": "OND",
       "year": 1995,
       "month": 11,
-      "anomaly": -1.05,
+      "anomaly": -1.0,
       "el_nino": false,
       "la_nina": true
     },
@@ -4985,7 +4985,7 @@
       "season": "NDJ",
       "year": 1995,
       "month": 12,
-      "anomaly": -1.01,
+      "anomaly": -0.98,
       "el_nino": false,
       "la_nina": true
     },
@@ -4994,7 +4994,7 @@
       "season": "DJF",
       "year": 1996,
       "month": 1,
-      "anomaly": -0.88,
+      "anomaly": -0.9,
       "el_nino": false,
       "la_nina": true
     },
@@ -5003,7 +5003,7 @@
       "season": "JFM",
       "year": 1996,
       "month": 2,
-      "anomaly": -0.7,
+      "anomaly": -0.75,
       "el_nino": false,
       "la_nina": false
     },
@@ -5012,7 +5012,7 @@
       "season": "FMA",
       "year": 1996,
       "month": 3,
-      "anomaly": -0.52,
+      "anomaly": -0.59,
       "el_nino": false,
       "la_nina": false
     },
@@ -5021,7 +5021,7 @@
       "season": "MAM",
       "year": 1996,
       "month": 4,
-      "anomaly": -0.36,
+      "anomaly": -0.39,
       "el_nino": false,
       "la_nina": false
     },
@@ -5030,7 +5030,7 @@
       "season": "AMJ",
       "year": 1996,
       "month": 5,
-      "anomaly": -0.25,
+      "anomaly": -0.31,
       "el_nino": false,
       "la_nina": false
     },
@@ -5039,7 +5039,7 @@
       "season": "MJJ",
       "year": 1996,
       "month": 6,
-      "anomaly": -0.24,
+      "anomaly": -0.3,
       "el_nino": false,
       "la_nina": false
     },
@@ -5048,7 +5048,7 @@
       "season": "JJA",
       "year": 1996,
       "month": 7,
-      "anomaly": -0.22,
+      "anomaly": -0.27,
       "el_nino": false,
       "la_nina": false
     },
@@ -5057,7 +5057,7 @@
       "season": "JAS",
       "year": 1996,
       "month": 8,
-      "anomaly": -0.27,
+      "anomaly": -0.32,
       "el_nino": false,
       "la_nina": false
     },
@@ -5066,7 +5066,7 @@
       "season": "ASO",
       "year": 1996,
       "month": 9,
-      "anomaly": -0.3,
+      "anomaly": -0.35,
       "el_nino": false,
       "la_nina": false
     },
@@ -5075,7 +5075,7 @@
       "season": "SON",
       "year": 1996,
       "month": 10,
-      "anomaly": -0.33,
+      "anomaly": -0.4,
       "el_nino": false,
       "la_nina": false
     },
@@ -5084,7 +5084,7 @@
       "season": "OND",
       "year": 1996,
       "month": 11,
-      "anomaly": -0.39,
+      "anomaly": -0.45,
       "el_nino": false,
       "la_nina": false
     },
@@ -5093,7 +5093,7 @@
       "season": "NDJ",
       "year": 1996,
       "month": 12,
-      "anomaly": -0.41,
+      "anomaly": -0.49,
       "el_nino": false,
       "la_nina": false
     },
@@ -5102,7 +5102,7 @@
       "season": "DJF",
       "year": 1997,
       "month": 1,
-      "anomaly": -0.41,
+      "anomaly": -0.5,
       "el_nino": false,
       "la_nina": false
     },
@@ -5111,7 +5111,7 @@
       "season": "JFM",
       "year": 1997,
       "month": 2,
-      "anomaly": -0.26,
+      "anomaly": -0.36,
       "el_nino": false,
       "la_nina": false
     },
@@ -5120,7 +5120,7 @@
       "season": "FMA",
       "year": 1997,
       "month": 3,
-      "anomaly": -0.03,
+      "anomaly": -0.1,
       "el_nino": false,
       "la_nina": false
     },
@@ -5129,7 +5129,7 @@
       "season": "MAM",
       "year": 1997,
       "month": 4,
-      "anomaly": 0.3,
+      "anomaly": 0.28,
       "el_nino": false,
       "la_nina": false
     },
@@ -5138,7 +5138,7 @@
       "season": "AMJ",
       "year": 1997,
       "month": 5,
-      "anomaly": 0.71,
+      "anomaly": 0.75,
       "el_nino": false,
       "la_nina": false
     },
@@ -5147,7 +5147,7 @@
       "season": "MJJ",
       "year": 1997,
       "month": 6,
-      "anomaly": 1.13,
+      "anomaly": 1.22,
       "el_nino": true,
       "la_nina": false
     },
@@ -5156,7 +5156,7 @@
       "season": "JJA",
       "year": 1997,
       "month": 7,
-      "anomaly": 1.48,
+      "anomaly": 1.6,
       "el_nino": true,
       "la_nina": false
     },
@@ -5165,7 +5165,7 @@
       "season": "JAS",
       "year": 1997,
       "month": 8,
-      "anomaly": 1.79,
+      "anomaly": 1.9,
       "el_nino": true,
       "la_nina": false
     },
@@ -5174,7 +5174,7 @@
       "season": "ASO",
       "year": 1997,
       "month": 9,
-      "anomaly": 2.04,
+      "anomaly": 2.14,
       "el_nino": true,
       "la_nina": false
     },
@@ -5183,7 +5183,7 @@
       "season": "SON",
       "year": 1997,
       "month": 10,
-      "anomaly": 2.24,
+      "anomaly": 2.33,
       "el_nino": true,
       "la_nina": false
     },
@@ -5192,7 +5192,7 @@
       "season": "OND",
       "year": 1997,
       "month": 11,
-      "anomaly": 2.34,
+      "anomaly": 2.4,
       "el_nino": true,
       "la_nina": false
     },
@@ -5201,7 +5201,7 @@
       "season": "NDJ",
       "year": 1997,
       "month": 12,
-      "anomaly": 2.37,
+      "anomaly": 2.39,
       "el_nino": true,
       "la_nina": false
     },
@@ -5210,7 +5210,7 @@
       "season": "DJF",
       "year": 1998,
       "month": 1,
-      "anomaly": 2.22,
+      "anomaly": 2.24,
       "el_nino": true,
       "la_nina": false
     },
@@ -5219,7 +5219,7 @@
       "season": "JFM",
       "year": 1998,
       "month": 2,
-      "anomaly": 1.91,
+      "anomaly": 1.93,
       "el_nino": true,
       "la_nina": false
     },
@@ -5228,7 +5228,7 @@
       "season": "FMA",
       "year": 1998,
       "month": 3,
-      "anomaly": 1.4,
+      "anomaly": 1.44,
       "el_nino": true,
       "la_nina": false
     },
@@ -5237,7 +5237,7 @@
       "season": "MAM",
       "year": 1998,
       "month": 4,
-      "anomaly": 1.03,
+      "anomaly": 0.99,
       "el_nino": true,
       "la_nina": false
     },
@@ -5246,7 +5246,7 @@
       "season": "AMJ",
       "year": 1998,
       "month": 5,
-      "anomaly": 0.4,
+      "anomaly": 0.45,
       "el_nino": false,
       "la_nina": false
     },
@@ -5255,7 +5255,7 @@
       "season": "MJJ",
       "year": 1998,
       "month": 6,
-      "anomaly": -0.08,
+      "anomaly": -0.13,
       "el_nino": false,
       "la_nina": false
     },
@@ -5264,7 +5264,7 @@
       "season": "JJA",
       "year": 1998,
       "month": 7,
-      "anomaly": -0.63,
+      "anomaly": -0.78,
       "el_nino": false,
       "la_nina": false
     },
@@ -5273,7 +5273,7 @@
       "season": "JAS",
       "year": 1998,
       "month": 8,
-      "anomaly": -0.83,
+      "anomaly": -1.12,
       "el_nino": false,
       "la_nina": true
     },
@@ -5282,7 +5282,7 @@
       "season": "ASO",
       "year": 1998,
       "month": 9,
-      "anomaly": -1.02,
+      "anomaly": -1.31,
       "el_nino": false,
       "la_nina": true
     },
@@ -5291,7 +5291,7 @@
       "season": "SON",
       "year": 1998,
       "month": 10,
-      "anomaly": -1.12,
+      "anomaly": -1.35,
       "el_nino": false,
       "la_nina": true
     },
@@ -5300,7 +5300,7 @@
       "season": "OND",
       "year": 1998,
       "month": 11,
-      "anomaly": -1.31,
+      "anomaly": -1.48,
       "el_nino": false,
       "la_nina": true
     },
@@ -5309,7 +5309,7 @@
       "season": "NDJ",
       "year": 1998,
       "month": 12,
-      "anomaly": -1.47,
+      "anomaly": -1.57,
       "el_nino": false,
       "la_nina": true
     },
@@ -5318,7 +5318,7 @@
       "season": "DJF",
       "year": 1999,
       "month": 1,
-      "anomaly": -1.51,
+      "anomaly": -1.55,
       "el_nino": false,
       "la_nina": true
     },
@@ -5327,7 +5327,7 @@
       "season": "JFM",
       "year": 1999,
       "month": 2,
-      "anomaly": -1.25,
+      "anomaly": -1.3,
       "el_nino": false,
       "la_nina": true
     },
@@ -5336,7 +5336,7 @@
       "season": "FMA",
       "year": 1999,
       "month": 3,
-      "anomaly": -0.93,
+      "anomaly": -1.07,
       "el_nino": false,
       "la_nina": true
     },
@@ -5345,7 +5345,7 @@
       "season": "MAM",
       "year": 1999,
       "month": 4,
-      "anomaly": -0.8,
+      "anomaly": -0.98,
       "el_nino": false,
       "la_nina": true
     },
@@ -5354,16 +5354,16 @@
       "season": "AMJ",
       "year": 1999,
       "month": 5,
-      "anomaly": -0.79,
+      "anomaly": -1.02,
       "el_nino": false,
-      "la_nina": false
+      "la_nina": true
     },
     {
       "date": "1999-06-01",
       "season": "MJJ",
       "year": 1999,
       "month": 6,
-      "anomaly": -0.84,
+      "anomaly": -1.04,
       "el_nino": false,
       "la_nina": true
     },
@@ -5372,7 +5372,7 @@
       "season": "JJA",
       "year": 1999,
       "month": 7,
-      "anomaly": -0.9,
+      "anomaly": -1.1,
       "el_nino": false,
       "la_nina": true
     },
@@ -5381,7 +5381,7 @@
       "season": "JAS",
       "year": 1999,
       "month": 8,
-      "anomaly": -0.94,
+      "anomaly": -1.11,
       "el_nino": false,
       "la_nina": true
     },
@@ -5390,7 +5390,7 @@
       "season": "ASO",
       "year": 1999,
       "month": 9,
-      "anomaly": -1.0,
+      "anomaly": -1.16,
       "el_nino": false,
       "la_nina": true
     },
@@ -5399,7 +5399,7 @@
       "season": "SON",
       "year": 1999,
       "month": 10,
-      "anomaly": -1.13,
+      "anomaly": -1.26,
       "el_nino": false,
       "la_nina": true
     },
@@ -5408,7 +5408,7 @@
       "season": "OND",
       "year": 1999,
       "month": 11,
-      "anomaly": -1.35,
+      "anomaly": -1.46,
       "el_nino": false,
       "la_nina": true
     },
@@ -5417,7 +5417,7 @@
       "season": "NDJ",
       "year": 1999,
       "month": 12,
-      "anomaly": -1.53,
+      "anomaly": -1.65,
       "el_nino": false,
       "la_nina": true
     },
@@ -5426,7 +5426,7 @@
       "season": "DJF",
       "year": 2000,
       "month": 1,
-      "anomaly": -1.47,
+      "anomaly": -1.66,
       "el_nino": false,
       "la_nina": true
     },
@@ -5435,7 +5435,7 @@
       "season": "JFM",
       "year": 2000,
       "month": 2,
-      "anomaly": -1.26,
+      "anomaly": -1.41,
       "el_nino": false,
       "la_nina": true
     },
@@ -5444,7 +5444,7 @@
       "season": "FMA",
       "year": 2000,
       "month": 3,
-      "anomaly": -0.98,
+      "anomaly": -1.07,
       "el_nino": false,
       "la_nina": true
     },
@@ -5462,7 +5462,7 @@
       "season": "AMJ",
       "year": 2000,
       "month": 5,
-      "anomaly": -0.67,
+      "anomaly": -0.71,
       "el_nino": false,
       "la_nina": false
     },
@@ -5471,7 +5471,7 @@
       "season": "MJJ",
       "year": 2000,
       "month": 6,
-      "anomaly": -0.62,
+      "anomaly": -0.64,
       "el_nino": false,
       "la_nina": false
     },
@@ -5480,7 +5480,7 @@
       "season": "JJA",
       "year": 2000,
       "month": 7,
-      "anomaly": -0.48,
+      "anomaly": -0.55,
       "el_nino": false,
       "la_nina": false
     },
@@ -5489,7 +5489,7 @@
       "season": "JAS",
       "year": 2000,
       "month": 8,
-      "anomaly": -0.4,
+      "anomaly": -0.51,
       "el_nino": false,
       "la_nina": false
     },
@@ -5498,7 +5498,7 @@
       "season": "ASO",
       "year": 2000,
       "month": 9,
-      "anomaly": -0.42,
+      "anomaly": -0.55,
       "el_nino": false,
       "la_nina": false
     },
@@ -5507,7 +5507,7 @@
       "season": "SON",
       "year": 2000,
       "month": 10,
-      "anomaly": -0.54,
+      "anomaly": -0.63,
       "el_nino": false,
       "la_nina": false
     },
@@ -5516,7 +5516,7 @@
       "season": "OND",
       "year": 2000,
       "month": 11,
-      "anomaly": -0.76,
+      "anomaly": -0.75,
       "el_nino": false,
       "la_nina": false
     },
@@ -5525,7 +5525,7 @@
       "season": "NDJ",
       "year": 2000,
       "month": 12,
-      "anomaly": -0.78,
+      "anomaly": -0.74,
       "el_nino": false,
       "la_nina": false
     },
@@ -5534,7 +5534,7 @@
       "season": "DJF",
       "year": 2001,
       "month": 1,
-      "anomaly": -0.76,
+      "anomaly": -0.68,
       "el_nino": false,
       "la_nina": false
     },
@@ -5543,7 +5543,7 @@
       "season": "JFM",
       "year": 2001,
       "month": 2,
-      "anomaly": -0.54,
+      "anomaly": -0.52,
       "el_nino": false,
       "la_nina": false
     },
@@ -5552,7 +5552,7 @@
       "season": "FMA",
       "year": 2001,
       "month": 3,
-      "anomaly": -0.43,
+      "anomaly": -0.44,
       "el_nino": false,
       "la_nina": false
     },
@@ -5561,7 +5561,7 @@
       "season": "MAM",
       "year": 2001,
       "month": 4,
-      "anomaly": -0.29,
+      "anomaly": -0.34,
       "el_nino": false,
       "la_nina": false
     },
@@ -5570,7 +5570,7 @@
       "season": "AMJ",
       "year": 2001,
       "month": 5,
-      "anomaly": -0.19,
+      "anomaly": -0.25,
       "el_nino": false,
       "la_nina": false
     },
@@ -5579,7 +5579,7 @@
       "season": "MJJ",
       "year": 2001,
       "month": 6,
-      "anomaly": -0.08,
+      "anomaly": -0.12,
       "el_nino": false,
       "la_nina": false
     },
@@ -5588,7 +5588,7 @@
       "season": "JJA",
       "year": 2001,
       "month": 7,
-      "anomaly": -0.05,
+      "anomaly": -0.08,
       "el_nino": false,
       "la_nina": false
     },
@@ -5606,7 +5606,7 @@
       "season": "ASO",
       "year": 2001,
       "month": 9,
-      "anomaly": -0.15,
+      "anomaly": -0.19,
       "el_nino": false,
       "la_nina": false
     },
@@ -5615,7 +5615,7 @@
       "season": "SON",
       "year": 2001,
       "month": 10,
-      "anomaly": -0.26,
+      "anomaly": -0.29,
       "el_nino": false,
       "la_nina": false
     },
@@ -5624,7 +5624,7 @@
       "season": "OND",
       "year": 2001,
       "month": 11,
-      "anomaly": -0.33,
+      "anomaly": -0.35,
       "el_nino": false,
       "la_nina": false
     },
@@ -5633,7 +5633,7 @@
       "season": "NDJ",
       "year": 2001,
       "month": 12,
-      "anomaly": -0.32,
+      "anomaly": -0.31,
       "el_nino": false,
       "la_nina": false
     },
@@ -5651,7 +5651,7 @@
       "season": "JFM",
       "year": 2002,
       "month": 2,
-      "anomaly": 0.07,
+      "anomaly": 0.03,
       "el_nino": false,
       "la_nina": false
     },
@@ -5660,7 +5660,7 @@
       "season": "FMA",
       "year": 2002,
       "month": 3,
-      "anomaly": 0.11,
+      "anomaly": 0.09,
       "el_nino": false,
       "la_nina": false
     },
@@ -5669,7 +5669,7 @@
       "season": "MAM",
       "year": 2002,
       "month": 4,
-      "anomaly": 0.15,
+      "anomaly": 0.2,
       "el_nino": false,
       "la_nina": false
     },
@@ -5678,7 +5678,7 @@
       "season": "AMJ",
       "year": 2002,
       "month": 5,
-      "anomaly": 0.3,
+      "anomaly": 0.43,
       "el_nino": false,
       "la_nina": false
     },
@@ -5687,7 +5687,7 @@
       "season": "MJJ",
       "year": 2002,
       "month": 6,
-      "anomaly": 0.45,
+      "anomaly": 0.65,
       "el_nino": false,
       "la_nina": false
     },
@@ -5696,7 +5696,7 @@
       "season": "JJA",
       "year": 2002,
       "month": 7,
-      "anomaly": 0.57,
+      "anomaly": 0.79,
       "el_nino": false,
       "la_nina": false
     },
@@ -5705,8 +5705,8 @@
       "season": "JAS",
       "year": 2002,
       "month": 8,
-      "anomaly": 0.63,
-      "el_nino": false,
+      "anomaly": 0.86,
+      "el_nino": true,
       "la_nina": false
     },
     {
@@ -5714,8 +5714,8 @@
       "season": "ASO",
       "year": 2002,
       "month": 9,
-      "anomaly": 0.78,
-      "el_nino": false,
+      "anomaly": 1.01,
+      "el_nino": true,
       "la_nina": false
     },
     {
@@ -5723,7 +5723,7 @@
       "season": "SON",
       "year": 2002,
       "month": 10,
-      "anomaly": 0.99,
+      "anomaly": 1.21,
       "el_nino": true,
       "la_nina": false
     },
@@ -5732,7 +5732,7 @@
       "season": "OND",
       "year": 2002,
       "month": 11,
-      "anomaly": 1.19,
+      "anomaly": 1.31,
       "el_nino": true,
       "la_nina": false
     },
@@ -5741,7 +5741,7 @@
       "season": "NDJ",
       "year": 2002,
       "month": 12,
-      "anomaly": 1.08,
+      "anomaly": 1.14,
       "el_nino": true,
       "la_nina": false
     },
@@ -5750,7 +5750,7 @@
       "season": "DJF",
       "year": 2003,
       "month": 1,
-      "anomaly": 0.9,
+      "anomaly": 0.92,
       "el_nino": true,
       "la_nina": false
     },
@@ -5759,7 +5759,7 @@
       "season": "JFM",
       "year": 2003,
       "month": 2,
-      "anomaly": 0.59,
+      "anomaly": 0.63,
       "el_nino": false,
       "la_nina": false
     },
@@ -5777,7 +5777,7 @@
       "season": "MAM",
       "year": 2003,
       "month": 4,
-      "anomaly": -0.01,
+      "anomaly": -0.04,
       "el_nino": false,
       "la_nina": false
     },
@@ -5786,7 +5786,7 @@
       "season": "AMJ",
       "year": 2003,
       "month": 5,
-      "anomaly": -0.18,
+      "anomaly": -0.26,
       "el_nino": false,
       "la_nina": false
     },
@@ -5795,7 +5795,7 @@
       "season": "MJJ",
       "year": 2003,
       "month": 6,
-      "anomaly": -0.13,
+      "anomaly": -0.16,
       "el_nino": false,
       "la_nina": false
     },
@@ -5804,7 +5804,7 @@
       "season": "JJA",
       "year": 2003,
       "month": 7,
-      "anomaly": 0.09,
+      "anomaly": 0.08,
       "el_nino": false,
       "la_nina": false
     },
@@ -5813,7 +5813,7 @@
       "season": "JAS",
       "year": 2003,
       "month": 8,
-      "anomaly": 0.14,
+      "anomaly": 0.21,
       "el_nino": false,
       "la_nina": false
     },
@@ -5822,7 +5822,7 @@
       "season": "ASO",
       "year": 2003,
       "month": 9,
-      "anomaly": 0.23,
+      "anomaly": 0.26,
       "el_nino": false,
       "la_nina": false
     },
@@ -5831,7 +5831,7 @@
       "season": "SON",
       "year": 2003,
       "month": 10,
-      "anomaly": 0.23,
+      "anomaly": 0.29,
       "el_nino": false,
       "la_nina": false
     },
@@ -5840,7 +5840,7 @@
       "season": "OND",
       "year": 2003,
       "month": 11,
-      "anomaly": 0.29,
+      "anomaly": 0.35,
       "el_nino": false,
       "la_nina": false
     },
@@ -5849,7 +5849,7 @@
       "season": "NDJ",
       "year": 2003,
       "month": 12,
-      "anomaly": 0.29,
+      "anomaly": 0.35,
       "el_nino": false,
       "la_nina": false
     },
@@ -5858,7 +5858,7 @@
       "season": "DJF",
       "year": 2004,
       "month": 1,
-      "anomaly": 0.34,
+      "anomaly": 0.37,
       "el_nino": false,
       "la_nina": false
     },
@@ -5867,7 +5867,7 @@
       "season": "JFM",
       "year": 2004,
       "month": 2,
-      "anomaly": 0.27,
+      "anomaly": 0.31,
       "el_nino": false,
       "la_nina": false
     },
@@ -5876,7 +5876,7 @@
       "season": "FMA",
       "year": 2004,
       "month": 3,
-      "anomaly": 0.19,
+      "anomaly": 0.23,
       "el_nino": false,
       "la_nina": false
     },
@@ -5885,7 +5885,7 @@
       "season": "MAM",
       "year": 2004,
       "month": 4,
-      "anomaly": 0.1,
+      "anomaly": 0.17,
       "el_nino": false,
       "la_nina": false
     },
@@ -5894,7 +5894,7 @@
       "season": "AMJ",
       "year": 2004,
       "month": 5,
-      "anomaly": 0.12,
+      "anomaly": 0.17,
       "el_nino": false,
       "la_nina": false
     },
@@ -5903,7 +5903,7 @@
       "season": "MJJ",
       "year": 2004,
       "month": 6,
-      "anomaly": 0.22,
+      "anomaly": 0.28,
       "el_nino": false,
       "la_nina": false
     },
@@ -5912,7 +5912,7 @@
       "season": "JJA",
       "year": 2004,
       "month": 7,
-      "anomaly": 0.39,
+      "anomaly": 0.47,
       "el_nino": false,
       "la_nina": false
     },
@@ -5921,7 +5921,7 @@
       "season": "JAS",
       "year": 2004,
       "month": 8,
-      "anomaly": 0.54,
+      "anomaly": 0.64,
       "el_nino": false,
       "la_nina": false
     },
@@ -5930,7 +5930,7 @@
       "season": "ASO",
       "year": 2004,
       "month": 9,
-      "anomaly": 0.58,
+      "anomaly": 0.7,
       "el_nino": false,
       "la_nina": false
     },
@@ -5939,7 +5939,7 @@
       "season": "SON",
       "year": 2004,
       "month": 10,
-      "anomaly": 0.61,
+      "anomaly": 0.67,
       "el_nino": false,
       "la_nina": false
     },
@@ -5948,7 +5948,7 @@
       "season": "OND",
       "year": 2004,
       "month": 11,
-      "anomaly": 0.64,
+      "anomaly": 0.66,
       "el_nino": false,
       "la_nina": false
     },
@@ -5957,7 +5957,7 @@
       "season": "NDJ",
       "year": 2004,
       "month": 12,
-      "anomaly": 0.71,
+      "anomaly": 0.69,
       "el_nino": false,
       "la_nina": false
     },
@@ -5966,7 +5966,7 @@
       "season": "DJF",
       "year": 2005,
       "month": 1,
-      "anomaly": 0.62,
+      "anomaly": 0.64,
       "el_nino": false,
       "la_nina": false
     },
@@ -5975,7 +5975,7 @@
       "season": "JFM",
       "year": 2005,
       "month": 2,
-      "anomaly": 0.55,
+      "anomaly": 0.58,
       "el_nino": false,
       "la_nina": false
     },
@@ -5984,7 +5984,7 @@
       "season": "FMA",
       "year": 2005,
       "month": 3,
-      "anomaly": 0.4,
+      "anomaly": 0.45,
       "el_nino": false,
       "la_nina": false
     },
@@ -5993,7 +5993,7 @@
       "season": "MAM",
       "year": 2005,
       "month": 4,
-      "anomaly": 0.37,
+      "anomaly": 0.43,
       "el_nino": false,
       "la_nina": false
     },
@@ -6002,7 +6002,7 @@
       "season": "AMJ",
       "year": 2005,
       "month": 5,
-      "anomaly": 0.27,
+      "anomaly": 0.29,
       "el_nino": false,
       "la_nina": false
     },
@@ -6011,7 +6011,7 @@
       "season": "MJJ",
       "year": 2005,
       "month": 6,
-      "anomaly": 0.09,
+      "anomaly": 0.11,
       "el_nino": false,
       "la_nina": false
     },
@@ -6020,7 +6020,7 @@
       "season": "JJA",
       "year": 2005,
       "month": 7,
-      "anomaly": -0.04,
+      "anomaly": -0.06,
       "el_nino": false,
       "la_nina": false
     },
@@ -6047,7 +6047,7 @@
       "season": "SON",
       "year": 2005,
       "month": 10,
-      "anomaly": -0.27,
+      "anomaly": -0.29,
       "el_nino": false,
       "la_nina": false
     },
@@ -6065,7 +6065,7 @@
       "season": "NDJ",
       "year": 2005,
       "month": 12,
-      "anomaly": -0.82,
+      "anomaly": -0.84,
       "el_nino": false,
       "la_nina": true
     },
@@ -6074,7 +6074,7 @@
       "season": "DJF",
       "year": 2006,
       "month": 1,
-      "anomaly": -0.86,
+      "anomaly": -0.85,
       "el_nino": false,
       "la_nina": true
     },
@@ -6083,16 +6083,16 @@
       "season": "JFM",
       "year": 2006,
       "month": 2,
-      "anomaly": -0.8,
+      "anomaly": -0.77,
       "el_nino": false,
-      "la_nina": true
+      "la_nina": false
     },
     {
       "date": "2006-03-01",
       "season": "FMA",
       "year": 2006,
       "month": 3,
-      "anomaly": -0.63,
+      "anomaly": -0.57,
       "el_nino": false,
       "la_nina": false
     },
@@ -6101,7 +6101,7 @@
       "season": "MAM",
       "year": 2006,
       "month": 4,
-      "anomaly": -0.45,
+      "anomaly": -0.37,
       "el_nino": false,
       "la_nina": false
     },
@@ -6110,7 +6110,7 @@
       "season": "AMJ",
       "year": 2006,
       "month": 5,
-      "anomaly": -0.19,
+      "anomaly": -0.14,
       "el_nino": false,
       "la_nina": false
     },
@@ -6119,7 +6119,7 @@
       "season": "MJJ",
       "year": 2006,
       "month": 6,
-      "anomaly": -0.05,
+      "anomaly": -0.03,
       "el_nino": false,
       "la_nina": false
     },
@@ -6128,7 +6128,7 @@
       "season": "JJA",
       "year": 2006,
       "month": 7,
-      "anomaly": 0.12,
+      "anomaly": 0.1,
       "el_nino": false,
       "la_nina": false
     },
@@ -6137,7 +6137,7 @@
       "season": "JAS",
       "year": 2006,
       "month": 8,
-      "anomaly": 0.33,
+      "anomaly": 0.3,
       "el_nino": false,
       "la_nina": false
     },
@@ -6155,7 +6155,7 @@
       "season": "SON",
       "year": 2006,
       "month": 10,
-      "anomaly": 0.71,
+      "anomaly": 0.77,
       "el_nino": false,
       "la_nina": false
     },
@@ -6164,7 +6164,7 @@
       "season": "OND",
       "year": 2006,
       "month": 11,
-      "anomaly": 0.88,
+      "anomaly": 0.94,
       "el_nino": true,
       "la_nina": false
     },
@@ -6173,7 +6173,7 @@
       "season": "NDJ",
       "year": 2006,
       "month": 12,
-      "anomaly": 0.88,
+      "anomaly": 0.94,
       "el_nino": true,
       "la_nina": false
     },
@@ -6182,7 +6182,7 @@
       "season": "DJF",
       "year": 2007,
       "month": 1,
-      "anomaly": 0.62,
+      "anomaly": 0.66,
       "el_nino": false,
       "la_nina": false
     },
@@ -6191,7 +6191,7 @@
       "season": "JFM",
       "year": 2007,
       "month": 2,
-      "anomaly": 0.19,
+      "anomaly": 0.22,
       "el_nino": false,
       "la_nina": false
     },
@@ -6218,7 +6218,7 @@
       "season": "AMJ",
       "year": 2007,
       "month": 5,
-      "anomaly": -0.34,
+      "anomaly": -0.38,
       "el_nino": false,
       "la_nina": false
     },
@@ -6227,7 +6227,7 @@
       "season": "MJJ",
       "year": 2007,
       "month": 6,
-      "anomaly": -0.41,
+      "anomaly": -0.47,
       "el_nino": false,
       "la_nina": false
     },
@@ -6236,7 +6236,7 @@
       "season": "JJA",
       "year": 2007,
       "month": 7,
-      "anomaly": -0.49,
+      "anomaly": -0.56,
       "el_nino": false,
       "la_nina": false
     },
@@ -6245,16 +6245,16 @@
       "season": "JAS",
       "year": 2007,
       "month": 8,
-      "anomaly": -0.77,
+      "anomaly": -0.81,
       "el_nino": false,
-      "la_nina": false
+      "la_nina": true
     },
     {
       "date": "2007-09-01",
       "season": "ASO",
       "year": 2007,
       "month": 9,
-      "anomaly": -1.05,
+      "anomaly": -1.07,
       "el_nino": false,
       "la_nina": true
     },
@@ -6263,7 +6263,7 @@
       "season": "SON",
       "year": 2007,
       "month": 10,
-      "anomaly": -1.38,
+      "anomaly": -1.34,
       "el_nino": false,
       "la_nina": true
     },
@@ -6272,7 +6272,7 @@
       "season": "OND",
       "year": 2007,
       "month": 11,
-      "anomaly": -1.57,
+      "anomaly": -1.5,
       "el_nino": false,
       "la_nina": true
     },
@@ -6281,7 +6281,7 @@
       "season": "NDJ",
       "year": 2007,
       "month": 12,
-      "anomaly": -1.72,
+      "anomaly": -1.6,
       "el_nino": false,
       "la_nina": true
     },
@@ -6290,7 +6290,7 @@
       "season": "DJF",
       "year": 2008,
       "month": 1,
-      "anomaly": -1.76,
+      "anomaly": -1.64,
       "el_nino": false,
       "la_nina": true
     },
@@ -6299,7 +6299,7 @@
       "season": "JFM",
       "year": 2008,
       "month": 2,
-      "anomaly": -1.61,
+      "anomaly": -1.52,
       "el_nino": false,
       "la_nina": true
     },
@@ -6308,7 +6308,7 @@
       "season": "FMA",
       "year": 2008,
       "month": 3,
-      "anomaly": -1.37,
+      "anomaly": -1.29,
       "el_nino": false,
       "la_nina": true
     },
@@ -6317,7 +6317,7 @@
       "season": "MAM",
       "year": 2008,
       "month": 4,
-      "anomaly": -1.05,
+      "anomaly": -1.01,
       "el_nino": false,
       "la_nina": true
     },
@@ -6326,7 +6326,7 @@
       "season": "AMJ",
       "year": 2008,
       "month": 5,
-      "anomaly": -0.85,
+      "anomaly": -0.84,
       "el_nino": false,
       "la_nina": true
     },
@@ -6335,7 +6335,7 @@
       "season": "MJJ",
       "year": 2008,
       "month": 6,
-      "anomaly": -0.56,
+      "anomaly": -0.61,
       "el_nino": false,
       "la_nina": false
     },
@@ -6344,7 +6344,7 @@
       "season": "JJA",
       "year": 2008,
       "month": 7,
-      "anomaly": -0.33,
+      "anomaly": -0.37,
       "el_nino": false,
       "la_nina": false
     },
@@ -6353,7 +6353,7 @@
       "season": "JAS",
       "year": 2008,
       "month": 8,
-      "anomaly": -0.2,
+      "anomaly": -0.23,
       "el_nino": false,
       "la_nina": false
     },
@@ -6362,7 +6362,7 @@
       "season": "ASO",
       "year": 2008,
       "month": 9,
-      "anomaly": -0.25,
+      "anomaly": -0.24,
       "el_nino": false,
       "la_nina": false
     },
@@ -6371,7 +6371,7 @@
       "season": "SON",
       "year": 2008,
       "month": 10,
-      "anomaly": -0.36,
+      "anomaly": -0.35,
       "el_nino": false,
       "la_nina": false
     },
@@ -6380,7 +6380,7 @@
       "season": "OND",
       "year": 2008,
       "month": 11,
-      "anomaly": -0.57,
+      "anomaly": -0.55,
       "el_nino": false,
       "la_nina": false
     },
@@ -6389,7 +6389,7 @@
       "season": "NDJ",
       "year": 2008,
       "month": 12,
-      "anomaly": -0.79,
+      "anomaly": -0.73,
       "el_nino": false,
       "la_nina": false
     },
@@ -6398,7 +6398,7 @@
       "season": "DJF",
       "year": 2009,
       "month": 1,
-      "anomaly": -0.89,
+      "anomaly": -0.85,
       "el_nino": false,
       "la_nina": true
     },
@@ -6407,16 +6407,16 @@
       "season": "JFM",
       "year": 2009,
       "month": 2,
-      "anomaly": -0.84,
+      "anomaly": -0.79,
       "el_nino": false,
-      "la_nina": true
+      "la_nina": false
     },
     {
       "date": "2009-03-01",
       "season": "FMA",
       "year": 2009,
       "month": 3,
-      "anomaly": -0.63,
+      "anomaly": -0.61,
       "el_nino": false,
       "la_nina": false
     },
@@ -6425,7 +6425,7 @@
       "season": "MAM",
       "year": 2009,
       "month": 4,
-      "anomaly": -0.35,
+      "anomaly": -0.33,
       "el_nino": false,
       "la_nina": false
     },
@@ -6434,7 +6434,7 @@
       "season": "AMJ",
       "year": 2009,
       "month": 5,
-      "anomaly": 0.03,
+      "anomaly": 0.01,
       "el_nino": false,
       "la_nina": false
     },
@@ -6443,7 +6443,7 @@
       "season": "MJJ",
       "year": 2009,
       "month": 6,
-      "anomaly": 0.34,
+      "anomaly": 0.28,
       "el_nino": false,
       "la_nina": false
     },
@@ -6452,7 +6452,7 @@
       "season": "JJA",
       "year": 2009,
       "month": 7,
-      "anomaly": 0.5,
+      "anomaly": 0.45,
       "el_nino": false,
       "la_nina": false
     },
@@ -6461,7 +6461,7 @@
       "season": "JAS",
       "year": 2009,
       "month": 8,
-      "anomaly": 0.56,
+      "anomaly": 0.58,
       "el_nino": false,
       "la_nina": false
     },
@@ -6470,7 +6470,7 @@
       "season": "ASO",
       "year": 2009,
       "month": 9,
-      "anomaly": 0.66,
+      "anomaly": 0.71,
       "el_nino": false,
       "la_nina": false
     },
@@ -6479,7 +6479,7 @@
       "season": "SON",
       "year": 2009,
       "month": 10,
-      "anomaly": 0.92,
+      "anomaly": 1.01,
       "el_nino": true,
       "la_nina": false
     },
@@ -6488,7 +6488,7 @@
       "season": "OND",
       "year": 2009,
       "month": 11,
-      "anomaly": 1.31,
+      "anomaly": 1.36,
       "el_nino": true,
       "la_nina": false
     },
@@ -6497,7 +6497,7 @@
       "season": "NDJ",
       "year": 2009,
       "month": 12,
-      "anomaly": 1.5,
+      "anomaly": 1.56,
       "el_nino": true,
       "la_nina": false
     },
@@ -6506,7 +6506,7 @@
       "season": "DJF",
       "year": 2010,
       "month": 1,
-      "anomaly": 1.47,
+      "anomaly": 1.5,
       "el_nino": true,
       "la_nina": false
     },
@@ -6515,7 +6515,7 @@
       "season": "JFM",
       "year": 2010,
       "month": 2,
-      "anomaly": 1.21,
+      "anomaly": 1.22,
       "el_nino": true,
       "la_nina": false
     },
@@ -6524,7 +6524,7 @@
       "season": "FMA",
       "year": 2010,
       "month": 3,
-      "anomaly": 0.88,
+      "anomaly": 0.84,
       "el_nino": true,
       "la_nina": false
     },
@@ -6533,7 +6533,7 @@
       "season": "MAM",
       "year": 2010,
       "month": 4,
-      "anomaly": 0.38,
+      "anomaly": 0.35,
       "el_nino": false,
       "la_nina": false
     },
@@ -6542,7 +6542,7 @@
       "season": "AMJ",
       "year": 2010,
       "month": 5,
-      "anomaly": -0.16,
+      "anomaly": -0.17,
       "el_nino": false,
       "la_nina": false
     },
@@ -6560,7 +6560,7 @@
       "season": "JJA",
       "year": 2010,
       "month": 7,
-      "anomaly": -0.98,
+      "anomaly": -1.05,
       "el_nino": false,
       "la_nina": true
     },
@@ -6569,7 +6569,7 @@
       "season": "JAS",
       "year": 2010,
       "month": 8,
-      "anomaly": -1.24,
+      "anomaly": -1.35,
       "el_nino": false,
       "la_nina": true
     },
@@ -6578,7 +6578,7 @@
       "season": "ASO",
       "year": 2010,
       "month": 9,
-      "anomaly": -1.43,
+      "anomaly": -1.56,
       "el_nino": false,
       "la_nina": true
     },
@@ -6587,7 +6587,7 @@
       "season": "SON",
       "year": 2010,
       "month": 10,
-      "anomaly": -1.54,
+      "anomaly": -1.64,
       "el_nino": false,
       "la_nina": true
     },
@@ -6596,7 +6596,7 @@
       "season": "OND",
       "year": 2010,
       "month": 11,
-      "anomaly": -1.57,
+      "anomaly": -1.64,
       "el_nino": false,
       "la_nina": true
     },
@@ -6605,7 +6605,7 @@
       "season": "NDJ",
       "year": 2010,
       "month": 12,
-      "anomaly": -1.48,
+      "anomaly": -1.54,
       "el_nino": false,
       "la_nina": true
     },
@@ -6614,7 +6614,7 @@
       "season": "DJF",
       "year": 2011,
       "month": 1,
-      "anomaly": -1.29,
+      "anomaly": -1.31,
       "el_nino": false,
       "la_nina": true
     },
@@ -6623,7 +6623,7 @@
       "season": "JFM",
       "year": 2011,
       "month": 2,
-      "anomaly": -1.06,
+      "anomaly": -1.04,
       "el_nino": false,
       "la_nina": true
     },
@@ -6632,7 +6632,7 @@
       "season": "FMA",
       "year": 2011,
       "month": 3,
-      "anomaly": -0.85,
+      "anomaly": -0.8,
       "el_nino": false,
       "la_nina": true
     },
@@ -6641,7 +6641,7 @@
       "season": "MAM",
       "year": 2011,
       "month": 4,
-      "anomaly": -0.68,
+      "anomaly": -0.62,
       "el_nino": false,
       "la_nina": false
     },
@@ -6650,7 +6650,7 @@
       "season": "AMJ",
       "year": 2011,
       "month": 5,
-      "anomaly": -0.5,
+      "anomaly": -0.46,
       "el_nino": false,
       "la_nina": false
     },
@@ -6659,7 +6659,7 @@
       "season": "MJJ",
       "year": 2011,
       "month": 6,
-      "anomaly": -0.34,
+      "anomaly": -0.37,
       "el_nino": false,
       "la_nina": false
     },
@@ -6668,7 +6668,7 @@
       "season": "JJA",
       "year": 2011,
       "month": 7,
-      "anomaly": -0.37,
+      "anomaly": -0.43,
       "el_nino": false,
       "la_nina": false
     },
@@ -6677,7 +6677,7 @@
       "season": "JAS",
       "year": 2011,
       "month": 8,
-      "anomaly": -0.5,
+      "anomaly": -0.58,
       "el_nino": false,
       "la_nina": false
     },
@@ -6686,7 +6686,7 @@
       "season": "ASO",
       "year": 2011,
       "month": 9,
-      "anomaly": -0.76,
+      "anomaly": -0.79,
       "el_nino": false,
       "la_nina": false
     },
@@ -6695,7 +6695,7 @@
       "season": "SON",
       "year": 2011,
       "month": 10,
-      "anomaly": -0.94,
+      "anomaly": -0.96,
       "el_nino": false,
       "la_nina": true
     },
@@ -6722,7 +6722,7 @@
       "season": "DJF",
       "year": 2012,
       "month": 1,
-      "anomaly": -0.71,
+      "anomaly": -0.72,
       "el_nino": false,
       "la_nina": false
     },
@@ -6731,7 +6731,7 @@
       "season": "JFM",
       "year": 2012,
       "month": 2,
-      "anomaly": -0.56,
+      "anomaly": -0.57,
       "el_nino": false,
       "la_nina": false
     },
@@ -6740,7 +6740,7 @@
       "season": "FMA",
       "year": 2012,
       "month": 3,
-      "anomaly": -0.44,
+      "anomaly": -0.46,
       "el_nino": false,
       "la_nina": false
     },
@@ -6749,7 +6749,7 @@
       "season": "MAM",
       "year": 2012,
       "month": 4,
-      "anomaly": -0.35,
+      "anomaly": -0.36,
       "el_nino": false,
       "la_nina": false
     },
@@ -6758,7 +6758,7 @@
       "season": "AMJ",
       "year": 2012,
       "month": 5,
-      "anomaly": -0.18,
+      "anomaly": -0.17,
       "el_nino": false,
       "la_nina": false
     },
@@ -6767,7 +6767,7 @@
       "season": "MJJ",
       "year": 2012,
       "month": 6,
-      "anomaly": 0.03,
+      "anomaly": 0.06,
       "el_nino": false,
       "la_nina": false
     },
@@ -6776,7 +6776,7 @@
       "season": "JJA",
       "year": 2012,
       "month": 7,
-      "anomaly": 0.28,
+      "anomaly": 0.3,
       "el_nino": false,
       "la_nina": false
     },
@@ -6785,7 +6785,7 @@
       "season": "JAS",
       "year": 2012,
       "month": 8,
-      "anomaly": 0.39,
+      "anomaly": 0.41,
       "el_nino": false,
       "la_nina": false
     },
@@ -6794,7 +6794,7 @@
       "season": "ASO",
       "year": 2012,
       "month": 9,
-      "anomaly": 0.37,
+      "anomaly": 0.41,
       "el_nino": false,
       "la_nina": false
     },
@@ -6803,7 +6803,7 @@
       "season": "SON",
       "year": 2012,
       "month": 10,
-      "anomaly": 0.28,
+      "anomaly": 0.31,
       "el_nino": false,
       "la_nina": false
     },
@@ -6821,7 +6821,7 @@
       "season": "NDJ",
       "year": 2012,
       "month": 12,
-      "anomaly": -0.03,
+      "anomaly": -0.1,
       "el_nino": false,
       "la_nina": false
     },
@@ -6830,7 +6830,7 @@
       "season": "DJF",
       "year": 2013,
       "month": 1,
-      "anomaly": -0.24,
+      "anomaly": -0.29,
       "el_nino": false,
       "la_nina": false
     },
@@ -6839,7 +6839,7 @@
       "season": "JFM",
       "year": 2013,
       "month": 2,
-      "anomaly": -0.28,
+      "anomaly": -0.29,
       "el_nino": false,
       "la_nina": false
     },
@@ -6848,7 +6848,7 @@
       "season": "FMA",
       "year": 2013,
       "month": 3,
-      "anomaly": -0.23,
+      "anomaly": -0.21,
       "el_nino": false,
       "la_nina": false
     },
@@ -6857,7 +6857,7 @@
       "season": "MAM",
       "year": 2013,
       "month": 4,
-      "anomaly": -0.2,
+      "anomaly": -0.19,
       "el_nino": false,
       "la_nina": false
     },
@@ -6866,7 +6866,7 @@
       "season": "AMJ",
       "year": 2013,
       "month": 5,
-      "anomaly": -0.3,
+      "anomaly": -0.27,
       "el_nino": false,
       "la_nina": false
     },
@@ -6875,7 +6875,7 @@
       "season": "MJJ",
       "year": 2013,
       "month": 6,
-      "anomaly": -0.38,
+      "anomaly": -0.34,
       "el_nino": false,
       "la_nina": false
     },
@@ -6884,7 +6884,7 @@
       "season": "JJA",
       "year": 2013,
       "month": 7,
-      "anomaly": -0.45,
+      "anomaly": -0.35,
       "el_nino": false,
       "la_nina": false
     },
@@ -6893,7 +6893,7 @@
       "season": "JAS",
       "year": 2013,
       "month": 8,
-      "anomaly": -0.34,
+      "anomaly": -0.28,
       "el_nino": false,
       "la_nina": false
     },
@@ -6902,7 +6902,7 @@
       "season": "ASO",
       "year": 2013,
       "month": 9,
-      "anomaly": -0.32,
+      "anomaly": -0.21,
       "el_nino": false,
       "la_nina": false
     },
@@ -6911,7 +6911,7 @@
       "season": "SON",
       "year": 2013,
       "month": 10,
-      "anomaly": -0.14,
+      "anomaly": -0.13,
       "el_nino": false,
       "la_nina": false
     },
@@ -6920,7 +6920,7 @@
       "season": "OND",
       "year": 2013,
       "month": 11,
-      "anomaly": -0.12,
+      "anomaly": -0.1,
       "el_nino": false,
       "la_nina": false
     },
@@ -6929,7 +6929,7 @@
       "season": "NDJ",
       "year": 2013,
       "month": 12,
-      "anomaly": -0.11,
+      "anomaly": -0.15,
       "el_nino": false,
       "la_nina": false
     },
@@ -6938,7 +6938,7 @@
       "season": "DJF",
       "year": 2014,
       "month": 1,
-      "anomaly": -0.24,
+      "anomaly": -0.28,
       "el_nino": false,
       "la_nina": false
     },
@@ -6947,7 +6947,7 @@
       "season": "JFM",
       "year": 2014,
       "month": 2,
-      "anomaly": -0.21,
+      "anomaly": -0.32,
       "el_nino": false,
       "la_nina": false
     },
@@ -6956,7 +6956,7 @@
       "season": "FMA",
       "year": 2014,
       "month": 3,
-      "anomaly": -0.02,
+      "anomaly": -0.14,
       "el_nino": false,
       "la_nina": false
     },
@@ -6965,7 +6965,7 @@
       "season": "MAM",
       "year": 2014,
       "month": 4,
-      "anomaly": 0.25,
+      "anomaly": 0.15,
       "el_nino": false,
       "la_nina": false
     },
@@ -6974,7 +6974,7 @@
       "season": "AMJ",
       "year": 2014,
       "month": 5,
-      "anomaly": 0.35,
+      "anomaly": 0.31,
       "el_nino": false,
       "la_nina": false
     },
@@ -6983,7 +6983,7 @@
       "season": "MJJ",
       "year": 2014,
       "month": 6,
-      "anomaly": 0.22,
+      "anomaly": 0.23,
       "el_nino": false,
       "la_nina": false
     },
@@ -6992,7 +6992,7 @@
       "season": "JJA",
       "year": 2014,
       "month": 7,
-      "anomaly": 0.07,
+      "anomaly": 0.1,
       "el_nino": false,
       "la_nina": false
     },
@@ -7001,7 +7001,7 @@
       "season": "JAS",
       "year": 2014,
       "month": 8,
-      "anomaly": 0.07,
+      "anomaly": 0.11,
       "el_nino": false,
       "la_nina": false
     },
@@ -7010,7 +7010,7 @@
       "season": "ASO",
       "year": 2014,
       "month": 9,
-      "anomaly": 0.24,
+      "anomaly": 0.28,
       "el_nino": false,
       "la_nina": false
     },
@@ -7019,7 +7019,7 @@
       "season": "SON",
       "year": 2014,
       "month": 10,
-      "anomaly": 0.51,
+      "anomaly": 0.54,
       "el_nino": false,
       "la_nina": false
     },
@@ -7028,7 +7028,7 @@
       "season": "OND",
       "year": 2014,
       "month": 11,
-      "anomaly": 0.7,
+      "anomaly": 0.71,
       "el_nino": false,
       "la_nina": false
     },
@@ -7037,8 +7037,8 @@
       "season": "NDJ",
       "year": 2014,
       "month": 12,
-      "anomaly": 0.8,
-      "el_nino": true,
+      "anomaly": 0.77,
+      "el_nino": false,
       "la_nina": false
     },
     {
@@ -7046,7 +7046,7 @@
       "season": "DJF",
       "year": 2015,
       "month": 1,
-      "anomaly": 0.73,
+      "anomaly": 0.69,
       "el_nino": false,
       "la_nina": false
     },
@@ -7055,7 +7055,7 @@
       "season": "JFM",
       "year": 2015,
       "month": 2,
-      "anomaly": 0.65,
+      "anomaly": 0.61,
       "el_nino": false,
       "la_nina": false
     },
@@ -7064,7 +7064,7 @@
       "season": "FMA",
       "year": 2015,
       "month": 3,
-      "anomaly": 0.72,
+      "anomaly": 0.65,
       "el_nino": false,
       "la_nina": false
     },
@@ -7073,7 +7073,7 @@
       "season": "MAM",
       "year": 2015,
       "month": 4,
-      "anomaly": 0.86,
+      "anomaly": 0.81,
       "el_nino": true,
       "la_nina": false
     },
@@ -7082,7 +7082,7 @@
       "season": "AMJ",
       "year": 2015,
       "month": 5,
-      "anomaly": 1.04,
+      "anomaly": 1.02,
       "el_nino": true,
       "la_nina": false
     },
@@ -7091,7 +7091,7 @@
       "season": "MJJ",
       "year": 2015,
       "month": 6,
-      "anomaly": 1.19,
+      "anomaly": 1.25,
       "el_nino": true,
       "la_nina": false
     },
@@ -7100,7 +7100,7 @@
       "season": "JJA",
       "year": 2015,
       "month": 7,
-      "anomaly": 1.44,
+      "anomaly": 1.57,
       "el_nino": true,
       "la_nina": false
     },
@@ -7109,7 +7109,7 @@
       "season": "JAS",
       "year": 2015,
       "month": 8,
-      "anomaly": 1.73,
+      "anomaly": 1.91,
       "el_nino": true,
       "la_nina": false
     },
@@ -7118,7 +7118,7 @@
       "season": "ASO",
       "year": 2015,
       "month": 9,
-      "anomaly": 2.02,
+      "anomaly": 2.21,
       "el_nino": true,
       "la_nina": false
     },
@@ -7127,7 +7127,7 @@
       "season": "SON",
       "year": 2015,
       "month": 10,
-      "anomaly": 2.28,
+      "anomaly": 2.47,
       "el_nino": true,
       "la_nina": false
     },
@@ -7136,7 +7136,7 @@
       "season": "OND",
       "year": 2015,
       "month": 11,
-      "anomaly": 2.45,
+      "anomaly": 2.64,
       "el_nino": true,
       "la_nina": false
     },
@@ -7145,7 +7145,7 @@
       "season": "NDJ",
       "year": 2015,
       "month": 12,
-      "anomaly": 2.59,
+      "anomaly": 2.75,
       "el_nino": true,
       "la_nina": false
     },
@@ -7154,7 +7154,7 @@
       "season": "DJF",
       "year": 2016,
       "month": 1,
-      "anomaly": 2.5,
+      "anomaly": 2.63,
       "el_nino": true,
       "la_nina": false
     },
@@ -7163,7 +7163,7 @@
       "season": "JFM",
       "year": 2016,
       "month": 2,
-      "anomaly": 2.21,
+      "anomaly": 2.28,
       "el_nino": true,
       "la_nina": false
     },
@@ -7172,7 +7172,7 @@
       "season": "FMA",
       "year": 2016,
       "month": 3,
-      "anomaly": 1.69,
+      "anomaly": 1.71,
       "el_nino": true,
       "la_nina": false
     },
@@ -7181,7 +7181,7 @@
       "season": "MAM",
       "year": 2016,
       "month": 4,
-      "anomaly": 1.11,
+      "anomaly": 1.05,
       "el_nino": true,
       "la_nina": false
     },
@@ -7190,7 +7190,7 @@
       "season": "AMJ",
       "year": 2016,
       "month": 5,
-      "anomaly": 0.57,
+      "anomaly": 0.49,
       "el_nino": false,
       "la_nina": false
     },
@@ -7199,7 +7199,7 @@
       "season": "MJJ",
       "year": 2016,
       "month": 6,
-      "anomaly": 0.09,
+      "anomaly": 0.0,
       "el_nino": false,
       "la_nina": false
     },
@@ -7208,7 +7208,7 @@
       "season": "JJA",
       "year": 2016,
       "month": 7,
-      "anomaly": -0.19,
+      "anomaly": -0.31,
       "el_nino": false,
       "la_nina": false
     },
@@ -7217,7 +7217,7 @@
       "season": "JAS",
       "year": 2016,
       "month": 8,
-      "anomaly": -0.34,
+      "anomaly": -0.5,
       "el_nino": false,
       "la_nina": false
     },
@@ -7226,7 +7226,7 @@
       "season": "ASO",
       "year": 2016,
       "month": 9,
-      "anomaly": -0.42,
+      "anomaly": -0.58,
       "el_nino": false,
       "la_nina": false
     },
@@ -7235,7 +7235,7 @@
       "season": "SON",
       "year": 2016,
       "month": 10,
-      "anomaly": -0.51,
+      "anomaly": -0.64,
       "el_nino": false,
       "la_nina": false
     },
@@ -7244,7 +7244,7 @@
       "season": "OND",
       "year": 2016,
       "month": 11,
-      "anomaly": -0.49,
+      "anomaly": -0.6,
       "el_nino": false,
       "la_nina": false
     },
@@ -7253,7 +7253,7 @@
       "season": "NDJ",
       "year": 2016,
       "month": 12,
-      "anomaly": -0.37,
+      "anomaly": -0.45,
       "el_nino": false,
       "la_nina": false
     },
@@ -7262,7 +7262,7 @@
       "season": "DJF",
       "year": 2017,
       "month": 1,
-      "anomaly": -0.08,
+      "anomaly": -0.19,
       "el_nino": false,
       "la_nina": false
     },
@@ -7271,7 +7271,7 @@
       "season": "JFM",
       "year": 2017,
       "month": 2,
-      "anomaly": 0.08,
+      "anomaly": -0.02,
       "el_nino": false,
       "la_nina": false
     },
@@ -7280,7 +7280,7 @@
       "season": "FMA",
       "year": 2017,
       "month": 3,
-      "anomaly": 0.27,
+      "anomaly": 0.18,
       "el_nino": false,
       "la_nina": false
     },
@@ -7289,7 +7289,7 @@
       "season": "MAM",
       "year": 2017,
       "month": 4,
-      "anomaly": 0.32,
+      "anomaly": 0.31,
       "el_nino": false,
       "la_nina": false
     },
@@ -7298,7 +7298,7 @@
       "season": "AMJ",
       "year": 2017,
       "month": 5,
-      "anomaly": 0.35,
+      "anomaly": 0.4,
       "el_nino": false,
       "la_nina": false
     },
@@ -7307,7 +7307,7 @@
       "season": "MJJ",
       "year": 2017,
       "month": 6,
-      "anomaly": 0.32,
+      "anomaly": 0.39,
       "el_nino": false,
       "la_nina": false
     },
@@ -7316,7 +7316,7 @@
       "season": "JJA",
       "year": 2017,
       "month": 7,
-      "anomaly": 0.14,
+      "anomaly": 0.19,
       "el_nino": false,
       "la_nina": false
     },
@@ -7334,7 +7334,7 @@
       "season": "ASO",
       "year": 2017,
       "month": 9,
-      "anomaly": -0.23,
+      "anomaly": -0.34,
       "el_nino": false,
       "la_nina": false
     },
@@ -7343,7 +7343,7 @@
       "season": "SON",
       "year": 2017,
       "month": 10,
-      "anomaly": -0.44,
+      "anomaly": -0.6,
       "el_nino": false,
       "la_nina": false
     },
@@ -7352,7 +7352,7 @@
       "season": "OND",
       "year": 2017,
       "month": 11,
-      "anomaly": -0.61,
+      "anomaly": -0.77,
       "el_nino": false,
       "la_nina": false
     },
@@ -7361,16 +7361,16 @@
       "season": "NDJ",
       "year": 2017,
       "month": 12,
-      "anomaly": -0.76,
+      "anomaly": -0.86,
       "el_nino": false,
-      "la_nina": false
+      "la_nina": true
     },
     {
       "date": "2018-01-01",
       "season": "DJF",
       "year": 2018,
       "month": 1,
-      "anomaly": -0.71,
+      "anomaly": -0.77,
       "el_nino": false,
       "la_nina": false
     },
@@ -7379,7 +7379,7 @@
       "season": "JFM",
       "year": 2018,
       "month": 2,
-      "anomaly": -0.67,
+      "anomaly": -0.71,
       "el_nino": false,
       "la_nina": false
     },
@@ -7388,7 +7388,7 @@
       "season": "FMA",
       "year": 2018,
       "month": 3,
-      "anomaly": -0.55,
+      "anomaly": -0.57,
       "el_nino": false,
       "la_nina": false
     },
@@ -7397,7 +7397,7 @@
       "season": "MAM",
       "year": 2018,
       "month": 4,
-      "anomaly": -0.35,
+      "anomaly": -0.39,
       "el_nino": false,
       "la_nina": false
     },
@@ -7406,7 +7406,7 @@
       "season": "AMJ",
       "year": 2018,
       "month": 5,
-      "anomaly": -0.07,
+      "anomaly": -0.13,
       "el_nino": false,
       "la_nina": false
     },
@@ -7415,7 +7415,7 @@
       "season": "MJJ",
       "year": 2018,
       "month": 6,
-      "anomaly": 0.13,
+      "anomaly": 0.06,
       "el_nino": false,
       "la_nina": false
     },
@@ -7424,7 +7424,7 @@
       "season": "JJA",
       "year": 2018,
       "month": 7,
-      "anomaly": 0.2,
+      "anomaly": 0.14,
       "el_nino": false,
       "la_nina": false
     },
@@ -7433,7 +7433,7 @@
       "season": "JAS",
       "year": 2018,
       "month": 8,
-      "anomaly": 0.3,
+      "anomaly": 0.27,
       "el_nino": false,
       "la_nina": false
     },
@@ -7442,7 +7442,7 @@
       "season": "ASO",
       "year": 2018,
       "month": 9,
-      "anomaly": 0.52,
+      "anomaly": 0.53,
       "el_nino": false,
       "la_nina": false
     },
@@ -7451,7 +7451,7 @@
       "season": "SON",
       "year": 2018,
       "month": 10,
-      "anomaly": 0.82,
+      "anomaly": 0.81,
       "el_nino": true,
       "la_nina": false
     },
@@ -7460,7 +7460,7 @@
       "season": "OND",
       "year": 2018,
       "month": 11,
-      "anomaly": 1.04,
+      "anomaly": 0.97,
       "el_nino": true,
       "la_nina": false
     },
@@ -7469,7 +7469,7 @@
       "season": "NDJ",
       "year": 2018,
       "month": 12,
-      "anomaly": 1.05,
+      "anomaly": 0.92,
       "el_nino": true,
       "la_nina": false
     },
@@ -7478,7 +7478,7 @@
       "season": "DJF",
       "year": 2019,
       "month": 1,
-      "anomaly": 0.99,
+      "anomaly": 0.89,
       "el_nino": true,
       "la_nina": false
     },
@@ -7487,7 +7487,7 @@
       "season": "JFM",
       "year": 2019,
       "month": 2,
-      "anomaly": 0.94,
+      "anomaly": 0.86,
       "el_nino": true,
       "la_nina": false
     },
@@ -7496,7 +7496,7 @@
       "season": "FMA",
       "year": 2019,
       "month": 3,
-      "anomaly": 0.87,
+      "anomaly": 0.84,
       "el_nino": true,
       "la_nina": false
     },
@@ -7505,8 +7505,8 @@
       "season": "MAM",
       "year": 2019,
       "month": 4,
-      "anomaly": 0.82,
-      "el_nino": true,
+      "anomaly": 0.77,
+      "el_nino": false,
       "la_nina": false
     },
     {
@@ -7514,7 +7514,7 @@
       "season": "AMJ",
       "year": 2019,
       "month": 5,
-      "anomaly": 0.71,
+      "anomaly": 0.64,
       "el_nino": false,
       "la_nina": false
     },
@@ -7523,7 +7523,7 @@
       "season": "MJJ",
       "year": 2019,
       "month": 6,
-      "anomaly": 0.59,
+      "anomaly": 0.52,
       "el_nino": false,
       "la_nina": false
     },
@@ -7532,7 +7532,7 @@
       "season": "JJA",
       "year": 2019,
       "month": 7,
-      "anomaly": 0.38,
+      "anomaly": 0.33,
       "el_nino": false,
       "la_nina": false
     },
@@ -7541,7 +7541,7 @@
       "season": "JAS",
       "year": 2019,
       "month": 8,
-      "anomaly": 0.2,
+      "anomaly": 0.19,
       "el_nino": false,
       "la_nina": false
     },
@@ -7550,7 +7550,7 @@
       "season": "ASO",
       "year": 2019,
       "month": 9,
-      "anomaly": 0.31,
+      "anomaly": 0.23,
       "el_nino": false,
       "la_nina": false
     },
@@ -7559,7 +7559,7 @@
       "season": "SON",
       "year": 2019,
       "month": 10,
-      "anomaly": 0.51,
+      "anomaly": 0.39,
       "el_nino": false,
       "la_nina": false
     },
@@ -7568,7 +7568,7 @@
       "season": "OND",
       "year": 2019,
       "month": 11,
-      "anomaly": 0.72,
+      "anomaly": 0.58,
       "el_nino": false,
       "la_nina": false
     },
@@ -7577,7 +7577,7 @@
       "season": "NDJ",
       "year": 2019,
       "month": 12,
-      "anomaly": 0.75,
+      "anomaly": 0.66,
       "el_nino": false,
       "la_nina": false
     },
@@ -7586,7 +7586,7 @@
       "season": "DJF",
       "year": 2020,
       "month": 1,
-      "anomaly": 0.71,
+      "anomaly": 0.64,
       "el_nino": false,
       "la_nina": false
     },
@@ -7595,7 +7595,7 @@
       "season": "JFM",
       "year": 2020,
       "month": 2,
-      "anomaly": 0.66,
+      "anomaly": 0.63,
       "el_nino": false,
       "la_nina": false
     },
@@ -7604,7 +7604,7 @@
       "season": "FMA",
       "year": 2020,
       "month": 3,
-      "anomaly": 0.57,
+      "anomaly": 0.53,
       "el_nino": false,
       "la_nina": false
     },
@@ -7613,7 +7613,7 @@
       "season": "MAM",
       "year": 2020,
       "month": 4,
-      "anomaly": 0.33,
+      "anomaly": 0.3,
       "el_nino": false,
       "la_nina": false
     },
@@ -7622,7 +7622,7 @@
       "season": "AMJ",
       "year": 2020,
       "month": 5,
-      "anomaly": 0.04,
+      "anomaly": 0.01,
       "el_nino": false,
       "la_nina": false
     },
@@ -7631,7 +7631,7 @@
       "season": "MJJ",
       "year": 2020,
       "month": 6,
-      "anomaly": -0.18,
+      "anomaly": -0.23,
       "el_nino": false,
       "la_nina": false
     },
@@ -7640,7 +7640,7 @@
       "season": "JJA",
       "year": 2020,
       "month": 7,
-      "anomaly": -0.29,
+      "anomaly": -0.36,
       "el_nino": false,
       "la_nina": false
     },
@@ -7649,7 +7649,7 @@
       "season": "JAS",
       "year": 2020,
       "month": 8,
-      "anomaly": -0.43,
+      "anomaly": -0.53,
       "el_nino": false,
       "la_nina": false
     },
@@ -7658,16 +7658,16 @@
       "season": "ASO",
       "year": 2020,
       "month": 9,
-      "anomaly": -0.77,
+      "anomaly": -0.85,
       "el_nino": false,
-      "la_nina": false
+      "la_nina": true
     },
     {
       "date": "2020-10-01",
       "season": "SON",
       "year": 2020,
       "month": 10,
-      "anomaly": -1.0,
+      "anomaly": -1.12,
       "el_nino": false,
       "la_nina": true
     },
@@ -7676,7 +7676,7 @@
       "season": "OND",
       "year": 2020,
       "month": 11,
-      "anomaly": -1.11,
+      "anomaly": -1.2,
       "el_nino": false,
       "la_nina": true
     },
@@ -7685,7 +7685,7 @@
       "season": "NDJ",
       "year": 2020,
       "month": 12,
-      "anomaly": -1.06,
+      "anomaly": -1.08,
       "el_nino": false,
       "la_nina": true
     },
@@ -7694,7 +7694,7 @@
       "season": "DJF",
       "year": 2021,
       "month": 1,
-      "anomaly": -0.99,
+      "anomaly": -0.91,
       "el_nino": false,
       "la_nina": true
     },
@@ -7703,16 +7703,16 @@
       "season": "JFM",
       "year": 2021,
       "month": 2,
-      "anomaly": -0.85,
+      "anomaly": -0.79,
       "el_nino": false,
-      "la_nina": true
+      "la_nina": false
     },
     {
       "date": "2021-03-01",
       "season": "FMA",
       "year": 2021,
       "month": 3,
-      "anomaly": -0.74,
+      "anomaly": -0.71,
       "el_nino": false,
       "la_nina": false
     },
@@ -7721,7 +7721,7 @@
       "season": "MAM",
       "year": 2021,
       "month": 4,
-      "anomaly": -0.56,
+      "anomaly": -0.55,
       "el_nino": false,
       "la_nina": false
     },
@@ -7730,7 +7730,7 @@
       "season": "AMJ",
       "year": 2021,
       "month": 5,
-      "anomaly": -0.4,
+      "anomaly": -0.39,
       "el_nino": false,
       "la_nina": false
     },
@@ -7739,7 +7739,7 @@
       "season": "MJJ",
       "year": 2021,
       "month": 6,
-      "anomaly": -0.31,
+      "anomaly": -0.3,
       "el_nino": false,
       "la_nina": false
     },
@@ -7757,7 +7757,7 @@
       "season": "JAS",
       "year": 2021,
       "month": 8,
-      "anomaly": -0.46,
+      "anomaly": -0.45,
       "el_nino": false,
       "la_nina": false
     },
@@ -7766,7 +7766,7 @@
       "season": "ASO",
       "year": 2021,
       "month": 9,
-      "anomaly": -0.64,
+      "anomaly": -0.63,
       "el_nino": false,
       "la_nina": false
     },
@@ -7775,7 +7775,7 @@
       "season": "SON",
       "year": 2021,
       "month": 10,
-      "anomaly": -0.77,
+      "anomaly": -0.76,
       "el_nino": false,
       "la_nina": false
     },
@@ -7793,7 +7793,7 @@
       "season": "NDJ",
       "year": 2021,
       "month": 12,
-      "anomaly": -0.83,
+      "anomaly": -0.87,
       "el_nino": false,
       "la_nina": true
     },
@@ -7802,16 +7802,16 @@
       "season": "DJF",
       "year": 2022,
       "month": 1,
-      "anomaly": -0.76,
+      "anomaly": -0.82,
       "el_nino": false,
-      "la_nina": false
+      "la_nina": true
     },
     {
       "date": "2022-02-01",
       "season": "JFM",
       "year": 2022,
       "month": 2,
-      "anomaly": -0.68,
+      "anomaly": -0.79,
       "el_nino": false,
       "la_nina": false
     },
@@ -7820,16 +7820,16 @@
       "season": "FMA",
       "year": 2022,
       "month": 3,
-      "anomaly": -0.77,
+      "anomaly": -0.86,
       "el_nino": false,
-      "la_nina": false
+      "la_nina": true
     },
     {
       "date": "2022-04-01",
       "season": "MAM",
       "year": 2022,
       "month": 4,
-      "anomaly": -0.86,
+      "anomaly": -0.95,
       "el_nino": false,
       "la_nina": true
     },
@@ -7838,7 +7838,7 @@
       "season": "AMJ",
       "year": 2022,
       "month": 5,
-      "anomaly": -0.83,
+      "anomaly": -0.9,
       "el_nino": false,
       "la_nina": true
     },
@@ -7847,7 +7847,7 @@
       "season": "MJJ",
       "year": 2022,
       "month": 6,
-      "anomaly": -0.73,
+      "anomaly": -0.78,
       "el_nino": false,
       "la_nina": false
     },
@@ -7856,7 +7856,7 @@
       "season": "JJA",
       "year": 2022,
       "month": 7,
-      "anomaly": -0.7,
+      "anomaly": -0.76,
       "el_nino": false,
       "la_nina": false
     },
@@ -7865,16 +7865,16 @@
       "season": "JAS",
       "year": 2022,
       "month": 8,
-      "anomaly": -0.78,
+      "anomaly": -0.87,
       "el_nino": false,
-      "la_nina": false
+      "la_nina": true
     },
     {
       "date": "2022-09-01",
       "season": "ASO",
       "year": 2022,
       "month": 9,
-      "anomaly": -0.87,
+      "anomaly": -0.97,
       "el_nino": false,
       "la_nina": true
     },
@@ -7883,7 +7883,7 @@
       "season": "SON",
       "year": 2022,
       "month": 10,
-      "anomaly": -0.89,
+      "anomaly": -0.94,
       "el_nino": false,
       "la_nina": true
     },
@@ -7892,7 +7892,7 @@
       "season": "OND",
       "year": 2022,
       "month": 11,
-      "anomaly": -0.82,
+      "anomaly": -0.85,
       "el_nino": false,
       "la_nina": true
     },
@@ -7901,7 +7901,7 @@
       "season": "NDJ",
       "year": 2022,
       "month": 12,
-      "anomaly": -0.7,
+      "anomaly": -0.71,
       "el_nino": false,
       "la_nina": false
     },
@@ -7910,7 +7910,7 @@
       "season": "DJF",
       "year": 2023,
       "month": 1,
-      "anomaly": -0.55,
+      "anomaly": -0.54,
       "el_nino": false,
       "la_nina": false
     },
@@ -7919,7 +7919,7 @@
       "season": "JFM",
       "year": 2023,
       "month": 2,
-      "anomaly": -0.33,
+      "anomaly": -0.29,
       "el_nino": false,
       "la_nina": false
     },
@@ -7928,7 +7928,7 @@
       "season": "FMA",
       "year": 2023,
       "month": 3,
-      "anomaly": -0.11,
+      "anomaly": -0.02,
       "el_nino": false,
       "la_nina": false
     },
@@ -7937,7 +7937,7 @@
       "season": "MAM",
       "year": 2023,
       "month": 4,
-      "anomaly": 0.19,
+      "anomaly": 0.27,
       "el_nino": false,
       "la_nina": false
     },
@@ -7946,7 +7946,7 @@
       "season": "AMJ",
       "year": 2023,
       "month": 5,
-      "anomaly": 0.46,
+      "anomaly": 0.57,
       "el_nino": false,
       "la_nina": false
     },
@@ -7955,8 +7955,8 @@
       "season": "MJJ",
       "year": 2023,
       "month": 6,
-      "anomaly": 0.73,
-      "el_nino": false,
+      "anomaly": 0.84,
+      "el_nino": true,
       "la_nina": false
     },
     {
@@ -7964,7 +7964,7 @@
       "season": "JJA",
       "year": 2023,
       "month": 7,
-      "anomaly": 1.0,
+      "anomaly": 1.12,
       "el_nino": true,
       "la_nina": false
     },
@@ -7973,7 +7973,7 @@
       "season": "JAS",
       "year": 2023,
       "month": 8,
-      "anomaly": 1.25,
+      "anomaly": 1.37,
       "el_nino": true,
       "la_nina": false
     },
@@ -7982,7 +7982,7 @@
       "season": "ASO",
       "year": 2023,
       "month": 9,
-      "anomaly": 1.5,
+      "anomaly": 1.6,
       "el_nino": true,
       "la_nina": false
     },
@@ -7991,7 +7991,7 @@
       "season": "SON",
       "year": 2023,
       "month": 10,
-      "anomaly": 1.74,
+      "anomaly": 1.83,
       "el_nino": true,
       "la_nina": false
     },
@@ -8000,7 +8000,7 @@
       "season": "OND",
       "year": 2023,
       "month": 11,
-      "anomaly": 1.9,
+      "anomaly": 1.99,
       "el_nino": true,
       "la_nina": false
     },
@@ -8009,7 +8009,7 @@
       "season": "NDJ",
       "year": 2023,
       "month": 12,
-      "anomaly": 1.99,
+      "anomaly": 2.06,
       "el_nino": true,
       "la_nina": false
     },
@@ -8018,7 +8018,7 @@
       "season": "DJF",
       "year": 2024,
       "month": 1,
-      "anomaly": 1.84,
+      "anomaly": 1.92,
       "el_nino": true,
       "la_nina": false
     },
@@ -8027,7 +8027,7 @@
       "season": "JFM",
       "year": 2024,
       "month": 2,
-      "anomaly": 1.53,
+      "anomaly": 1.62,
       "el_nino": true,
       "la_nina": false
     },
@@ -8036,7 +8036,7 @@
       "season": "FMA",
       "year": 2024,
       "month": 3,
-      "anomaly": 1.18,
+      "anomaly": 1.26,
       "el_nino": true,
       "la_nina": false
     },
@@ -8045,8 +8045,8 @@
       "season": "MAM",
       "year": 2024,
       "month": 4,
-      "anomaly": 0.77,
-      "el_nino": false,
+      "anomaly": 0.82,
+      "el_nino": true,
       "la_nina": false
     },
     {
@@ -8054,7 +8054,7 @@
       "season": "AMJ",
       "year": 2024,
       "month": 5,
-      "anomaly": 0.43,
+      "anomaly": 0.49,
       "el_nino": false,
       "la_nina": false
     },
@@ -8063,7 +8063,7 @@
       "season": "MJJ",
       "year": 2024,
       "month": 6,
-      "anomaly": 0.18,
+      "anomaly": 0.22,
       "el_nino": false,
       "la_nina": false
     },
@@ -8072,7 +8072,7 @@
       "season": "JJA",
       "year": 2024,
       "month": 7,
-      "anomaly": 0.06,
+      "anomaly": 0.08,
       "el_nino": false,
       "la_nina": false
     },
@@ -8081,7 +8081,7 @@
       "season": "JAS",
       "year": 2024,
       "month": 8,
-      "anomaly": -0.04,
+      "anomaly": -0.07,
       "el_nino": false,
       "la_nina": false
     },
@@ -8090,7 +8090,7 @@
       "season": "ASO",
       "year": 2024,
       "month": 9,
-      "anomaly": -0.12,
+      "anomaly": -0.17,
       "el_nino": false,
       "la_nina": false
     },
@@ -8099,7 +8099,7 @@
       "season": "SON",
       "year": 2024,
       "month": 10,
-      "anomaly": -0.19,
+      "anomaly": -0.21,
       "el_nino": false,
       "la_nina": false
     },
@@ -8108,7 +8108,7 @@
       "season": "OND",
       "year": 2024,
       "month": 11,
-      "anomaly": -0.29,
+      "anomaly": -0.3,
       "el_nino": false,
       "la_nina": false
     },
@@ -8117,7 +8117,7 @@
       "season": "NDJ",
       "year": 2024,
       "month": 12,
-      "anomaly": -0.43,
+      "anomaly": -0.42,
       "el_nino": false,
       "la_nina": false
     },
@@ -8126,7 +8126,7 @@
       "season": "DJF",
       "year": 2025,
       "month": 1,
-      "anomaly": -0.46,
+      "anomaly": -0.45,
       "el_nino": false,
       "la_nina": false
     },
@@ -8135,7 +8135,7 @@
       "season": "JFM",
       "year": 2025,
       "month": 2,
-      "anomaly": -0.22,
+      "anomaly": -0.24,
       "el_nino": false,
       "la_nina": false
     },
@@ -8144,7 +8144,7 @@
       "season": "FMA",
       "year": 2025,
       "month": 3,
-      "anomaly": -0.08,
+      "anomaly": -0.06,
       "el_nino": false,
       "la_nina": false
     },
@@ -8162,7 +8162,7 @@
       "season": "AMJ",
       "year": 2025,
       "month": 5,
-      "anomaly": -0.04,
+      "anomaly": -0.02,
       "el_nino": false,
       "la_nina": false
     },
@@ -8171,7 +8171,7 @@
       "season": "MJJ",
       "year": 2025,
       "month": 6,
-      "anomaly": -0.02,
+      "anomaly": -0.04,
       "el_nino": false,
       "la_nina": false
     },
@@ -8180,7 +8180,7 @@
       "season": "JJA",
       "year": 2025,
       "month": 7,
-      "anomaly": -0.11,
+      "anomaly": -0.14,
       "el_nino": false,
       "la_nina": false
     },
@@ -8189,7 +8189,7 @@
       "season": "JAS",
       "year": 2025,
       "month": 8,
-      "anomaly": -0.26,
+      "anomaly": -0.28,
       "el_nino": false,
       "la_nina": false
     },
@@ -8198,7 +8198,7 @@
       "season": "ASO",
       "year": 2025,
       "month": 9,
-      "anomaly": -0.43,
+      "anomaly": -0.4,
       "el_nino": false,
       "la_nina": false
     },
@@ -8207,7 +8207,7 @@
       "season": "SON",
       "year": 2025,
       "month": 10,
-      "anomaly": -0.57,
+      "anomaly": -0.51,
       "el_nino": false,
       "la_nina": false
     },
@@ -8216,7 +8216,7 @@
       "season": "OND",
       "year": 2025,
       "month": 11,
-      "anomaly": -0.61,
+      "anomaly": -0.55,
       "el_nino": false,
       "la_nina": false
     },
@@ -8225,7 +8225,7 @@
       "season": "NDJ",
       "year": 2025,
       "month": 12,
-      "anomaly": -0.6,
+      "anomaly": -0.54,
       "el_nino": false,
       "la_nina": false
     },
@@ -8234,7 +8234,7 @@
       "season": "DJF",
       "year": 2026,
       "month": 1,
-      "anomaly": -0.39,
+      "anomaly": -0.37,
       "el_nino": false,
       "la_nina": false
     },
@@ -8243,7 +8243,7 @@
       "season": "JFM",
       "year": 2026,
       "month": 2,
-      "anomaly": -0.21,
+      "anomaly": -0.14,
       "el_nino": false,
       "la_nina": false
     },
@@ -8252,7 +8252,7 @@
       "season": "FMA",
       "year": 2026,
       "month": 3,
-      "anomaly": 0.11,
+      "anomaly": 0.13,
       "el_nino": false,
       "la_nina": false
     },
@@ -8261,7 +8261,7 @@
       "season": "MAM",
       "year": 2026,
       "month": 4,
-      "anomaly": 0.46,
+      "anomaly": 0.51,
       "el_nino": false,
       "la_nina": false
     },
@@ -8270,16 +8270,7 @@
       "season": "AMJ",
       "year": 2026,
       "month": 5,
-      "anomaly": 0.95,
-      "el_nino": true,
-      "la_nina": false
-    },
-    {
-      "date": "2026-06-01",
-      "season": "MJJ",
-      "year": 2026,
-      "month": 6,
-      "anomaly": 1.39,
+      "anomaly": 0.98,
       "el_nino": true,
       "la_nina": false
     }
