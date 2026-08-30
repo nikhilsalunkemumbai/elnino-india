@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-29T04:37:35.860422Z",
+  "updated": "2026-08-30T02:09:36.061514Z",
   "source": "https://www.jamstec.go.jp/aplinfo/sintexf/DATA/dmi.monthly.txt",
   "note": "Primary: JAMSTEC HadISST monthly DMI. Supplement: JAMSTEC OISST weekly DMI for recent months. Fallback: NOAA PSL (stale after Jan 2025).",
   "latest": {
