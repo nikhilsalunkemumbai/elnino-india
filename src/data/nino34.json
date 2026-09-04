@@ -1,17 +1,17 @@
 {
-  "updated": "2026-09-03T01:53:07.140063Z",
+  "updated": "2026-09-04T01:47:21.721710Z",
   "source": "https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt",
   "weekly_source": "https://www.cpc.ncep.noaa.gov/data/indices/wksst9120.for",
   "note": "ONI (3-month running mean) is the stress index input. latest_weekly shows current-week Nino3.4 for dashboard context \u2014 it typically reads 1-2C higher than ONI during rapid El Nino onset.",
   "latest": {
-    "date": "2026-06-01",
-    "season": "MJJ",
+    "date": "2026-07-01",
+    "season": "JJA",
     "year": 2026,
-    "month": 6,
-    "anomaly": 1.39,
+    "month": 7,
+    "anomaly": 1.8,
     "el_nino": true,
     "la_nina": false,
-    "label": "Weak El Ni\u00f1o"
+    "label": "Moderate El Ni\u00f1o"
   },
   "latest_weekly": {
     "date": "2026-08-26",
@@ -8280,6 +8280,15 @@
       "year": 2026,
       "month": 6,
       "anomaly": 1.39,
+      "el_nino": true,
+      "la_nina": false
+    },
+    {
+      "date": "2026-07-01",
+      "season": "JJA",
+      "year": 2026,
+      "month": 7,
+      "anomaly": 1.8,
       "el_nino": true,
       "la_nina": false
     }
