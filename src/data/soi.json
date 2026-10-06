@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-05T02:48:59.021221Z",
+  "updated": "2026-10-06T03:39:24.796723Z",
   "source": "https://www.cpc.ncep.noaa.gov/data/indices/soi",
   "latest": {
-    "date": "2026-07-01",
+    "date": "2026-08-01",
     "year": 2026,
-    "month": 7,
-    "soi": -2.4,
+    "month": 8,
+    "soi": -1.1,
     "label": "Neutral"
   },
   "timeseries": [
@@ -6359,6 +6359,13 @@
       "label": "Neutral"
     },
     {
+      "date": "2026-08-01",
+      "year": 2026,
+      "month": 8,
+      "soi": -1.8,
+      "label": "Neutral"
+    },
+    {
       "date": "1951-01-01",
       "year": 1951,
       "month": 1,
@@ -12705,6 +12712,13 @@
       "year": 2026,
       "month": 7,
       "soi": -2.4,
+      "label": "Neutral"
+    },
+    {
+      "date": "2026-08-01",
+      "year": 2026,
+      "month": 8,
+      "soi": -1.1,
       "label": "Neutral"
     }
   ]
